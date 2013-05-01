@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string   :account_name
       t.string   :password_digest
       t.string   :remember_token
-      t.integer  :confirmed,      :default => 0, :null => false
+      t.integer  :confirmed, :default => 0, :null => false
     end
   end
   def down

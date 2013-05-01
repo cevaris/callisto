@@ -13,30 +13,18 @@
 
 ActiveRecord::Schema.define(:version => 20130426191905) do
 
-  create_table "dropbox_accounts", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "session_token"
-    t.string   "file_hash"
-    t.string   "cursor"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
   create_table "google_accounts", :force => true do |t|
     t.integer  "user_id"
     t.string   "access_token"
     t.string   "refresh_token"
     t.string   "expires_in"
     t.string   "issued_at"
-    t.string   "folder_id"
-    t.string   "largest_change_id"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
 
   create_table "settings", :force => true do |t|
     t.integer  "user_id"
-    t.string   "upload_to"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
