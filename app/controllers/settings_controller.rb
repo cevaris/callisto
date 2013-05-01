@@ -7,22 +7,8 @@ class SettingsController < ApplicationController
     @user = @current_user
     @setting = @current_user.setting
 
-    @google_account = nil
-    if @current_user.has_google_account?
-       @google_account = @current_user.google_account
-    end
-    @drop_box_account = nil
-    if @current_user.has_drop_box_account?
-      @drop_box_account = @current_user.drop_box_account
-    end
-
-    if @google_account.nil? and @drop_box_account.nil?
-      flash['info'] = t('settings.select_storage_service')
-    end
-
     respond_to do |format|
-      format.html # index.html.erb
-      # format.json { render json: @settings }
+      format.html
     end
   end
 

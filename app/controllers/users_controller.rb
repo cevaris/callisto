@@ -16,19 +16,6 @@ class UsersController < ApplicationController
       return render :status => 404
     end
 
-    @maps = Map.where( user_id: @current_user ).order('id DESC')
-    @resources = Resource.where( user_id: @current_user.id ).paginate(:page => params[:page], :per_page => 20)
-    @num_of_pages = Resource.where( user_id: @current_user.id ).count / 20 + 1
-    Rails.logger.info @resources.count
-
-    @filter_course_types = ResourceType.where( id: @resources.map { |resource| resource.resource_type.id } )
-    @filter_course_grades = CourseGrade.where( id: @resources.map { |resource| resource.course_grades.collect(&:id) } )
-    @filter_course_subjects = CourseSubject.where( id: @resources.map { |resource| resource.course_subjects.collect(&:id) } )
-
-    # For rendering Ajax "Upload Resource" form
-    @resource = Resource.new
-
-
   end
 
   def new
