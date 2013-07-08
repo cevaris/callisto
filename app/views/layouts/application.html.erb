@@ -28,27 +28,5 @@
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
     </div>
-
-    <div id="loading_modal" style="text-align:center;" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="loading_modalLabel">
-      <div class="modal-header"><h1><%= t('resources.loading') %></h1></div>
-      <div class="modal-body">
-        <%= image_tag "loading.gif", :alt => "loading"%>
-      </div>
-      <div class="modal-header"></div>
-    </div>
-
-    <% if apply_google_analytics? %>
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-38603370-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-    <% end %>
   </body>
 </html>
