@@ -2,16 +2,12 @@
   <tr>
     <th></th>
     <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @activities.each do |activity| %>
   <tr>
     <td><%= link_to "#{activity.name.titlecase}", activity %></td>
     <td><%= link_to "#{activity.user.name.titlecase}", activity.user %></td>
-    <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
-    <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
