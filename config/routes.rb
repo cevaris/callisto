@@ -1,8 +1,5 @@
 Callisto::Application.routes.draw do
 
-    
-  resources :activities
-
 
   resources :settings
 
@@ -25,6 +22,10 @@ Callisto::Application.routes.draw do
   resources :resources
   resources :users 
   match '/stream', to: 'users#stream'
+
+  match '/activities/search' => 'activities#search'
+  resources :activities 
+
 
 
   # The priority is based upon order of creation:

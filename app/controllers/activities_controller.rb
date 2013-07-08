@@ -15,6 +15,16 @@ class ActivitiesController < ApplicationController
     # end
   end
 
+
+  def search
+    @activities = Activity.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @activities }
+    end
+  end
+
   # GET /activities/1
   # GET /activities/1.json
   def show
