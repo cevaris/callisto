@@ -2,14 +2,16 @@ class UsersController < ApplicationController
 	include SessionsHelper
 
   def index
-    # /users/ was returning a 404
-    return_to signin_url if !signed_in?
-    redirect_to @current_user
+  	require_session
+    # # /users/ was returning a 404
+    # return_to signin_url if !signed_in?
+    # redirect_to @current_user
   end
 
   def show
     # Users must be signed in to view a profile
-    redirect_to signin_url if !signed_in?
+    # redirect_to signin_url if !signed_in?
+    require_session
 
     @user = User.find params[:id]
     if !@user
@@ -20,6 +22,8 @@ class UsersController < ApplicationController
   end
 
   def stream
+		require_session
+
   	@user = current_user
   	Rails.logger.info "Baddass #{current_user}"
     # Users must be signed in to view a profile
@@ -27,7 +31,7 @@ class UsersController < ApplicationController
   end
 
   def new
-    redirect_to @current_user if signed_in?
+    require_session
     @user = User.new
   end
 

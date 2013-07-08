@@ -20,4 +20,11 @@ module SessionsHelper
     self.current_user = nil
     cookies.delete(:remember_token)
   end
+
+  def require_session
+    unless current_user
+      redirect_to signin_path
+    end
+  end
+  
 end

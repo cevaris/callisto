@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130426191905) do
+ActiveRecord::Schema.define(:version => 20130708033221) do
+
+  create_table "activities", :force => true do |t|
+    t.integer  "user_id"
+    t.text     "description"
+    t.string   "name"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "google_accounts", :force => true do |t|
     t.integer  "user_id"
@@ -19,8 +27,8 @@ ActiveRecord::Schema.define(:version => 20130426191905) do
     t.string   "refresh_token"
     t.string   "expires_in"
     t.string   "issued_at"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "settings", :force => true do |t|

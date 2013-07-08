@@ -11,7 +11,7 @@
         <div class="nav-collapse collapse">
           <ul class="nav pull-right">
             <% if signed_in? %>
-            	<li><%= link_to t('signin.profile'), current_user %></li>
+            	<li><%= link_to "#{current_user.name.titlecase}", current_user %></li>
             	<li><%= link_to 'Stream', stream_path %></li>
             	<li><%= link_to 'Search', '#search' %></li>
             	<li>&nbsp;&nbsp;&nbsp;</li>
