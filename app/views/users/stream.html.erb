@@ -8,12 +8,18 @@
   </aside>
 </div>
 
-<div class="row">
-  <ul>
-  	<li>Public Activity 1</li>
-  	<li>Public Activity 2</li>
-  	<li>Public Activity 3</li>
-  	<li>Public Activity 4</li>
-  </ul>
-</div>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Creator</th>
+  </tr>
+
+<% @activities.each do |activity| %>
+  <tr>
+    <td><%= link_to "#{activity.name.titlecase}", activity %></td>
+    <td><%= link_to "#{activity.user.name.titlecase}", activity.user %></td>
+  </tr>
+<% end %>
+</table>
 

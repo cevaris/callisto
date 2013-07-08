@@ -24,6 +24,7 @@ class UsersController < ApplicationController
   def stream
 		require_session
   	@user = current_user
+  	@activities = Activity.all
   end
 
   def new

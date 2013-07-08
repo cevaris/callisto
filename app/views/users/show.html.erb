@@ -8,3 +8,17 @@
   </aside>
 </div>
 
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Creator</th>
+  </tr>
+
+<% @user.activities.each do |activity| %>
+  <tr>
+    <td><%= link_to "#{activity.name.titlecase}", activity %></td>
+    <td><%= link_to "#{activity.user.name.titlecase}", activity.user %></td>
+  </tr>
+<% end %>
+</table>
+
