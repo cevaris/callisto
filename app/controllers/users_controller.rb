@@ -23,15 +23,10 @@ class UsersController < ApplicationController
 
   def stream
 		require_session
-
   	@user = current_user
-  	Rails.logger.info "Baddass #{current_user}"
-    # Users must be signed in to view a profile
-    redirect_to signin_url if !signed_in?
   end
 
   def new
-    require_session
     @user = User.new
   end
 
@@ -40,7 +35,8 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = t('signup.welcome', app_name: t('global.app_name'))
-      redirect_to @user
+      # redirect_to @user
+      redirect_to stream_path
     else
       render 'new'
     end
