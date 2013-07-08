@@ -7,7 +7,7 @@ en:
       user:
         password_digest:        "Password"
   global:
-    app_name:                   "HubSocial"
+    app_name:                   "Callisto"
     copyright:                  "Copyright 2013"
   shared:
     errors:                     "The form contains %{count}."
@@ -129,7 +129,7 @@ en:
     removed:                    "Removed Google Drive Account"
     remove_invalid:             "Delete your own Google Account!"
     success_sync:               "Synced with Google Drive"
-    denied_oauth:               "You denied HubSocial access to Google Drive"
+    denied_oauth:               "You denied Callisto access to Google Drive"
     already_added:              "Google Drive already added"
   drop_box:
     link:                       "dropbox"
@@ -142,9 +142,9 @@ en:
     removed:                    "Removed dropbox Account"
     remove_invalid:             "Delete your own dropbox Account!"
     success_sync:               "Synced with dropbox Acccount"
-    denied_oauth:               "You denied HubSocial access to dropbox"
+    denied_oauth:               "You denied Callisto access to dropbox"
   welcome_email:
-    subject:                    "Welcome to HubSocial!"
+    subject:                    "Welcome to Callisto!"
     title:                      "Let's get started, %{name}"
     content_textonly:           "Activate your account with the link below:"
     content:                    "%{activation_link} to active your account."
@@ -155,7 +155,7 @@ en:
     subject:                    "Forgot your password?"
     content_textonly:           "Click the link below to change your password:"
     content:                    |
-                                <p>We received a password reset request for your HubSocial account.</p>
+                                <p>We received a password reset request for your Callisto account.</p>
                                 <p>%{action} to change your password.</p>
     action:                     "Click here"
     new_password:               "Enter a new password"

@@ -6,7 +6,7 @@ class GoogleAccount < ActiveRecord::Base
 
 	belongs_to :user
 
-	# HubSocial Google Drive folder id
+	# Callisto Google Drive folder id
 	attr_accessible :folder_id
 
 	# ID of last Google Drive change, may not need
@@ -19,7 +19,7 @@ class GoogleAccount < ActiveRecord::Base
     self.user_id == user.id
   end
 	
-	# Link to Google Drive Folder which is synced with HubSocial
+	# Link to Google Drive Folder which is synced with Callisto
 	def drive_folder_link
 		"https://drive.google.com/#folders/#{self.folder_id}"
 	end
@@ -70,22 +70,22 @@ class GoogleAccount < ActiveRecord::Base
 	end
 
 
-	def search_for_HubSocial_folder()
+	def search_for_Callisto_folder()
  
  		folder_id = false
- 		# Grab 10 files named 'HubSocial'
-		HubSocial_folder = list_files( nil,'HubSocial', 10, 'application/vnd.google-apps.folder' )
+ 		# Grab 10 files named 'Callisto'
+		Callisto_folder = list_files( nil,'Callisto', 10, 'application/vnd.google-apps.folder' )
 		# Grab 10 files named 'Apps' which are located in the root directory
 		apps_folder = list_files( 'root', 'Apps', 10, 'application/vnd.google-apps.folder' )		
 		# Organize 
 		apps_folders_by_id = Hash[apps_folder.map { |p| [p['id'], p] }]
 		
 
-		# Rails.logger.info("Found TeacherMap Folders #{HubSocial_folder.inspect}")
+		# Rails.logger.info("Found TeacherMap Folders #{Callisto_folder.inspect}")
 
 
-		# For each HubSocial folder in Google Drive
-		HubSocial_folder.each do |folder|
+		# For each Callisto folder in Google Drive
+		Callisto_folder.each do |folder|
 
 			folder['parents'].each do |parent_reference|
 
@@ -96,14 +96,14 @@ class GoogleAccount < ActiveRecord::Base
 
 				candidate_parent = apps_folders_by_id[parent_reference['id']]
 
-				# Check if parent title is "Apps" and folder title is "HubSocial"
-				if !candidate_parent.nil? and candidate_parent['title'] == 'Apps' and folder['title'] == 'HubSocial'
-					# Rails.logger.info("Found /Apps/HubSocial: #{parent_reference['id']} #{apps_folders_by_id.keys}")
-					# Return HubSocial folder id
+				# Check if parent title is "Apps" and folder title is "Callisto"
+				if !candidate_parent.nil? and candidate_parent['title'] == 'Apps' and folder['title'] == 'Callisto'
+					# Rails.logger.info("Found /Apps/Callisto: #{parent_reference['id']} #{apps_folders_by_id.keys}")
+					# Return Callisto folder id
 					return folder['id']
 				end
 
-				# Rails.logger.info("Found /Apps/HubSocial: /#{candidate_parent['title']}/#{folder['title']}") if !candidate_parent.nil?
+				# Rails.logger.info("Found /Apps/Callisto: /#{candidate_parent['title']}/#{folder['title']}") if !candidate_parent.nil?
 				# rescue
 				# 	next
 				# end
@@ -115,16 +115,16 @@ class GoogleAccount < ActiveRecord::Base
 		folder_id
 	end
 
-	def create_HubSocial_folder(save=false)
+	def create_Callisto_folder(save=false)
 		app_folder = create_folder("Apps", "Store and Organize all your teaching materials");
-    HubSocial_folder = create_folder("HubSocial", "Store and Organize all your teaching materials", app_folder['id']);
-    self.folder_id = HubSocial_folder['id']
+    Callisto_folder = create_folder("Callisto", "Store and Organize all your teaching materials", app_folder['id']);
+    self.folder_id = Callisto_folder['id']
 
     self.save() if save
     self.folder_id
 	end
 
-	def HubSocial_files()
+	def Callisto_files()
 		return list_files( self.folder_id, nil, 100 )
 	end
 
@@ -149,7 +149,7 @@ class GoogleAccount < ActiveRecord::Base
 		# Hash to save number of sync/updated files
 		sync_count = Hash.new
 
-		google_files  = self.HubSocial_files()
+		google_files  = self.Callisto_files()
 
   	# Create Dictonary {File_ID => Google Resource} to easily check if a file exists
   	resources_by_id = Hash[@resources.map { |p| [p['file_id'], p] }]
@@ -164,7 +164,7 @@ class GoogleAccount < ActiveRecord::Base
 
 
       if file['labels']['trashed'] == true 
-        # File is marked deleted and has yet to be deleted in HubSocial database
+        # File is marked deleted and has yet to be deleted in Callisto database
 
         # Rails.logger.info("Deleting Resource: #{file['title']} Trashed?: #{file['labels']['trashed']}")
         google_resource = resources_by_id[file['id']]
@@ -183,7 +183,7 @@ class GoogleAccount < ActiveRecord::Base
       end
 
       if resources_by_id.has_key?(file['id'])
-      	# Exists in HubSocial database
+      	# Exists in Callisto database
         
       	# Rails.logger.info("Found Existing Resource: #{file['title']} Trashed?: #{file['labels']['trashed']}")
 
@@ -199,7 +199,7 @@ class GoogleAccount < ActiveRecord::Base
       	resources_touched.delete(file['id']) if resources_touched.has_key?(file['id'])
         
       else
-      	# Does not exist in HubSocial database
+      	# Does not exist in Callisto database
 
       	# Rails.logger.info("Found New Resource: #{file['title']} Trashed?: #{file['labels']['trashed']}")
       	google_resource = GoogleResource.create( 

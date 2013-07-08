@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-HubSocial::Application.load_tasks
+Callisto::Application.load_tasks

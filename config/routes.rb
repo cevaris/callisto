@@ -1,4 +1,4 @@
-HubSocial::Application.routes.draw do
+Callisto::Application.routes.draw do
 
     
   resources :settings
@@ -19,70 +19,10 @@ HubSocial::Application.routes.draw do
   match '/confirm', to: 'users#confirm_email'
   match '/reset', to: 'users#reset_password'
 
-  # Sync Google Drive and/or dropbox resources
-  match '/resources/sync' => 'resources#sync'
-  match '/resources/create/link' => 'resources#create_link'
-  match '/resources/filter' => 'resources#filter'
-  match '/resources/page' => 'resources#page'
   resources :resources
+  resources :users
 
 
-  resources :users do
-    resources :maps
-    resources :map_standards, :path => 'standards', only: [:show]
-  end
-
-
-  resources :map_resources
-
-
-  resources :maps, only: [:update, :create, :destroy]
-  resources :maps do
-    resources :map_standards, only: [:create]
-    post 'sort_assessments'
-    post 'sort_standards'
-  end
-
-
-  resources :map_standards, only: [:update, :destroy]
-  resources :map_standards do
-    post 'sort_objectives'
-  end  
-
-
-  resources :map_assessments do
-    member do
-      get    'show_resources'
-      post   'filter_resources'
-      post   'create_resource'
-      delete 'destroy_resource'
-      post   'sort_resources'
-    end
-  end
-  
-  
-  resources :map_objectives do
-    member do
-      get    'show_resources'
-      post   'filter_resources'
-      post   'create_resource'
-      delete 'destroy_resource'
-      post   'sort_resources'
-    end
-  end
-
-  match '/standards/ajax/filter' => 'standards#ajax_filter'
-  resources :standards
-  
-  # Google API
-  match 'google/oauth_callback' => 'google_accounts#oauth_callback'
-  resources :google_accounts
-
-  # dropbox API
-  match 'dropbox/new' => 'drop_box_accounts#new', :as => 'new_drop_box_accounts'
-  match 'dropbox/preview/:path' => 'drop_box_accounts#preview', :as => 'drop_box_accounts_preview', :constraints => {:path => /[\w.\/]+/}
-  match 'dropbox/oauth_callback' => 'drop_box_accounts#oauth_callback'
-  resources :drop_box_accounts
 
 
   # The priority is based upon order of creation:

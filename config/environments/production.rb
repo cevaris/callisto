@@ -1,4 +1,4 @@
-HubSocial::Application.configure do
+Callisto::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -87,6 +87,6 @@ HubSocial::Application.configure do
       'https://www.googleapis.com/auth/plus.me'
   ]
 
-  config.PRODUCTION_DOMAIN = 'HubSocial.herokuapp.com'
+  config.PRODUCTION_DOMAIN = 'Callisto.herokuapp.com'
 
 end

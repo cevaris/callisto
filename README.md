@@ -1,3 +1,3 @@
-# HubSocial
+# Callisto
 
-HubSocial helps teachers build and share lesson plans.
+Callisto helps teachers build and share lesson plans.
