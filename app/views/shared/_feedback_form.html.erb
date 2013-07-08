@@ -13,7 +13,6 @@
         <%= f.hidden_field :page, value: "#{@current_controller}##{@current_action}" %>
         <%= f.hidden_field :name, value: @current_user.name  %>
         <%= f.hidden_field :email, value: @current_user.email %>
-        <%= f.hidden_field :account_name, value: @current_user.account_name %>
 
         <label class="pull-left checkbox" style="margin-top: 7px;">
           <%= check_box_tag :anonymous, 1 %> <%= t 'feedback.anonymous' %>

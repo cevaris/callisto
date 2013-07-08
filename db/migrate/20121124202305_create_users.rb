@@ -3,7 +3,6 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users, :force => true do |t|
       t.string   :name
       t.string   :email
-      t.string   :account_name
       t.string   :password_digest
       t.string   :remember_token
       t.integer  :confirmed, :default => 0, :null => false
