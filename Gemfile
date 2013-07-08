@@ -7,10 +7,8 @@ gem 'jquery-rails', '~> 2.2.1'
 gem 'bcrypt-ruby', '~> 3.0.1'
 gem "i18n-js", '~> 2.1.2'
 gem "select2-rails", '~> 3.3.0'
-gem 'google-api-client', '~> 0.6.2'
 gem 'jquery-ui-rails', '~> 4.0.2'
 gem 'best_in_place', '~> 2.1.0'
-
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.7'
