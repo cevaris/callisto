@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
+	acts_as_taggable_on
+	has_secure_password
+
   attr_accessible :email, :name, :password, :password_confirmation
-  has_secure_password
+  
 
   has_one  :setting
   has_many :activities
