@@ -3,21 +3,12 @@ class UsersController < ApplicationController
 
   def index
   	require_session
-    # # /users/ was returning a 404
-    # return_to signin_url if !signed_in?
-    # redirect_to @current_user
   end
 
   def show
-    # Users must be signed in to view a profile
-    # redirect_to signin_url if !signed_in?
     require_session
 
     @user = User.find params[:id]
-    if !@user
-      Rails.logger.info "404 user #{params[:id]}"
-      return render :status => 404
-    end
 
   end
 

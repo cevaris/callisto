@@ -7,12 +7,6 @@ class ActivitiesController < ApplicationController
   	else
   		render 'static_pages/home'
   	end
-    # @activities = Activity.all
-
-    # respond_to do |format|
-    #   format.html # index.html.erb
-    #   format.json { render json: @activities }
-    # end
   end
 
 
@@ -22,6 +16,14 @@ class ActivitiesController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @activities }
+    end
+  end
+
+  def filter
+    @activities = Activity.all
+
+    respond_to do |format|
+      format.html # filter.html.erb
     end
   end
 

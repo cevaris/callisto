@@ -1,0 +1,17 @@
+<div>
+<%= form_tag activities_filter_path, id: 'filter_activities', :class=>"form-inline", :remote=>true do %>
+
+ 	<%= text_field_tag 'filter_activity_tags', '', :maxlength => 100, :placeholder=>'Search by tag', 		:name=>'qtag', 	:class => 'search-query'  %>
+  <%= text_field_tag 'filter_activity_text', '', :maxlength => 15,  :placeholder=>t('shared.search'), :name=>'qtext', :class => 'search-query' %>
+
+<% end %>
+
+
+<script type="text/javascript">
+$(document).ready(function() { 
+  // $("#filter_course_subjects").val(7).select2({
+  //     placeholder: '<%= I18n.t("resources.all_subjects") %>'
+  // });
+});
+</script>
+</div>
