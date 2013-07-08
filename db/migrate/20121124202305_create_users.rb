@@ -6,6 +6,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string   :password_digest
       t.string   :remember_token
       t.integer  :confirmed, :default => 0, :null => false
+
+      t.timestamps
     end
   end
   def down
