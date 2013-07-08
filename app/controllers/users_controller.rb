@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	include SessionsHelper
 
   def index
     # /users/ was returning a 404
@@ -12,10 +13,17 @@ class UsersController < ApplicationController
 
     @user = User.find params[:id]
     if !@user
-      Rails.logger.info 'Could not locate user '
+      Rails.logger.info "404 user #{params[:id]}"
       return render :status => 404
     end
 
+  end
+
+  def stream
+  	@user = current_user
+  	Rails.logger.info "Baddass #{current_user}"
+    # Users must be signed in to view a profile
+    redirect_to signin_url if !signed_in?
   end
 
   def new
