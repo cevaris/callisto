@@ -20,11 +20,21 @@ class ActivitiesController < ApplicationController
   end
 
   def filter
+    
+
+    filter = {}
     @activities = Activity.all
 
-    # render :json => { :attachmentPartial => render_to_string('activities/table_activities', :layout => false, :locals => { }) }
-    # render 'activities/table_activities'
-    render '_table_activities'
+    if params.has_key?('filter_activity_text') and !params[:filter_activity_text].empty?
+      @activities &= Activity.where( Activity.arel_table[:name].matches("%#{params[:filter_activity_text].strip}%") )
+    end
+
+
+    if params.has_key?('hidden-filter_activity_tags') and !params['hidden-filter_activity_tags'].empty?
+      @activities &= Activity.tagged_with([params['hidden-filter_activity_tags']], :any => true)
+    end
+
+    render partial: 'activities/table_activities'
   end
 
   # GET /activities/1
