@@ -2,21 +2,15 @@
 <div>
 <%= form_tag activities_filter_path, id: 'filter_form_activities', :remote=>true do %>
 
-	
-	<div class="span8">
-
+	<span>
 		<%= text_field_tag 'filter_activity_text', '', :maxlength => 15,  :placeholder=>t('shared.search'), :class => 'input-xlarge' %>
+		<%= button_tag 'Search', class: 'btn', type: 'button', id: 'filter_activity_submit' %>
+	</span>
 		<br/>
-    <%= text_field_tag 'filter_activity_tags', '', :maxlength => 100, :placeholder=>'Search by tag',	:class => 'input-xlarge'  %>
-
+	<span>
+    <%= text_field_tag 'filter_activity_tags', '', :maxlength => 100, :placeholder=>'Search by tag',	:class => 'input-medium'  %>
+  </span>
     
-
-	</div>
-
-	<div class="span2">
-		<%= button_tag "Update", class: 'btn btn-primary', type: 'button', id: 'filter_activity_submit' %>
-	</div>
-
 <% end %>
 
 
@@ -25,22 +19,10 @@
 $(document).ready(function() { 
 
 	$('#filter_activity_tags').tagsManager();
+
 	$('#filter_activity_submit').click(function(){
 		$('#filter_form_activities').submit();
 	});
-	// $('#filter_activity_tags').change(function(){
-	// 	$('#filter_form_activities').submit();
-	// })
-	// $('#filter_activity_text').change(function(){
-	// 	$('#filter_form_activities').submit();
-	// })
-
-	// $('#filter_form_activities').change(function(){$this.submit();});
-	
-  // $("#filter_course_subjects").val(7).select2({
-  //     placeholder: '<%= I18n.t("resources.all_subjects") %>'
-  // });
-
 	
 });
 </script>
