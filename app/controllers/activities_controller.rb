@@ -22,9 +22,9 @@ class ActivitiesController < ApplicationController
   def filter
     @activities = Activity.all
 
-    respond_to do |format|
-      format.html # filter.html.erb
-    end
+    # render :json => { :attachmentPartial => render_to_string('activities/table_activities', :layout => false, :locals => { }) }
+    # render 'activities/table_activities'
+    render '_table_activities'
   end
 
   # GET /activities/1

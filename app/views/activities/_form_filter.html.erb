@@ -1,23 +1,42 @@
 
-<input type="text" name="tags" placeholder="Tags" class="tm-input"/>
 <div>
-<%= form_tag activities_filter_path, id: 'filter_activities', :class=>"form-inline", :remote=>true do %>
+<%= form_tag activities_filter_path, id: 'filter_form_activities', :remote=>true do %>
 
 	
-	
- 	<%= text_field_tag 'filter_activity_tags', '', :maxlength => 100, :placeholder=>'Search by tag', 		:name=>'qtag', 	:class => 'tm-input'  %>
-  <%= text_field_tag 'filter_activity_text', '', :maxlength => 15,  :placeholder=>t('shared.search'), :name=>'qtext', :class => 'search-query' %>
+	<div class="span8">
+
+		<%= text_field_tag 'filter_activity_text', '', :maxlength => 15,  :placeholder=>t('shared.search'), :class => 'input-xlarge' %>
+		<br/>
+    <%= text_field_tag 'filter_activity_tags', '', :maxlength => 100, :placeholder=>'Search by tag',	:class => 'input-xlarge'  %>
+
+    
+
+	</div>
+
+	<div class="span2">
+		<%= button_tag "Update", class: 'btn btn-primary', type: 'button', id: 'filter_activity_submit' %>
+	</div>
 
 <% end %>
-
-
 
 
 <script type="text/javascript">
 
 $(document).ready(function() { 
 
-	$('.tm-input').tagsManager();
+	$('#filter_activity_tags').tagsManager();
+	$('#filter_activity_submit').click(function(){
+		$('#filter_form_activities').submit();
+	});
+	// $('#filter_activity_tags').change(function(){
+	// 	$('#filter_form_activities').submit();
+	// })
+	// $('#filter_activity_text').change(function(){
+	// 	$('#filter_form_activities').submit();
+	// })
+
+	// $('#filter_form_activities').change(function(){$this.submit();});
+	
   // $("#filter_course_subjects").val(7).select2({
   //     placeholder: '<%= I18n.t("resources.all_subjects") %>'
   // });

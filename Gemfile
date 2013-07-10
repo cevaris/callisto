@@ -10,7 +10,7 @@ gem "select2-rails", '~> 3.3.0'
 gem 'jquery-ui-rails', '~> 4.0.2'
 gem 'best_in_place', '~> 2.1.0'
 gem 'acts-as-taggable-on', '~> 2.4.1'
-gem 'tagmanager-rails', '~> 0.0.1'
+# gem 'tagmanager-rails', '~> 0.0.1'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.7'
