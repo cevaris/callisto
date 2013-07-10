@@ -2,15 +2,10 @@
 <div>
 <%= form_tag activities_filter_path, id: 'filter_form_activities', :remote=>true do %>
 
-	<span>
 		<%= text_field_tag 'filter_activity_text', '', :maxlength => 15,  :placeholder=>t('shared.search'), :class => 'input-xlarge' %>
-		<%= button_tag 'Search', class: 'btn', type: 'button', id: 'filter_activity_submit' %>
-	</span>
-		<br/>
-	<span>
-    <%= text_field_tag 'filter_activity_tags', '', :maxlength => 100, :placeholder=>'Search by tag',	:class => 'input-medium'  %>
-  </span>
-    
+		
+    <%= text_field_tag 'filter_activity_tags', '', :maxlength => 100, :placeholder=>'Search by tag',	:class => 'input-xlarge'  %>
+   <%= submit_tag 'Search', class: 'btn', id: 'filter_activity_submit' %> 
 <% end %>
 
 
@@ -18,7 +13,7 @@
 
 $(document).ready(function() { 
 
-	$('#filter_activity_tags').tagsManager();
+	// $('#filter_activity_tags').tagsManager();
 
 	$('#filter_activity_submit').click(function(){
 		$('#filter_form_activities').submit();

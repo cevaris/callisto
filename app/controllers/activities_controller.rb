@@ -30,8 +30,8 @@ class ActivitiesController < ApplicationController
     end
 
 
-    if params.has_key?('hidden-filter_activity_tags') and !params['hidden-filter_activity_tags'].empty?
-      @activities &= Activity.tagged_with([params['hidden-filter_activity_tags']], :any => true)
+    if params.has_key?('filter_activity_tags') and !params[:filter_activity_tags].empty?
+      @activities &= Activity.tagged_with([params[:filter_activity_tags]], :any => true)
     end
 
     render partial: 'activities/table_activities'
