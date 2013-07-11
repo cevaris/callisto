@@ -1,0 +1,9 @@
+in_progress:
+  name: 'In Progress'
+  thumbnail: icon-tasks
+completed:
+  name: 'Completed'
+  thumbnail: icon-ok
+incomplete:
+  name: 'Incomplete'
+  thumbnail: icon-ban-circle
