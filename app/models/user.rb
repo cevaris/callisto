@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 
   has_one  :setting
   has_many :activities
+  has_many :user_activities
 
   before_save do |user|
     user.email = user.email.downcase
