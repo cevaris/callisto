@@ -25,11 +25,6 @@ Callisto::Application.routes.draw do
 
   match '/activities/search' => 'activities#search'
   match '/activities/filter' => 'activities#filter'
-  
-  resources :activities do
-	  get :autocomplete_activity_name, :on => :collection
-	end
-
   resources :activities
 
 
