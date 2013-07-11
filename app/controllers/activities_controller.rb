@@ -1,4 +1,9 @@
 class ActivitiesController < ApplicationController
+
+
+	autocomplete :activity, :name
+
+
   # GET /activities
   # GET /activities.json
   def index

@@ -1,14 +1,16 @@
 
+
 <div>
 <%= form_tag activities_filter_path, id: 'filter_form_activities', :remote=>true do %>
+	
+	<%=  autocomplete_field_tag 'name', '', autocomplete_activity_name_activities_path, :size => 75, :class => 'input-xlarge', :placeholder=>t('shared.search')%>	
+  <%= text_field_tag 'filter_activity_tags', '', :maxlength => 100, :placeholder=>'Search by tag',	:class => 'input-xlarge'  %>
+ 	<%= submit_tag 'Search', class: 'btn', id: 'filter_activity_submit' %> 
 
-		<%= text_field_tag 'filter_activity_text', '', :maxlength => 15,  :placeholder=>t('shared.search'), :class => 'input-xlarge' %>
-		
-    <%= text_field_tag 'filter_activity_tags', '', :maxlength => 100, :placeholder=>'Search by tag',	:class => 'input-xlarge'  %>
-   <%= submit_tag 'Search', class: 'btn', id: 'filter_activity_submit' %> 
 <% end %>
 
 
+<%= javascript_include_tag "autocomplete-rails.js" %>
 <script type="text/javascript">
 
 $(document).ready(function() { 
@@ -29,4 +31,6 @@ $(document).ready(function() {
 	
 });
 </script>
+
+
 </div>
