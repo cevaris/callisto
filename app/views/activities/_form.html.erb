@@ -11,7 +11,12 @@
     </div>
   <% end %>
 
+  <%= f.text_field :name, placeholder: 'Enter Activity Name'  %>
+  <%= f.text_field :tag_list, placeholder: 'Enter Tags' %>
+  <%= f.text_area :description, :size => '50x10', placeholder: 'Enter Activity Description' %>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-primary' %>
+    <%= link_to 'Cancel', stream_path, html_options = {class: 'btn',:confirm => 'Cancel? Any data will be lost.'} %>
   </div>
 <% end %>
