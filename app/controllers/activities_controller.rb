@@ -36,6 +36,8 @@ class ActivitiesController < ApplicationController
       @activities &= Activity.tagged_with([params[:filter_activity_tags]], :any => true)
     end
 
+    Rails.logger.info @activities
+
     render partial: 'activities/table_activities'
   end
 
