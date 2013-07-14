@@ -9,3 +9,12 @@
 	<label><b>Description:</b></label>
 	<%= @activity.description %>
 <p>
+
+
+<span>
+	<% if !@user_activity.nil? %>
+	Accpeted <i class="<%= @user_activity.activity_state.thumbnail %>"></i>
+	<% else %>
+	<%= link_to 'Accept', '#accept', class: 'btn' %>
+	<% end %>
+</span>

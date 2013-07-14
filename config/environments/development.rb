@@ -41,5 +41,4 @@ Callisto::Application.configure do
     HOST_NAME = ENV['HOST_NAME']
   end
 
-
 end

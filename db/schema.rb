@@ -62,9 +62,9 @@ ActiveRecord::Schema.define(:version => 20130711150422) do
   create_table "user_activities", :force => true do |t|
     t.integer  "user_id"
     t.integer  "activity_id"
-    t.integer  "activity_state"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.integer  "activity_state_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "users", :force => true do |t|
