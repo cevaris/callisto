@@ -36,9 +36,26 @@ Callisto::Application.configure do
   config.assets.debug = false
 
 
+
+	#=====================================================================================
   HOST_NAME = 'localhost:3000'
   if !ENV.nil? and ENV.has_key?('HOST_NAME')
     HOST_NAME = ENV['HOST_NAME']
   end
+
+  ENV['AWS_BUCKET'] = 'images.activiti.co'
+  ENV['AWS_ACCESS_KEY_ID'] = 'AKIAIKKACIRQPH57FHBQ'
+  ENV['AWS_SECRET_ACCESS_KEY'] = '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'
+
+  config.paperclip_defaults = {
+	  :storage => :s3,
+	  :s3_credentials => {
+	    :bucket => ENV['AWS_BUCKET'],
+	    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+	    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+	  }
+	}
+
+	Paperclip.options[:command_path] = "/usr/local/bin/"
 
 end

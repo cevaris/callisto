@@ -3,3 +3,13 @@
 
 <h2><%= t 'settings.user_title' %></h2>
 
+
+<%= form_for @user do |f| %>
+  <div class="field">
+	  <%= f.label :avatar %><br />
+	  <%= f.file_field :avatar %>
+	  <%= image_tag @user.avatar.url :thumb %>
+	</div>
+  <%= f.submit %>
+<% end %>
+

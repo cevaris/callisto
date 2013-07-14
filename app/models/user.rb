@@ -2,13 +2,22 @@ class User < ActiveRecord::Base
 	acts_as_taggable_on
 	has_secure_password
 
-  attr_accessible :email, :name, :password, :password_confirmation
-  
+  attr_accessible :email, :name, :password, :password_confirmation, :avatar
 
   has_one  :setting
   has_many :activities
   has_many :user_activities
 
+  # This method associates the attribute ":avatar" with a file attachment
+  has_attached_file :avatar, 
+  	styles: { 
+  		icon: '50x50>', 
+			thumb: '100x100>', 
+			square: '200x200#', 
+			medium: '300x300>',
+			large: '500x500>' 
+		}
+  	
   before_save do |user|
     user.email = user.email.downcase
   end

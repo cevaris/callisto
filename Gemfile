@@ -11,6 +11,9 @@ gem 'jquery-ui-rails', '~> 4.0.2'
 gem 'best_in_place', '~> 2.1.0'
 gem 'acts-as-taggable-on', '~> 2.4.1'
 gem 'rails3-jquery-autocomplete'
+gem 'paperclip'#, '3.0.4'
+gem 'cocaine'#, '0.3.2'
+gem 'aws-sdk'
 # gem 'tagmanager-rails', '~> 0.0.1'
 
 group :development, :test do
