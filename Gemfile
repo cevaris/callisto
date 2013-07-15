@@ -14,7 +14,7 @@ gem 'rails3-jquery-autocomplete'
 gem 'paperclip', '3.4.2'
 gem 'cocaine', '0.5.1'
 gem 'aws-sdk'
-gem 'jquery-fileupload-rails'
+# gem 'jquery-fileupload-rails'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.7'
