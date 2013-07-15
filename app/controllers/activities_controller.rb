@@ -74,6 +74,9 @@ class ActivitiesController < ApplicationController
   # GET /activities/1/edit
   def edit
     @activity = Activity.find(params[:id])
+    5.times { @activity.activity_images.build }
+
+    Rails.logger.info "Activity: #{@activity.name}"
   end
 
   # POST /activities

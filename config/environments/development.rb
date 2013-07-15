@@ -58,6 +58,7 @@ Callisto::Application.configure do
 
 	Paperclip.options[:command_path] = "/usr/local/bin/"
 
+
 	config.middleware.use JQuery::FileUpload::Rails::Middleware
 
 end
