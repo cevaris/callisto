@@ -5,7 +5,7 @@ class ActivityImage < ActiveRecord::Base
   	styles: { 
 			thumb: '100x100>', 
 			square: '200x200#', 
-			medium: '300x300>',
-			large: '500x500>' 
+			medium: '500x500>',
+			large: '700x700>' 
 		}
 end

@@ -23,17 +23,20 @@
   </p>
 
 	<h4>New Files</h4>
+  <% if @activity.activity_images.count < 5 %>
+		
+		<%= f.fields_for :activity_images do |asset_fields| %>
 
-	<%= f.fields_for :activity_images do |asset_fields| %>
+			<% if asset_fields.object.new_record? %>
+			<p>
+				<%= asset_fields.file_field :image %>
+			</p>
+			<% end %>
 
-		<% if asset_fields.object.new_record? %>
-		<p>
-			<%= asset_fields.file_field :image %>
-		</p>
 		<% end %>
-
+	<% else %>
+		<p>Cannot add new images, max is 5. Delete some images to add new ones.<p>
 	<% end %>
-
 
 	<h4>Old Files</h4>
 

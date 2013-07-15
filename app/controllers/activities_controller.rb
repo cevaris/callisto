@@ -53,7 +53,6 @@ class ActivitiesController < ApplicationController
     	Rails.logger.info "#{@user_activity.inspect}"
     end
 
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @activity }
@@ -74,7 +73,9 @@ class ActivitiesController < ApplicationController
   # GET /activities/1/edit
   def edit
     @activity = Activity.find(params[:id])
-    5.times { @activity.activity_images.build }
+
+    images_left = (5 - @activity.activity_images.count)
+    images_left.times { @activity.activity_images.build }
 
     Rails.logger.info "Activity: #{@activity.name}"
   end

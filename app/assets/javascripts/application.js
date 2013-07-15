@@ -19,3 +19,5 @@
 //= require select2
 //= require best_in_place
 //= require jquery.ui.effect-highlight
+//= require bootstrap/load-image.min
+//= require bootstrap/image-gallery.min
