@@ -19,3 +19,4 @@
 //= require select2
 //= require best_in_place
 //= require jquery.ui.effect-highlight
+//= require jquery-fileupload
