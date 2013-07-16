@@ -6,11 +6,17 @@ class UserActivitiesController < ApplicationController
 	def show 
 		Rails.logger.info params
 		@activity = Activity.find params[:activity_id]
-		@user_activity = UserActivity.find params[:id]
-
 		@user = current_user || false
 
-		Rails.logger.info "I am logged in #{current_user}"
+		if @user
+			@user_activity = UserActivity.find_by_user_id_and_activity_id @user.id, @activity.id
+		else
+			@user_activity = UserActivity.find params[:id]
+		end
+
+		unless @user_activity
+			render 'static_pages/404', :status => 404
+		end
 
 	end
 

@@ -1,6 +1,11 @@
-<div class="btn-group">
+<% if @user and @user_activity %>
+	<%= @user.id  %>
+	<%= @user_activity.user.id %>
+	<%= @user and @user.id == @user_activity.user.id %>
+<% end %>
 
-	<% if @user and @user.id == @user_activity.id %>
+<div class="btn-group">
+	<% if @user and @user.id == @user_activity.user.id %>
 
 		<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 			<% if @user_activity.activity_state.name == ActivityState::ACCEPTED %>
@@ -28,7 +33,5 @@
 				<i class="<%= @user_activity.activity_state.thumbnail %>"></i> Forfeited
 			<% end %>
 		</a>
-		
 	<% end %>
-
 </div>
