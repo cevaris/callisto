@@ -4,6 +4,11 @@
 <h1><%= @activity.name %></h1>
 
 <p>
+	<label><b>User:</b></label>
+	<%= @user_activity.user.name %>
+<p>
+
+<p>
 	<label><b>Tags:</b></label>
 	<%= @activity.tag_list %>
 <p>
@@ -12,8 +17,6 @@
 	<label><b>Description:</b></label>
 	<%= @activity.description %>
 <p>
-
-
 
 <div class="activity-actions">
 	<%= render 'action' %>

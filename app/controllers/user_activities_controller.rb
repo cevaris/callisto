@@ -8,12 +8,17 @@ class UserActivitiesController < ApplicationController
 		@activity = Activity.find params[:activity_id]
 		@user_activity = UserActivity.find params[:id]
 
+		@user = current_user || false
+
+		Rails.logger.info "I am logged in #{current_user}"
+
 	end
 
 	
 	def accept
   	@activity = Activity.find params[:activity_id]
 		@user_activity = UserActivity.find params[:user_activity_id]
+		@user = current_user || false
 
   	update_action(:accept)
 
@@ -30,6 +35,7 @@ class UserActivitiesController < ApplicationController
   def complete
   	@activity = Activity.find params[:activity_id]
 		@user_activity = UserActivity.find params[:user_activity_id]
+		@user = current_user || false
 
   	update_action(:complete)
 
@@ -46,6 +52,7 @@ class UserActivitiesController < ApplicationController
   def forfeit
   	@activity = Activity.find params[:activity_id]
 		@user_activity = UserActivity.find params[:user_activity_id]
+		@user = current_user || false
 
   	update_action(:forfeit)
 
