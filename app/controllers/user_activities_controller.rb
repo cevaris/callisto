@@ -17,10 +17,9 @@ class UserActivitiesController < ApplicationController
 		unless @user_activity
 			render 'static_pages/404', :status => 404
 		end
-
 	end
 
-	
+
 	def accept
   	@activity = Activity.find params[:activity_id]
 		@user_activity = UserActivity.find params[:user_activity_id]

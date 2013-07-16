@@ -11,4 +11,9 @@ class ApplicationController < ActionController::Base
   #   @current_controller = controller_name
   # end
 
+
+  rescue_from ActiveRecord::RecordNotFound do
+	  render 'static_pages/404', :status => 404
+	end
+
 end
