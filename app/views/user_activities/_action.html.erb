@@ -1,9 +1,11 @@
 <div class="btn-group">
 	<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-	  <% if !@user_activity.nil? %>
-		<i class="<%= @user_activity.activity_state.thumbnail %>"></i> Accpeted 
-		<% else %>
-		<i class="icon-plus"></i> Not Started 
+		<% if @user_activity.activity_state.name == ActivityState::ACCEPTED %>
+			<i class="<%= @user_activity.activity_state.thumbnail %>"></i> Accpeted 
+		<% elsif @user_activity.activity_state.name == ActivityState::COMPLETED %>
+			<i class="<%= @user_activity.activity_state.thumbnail %>"></i> Completed
+		<% elsif @user_activity.activity_state.name == ActivityState::FORFEITED %>
+			<i class="<%= @user_activity.activity_state.thumbnail %>"></i> Forfeited
 		<% end %>
 		<span class="caret"></span>
 	</a>

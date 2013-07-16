@@ -60,7 +60,7 @@ class UserActivitiesController < ApplicationController
 
     respond_to do |format|
     	if @user_activity.save
-    		format.html { redirect_to @user_activity, notice: 'Activity was successfully accepted.' }
+    		format.html { redirect_to activity_user_activity_url(@activity, @user_activity), notice: 'Activity was successfully accepted.' }
     	else
   			format.html { redirect_to @activity, error: 'Activity could not be accepted.' }
     	end
