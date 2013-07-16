@@ -1,5 +1,7 @@
 class ActivitiesController < ApplicationController
-	include SessionsHelper
+
+	before_filter :require_session, 
+		:only => [:new, :create, :update, :destroy]
 
 
   # GET /activities
@@ -22,11 +24,8 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  
-
   def filter
-    
-
+   
     filter = {}
     @activities = Activity.all
 
@@ -85,7 +84,6 @@ class ActivitiesController < ApplicationController
   # POST /activities
   # POST /activities.json
   def create
-  	require_session
 
     @activity = Activity.new(params[:activity])
     @activity.user = current_user

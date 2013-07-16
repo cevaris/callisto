@@ -33,12 +33,4 @@ class SettingsController < ApplicationController
     end
   end
 
-  private
-
-  # Requires user session
-  def require_session
-    unless current_user
-      redirect_to signin_path
-    end
-  end
 end

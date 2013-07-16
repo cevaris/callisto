@@ -1,22 +1,21 @@
 class UserActivitiesController < ApplicationController
 
+	before_filter :require_session, 
+		:only => [:create, :accept, :complete, :forfeit]
+
 	def show 
 		Rails.logger.info params
 		@activity = Activity.find params[:activity_id]
 		@user_activity = UserActivity.find params[:id]
-		Rails.logger.info @user_activity.inspect
 
 	end
 
 	
-
 	def accept
-  	require_session
-  	Rails.logger.info params
   	@activity = Activity.find params[:activity_id]
 		@user_activity = UserActivity.find params[:user_activity_id]
 
-  	action(:accept)
+  	update_action(:accept)
 
   	respond_to do |format|
 			if @user_activity.save
@@ -25,17 +24,14 @@ class UserActivitiesController < ApplicationController
 				format.html { render :nothing => true, :status => 500 }
 			end
     end
-
   end
 
 
   def complete
-  	require_session
-  	Rails.logger.info params
   	@activity = Activity.find params[:activity_id]
 		@user_activity = UserActivity.find params[:user_activity_id]
 
-  	action(:complete)
+  	update_action(:complete)
 
   	respond_to do |format|
 			if @user_activity.save
@@ -48,12 +44,10 @@ class UserActivitiesController < ApplicationController
   end
 
   def forfeit
-  	require_session
-  	Rails.logger.info params
   	@activity = Activity.find params[:activity_id]
 		@user_activity = UserActivity.find params[:user_activity_id]
 
-  	action(:forfeit)
+  	update_action(:forfeit)
 
   	respond_to do |format|
 			if @user_activity.save
@@ -66,11 +60,9 @@ class UserActivitiesController < ApplicationController
   end
 
 
-
+ 	
 
   def create
-  	require_session
-
     @activity = Activity.find params[:activity_id]
 
     @user_activity = UserActivity.new
@@ -78,7 +70,7 @@ class UserActivitiesController < ApplicationController
     @user_activity.activity_state = ActivityState.find_by_name ActivityState::ACCEPTED
     @user_activity.user = current_user
 
-    respond_to do |format|
+    return respond_to do |format|
     	if @user_activity.save
     		format.html { redirect_to activity_user_activity_url(@activity, @user_activity), notice: 'Activity was successfully accepted.' }
     	else
@@ -90,7 +82,7 @@ class UserActivitiesController < ApplicationController
 
   private 
 
-  def action(request)
+  def update_action(request)
 
   	case request
 	  	when :accept
@@ -101,8 +93,7 @@ class UserActivitiesController < ApplicationController
 	  		state = ActivityState.find_by_name ActivityState::FORFEITED
 	  	end
 
-  	@user_activity.activity_state = state
+		@user_activity.activity_state = state
   end
-
 
 end

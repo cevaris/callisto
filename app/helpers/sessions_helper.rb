@@ -21,8 +21,16 @@ module SessionsHelper
     cookies.delete(:remember_token)
   end
 
+  # def login_required  
+  #   unless current_user  
+  #     flash[:error] = 'You must be logged in to view this page.'  
+  #     redirect_to signin_path  
+  #   end  
+  # end  
+
   def require_session
     unless current_user
+    	flash[:error] = 'You must be logged in to view this page.'  
       redirect_to signin_path
     end
   end
