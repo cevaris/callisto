@@ -8,9 +8,8 @@
 		<span class="caret"></span>
 	</a>
 	<ul class="dropdown-menu">
-	  <li><%= link_to 'Accept',   activities_action_url(@user_activity, :accept),   :remote => true %></li>
-	  <li><%= link_to 'Complete', activities_action_url(@user_activity, :complete), :remote => true %></li>
-	  <li><%= link_to 'Decline',  activities_action_url(@user_activity, :decline),  :remote => true %></li>
+	  <li><%= link_to 'Complete', activity_user_activity_complete_path(@activity, @user_activity), :remote => true %></li>
+	  <li><%= link_to 'Forfeit',  activity_user_activity_forfeit_path(@activity,@user_activity),  :remote => true %></li>
 	</ul>
 </div>
 

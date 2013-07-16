@@ -25,13 +25,21 @@ Callisto::Application.routes.draw do
 
 
 
+  # match '/user_activities/:id/action/:request' => 'user_activities#action', as: 'user_activities_action'
 
   match '/activities/search' => 'activities#search'
   match '/activities/filter' => 'activities#filter'
-  resources :activities
+  
+  resources :activities do 
+  	resources :user_activities do
+  		get 'accept'
+  		get 'forfeit'
+  		get 'complete'
+  	end
+  end
 
-  match '/user_activities/:id/action/:request' => 'user_activities#action', as: 'user_activities_action'
-  resources :user_activities
+  
+  
   
 
 
