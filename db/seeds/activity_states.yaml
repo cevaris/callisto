@@ -5,5 +5,5 @@ completed:
   name: 'Completed'
   thumbnail: icon-ok
 forfieted:
-  name: 'Forfieted'
+  name: 'Forfeited'
   thumbnail: icon-ban-circle

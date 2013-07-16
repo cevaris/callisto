@@ -1,4 +1,5 @@
 <div class="btn-group">
+
 	<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 		<% if @user_activity.activity_state.name == ActivityState::ACCEPTED %>
 			<i class="<%= @user_activity.activity_state.thumbnail %>"></i> Accpeted 
@@ -10,26 +11,9 @@
 		<span class="caret"></span>
 	</a>
 	<ul class="dropdown-menu">
-	  <li><%= link_to 'Complete', activity_user_activity_complete_path(@activity, @user_activity), :remote => true %></li>
-	  <li><%= link_to 'Forfeit',  activity_user_activity_forfeit_path(@activity,@user_activity),  :remote => true %></li>
+		<li><%= link_to 'Accept',   activity_user_activity_accept_path(@activity,@user_activity),    :remote => true, class: 'accept-user-activity-select' %></li>
+	  <li><%= link_to 'Complete', activity_user_activity_complete_path(@activity, @user_activity), :remote => true, class: 'accept-user-activity-select' %></li>
+	  <li><%= link_to 'Forfeit',  activity_user_activity_forfeit_path(@activity,@user_activity),   :remote => true, class: 'accept-user-activity-select' %></li>
 	</ul>
+
 </div>
-
-
-<script type="text/javascript">
-
-$(document).ready(function() { 
-
-	
-
-	$('.link-delete).bind('ajax:beforeSend, function() {
-	  $('#mySpinner').show();
-	});
-
-	$('.link-delete).bind('ajax:complete:, function() {
-	  $('#mySpinner').hide();
-	});
-
-	
-});
-</script>

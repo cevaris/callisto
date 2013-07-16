@@ -1,5 +1,5 @@
 class ActivityState < ActiveRecord::Base
 	ACCEPTED  = 'Accepted'
 	COMPLETED = 'Completed'
-	FORFEITED = 'Forfit'
+	FORFEITED = 'Forfeited'
 end

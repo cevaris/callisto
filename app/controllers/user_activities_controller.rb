@@ -4,10 +4,30 @@ class UserActivitiesController < ApplicationController
 		Rails.logger.info params
 		@activity = Activity.find params[:activity_id]
 		@user_activity = UserActivity.find params[:id]
+		Rails.logger.info @user_activity.inspect
 
 	end
 
 	
+
+	def accept
+  	require_session
+  	Rails.logger.info params
+  	@activity = Activity.find params[:activity_id]
+		@user_activity = UserActivity.find params[:user_activity_id]
+
+  	action(:accept)
+
+  	respond_to do |format|
+			if @user_activity.save
+				format.html { render :partial => 'action', :layout=>false }
+			else
+				format.html { render :nothing => true, :status => 500 }
+			end
+    end
+
+  end
+
 
   def complete
   	require_session
