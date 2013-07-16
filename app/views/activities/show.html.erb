@@ -10,15 +10,13 @@
 	<%= @activity.description %>
 <p>
 
-
-<span>
-	<% if !@user_activity.nil? %>
-	Accpeted <i class="<%= @user_activity.activity_state.thumbnail %>"></i>
-	<% else %>
-	<%= link_to 'Accept', '#accept', class: 'btn' %>
-	<% end %>
+<span class="activity-action">
+	<%= render 'action' %>
 </span>
 
+<p>
+	<label><b>Pictures:</b></label>
+<p>
 
 <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
 	<% @activity.activity_images.each do |activity_image| %>
@@ -46,12 +44,6 @@
 
 $(document).ready(function() { 
 
-	$('#modal-gallery').on('load', function () {
-			var modalData = $(this).data('modal');
-	    // modalData.$links is the list of (filtered) element nodes as jQuery object
-	    // modalData.img is the img (or canvas) element for the loaded image
-	    // modalData.options.index is the index of the current link
-	});
 	
 });
 </script>

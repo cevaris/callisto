@@ -22,6 +22,11 @@ class ActivitiesController < ApplicationController
     end
   end
 
+  def action
+  	require_session
+
+  end
+
   def filter
     
 
