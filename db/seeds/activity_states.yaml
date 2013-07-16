@@ -1,9 +1,9 @@
-in_progress:
-  name: 'In Progress'
+accepted:
+  name: 'Accepted'
   thumbnail: icon-tasks
 completed:
   name: 'Completed'
   thumbnail: icon-ok
-incomplete:
-  name: 'Incomplete'
+forfieted:
+  name: 'Forfieted'
   thumbnail: icon-ban-circle

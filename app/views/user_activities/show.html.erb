@@ -13,11 +13,11 @@
 	<%= @activity.description %>
 <p>
 
-<% if !@user_activity.nil? %>
-	Accpeted <i class="<%= @user_activity.activity_state.thumbnail %>"></i>
-<% else %>
-	<%= link_to 'Accept', new_user_activity_path %> <i class="icon-plus"></i> 
-<% end %>
+
+
+<span class="activity-action">
+	<%= render 'action' %>
+</span>
 
 <p>
 	<label><b>Pictures:</b></label>
@@ -43,4 +43,7 @@
       <a class="btn modal-download" target="_blank"><i class="icon-download"></i> Download</a>
   </div>
 </div>
+
+
+
 

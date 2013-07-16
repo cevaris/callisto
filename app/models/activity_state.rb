@@ -1,3 +1,5 @@
 class ActivityState < ActiveRecord::Base
-  # attr_accessible :title, :body
+	ACCEPTED  = 'Accepted'
+	COMPLETED = 'Completed'
+	FORFEITED = 'Forfit'
 end

@@ -23,9 +23,16 @@ Callisto::Application.routes.draw do
   resources :users 
   match '/stream', to: 'users#stream'
 
+
+
+
   match '/activities/search' => 'activities#search'
   match '/activities/filter' => 'activities#filter'
   resources :activities
+
+  match '/user_activities/:id/action/:request' => 'user_activities#action', as: 'user_activities_action'
+  resources :user_activities
+  
 
 
 
