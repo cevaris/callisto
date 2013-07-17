@@ -28,8 +28,8 @@ $(document).ready(function() {
 	$(document)
 	.on('ajax:success', '#follow_user_select', function(event, data, status, xhf) {
 		// $('#follow_user_select').addClass('disabled');
-		$('#follow_user_select').prop("href", "<%= user_unfollow_url(@user) %>");
 		$('#follow_user_select').text('Unfollow');
+		$('#follow_user_select').prop("href", "<%= user_unfollow_url(@user) %>");
 		$('#follow_user_select').attr('id','unfollow_user_select')
 	});	
 
@@ -42,8 +42,8 @@ $(document).ready(function() {
 	$(document)
 	.on('ajax:success', '#unfollow_user_select', function(event, data, status, xhf) {
 		// $('#unfollow_user_select').addClass('disabled');
-		$('#unfollow_user_select').prop("href", "<%= user_follow_url(@user) %>");
 		$('#unfollow_user_select').text('Follow');
+		$('#unfollow_user_select').prop("href", "<%= user_follow_url(@user) %>");
 		$('#unfollow_user_select').attr('id','follow_user_select')
 	});	
 
