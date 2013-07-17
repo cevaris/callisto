@@ -1,12 +1,13 @@
 class Activity < ActiveRecord::Base
 	acts_as_taggable
+	acts_as_followable
+
   acts_as_taggable_on :tags
 
   attr_accessible :description, :name, :tag_list, :video_url, :activity_images_attributes
 
   belongs_to :user
   has_many :activity_images
- 
 
   accepts_nested_attributes_for :activity_images, :allow_destroy => true    
 

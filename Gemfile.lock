@@ -30,6 +30,7 @@ GEM
       multi_json (~> 1.0)
     acts-as-taggable-on (2.4.1)
       rails (>= 3, < 5)
+    acts_as_follower (0.1.1)
     annotate (2.5.0)
       rake
     arel (3.0.2)
@@ -170,6 +171,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on (~> 2.4.1)
+  acts_as_follower (~> 0.1.1)
   annotate (~> 2.5.0)
   auto_html (~> 1.6.0)
   aws-sdk (~> 1.11.1)
