@@ -2,7 +2,7 @@ class Activity < ActiveRecord::Base
 	acts_as_taggable
   acts_as_taggable_on :tags
 
-  attr_accessible :description, :name, :tag_list, :activity_images_attributes
+  attr_accessible :description, :name, :tag_list, :video_url, :activity_images_attributes
 
   belongs_to :user
   has_many :activity_images

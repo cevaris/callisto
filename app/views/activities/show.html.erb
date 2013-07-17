@@ -36,6 +36,19 @@
 	<% end %>
 <% end %>
 
+<div>
+	<label><b>Video:</b></label>
+	<% if @activity.video_url %>
+		<% if @activity.video_url.include?('youtube') or @activity.video_url.include?('youtu.be') %>
+			<%= auto_html(@activity.video_url) { youtube } %>
+		<% elsif @activity.video_url.include? 'vimeo' %>
+			<%= auto_html(@activity.video_url) { vimeo } %>
+		<% else %>
+			<%= auto_html(@activity.video_url) { simple_format; link(:target => 'blank') } %>
+		<% end %>
+	<% end %>
+</div>
+
 <p>
 	<label><b>Pictures:</b></label>
 <p>
