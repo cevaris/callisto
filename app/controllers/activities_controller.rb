@@ -7,22 +7,28 @@ class ActivitiesController < ApplicationController
   # GET /activities
   # GET /activities.json
   def index
-  	if signed_in?
-  		redirect_to @current_user 
-  	else
-  		render 'static_pages/home'
-  	end
-  end
-
-
-  def search
-    @activities = Activity.all
+  	# if signed_in?
+  	# 	redirect_to @current_user 
+  	# else
+  	# 	render 'static_pages/home'
+  	# end
+  	@activities = Activity.all
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @activities }
     end
   end
+
+
+  # def search
+  #   @activities = Activity.all
+
+  #   respond_to do |format|
+  #     format.html # index.html.erb
+  #     format.json { render json: @activities }
+  #   end
+  # end
 
   def filter
    

@@ -7,14 +7,12 @@ Cannot find an activity? <%= link_to 'Create one here.', new_activity_path %>
 <table class="table">
   <tr>
     <th>Name</th>
-    <th>Creator</th>
     <th>Tags</th>
   </tr>
 
 <% @activities.each do |activity| %>
   <tr>
     <td><%= link_to "#{activity.name.titlecase}", activity %></td>
-    <td><%= link_to "#{activity.user.name.titlecase}", activity.user %></td>
     <td><%= activity.tag_list %></td>
   </tr>
 <% end %>

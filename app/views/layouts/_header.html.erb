@@ -14,9 +14,9 @@
         </a>
         <div class="nav-collapse collapse">
           <ul class="nav pull-right">
+          		<li><%= link_to 'Home', stream_path %></li>
+            	<li><%= link_to 'Search', activities_path %></li>
             <% if signed_in? %>
-            	<li><%= link_to 'Home', stream_path %></li>
-            	<li><%= link_to 'Search', activities_search_path %></li>
             	<li><%= link_to "#{current_user.name.titlecase}", current_user %></li>
             	<li><%= link_to t('signin.settings'), settings_path %></li>
               <li> <%= link_to t('signin.signout'), signout_path, method: "delete" %> </li>              
