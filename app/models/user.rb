@@ -1,8 +1,14 @@
 class User < ActiveRecord::Base
+	ADMIN = 'admin'
+	SUPER_ADMIN = 'super_admin'
+	DEFAULT = 'default'
+
+
 	acts_as_taggable_on
 	has_secure_password
+	before_save :default_values
 
-  attr_accessible :email, :name, :password, :password_confirmation, :avatar
+  attr_accessible :email, :name, :password, :password_confirmation, :avatar, :role
 
   has_one  :setting
   has_many :activities
@@ -38,6 +44,10 @@ class User < ActiveRecord::Base
 
   def request_key
     Digest::MD5.hexdigest(self.email + self.confirmed.to_s + self.password_digest + self.created_at.iso8601)
+  end
+  
+  def admin?
+  	[User::ADMIN, User::SUPER_ADMIN].include? self.role
   end
 
   private

@@ -15,5 +15,10 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound do
 	  render 'static_pages/404', :status => 404
 	end
+	rescue_from CanCan::AccessDenied do |exception|
+    # flash[:error] = exception.message
+    render 'static_pages/404', :status => 404
+  end
+
 
 end
