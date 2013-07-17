@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
   include ApplicationHelper
+
+  protect_from_forgery
+  # check_authorization
 
   # # This allows us to see the current controller and action for feedback
   # before_filter :instantiate_controller_and_action_names
@@ -16,8 +18,8 @@ class ApplicationController < ActionController::Base
 	  render 'static_pages/404', :status => 404
 	end
 	rescue_from CanCan::AccessDenied do |exception|
-    # flash[:error] = exception.message
-    render 'static_pages/404', :status => 404
+    flash[:error] = 'Sorry, you do not have the privliges to  access this page.'
+    render 'static_pages/access_denied', :status => 500
   end
 
 

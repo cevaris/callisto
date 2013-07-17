@@ -2,6 +2,20 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+  	user ||= User.new # guest user (not logged in)
+
+    if user.role == User::SUPER_ADMIN
+      can :manage, :all
+    elsif user.role == User::ADMIN
+    	can :manage, :all
+    elsif user.role == User::DEFAULT
+      can :read, :all
+      can :create, :all
+      cannot :destroy, [Activity, ActivityImage]
+      cannot :edit, 	 [Activity, ActivityImage]
+      cannot :update,  [Activity, ActivityImage]
+    end
+
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)

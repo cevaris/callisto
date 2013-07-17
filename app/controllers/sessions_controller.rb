@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+	# skip_authorization_check :only => [:new, :create]
+	
   def new
     @user = User.new
   end

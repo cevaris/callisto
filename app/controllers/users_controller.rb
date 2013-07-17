@@ -1,17 +1,12 @@
 class UsersController < ApplicationController
-	include SessionsHelper
-
-  def index
-  	require_session
-  end
+	# skip_authorization_check :only => [:new, :create]
 
   def show
-    require_session
     @user = User.find params[:id]
   end
 
   def stream
-		require_session
+
   	@user = current_user
   	@activities = Activity.all
   end
@@ -21,7 +16,6 @@ class UsersController < ApplicationController
   end
 
   def update
-  	require_session
   	@user = current_user
 
     respond_to do |format|

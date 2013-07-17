@@ -85,6 +85,12 @@ class ActivitiesController < ApplicationController
     images_left.times { @activity.activity_images.build }
 
     Rails.logger.info "Activity: #{@activity.name}"
+
+    # authorize edits only after the first day of activity creation
+    if @activity.created_at < 1.day.ago
+    	authorize! :edit, @activity
+    end
+
   end
 
   # POST /activities
@@ -119,6 +125,10 @@ class ActivitiesController < ApplicationController
         format.json { render json: @activity.errors, status: :unprocessable_entity }
       end
     end
+    
+    if @activity.created_at < 1.day.ago
+    	authorize! :edit, @activity
+    end
   end
 
   # DELETE /activities/1
@@ -130,6 +140,10 @@ class ActivitiesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to activities_url }
       format.json { head :no_content }
+    end
+
+    if @activity.created_at < 1.day.ago
+    	authorize! :edit, @activity
     end
   end
 end

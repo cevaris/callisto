@@ -2,8 +2,7 @@ class User < ActiveRecord::Base
 	ADMIN = 'admin'
 	SUPER_ADMIN = 'super_admin'
 	DEFAULT = 'default'
-
-
+	
 	acts_as_taggable_on
 	has_secure_password
 	before_save :default_values
