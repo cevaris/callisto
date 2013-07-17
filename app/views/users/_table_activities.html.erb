@@ -1,0 +1,13 @@
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Tags</th>
+  </tr>
+
+<% @activities.each do |activity| %>
+  <tr>
+    <td><%= link_to "#{activity.name.titlecase}", activity %></td>
+    <td><%= activity.tag_list %></td>
+  </tr>
+<% end %>
+</table>

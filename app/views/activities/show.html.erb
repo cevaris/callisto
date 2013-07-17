@@ -1,10 +1,15 @@
 <%= hidden_field_tag 'activity-id', @activity.id %>
 
-<% if can? :edit, @activity %>
-<span>
-	<%= link_to 'Edit', edit_activity_path(@activity), class: 'btn pull-right' %>
-</span>
+<span class="pull-right">
+<% if @user.following? @activity %>
+	<%= link_to 'Watch', 'javascript:void(0);', class: 'btn disabled' %>
+<% else %>	
+	<%= link_to 'Watched', '#follow', class: 'btn', remote: true %>
 <% end %>
+<% if can? :edit, @activity %>
+	<%= link_to 'Edit', edit_activity_path(@activity), class: 'btn' %>
+<% end %>
+</span>
 
 <h1><%= @activity.name %></h1>
 

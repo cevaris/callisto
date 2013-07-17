@@ -1,25 +1,21 @@
-<div class="row">
-  <aside class="span8">
-    <section>
-    	<p><strong><%= @user.name %></strong></p>
-    	<p><%= image_tag @user.avatar.url :thumb %></p>
-    </section>
-  </aside>
-</div>
 
-<table class="table">
-  <tr>
-    <th>Name</th>
-    <th>Creator</th>
-    <th>Tags</th>
-  </tr>
+<aside class="span3">
+  <section>
+  	<p><strong><%= @user.name %></strong></p>
+  	<p><%= image_tag @user.avatar.url :thumb %></p>
+  </section>
+</aside>
 
-<% @user.activities.each do |activity| %>
-  <tr>
-    <td><%= link_to "#{activity.name.titlecase}", activity %></td>
-    <td><%= link_to "#{activity.user.name.titlecase}", activity.user %></td>
-    <td><%= activity.tag_list %></td>
-  </tr>
+
+<span class="pull-right">
+<% if @current_user and @current_user.id != @user.id %>
+	<% if @current_user.following? @user %>
+		<%= link_to 'Following', 'javascript:void(0);', class: 'btn disabled' %>
+	<% else %>	
+		<%= link_to 'Follow', '#follow', class: 'btn', remote: true %>
+	<% end %>
 <% end %>
-</table>
+</span>
+
+<%= render 'table_activities' %>
 

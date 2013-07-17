@@ -4,18 +4,6 @@ Cannot find an activity? <%= link_to 'Create one here.', new_activity_path %>
 
 <div class="filter_activity_results">
 
-<table class="table">
-  <tr>
-    <th>Name</th>
-    <th>Tags</th>
-  </tr>
-
-<% @activities.each do |activity| %>
-  <tr>
-    <td><%= link_to "#{activity.name.titlecase}", activity %></td>
-    <td><%= activity.tag_list %></td>
-  </tr>
-<% end %>
-</table>
+<%= render 'table_activities' %>
 
 </div>

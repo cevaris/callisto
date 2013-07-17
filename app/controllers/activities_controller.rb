@@ -7,11 +7,6 @@ class ActivitiesController < ApplicationController
   # GET /activities
   # GET /activities.json
   def index
-  	# if signed_in?
-  	# 	redirect_to @current_user 
-  	# else
-  	# 	render 'static_pages/home'
-  	# end
   	@activities = Activity.all
 
     respond_to do |format|
@@ -19,16 +14,6 @@ class ActivitiesController < ApplicationController
       format.json { render json: @activities }
     end
   end
-
-
-  # def search
-  #   @activities = Activity.all
-
-  #   respond_to do |format|
-  #     format.html # index.html.erb
-  #     format.json { render json: @activities }
-  #   end
-  # end
 
   def filter
    
@@ -57,6 +42,7 @@ class ActivitiesController < ApplicationController
     if current_user
     	@user = current_user
     	@user_activity = UserActivity.find_by_user_id_and_activity_id @user.id, @activity.id
+    	
     	Rails.logger.info "#{@user_activity.inspect}"
     end
 
