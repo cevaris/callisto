@@ -1,5 +1,10 @@
 <%= hidden_field_tag 'activity-id', @activity.id %>
 
+<% if can? :edit, @activity %>
+<span>
+	<%= link_to 'Edit', edit_activity_path(@activity), class: 'btn pull-right' %>
+</span>
+<% end %>
 
 <h1><%= @activity.name %></h1>
 
