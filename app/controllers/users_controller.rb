@@ -1,17 +1,19 @@
 class UsersController < ApplicationController
 	# skip_authorization_check :only => [:new, :create]
 
+	def home
+    if signed_in?
+    	@user = current_user
+  		@activities = Activity.all
+    else
+    	render 'static_pages/home'
+    end
+  end
+
   def show
     @user = User.find params[:id]
     @activities = @user.activities
     @current_user = current_user 
-    
-  end
-
-  def stream
-
-  	@user = current_user
-  	@activities = Activity.all
   end
 
   def new

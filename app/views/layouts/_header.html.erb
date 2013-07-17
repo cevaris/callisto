@@ -2,7 +2,7 @@
   <div class="navbar-inner">
     <div class="container">
     	<% if signed_in? %>
-      <%= link_to t('global.app_name'), stream_path, class: "brand" %>
+      <%= link_to t('global.app_name'), root_path, class: "brand" %>
       <% else %>
       <%= link_to t('global.app_name'), root_path, class: "brand" %>
       <% end %>
@@ -14,7 +14,7 @@
         </a>
         <div class="nav-collapse collapse">
           <ul class="nav pull-right">
-          		<li><%= link_to 'Home', stream_path %></li>
+          		<li><%= link_to 'Home', root_path %></li>
             	<li><%= link_to 'Search', activities_path %></li>
             <% if signed_in? %>
             	<li><%= link_to "#{current_user.name.titlecase}", current_user %></li>

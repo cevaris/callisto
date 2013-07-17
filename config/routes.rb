@@ -6,7 +6,7 @@ Callisto::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :feedbacks, only: [:create]
 
-  root to: 'static_pages#home'
+  root to: 'users#home'
 
   match '/404',  to: 'static_pages#page404', as: 'page404'
   match '/500',  to: 'static_pages#page500', as: 'page500'
@@ -19,7 +19,6 @@ Callisto::Application.routes.draw do
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
 
-  resources :resources
   resources :users 
   match '/stream', to: 'users#stream'
 
