@@ -16,6 +16,19 @@ class UsersController < ApplicationController
     @current_user = current_user 
   end
 
+  def follow
+  	@user = User.find params[:user_id]
+		@current_user = current_user || false
+
+  	respond_to do |format|
+			if @current_user and @current_user.follow(@user)
+				format.html { render :nothing => true, :status => 200 }
+			else
+				format.html { render :nothing => true, :status => 500 }
+			end
+    end
+  end
+
   def new
     @user = User.new
   end

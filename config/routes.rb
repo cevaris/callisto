@@ -19,17 +19,14 @@ Callisto::Application.routes.draw do
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
 
-  resources :users 
-  match '/stream', to: 'users#stream'
+  resources :users do
+  	get 'follow'
+  end 
 
-
-
-  # match '/user_activities/:id/action/:request' => 'user_activities#action', as: 'user_activities_action'
-
-  # match '/activities/search' => 'activities#search'
   match '/activities/filter' => 'activities#filter'
-  
+
   resources :activities do 
+  	get 'watch'
   	resources :user_activities do
   		get 'accept'
   		get 'forfeit'
@@ -37,8 +34,6 @@ Callisto::Application.routes.draw do
   	end
   end
 
-  
-  
   
 
 
