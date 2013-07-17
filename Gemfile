@@ -16,6 +16,7 @@ gem 'cocaine', '0.5.1'
 gem 'aws-sdk'
 # gem 'jquery-fileupload-rails'
 gem 'bootstrap-addons-rails'
+gem "auto_html"
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.7'

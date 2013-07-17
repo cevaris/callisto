@@ -33,6 +33,9 @@ GEM
     annotate (2.5.0)
       rake
     arel (3.0.2)
+    auto_html (1.6.0)
+      redcarpet (~> 2.0)
+      rinku (~> 1.5.0)
     aws-sdk (1.11.1)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
@@ -125,6 +128,8 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    redcarpet (2.3.0)
+    rinku (1.5.1)
     rubyzip (0.9.9)
     sass (3.2.9)
     sass-rails (3.2.6)
@@ -165,6 +170,7 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on (~> 2.4.1)
   annotate (~> 2.5.0)
+  auto_html
   aws-sdk
   bcrypt-ruby (~> 3.0.1)
   best_in_place (~> 2.1.0)

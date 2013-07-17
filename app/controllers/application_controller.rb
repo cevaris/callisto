@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  include SessionsHelper
+  include ApplicationHelper
 
   # # This allows us to see the current controller and action for feedback
   # before_filter :instantiate_controller_and_action_names

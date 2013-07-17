@@ -23,6 +23,23 @@
 </div>
 
 <p>
+	<label><b>Report:</b></label>
+	<%= @user_activity.report %>
+<p>
+
+<div>
+	<label><b>Video:</b></label>
+	<% if @user_activity.video_url %>
+		<% if @user_activity.video_url.include?('youtube') or @user_activity.video_url.include?('youtu.be') %>
+			<%= auto_html(@user_activity.video_url) { youtube } %>
+		<% end %>
+		<% if @user_activity.video_url.include? 'vimeo' %>
+			<%= auto_html(@user_activity.video_url) { vimeo } %>
+		<% end %>
+	<% end %>
+</div>
+
+<p>
 	<label><b>Pictures:</b></label>
 <p>
 
