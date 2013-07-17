@@ -4,7 +4,6 @@ class Activity < ActiveRecord::Base
 
   attr_accessible :description, :name, :tag_list, :activity_images_attributes
 
-
   belongs_to :user
   has_many :activity_images
  

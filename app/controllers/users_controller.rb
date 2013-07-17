@@ -8,8 +8,6 @@ class UsersController < ApplicationController
   def show
     require_session
     @user = User.find params[:id]
-    
-
   end
 
   def stream

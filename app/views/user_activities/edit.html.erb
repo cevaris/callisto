@@ -1,0 +1,74 @@
+<h1>Editing activity</h1>
+
+<%= form_for [@activity,@user_activity], :html => { :multipart => true } do |f| %>
+	<% if @user_activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_activity.errors.count, "error") %> prohibited your activity from being saved:</h2>
+
+      <ul>
+      <% @user_activity.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <h1><%= @activity.name %></h1>
+
+	<p>
+		<label><b>User:</b></label>
+		<%= @user_activity.user.name %>
+	<p>
+
+	<p>
+		<label><b>Tags:</b></label>
+		<%= @activity.tag_list %>
+	<p>
+
+	<p>
+		<label><b>Description:</b></label>
+		<%= @activity.description %>
+	<p>
+
+
+  <p>
+    <%= f.label :report %>
+    <%= f.text_area :report %>
+  </p>
+  <p>
+    <%= f.label :video_url %>
+    <%= f.text_field :video_url %>
+  </p>
+
+	<h4>New Images</h4>
+  <% if @user_activity.user_activity_images.count < 5 %>
+		
+		<%= f.fields_for :user_activity_images do |asset_fields| %>
+
+			<% if asset_fields.object.new_record? %>
+			<p>
+				<%= asset_fields.file_field :image %>
+			</p>
+			<% end %>
+
+		<% end %>
+	<% else %>
+		<p>Cannot add new images, max is 5. Delete some images to add new ones.<p>
+	<% end %>
+
+	<h4>Images</h4>
+
+	<%= f.fields_for :user_activity_images do |asset_fields| %>			
+
+		<% unless asset_fields.object.new_record? %>
+		<div class="thumb">
+			<%= link_to image_tag(asset_fields.object.image.url(:thumb)), asset_fields.object.image.url(:original) %>
+			<%= asset_fields.check_box :_destroy %>			
+		</div>	
+		<% end %>
+
+	<% end %>
+
+  <p><%= f.submit class: 'btn btn-primary' %></p>
+
+<% end %>

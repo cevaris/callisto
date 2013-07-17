@@ -1,14 +1,14 @@
 class UserActivitiesController < ApplicationController
 
 	before_filter :require_session, 
-		:only => [:create, :accept, :complete, :forfeit]
+		:only => [:create, :accept, :complete, :forfeit, :new, :edit, :update]
 
 	def show 
 		Rails.logger.info params
 		@activity = Activity.find params[:activity_id]
 		@user = current_user || false
 
-		if @user
+		if @user and params[:id] == @user.id
 			@user_activity = UserActivity.find_by_user_id_and_activity_id @user.id, @activity.id
 		else
 			@user_activity = UserActivity.find params[:id]
@@ -19,6 +19,38 @@ class UserActivitiesController < ApplicationController
 		end
 	end
 
+	def edit
+		@activity = Activity.find params[:activity_id]
+		@user = current_user || false
+
+		if @user
+			@user_activity = UserActivity.find_by_user_id_and_activity_id @user.id, @activity.id
+			images_left = (5 - @user_activity.user_activity_images.count)
+    	images_left.times { @user_activity.user_activity_images.build }
+		end
+
+
+
+		unless @user_activity
+			render 'static_pages/404', :status => 404
+		end
+	end
+
+	def update
+  	@user = current_user
+  	@activity = Activity.find params[:activity_id]
+  	@user_activity = UserActivity.find_by_user_id_and_activity_id @user.id, @activity.id
+
+    respond_to do |format|
+      if @user_activity.update_attributes(params[:user_activity])
+        format.html { redirect_to activity_user_activity_url(@activity, @user_activity), notice: 'Your Activity was successfully updated.' }
+        format.json { head :no_content }
+      # else
+      #   format.html { render action: "edit" }
+      #   format.json { render json: @setting.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
 	def accept
   	@activity = Activity.find params[:activity_id]
@@ -35,7 +67,6 @@ class UserActivitiesController < ApplicationController
 			end
     end
   end
-
 
   def complete
   	@activity = Activity.find params[:activity_id]
@@ -70,9 +101,6 @@ class UserActivitiesController < ApplicationController
     end
   	
   end
-
-
- 	
 
   def create
     @activity = Activity.find params[:activity_id]
