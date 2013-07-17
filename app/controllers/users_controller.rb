@@ -16,6 +16,20 @@ class UsersController < ApplicationController
     @current_user = current_user 
   end
 
+
+  def unfollow
+  	@user = User.find params[:user_id]
+		@current_user = current_user || false
+
+  	respond_to do |format|
+			if @current_user and @current_user.stop_following(@user)
+				format.html { render :nothing => true, :status => 200 }
+			else
+				format.html { render :nothing => true, :status => 500 }
+			end
+    end
+  end
+
   def follow
   	@user = User.find params[:user_id]
 		@current_user = current_user || false
@@ -39,7 +53,6 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to settings_url, notice: 'User was successfully updated.' }
-        format.json { head :no_content }
       # else
       #   format.html { render action: "edit" }
       #   format.json { render json: @setting.errors, status: :unprocessable_entity }

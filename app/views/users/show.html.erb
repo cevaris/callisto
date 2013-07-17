@@ -10,12 +10,47 @@
 <span class="pull-right">
 <% if @current_user and @current_user.id != @user.id %>
 	<% if @current_user.following? @user %>
-		<%= link_to 'Following', 'javascript:void(0);', class: 'btn disabled' %>
+		<%= link_to 'Unfollow', user_unfollow_url(@user), class: 'btn', remote: true, id:'unfollow_user_select' %>
 	<% else %>	
-		<%= link_to 'Follow', user_follow_url(@user), class: 'btn', remote: true %>
+		<%= link_to 'Follow', user_follow_url(@user), class: 'btn', remote: true, id:'follow_user_select' %>
 	<% end %>
 <% end %>
 </span>
 
 <%= render 'table_activities' %>
 
+
+
+<script type="text/javascript">
+
+$(document).ready(function() { 
+	
+	$(document)
+	.on('ajax:success', '#follow_user_select', function(event, data, status, xhf) {
+		// $('#follow_user_select').addClass('disabled');
+		$('#follow_user_select').prop("href", "<%= user_unfollow_url(@user) %>");
+		$('#follow_user_select').text('Unfollow');
+		$('#follow_user_select').attr('id','unfollow_user_select')
+	});	
+
+	$(document)
+	.on('ajax:error', '#follow_user_select', function(event, data, status, xhf) {
+		pushFlash({message:'Error following user', state: 'error', fadeOut: 5000});
+	});
+
+
+	$(document)
+	.on('ajax:success', '#unfollow_user_select', function(event, data, status, xhf) {
+		// $('#unfollow_user_select').addClass('disabled');
+		$('#unfollow_user_select').prop("href", "<%= user_follow_url(@user) %>");
+		$('#unfollow_user_select').text('Follow');
+		$('#unfollow_user_select').attr('id','follow_user_select')
+	});	
+
+	$(document)
+	.on('ajax:error', '#unfollow_user_select', function(event, data, status, xhf) {
+		pushFlash({message:'Error unfollowing user.', state: 'error', fadeOut: 5000});
+	});
+
+});
+</script>

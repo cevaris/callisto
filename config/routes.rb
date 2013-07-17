@@ -21,6 +21,7 @@ Callisto::Application.routes.draw do
 
   resources :users do
   	get 'follow'
+  	get 'unfollow'
   end 
 
   match '/activities/filter' => 'activities#filter'
