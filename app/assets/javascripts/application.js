@@ -21,6 +21,4 @@
 //= require jquery.ui.effect-highlight
 //= require bootstrap/load-image.min
 //= require bootstrap/image-gallery.min
-//= require jquery-ui
-//= require autocomplete-rails
 //= require bootstrap-tagmanager

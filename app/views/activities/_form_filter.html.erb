@@ -17,16 +17,7 @@ $(document).ready(function() {
         typeahead: true,
         typeaheadAjaxSource: '<%= activities_filter_tags_path format: :json %>',
         typeaheadAjaxPolling: true
-    });
-
-	// $('#filter_activity_tags').tokenInput('<%= activities_filter_tags_path format: :json %>', {
-	// 		'searchingText': 'Loading...',
-	// 		'hintText': 'Search By Tag',
-	// 		'theme': 'facebook',
-	// 		onAdd: function() { $('#filter_form_activities').submit(); },
-	// 		onDelete: function() { $('#filter_form_activities').submit(); }
-	// 	}
-	// );
+  });
 
 	var timer;
 	$(document).on('keyup input', '#filter_activity_text', function() {    
