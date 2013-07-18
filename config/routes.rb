@@ -30,8 +30,6 @@ Callisto::Application.routes.draw do
   resources :activities do 
   	get 'watch'
   	get 'unwatch'
-  	get :autocomplete_activity_name, :on => :collection
-  	get :autocomplete_activity_description, :on => :collection
   	resources :user_activities do
   		get 'accept'
   		get 'forfeit'

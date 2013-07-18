@@ -3,9 +3,6 @@ class ActivitiesController < ApplicationController
 	before_filter :require_session, 
 		:only => [:new, :create, :update, :destroy]
 
-	autocomplete :activity, :name, :full => true
-	autocomplete :activity, :description, :full => true
-
   # GET /activities
   # GET /activities.json
   def index
@@ -19,12 +16,7 @@ class ActivitiesController < ApplicationController
 
 
   def filter_tags
-  	Rails.logger.info params
-  	# @books = Activity.where("name LIKE ?", "%params[:q]%")
-  	# @activities = Activity.tagged_with(params[:q], :any => true)
 	  @tags = ActsAsTaggableOn::Tag.where("tags.name LIKE ?", "%#{params[:q]}%") 
-  	Rails.logger.info @tags.inspect
-
 		respond_to do |format|
       format.json { render json: @tags }
     end
@@ -39,16 +31,13 @@ class ActivitiesController < ApplicationController
       @activities &= Activity.where( Activity.arel_table[:name].matches("%#{params[:filter_activity_text].strip}%") )
     end
 
-
     if params.has_key?('filter_activity_tags') and !params[:filter_activity_tags].empty?
     	tags = ActsAsTaggableOn::Tag.where(id: params[:filter_activity_tags]) 
     	if !tags.empty?
       	@activities &= Activity.tagged_with(tags.pluck(:name), :any => true)
       end
     end
-
-    Rails.logger.info @activities
-
+    
     render partial: 'activities/table_activities'
   end
 
