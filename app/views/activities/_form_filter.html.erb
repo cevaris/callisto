@@ -3,7 +3,7 @@
 <%= form_tag activities_filter_path, id: 'filter_form_activities', :remote=>true do %>
 	
 	<%= label_tag 'filter_activity_text', 'Search by Text' %>
-	<%= text_field_tag 'filter_activity_text', '', :maxlength => 50,  :class => 'input-xlarge' %>		
+	<%= text_field_tag 'filter_activity_text', '', :maxlength => 50,  :class => 'input-xlarge', style: "width:400px;" %>		
 	<%= label_tag 'filter_activity_tags', 'Search by Tag' %>
   <%= text_field_tag 'filter_activity_tags', '', :maxlength => 100, :class => 'input-xlarge'  %>
   
@@ -22,22 +22,21 @@ $(document).ready(function() {
 		}
 	);
 
-	$(document)
-  .on('ajax:error', '#filter_form_activities', function(event, data, status, xhr) {
-    pushFlash({message:"Error filtering results", state: 'error', fadeOut: 5000});
-  })
-  .on('ajax:success', "#filter_form_activities", function(event, data, status, xhr) {
-    $('.filter_activity_results').html(data);
-  });
-
-
- 	var timer;
+	var timer;
 	$(document).on('keyup input', '#filter_activity_text', function() {    
     var form = $('#filter_form_activities');
     timer && clearTimeout(timer);
     timer = setTimeout(function(){ 
       form.submit();
     }, 250);
+  });
+
+  $(document)
+  .on('ajax:error', '#filter_form_activities', function(event, data, status, xhr) {
+    pushFlash({message:"Error filtering results", state: 'error', fadeOut: 5000});
+  })
+  .on('ajax:success', "#filter_form_activities", function(event, data, status, xhr) {
+    $('.filter_activity_results').html(data);
   });
 	
 });

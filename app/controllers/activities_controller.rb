@@ -23,21 +23,25 @@ class ActivitiesController < ApplicationController
   end
 
   def filter
-   
-    filter = {}
-    @activities = Activity.all
+
+   	@activities = activity_tags = activity_names = []
 
     if params.has_key?('filter_activity_text') and !params[:filter_activity_text].empty?
-      @activities &= Activity.where( Activity.arel_table[:name].matches("%#{params[:filter_activity_text].strip}%") )
+      activity_names = Activity.where( Activity.arel_table[:name].matches("%#{params[:filter_activity_text].strip}%") )
     end
 
     if params.has_key?('filter_activity_tags') and !params[:filter_activity_tags].empty?
     	tags = ActsAsTaggableOn::Tag.where(id: params[:filter_activity_tags]) 
     	if !tags.empty?
-      	@activities &= Activity.tagged_with(tags.pluck(:name), :any => true)
+      	activity_tags = Activity.tagged_with(tags.pluck(:name), :any => true)
       end
     end
-    
+
+    # Combine results
+    @activities = activity_tags + activity_names
+    # return results
+    @activities.uniq!
+
     render partial: 'activities/table_activities'
   end
 
