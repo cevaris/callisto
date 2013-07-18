@@ -18,6 +18,10 @@
     <%= f.text_field :name %>
   </p>
   <p>
+    <%= f.label :tag_list %>
+    <%= f.text_field :tag_list %>
+  </p>
+  <p>
     <%= f.label :description %>
     <%= f.text_area :description %>
   </p>
@@ -58,3 +62,15 @@
   <p><%= f.submit class: 'btn btn-primary' %></p>
 
 <% end %>
+
+
+<script type="text/javascript">
+
+$(document).ready(function() { 
+
+	$('#activity_tag_list').tagsManager({
+		prefilled: "<%= @activity.tag_list %>"
+	});
+	
+});
+</script>

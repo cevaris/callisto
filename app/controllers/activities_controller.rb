@@ -126,6 +126,10 @@ class ActivitiesController < ApplicationController
     @activity = Activity.new(params[:activity])
     @activity.user = current_user
 
+    if params.has_key?('hidden-activity') and params['hidden-activity'].has_key?('tag_list')
+    	params[:activity][:tag_list] = params['hidden-activity'][:tag_list]
+    end
+
     respond_to do |format|
       if @activity.save
         format.html { redirect_to @activity, notice: 'Activity was successfully created.' }
@@ -141,6 +145,10 @@ class ActivitiesController < ApplicationController
   # PUT /activities/1.json
   def update
     @activity = Activity.find(params[:id])
+
+    if params.has_key?('hidden-activity') and params['hidden-activity'].has_key?('tag_list')
+    	params[:activity][:tag_list] = params['hidden-activity'][:tag_list]
+    end
 
     respond_to do |format|
       if @activity.update_attributes(params[:activity])

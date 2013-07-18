@@ -1,6 +1,67 @@
-<h1>New activity</h1>
+<h1>New Activity</h1>
 
-<%= render 'form' %>
+<%= form_for @activity, :html => { :multipart => true } do |f| %>
+	<% if @activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+
+      <ul>
+      <% @activity.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :tag_list %>
+    <%= f.text_field :tag_list %>
+  </p>
+  <p>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :video_url %>
+    <%= f.text_field :video_url %>
+  </p>
+
+	<h4>New Files</h4>
+  <% if @activity.activity_images.count < 5 %>
+		
+		<%= f.fields_for :activity_images do |asset_fields| %>
+
+			<% if asset_fields.object.new_record? %>
+			<p>
+				<%= asset_fields.file_field :image %>
+			</p>
+			<% end %>
+
+		<% end %>
+	<% else %>
+		<p>Cannot add new images, max is 5. Delete some images to add new ones.<p>
+	<% end %>
+
+	<h4>Old Files</h4>
+
+	<%= f.fields_for :activity_images do |asset_fields| %>			
+
+		<% unless asset_fields.object.new_record? %>
+		<div class="thumb">
+			<%= link_to image_tag(asset_fields.object.image.url(:thumb)), asset_fields.object.image.url(:original) %>
+			<%= asset_fields.check_box :_destroy %>			
+		</div>	
+		<% end %>
+
+	<% end %>
+
+  <p><%= f.submit class: 'btn btn-primary' %></p>
+
+<% end %>
 
 <script type="text/javascript">
 
