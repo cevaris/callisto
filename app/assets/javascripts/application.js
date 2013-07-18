@@ -23,3 +23,4 @@
 //= require bootstrap/image-gallery.min
 //= require jquery-ui
 //= require autocomplete-rails
+//= require bootstrap-tagmanager
