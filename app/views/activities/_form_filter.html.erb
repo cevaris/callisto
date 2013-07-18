@@ -32,16 +32,12 @@ $(document).ready(function() {
 
 
  	var timer;
-	$(document).on('keyup input', '#filter_activity_text', function() {
-  	// $("#standards_table").html('');  
-   //  $('#filter_map_standards_loading_wheel').show();
-    
+	$(document).on('keyup input', '#filter_activity_text', function() {    
     var form = $('#filter_form_activities');
-    // Prevents ajax request till N milliseconds 
     timer && clearTimeout(timer);
     timer = setTimeout(function(){ 
       form.submit();
-    }, 500);
+    }, 250);
   });
 	
 });
