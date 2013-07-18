@@ -16,9 +16,14 @@ class ActivitiesController < ApplicationController
 
 
   def filter_tags
-	  @tags = ActsAsTaggableOn::Tag.where("tags.name LIKE ?", "%#{params[:q]}%") 
+	  @tags = ActsAsTaggableOn::Tag.where("tags.name LIKE ?", "%#{params[:typeahead]}%")
+	  @tag_results = [] 
+	  @tags.each do |tag| # Need to build hash
+	  	@tag_results.push({tag: tag.name})
+	  end
+
 		respond_to do |format|
-      format.json { render json: @tags }
+      format.json { render json: {tags: @tag_results} }
     end
   end
 
