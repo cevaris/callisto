@@ -17,8 +17,8 @@
 <% end %>
 </span>
 
-<%= render 'table_activities' %>
 
+<%= render :partial => 'table_user_activities', locals: {user_activities: @user.activities_accepted} %>
 
 
 <script type="text/javascript">

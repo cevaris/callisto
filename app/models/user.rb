@@ -53,6 +53,19 @@ class User < ActiveRecord::Base
   	[User::ADMIN, User::SUPER_ADMIN].include? self.role
   end
 
+  def activities_accepted
+  	self.user_activities.where(activity_state_id: ActivityState.find_by_name(ActivityState::ACCEPTED)).limit(20)
+  end
+
+  def activities_following
+  	user_ids = self.following_by_type('User').pluck(:id)
+  	UserActivity.where(user_id: user_ids).order("created_at DESC").limit(20)
+  end
+
+  def activities_watching
+  	self.following_by_type('Activity').limit(20)
+  end
+
   private
 
   def default_values

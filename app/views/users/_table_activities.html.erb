@@ -1,13 +1,13 @@
 <table class="table table-hover table-condensed">
   <tr>
     <th>Name</th>
-    <th>Tags</th>
+    <th>User</th>
   </tr>
 
-<% @activities.each do |activity| %>
+<% activities.each do |activity| %>
   <tr>
     <td><%= link_to "#{activity.name.titlecase}", activity %></td>
-    <td><%= activity.tag_list %></td>
+    <td><%= link_to "#{activity.user.name.titlecase}", activity.user %></td>
   </tr>
 <% end %>
 </table>
