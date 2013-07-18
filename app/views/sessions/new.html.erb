@@ -12,8 +12,9 @@
 
       <%= f.submit t('signin.link'), class: "btn btn-large btn-primary" %>
     <% end %>
-    <p>
-      <%= link_to(t('signup.link'), signup_path) %>
-    </p>
+    <div class="hero-unit center">
+    	<h3>Do not have an account?</h3>
+      <%= link_to(t('signup.link'), signup_path, class: "btn btn-large btn-primary") %>
+    </div>
   </div>
 </div>
