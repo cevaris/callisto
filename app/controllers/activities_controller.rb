@@ -101,6 +101,8 @@ class ActivitiesController < ApplicationController
   # GET /activities/new.json
   def new
     @activity = Activity.new
+    images_left = (5 - @activity.activity_images.count)
+    images_left.times { @activity.activity_images.build }
 
     respond_to do |format|
       format.html # new.html.erb

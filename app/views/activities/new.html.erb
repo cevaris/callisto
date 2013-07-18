@@ -19,7 +19,7 @@
   </p>
   <p>
     <%= f.label :tag_list %>
-    <%= f.text_field :tag_list %>
+    <%= f.text_field :tag_list, autocomplete: :off %>
   </p>
   <p>
     <%= f.label :description %>
@@ -67,7 +67,11 @@
 
 $(document).ready(function() { 
 
-	$('#activity_tag_list').tagsManager();
+	$('#activity_tag_list').tagsManager({
+    typeahead: true,
+    typeaheadAjaxSource: '<%= activities_filter_tags_path format: :json %>',
+    typeaheadAjaxPolling: true
+  });
 	
 });
 </script>

@@ -14,9 +14,9 @@
 $(document).ready(function() { 
 
 	$('#filter_activity_tags').tagsManager({
-        typeahead: true,
-        typeaheadAjaxSource: '<%= activities_filter_tags_path format: :json %>',
-        typeaheadAjaxPolling: true
+    typeahead: true,
+    typeaheadAjaxSource: '<%= activities_filter_tags_path format: :json %>',
+    typeaheadAjaxPolling: true
   });
 
 	var timer;
