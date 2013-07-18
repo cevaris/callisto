@@ -1,5 +1,11 @@
 <%= hidden_field_tag 'activity-id', @activity.id %>
+<%= hidden_field_tag 'user-activity-id', @user_activity.id %>
 
+<span class="pull-right">
+<% if @current_user and (@current_user.id == @user_activity.user.id or @current_user.role = User::SUPER_ADMIN) %>
+	<%= link_to 'Edit', edit_activity_user_activity_path(@activity,@user_activity), class: 'btn' %>
+<% end %>
+</span>
 
 <h1><%= @activity.name %></h1>
 
@@ -35,7 +41,7 @@
 		<% elsif @user_activity.video_url.include? 'vimeo' %>
 			<%= auto_html(@user_activity.video_url) { vimeo } %>
 		<% else %>
-			<%= auto_html(@activity.video_url) { simple_format; link(:target => 'blank') } %>
+			<%= auto_html(@user_activity.video_url) { simple_format; link(:target => 'blank') } %>
 		<% end %>
 	<% end %>
 </div>

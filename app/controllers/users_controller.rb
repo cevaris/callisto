@@ -66,7 +66,7 @@ class UsersController < ApplicationController
       sign_in @user
       flash[:success] = t('signup.welcome', app_name: t('global.app_name'))
       # redirect_to @user
-      redirect_to stream_path
+      redirect_to root_path
     else
       render 'new'
     end

@@ -2,9 +2,9 @@
 
 <span class="pull-right">
 <% if @user.following? @activity %>
-	<%= link_to 'Watch', 'javascript:void(0);', class: 'btn disabled' %>
+	<%= link_to 'Ignore', activity_unwatch_path(@activity), class: 'btn', remote: true, id:'unwatch_user_select' %>
 <% else %>	
-	<%= link_to 'Watched', '#follow', class: 'btn', remote: true %>
+	<%= link_to 'Watch', activity_watch_path(@activity), class: 'btn', remote: true, remote: true, id:'watch_user_select' %>
 <% end %>
 <% if can? :edit, @activity %>
 	<%= link_to 'Edit', edit_activity_path(@activity), class: 'btn' %>
@@ -78,4 +78,38 @@
       <a class="btn modal-download" target="_blank"><i class="icon-download"></i> Download</a>
   </div>
 </div>
+
+
+
+<script type="text/javascript">
+
+$(document).ready(function() { 
+	
+	$(document)
+	.on('ajax:success', '#watch_user_select', function(event, data, status, xhf) {
+		$('#watch_user_select').text('Ignore');
+		$('#watch_user_select').prop("href", "<%= activity_unwatch_url(@activity) %>");
+		$('#watch_user_select').attr('id','unwatch_user_select')
+	});	
+
+	$(document)
+	.on('ajax:error', '#follow_user_select', function(event, data, status, xhf) {
+		pushFlash({message:'Error watching activity.', state: 'error', fadeOut: 5000});
+	});
+
+
+	$(document)
+	.on('ajax:success', '#unwatch_user_select', function(event, data, status, xhf) {
+		$('#unwatch_user_select').text('Watch');
+		$('#unwatch_user_select').prop("href", "<%= activity_watch_url(@activity) %>");
+		$('#unwatch_user_select').attr('id','watch_user_select')
+	});	
+
+	$(document)
+	.on('ajax:error', '#unwatch_user_select', function(event, data, status, xhf) {
+		pushFlash({message:'Error unwatching activity.', state: 'error', fadeOut: 5000});
+	});
+
+});
+</script>
 

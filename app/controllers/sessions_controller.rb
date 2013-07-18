@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       sign_in user
       # redirect_to user
-      redirect_to stream_path
+      redirect_to root_path
     else
       flash.now[:error] = t 'signin.error'
       render 'new'

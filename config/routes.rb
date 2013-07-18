@@ -28,6 +28,7 @@ Callisto::Application.routes.draw do
 
   resources :activities do 
   	get 'watch'
+  	get 'unwatch'
   	resources :user_activities do
   		get 'accept'
   		get 'forfeit'
