@@ -3,6 +3,8 @@ class ActivitiesController < ApplicationController
 	before_filter :require_session, 
 		:only => [:new, :create, :update, :destroy]
 
+	autocomplete :activity, :name, :full => true
+	autocomplete :activity, :description, :full => true
 
   # GET /activities
   # GET /activities.json

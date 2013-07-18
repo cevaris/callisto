@@ -1,5 +1,4 @@
 
-
 <div>
 <%= form_tag activities_filter_path, id: 'filter_form_activities', :remote=>true do %>
 	
@@ -14,13 +13,6 @@
 
 $(document).ready(function() { 
 
-	// $('#filter_activity_tags').tagsManager();
-
-	// $('#filter_activity_submit').click(function(){
-	// 	$('#filter_form_activities').submit();
-	// });
-
-
 	$('#filter_activity_tags').tokenInput('<%= activities_filter_tags_path format: :json %>', {
 			'searchingText': 'Loading...',
 			'hintText': 'Search By Tag',
@@ -29,8 +21,6 @@ $(document).ready(function() {
 			onDelete: function() { $('#filter_form_activities').submit(); }
 		}
 	);
-
-
 
 	$(document)
   .on('ajax:error', '#filter_form_activities', function(event, data, status, xhr) {
