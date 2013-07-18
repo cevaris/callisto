@@ -1,10 +1,12 @@
 
 
 <div>
-<%= form_tag activities_filter_path, id: 'filter_form_activities', :remote=>true, format: :json do %>
+<%= form_tag activities_filter_path, id: 'filter_form_activities', :remote=>true do %>
 	
-	<%= text_field_tag 'filter_activity_text', '', :maxlength => 50,  :placeholder=>'Search by text', :class => 'input-xlarge' %>		
-  <%= text_field_tag 'filter_activity_tags', '', :maxlength => 100, :placeholder=>'Search by tag',	:class => 'input-xlarge'  %>
+	<%= label_tag 'filter_activity_text', 'Search by Text' %>
+	<%= text_field_tag 'filter_activity_text', '', :maxlength => 50,  :class => 'input-xlarge' %>		
+	<%= label_tag 'filter_activity_tags', 'Search by Tag' %>
+  <%= text_field_tag 'filter_activity_tags', '', :maxlength => 100, :class => 'input-xlarge'  %>
   
 <% end %>
 
@@ -19,7 +21,14 @@ $(document).ready(function() {
 	// });
 
 
-	$('#filter_activity_tags').tokenInput('<%= activities_filter_tags_path format: :json %>');
+	$('#filter_activity_tags').tokenInput('<%= activities_filter_tags_path format: :json %>', {
+			'searchingText': 'Loading...',
+			'hintText': 'Search By Tag',
+			'theme': 'facebook',
+			onAdd: function() {
+				
+			}
+		});
 
 	$(document)
   .on('ajax:error', '#filter_form_activities', function(event, data, status, xhr) {
