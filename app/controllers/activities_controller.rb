@@ -39,7 +39,10 @@ class ActivitiesController < ApplicationController
 
 
     if params.has_key?('filter_activity_tags') and !params[:filter_activity_tags].empty?
-      @activities &= Activity.tagged_with([params[:filter_activity_tags]], :any => true)
+    	tags = ActsAsTaggableOn::Tag.where(id: params[:filter_activity_tags]) 
+    	if !tags.empty?
+      	@activities &= Activity.tagged_with(tags.pluck(:name), :any => true)
+      end
     end
 
     Rails.logger.info @activities
