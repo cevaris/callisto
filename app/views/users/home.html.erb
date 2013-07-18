@@ -1,14 +1,6 @@
-<table class="table">
-  <tr>
-    <th>Name</th>
-    <th>Tags</th>
-  </tr>
+<h3>Activities In Progress</h3>
+<%= render :partial => 'table_user_activities', :locals => {:user_activities => @user_activities} %>
+<h3>Users Following</h3>
 
-<% @activities.each do |activity| %>
-  <tr>
-    <td><%= link_to "#{activity.name.titlecase}", activity %></td>
-    <td><%= activity.tag_list %></td>
-  </tr>
-<% end %>
-</table>
+<h3>Activites Watching</h3>
 

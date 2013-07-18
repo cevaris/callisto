@@ -4,7 +4,11 @@ class UsersController < ApplicationController
 	def home
     if signed_in?
     	@user = current_user
-  		@activities = Activity.all
+  		@user_activities = @user.user_activities
+  		@activities_following = @user.following_by_type('Activity')
+  		@activities_users = @user.following_by_type('User')
+
+
     else
     	render 'static_pages/home'
     end
@@ -13,7 +17,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find params[:id]
     @activities = @user.activities
-    @current_user = current_user 
+    @current_user = current_user
   end
 
 
