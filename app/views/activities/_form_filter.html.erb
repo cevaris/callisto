@@ -1,12 +1,11 @@
 
 
 <div>
-<%= form_tag activities_filter_path, id: 'filter_form_activities', :remote=>true do %>
+<%= form_tag activities_filter_path, id: 'filter_form_activities', :remote=>true, format: :json do %>
 	
-	<%= text_field_tag 'filter_activity_text', '', :maxlength => 15,  :placeholder=>t('shared.search'), :class => 'input-xlarge' %>		
+	<%= text_field_tag 'filter_activity_text', '', :maxlength => 50,  :placeholder=>'Search by text', :class => 'input-xlarge' %>		
   <%= text_field_tag 'filter_activity_tags', '', :maxlength => 100, :placeholder=>'Search by tag',	:class => 'input-xlarge'  %>
-  <%= submit_tag 'Search', class: 'btn', id: 'filter_activity_submit' %> 
-
+  
 <% end %>
 
 <script type="text/javascript">
@@ -18,6 +17,9 @@ $(document).ready(function() {
 	// $('#filter_activity_submit').click(function(){
 	// 	$('#filter_form_activities').submit();
 	// });
+
+
+	$('#filter_activity_tags').tokenInput('<%= activities_filter_tags_path format: :json %>');
 
 	$(document)
   .on('ajax:error', '#filter_form_activities', function(event, data, status, xhr) {

@@ -25,6 +25,7 @@ Callisto::Application.routes.draw do
   end 
 
   match '/activities/filter' => 'activities#filter'
+  match '/activities/filter_tags' => 'activities#filter_tags'
 
   resources :activities do 
   	get 'watch'

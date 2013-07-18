@@ -15,6 +15,19 @@ class ActivitiesController < ApplicationController
     end
   end
 
+
+  def filter_tags
+  	Rails.logger.info params
+  	# @books = Activity.where("name LIKE ?", "%params[:q]%")
+  	# @activities = Activity.tagged_with(params[:q], :any => true)
+	  @tags = ActsAsTaggableOn::Tag.where("tags.name LIKE ?", "%#{params[:q]}%") 
+  	Rails.logger.info @tags.inspect
+
+		respond_to do |format|
+      format.json { render json: @tags }
+    end
+  end
+
   def filter
    
     filter = {}
