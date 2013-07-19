@@ -47,7 +47,7 @@
 </div>
 
 <p>
-	<label><b>Pictures:</b></label>
+	<label><b>Activity Pictures:</b></label>
 <p>
 
 <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
@@ -55,6 +55,10 @@
 		<%= link_to image_tag(activity_image.image.url(:thumb)), activity_image.image.url(:large), title: activity_image.image_file_name, 'data-gallery' => 'gallery' %>
  	<% end %>
 </div>
+
+<p>
+	<label><b>User Pictures:</b></label>
+<p>
 
 <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
 	<% @user_activity.user_activity_images.each do |activity_image| %>

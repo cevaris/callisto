@@ -21,15 +21,13 @@ class UserActivitiesController < ApplicationController
 
 	def edit
 		@activity = Activity.find params[:activity_id]
+		@user_activity = UserActivity.find params[:id]
 		@user = current_user || false
 
-		if @user
-			@user_activity = UserActivity.find_by_user_id_and_activity_id @user.id, @activity.id
+		if @user and @user.id == @user_activity.user.id
 			images_left = (5 - @user_activity.user_activity_images.count)
     	images_left.times { @user_activity.user_activity_images.build }
 		end
-
-
 
 		unless @user_activity
 			render 'static_pages/404', :status => 404
@@ -39,15 +37,15 @@ class UserActivitiesController < ApplicationController
 	def update
   	@user = current_user
   	@activity = Activity.find params[:activity_id]
-  	@user_activity = UserActivity.find_by_user_id_and_activity_id @user.id, @activity.id
+  	@user_activity = UserActivity.find params[:id]
+		@user = current_user || false		
 
     respond_to do |format|
-      if @user_activity.update_attributes(params[:user_activity])
+      if @user and (@user.id == @user_activity.user.id) and @user_activity.update_attributes(params[:user_activity])
         format.html { redirect_to activity_user_activity_url(@activity, @user_activity), notice: 'Your Activity was successfully updated.' }
         format.json { head :no_content }
-      # else
-      #   format.html { render action: "edit" }
-      #   format.json { render json: @setting.errors, status: :unprocessable_entity }
+      else
+        format.html { render action: "edit" }
       end
     end
   end
