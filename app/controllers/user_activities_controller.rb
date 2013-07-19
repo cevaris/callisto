@@ -24,7 +24,9 @@ class UserActivitiesController < ApplicationController
 		@user_activity = UserActivity.find params[:id]
 		@user = current_user || false
 
-		if @user and @user.id == @user_activity.user.id
+		@has_permission = @user and ((@user.id == @user_activity.user.id) or (@user.role == User::SUPER_ADMIN))
+
+		if @has_permission
 			images_left = (5 - @user_activity.user_activity_images.count)
     	images_left.times { @user_activity.user_activity_images.build }
 		end
@@ -40,8 +42,10 @@ class UserActivitiesController < ApplicationController
   	@user_activity = UserActivity.find params[:id]
 		@user = current_user || false		
 
+		@has_permission = @user and ((@user.id == @user_activity.user.id) or (@user.role == User::SUPER_ADMIN))
+
     respond_to do |format|
-      if @user and (@user.id == @user_activity.user.id) and @user_activity.update_attributes(params[:user_activity])
+      if @has_permission and @user_activity.update_attributes(params[:user_activity])
         format.html { redirect_to activity_user_activity_url(@activity, @user_activity), notice: 'Your Activity was successfully updated.' }
         format.json { head :no_content }
       else
