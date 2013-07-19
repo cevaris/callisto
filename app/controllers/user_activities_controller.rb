@@ -24,7 +24,7 @@ class UserActivitiesController < ApplicationController
 		@user_activity = UserActivity.find params[:id]
 		@user = current_user || false
 
-		@has_permission = @user and ((@user.id == @user_activity.user.id) or (@user.role == User::SUPER_ADMIN))
+		@has_permission = @user# and ((@user.id == @user_activity.user.id) or (@user.role == User::SUPER_ADMIN))
 
 		if @has_permission
 			images_left = (5 - @user_activity.user_activity_images.count)
@@ -34,6 +34,9 @@ class UserActivitiesController < ApplicationController
 		unless @user_activity
 			render 'static_pages/404', :status => 404
 		end
+		unless @user.id == @user_activity.user.id
+			authorize! :edit, @user_activity
+		end
 	end
 
 	def update
@@ -42,7 +45,7 @@ class UserActivitiesController < ApplicationController
   	@user_activity = UserActivity.find params[:id]
 		@user = current_user || false		
 
-		@has_permission = @user and ((@user.id == @user_activity.user.id) or (@user.role == User::SUPER_ADMIN))
+		@has_permission = @user# and ((@user.id == @user_activity.user.id) or (@user.role == User::SUPER_ADMIN))
 
     respond_to do |format|
       if @has_permission and @user_activity.update_attributes(params[:user_activity])
@@ -52,6 +55,11 @@ class UserActivitiesController < ApplicationController
         format.html { render action: "edit" }
       end
     end
+
+  	unless @user.id == @user_activity.user.id
+			authorize! :edit, @user_activity
+		end
+
   end
 
 	def accept

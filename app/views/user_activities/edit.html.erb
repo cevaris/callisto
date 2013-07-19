@@ -33,7 +33,7 @@
 
   <p>
     <%= f.label :report %>
-    <%= f.text_area :report %>
+    <%= f.text_area :report, size: '30x10' %>
   </p>
   <p>
     <%= f.label :video_url %>
@@ -72,3 +72,13 @@
   <p><%= f.submit class: 'btn btn-primary' %></p>
 
 <% end %>
+
+
+<script type="text/javascript">
+
+$(document).ready(function() { 
+
+	$('#user_activity_report').autoGrowTextArea();
+	
+});
+</script>
