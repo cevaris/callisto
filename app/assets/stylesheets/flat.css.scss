@@ -1,0 +1,43 @@
+
+/*footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayLighter;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}*/
+
+
+.tile-group {
+	ul {
+		
+		li {
+			background-color: lightgray;
+			list-style-type: none;
+			padding: 20px;
+			margin: 10px;
+
+			div {
+				padding: 10px;
+
+			}
+		}
+
+	}
+}

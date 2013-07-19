@@ -1,0 +1,98 @@
+<%= hidden_field_tag 'activity-id', @activity.id %>
+<%= hidden_field_tag 'user-activity-id', @user_activity.id %>
+
+<span class="pull-right">
+<% if @current_user and (@current_user.id == @user_activity.user.id or @current_user.role = User::SUPER_ADMIN) %>
+	<%= link_to 'Edit', edit_activity_user_activity_path(@activity,@user_activity), class: 'btn' %>
+<% end %>
+</span>
+
+<h1><%= @activity.name %></h1>
+
+<p>
+	<label><b>User:</b></label>
+	<%= @user_activity.user.name %>
+<p>
+
+<p>
+	<label><b>Tags:</b></label>
+	<%= @activity.tag_list %>
+<p>
+
+<p>
+	<label><b>Description:</b></label>
+	<%= @activity.description %>
+<p>
+
+<div class="activity-actions">
+	<%= render 'action'%>
+</div>
+
+<p>
+	<label><b>Report:</b></label>
+	<%= @user_activity.report %>
+<p>
+
+<div>
+	<label><b>Video:</b></label>
+	<% if @user_activity.video_url %>
+		<% if @user_activity.video_url.include?('youtube') or @user_activity.video_url.include?('youtu.be') %>
+			<%= auto_html(@user_activity.video_url) { youtube } %>
+		<% elsif @user_activity.video_url.include? 'vimeo' %>
+			<%= auto_html(@user_activity.video_url) { vimeo } %>
+		<% else %>
+			<%= auto_html(@user_activity.video_url) { simple_format; link(:target => 'blank') } %>
+		<% end %>
+	<% end %>
+</div>
+
+<p>
+	<label><b>Activity Pictures:</b></label>
+<p>
+
+<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+	<% @activity.activity_images.each do |activity_image| %>
+		<%= link_to image_tag(activity_image.image.url(:thumb)), activity_image.image.url(:large), title: activity_image.image_file_name, 'data-gallery' => 'gallery' %>
+ 	<% end %>
+</div>
+
+<p>
+	<label><b>User Pictures:</b></label>
+<p>
+
+<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+	<% @user_activity.user_activity_images.each do |activity_image| %>
+		<%= link_to image_tag(activity_image.image.url(:thumb)), activity_image.image.url(:large), title: activity_image.image_file_name, 'data-gallery' => 'gallery' %>
+ 	<% end %>
+</div>
+
+<!-- modal-gallery is the modal dialog used for the image gallery -->
+<div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
+  <div class="modal-header">
+      <a class="close" data-dismiss="modal">&times;</a>
+      <h3 class="modal-title"></h3>
+  </div>
+  <div class="modal-body"><div class="modal-image"></div></div>
+  <div class="modal-footer">
+      <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
+      <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
+      <a class="btn btn-success modal-play modal-slideshow" data-slideshow="5000"><i class="icon-play icon-white"></i> Slideshow</a>
+      <a class="btn modal-download" target="_blank"><i class="icon-download"></i> Download</a>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function() { 
+	$(document)
+	.on('ajax:success', '.accept-user-activity-select', function(event, data, status, xhf) {
+		$('.activity-actions').html(data);
+	});	
+
+	$(document)
+	.on('ajax:error', '.accept-user-activity-select', function(event, data, status, xhf) {
+		pushFlash({message:'Error selecting activity action.', state: 'error', fadeOut: 5000});
+	});
+});
+</script>
+
