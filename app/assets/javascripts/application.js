@@ -22,3 +22,4 @@
 //= require bootstrap/load-image.min
 //= require bootstrap/image-gallery.min
 //= require bootstrap-tagmanager
+//= require jquery-autogrow-textarea

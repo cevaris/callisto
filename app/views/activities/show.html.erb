@@ -20,7 +20,7 @@
 
 <p>
 	<label><b>Description:</b></label>
-	<%= @activity.description %>
+	<%= with_new_lines @activity.description %>
 <p>
 
 <% if !@user_activity.nil? %>

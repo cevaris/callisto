@@ -19,11 +19,11 @@
   </p>
   <p>
     <%= f.label :tag_list %>
-    <%= f.text_field :tag_list, autocomplete: :off %>
+    <%= f.text_field :tag_list, autocomplete: :off, placeholder: 'Add tags here' %>
   </p>
   <p>
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, size: '30x10' %>
   </p>
   <p>
     <%= f.label :video_url %>
@@ -67,6 +67,8 @@
 
 $(document).ready(function() { 
 
+	$('#activity_description').autoGrowTextArea();
+	
 	$('#activity_tag_list').tagsManager({
     typeahead: true,
     typeaheadAjaxSource: '<%= activities_filter_tags_path format: :json %>',
