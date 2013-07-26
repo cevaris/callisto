@@ -32,14 +32,17 @@
 		</li>
 
 		<li>
+			<div class="square">
 
+				<div class="fill">
+					<%= link_to image_tag(@user_activity.user.avatar.url(:square), size: '300x00'), @user_activity.user.avatar.url(:large), title: @user_activity.user.name %>
+					<div class="transparent">
+						<b><%= @user_activity.user.name %></b>
+					</div>
+				</div>
+
+				
 			<div>
-				<%= link_to image_tag(@user_activity.user.avatar.url(:square)), @user_activity.user.avatar.url(:large), title: @user_activity.user.name %>
-			</div>
-
-			<div class="center">
-				<b><%= @user_activity.user.name %></b>
-			</div>
 
 		</li>
 
