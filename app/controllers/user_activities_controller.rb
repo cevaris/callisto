@@ -27,7 +27,7 @@ class UserActivitiesController < ApplicationController
 		@has_permission = @user# and ((@user.id == @user_activity.user.id) or (@user.role == User::SUPER_ADMIN))
 
 		if @has_permission
-			images_left = (5 - @user_activity.user_activity_images.count)
+			images_left = (UserActivity::MAX_PHOTOS - @user_activity.user_activity_images.count)
     	images_left.times { @user_activity.user_activity_images.build }
 		end
 

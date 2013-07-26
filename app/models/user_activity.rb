@@ -1,4 +1,5 @@
 class UserActivity < ActiveRecord::Base
+	MAX_PHOTOS = 6
   attr_accessible :report, :video_url, :user_activity_images_attributes
   
   belongs_to :user

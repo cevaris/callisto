@@ -1,73 +1,86 @@
-<div class="row">
-	<%= hidden_field_tag 'activity-id', @activity.id %>
-	<%= hidden_field_tag 'user-activity-id', @user_activity.id %>
+<%= hidden_field_tag 'activity-id', @activity.id %>
+<%= hidden_field_tag 'user-activity-id', @user_activity.id %>
 
+<div class="well well-small">
+	
+	<div class="row">
 
-	<div class="well span3" >
-		<label><b><%= @user_activity.user.name %></b></label>
-		<%= image_tag(@user_activity.user.avatar.url(:square), size: '300x300') %>	
-	</div>
+		<div class="span3" >
+			<label><h2><%= @user_activity.user.name %></h2></label>
+			<%= image_tag(@user_activity.user.avatar.url(:square), size: '300x300') %>	
+		</div><!-- user -->
+		<div class="span9">
 
-	<div class="well span9">
-
-		<div style="min-height:220px;">
-			<div class="text-right">
-				<h1><%= @activity.name %></h1>
-			</div>
-				
 			<div>
-				<%= @activity.description %>
-			</div>
-		</div>
-		
-		<div class="pull-right" style="vertical-align:bottom;bottom:0">
-			<span>
-				<b><%= @activity.tag_list %></b>
-			</span>
-			<span>
+				<div class="text-right">
+					<h1><%= @activity.name %></h1>
+				</div>
 					
-			<span class="activity-actions">
-				<%= render 'action'%>
-			</span>
-				<% if @current_user and (@current_user.id == @user_activity.user.id or @current_user.role = User::SUPER_ADMIN) %>
-					<%= link_to 'Edit', edit_activity_user_activity_path(@activity,@user_activity), class: 'btn' %>
-				<% end %>
-			</span>	
-		</div>
+				<div class="activity_info" style="height:200px; overflow:hidden;">
+					<%= with_new_lines @activity.description %>
+				</div>
+			</div>
 
-	</div>
+			<hr/>
 
+			<div class="center">
+
+				<span  class="pull-left">
+					<b><%= @activity.tag_list %></b>
+				</span>
+				<span>
+					<small><%= link_to 'Click to expand','javascript:void(0);', class: 'expander' %></small>
+				</span>
+				<span class=" pull-right" >
+					<%= render 'action'%>
+					<% if @current_user and (@current_user.id == @user_activity.user.id or @current_user.role = User::SUPER_ADMIN) %>
+						<%= link_to 'Edit', edit_activity_user_activity_path(@activity,@user_activity), class: 'btn' %>
+					<% end %>
+				</span>	
+			</div>
+		</div><!-- activity -->
+	</div><!-- row -->
+</div><!-- well -->
+
+<div class="row">
 
 	<div class="well well-small span12">
 		<label><b>Report:</b></label>
-		<%= @user_activity.report %>
+		<%= with_new_lines @user_activity.report %>
 	</div>		
 
+</div>
 
-	<div class="well well-small span6">
-		<label style="padding-left:5%;"><b>User Activty Video:</b></label>
-		<div class="center">
-			<% if @user_activity.video_url %>
-				<% if @user_activity.video_url.include?('youtube') or @user_activity.video_url.include?('youtu.be') %>
-					<%= auto_html(@user_activity.video_url) { youtube } %>
-				<% elsif @user_activity.video_url.include? 'vimeo' %>
-					<%= auto_html(@user_activity.video_url) { vimeo } %>
-				<% else %>
-					<%= auto_html(@user_activity.video_url) { simple_format; link(:target => 'blank') } %>
+<div class="well well-small">
+	<div class="row">
+
+
+		<div class="span6">
+			<label><b>User Activty Video:</b></label>
+			<div class="center">
+				<% if @user_activity.video_url %>
+					<% if @user_activity.video_url.include?('youtube') or @user_activity.video_url.include?('youtu.be') %>
+						<%= auto_html(@user_activity.video_url) { youtube } %>
+					<% elsif @user_activity.video_url.include? 'vimeo' %>
+						<%= auto_html(@user_activity.video_url) { vimeo } %>
+					<% else %>
+						<%= auto_html(@user_activity.video_url) { simple_format; link(:target => 'blank') } %>
+					<% end %>
 				<% end %>
-			<% end %>
+			</div>
 		</div>
-	</div>
 
-	<div class="well well-small span6">
-		<label><b>User Pictures:</b></label>
-		<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
-			<% @user_activity.user_activity_images.each do |activity_image| %>
-				<%= link_to image_tag(activity_image.image.url(:thumb)), activity_image.image.url(:large), title: activity_image.image_file_name, 'data-gallery' => 'gallery' %>
-		 	<% end %>
+		<div class="span6">
+			<label><b>User Pictures:</b></label>
+			<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+				<% @user_activity.user_activity_images.each do |activity_image| %>
+					<%= link_to image_tag(activity_image.image.url(:thumb)), activity_image.image.url(:large), title: activity_image.image_file_name, 'data-gallery' => 'gallery' %>
+			 	<% end %>
+			</div>
 		</div>
-	</div>
 
+	</div>
+</div>
 
 	<div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
 	  <div class="modal-header">
@@ -87,7 +100,13 @@
 
 $(document).ready(function() { 
 
-	$('.grid_container').isotope({});
+
+	$(document)
+	.on('click', '.expander', function() {
+		$('.activity_info').animate({height:'100%'},200);
+		$('.activity_info').css('min-height','200px');
+		$(this).hide();
+	});	
 
 	$(document)
 	.on('ajax:success', '.accept-user-activity-select', function(event, data, status, xhf) {
@@ -100,4 +119,3 @@ $(document).ready(function() {
 	});
 });
 </script>
-</div>
