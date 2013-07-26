@@ -1,25 +1,26 @@
-<%= hidden_field_tag 'activity-id', @activity.id %>
-<%= hidden_field_tag 'user-activity-id', @user_activity.id %>
+<div class="row">
+	<%= hidden_field_tag 'activity-id', @activity.id %>
+	<%= hidden_field_tag 'user-activity-id', @user_activity.id %>
 
 
-
-<div style="min-height:90%;">
-
-	<div class="well well-small span3">
+	<div class="well span3" >
 		<label><b><%= @user_activity.user.name %></b></label>
 		<%= image_tag(@user_activity.user.avatar.url(:square), size: '300x300') %>	
 	</div>
 
-	<div class="well well-small span8">
+	<div class="well span9">
 
-		<div class="text-right">
-			<h1><%= @activity.name %></h1>
+		<div style="min-height:220px;">
+			<div class="text-right">
+				<h1><%= @activity.name %></h1>
+			</div>
+				
+			<div>
+				<%= @activity.description %>
+			</div>
 		</div>
-			
-		<div>
-			<%= @activity.description %>
-		</div>
-		<div>
+		
+		<div class="pull-right" style="vertical-align:bottom;bottom:0">
 			<span>
 				<b><%= @activity.tag_list %></b>
 			</span>
@@ -37,18 +38,13 @@
 	</div>
 
 
-
-
-	<div class="well well-small span11">
+	<div class="well well-small span12">
 		<label><b>Report:</b></label>
 		<%= @user_activity.report %>
 	</div>		
 
 
-
-
-
-	<div class="well well-small span5">
+	<div class="well well-small span6">
 		<label style="padding-left:5%;"><b>User Activty Video:</b></label>
 		<div class="center">
 			<% if @user_activity.video_url %>
