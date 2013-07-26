@@ -2,138 +2,97 @@
 <%= hidden_field_tag 'user-activity-id', @user_activity.id %>
 
 
-<div class="tile-group">
-	<ul class="inline">
-		<li>
 
-			<div class="text-right">
-				<h1><%= @activity.name %></h1>
-			</div>
-			
-			<div>
-				<%= @activity.description %>
-			</div>
-			<div>
-				<span class="pull-left">
-					<b><%= @activity.tag_list %></b>
-				</span>
-				<span class="pull-right">
-					
-					<span class="activity-actions">
-						<%= render 'action'%>
-					</span>
-					<% if @current_user and (@current_user.id == @user_activity.user.id or @current_user.role = User::SUPER_ADMIN) %>
-						<%= link_to 'Edit', edit_activity_user_activity_path(@activity,@user_activity), class: 'btn' %>
-					<% end %>
+<div style="min-height:90%;">
 
-				</span>
-			</div>
+	<div class="well well-small span3">
+		<label><b><%= @user_activity.user.name %></b></label>
+		<%= image_tag(@user_activity.user.avatar.url(:square), size: '300x300') %>	
+	</div>
 
-		</li>
+	<div class="well well-small span8">
 
-		<li>
-			<div class="square">
-
-				<div class="fill">
-					<%= link_to image_tag(@user_activity.user.avatar.url(:square), size: '300x00'), @user_activity.user.avatar.url(:large), title: @user_activity.user.name %>
-					<div class="transparent">
-						<b><%= @user_activity.user.name %></b>
-					</div>
-				</div>
-
-				
-			<div>
-
-		</li>
-
-		<% unless @user_activity.report.blank? %>
-		<li>
-			<div>
-				<label><b>Report:</b></label>
-				<%= @user_activity.report %>
-			</div>
-		</li>
-		<% end %>
-
-		<% unless @user_activity.video_url.blank? %>
-		<li>
-			<div>
-				<label><b>User Activty Video:</b></label>
-				<% if @user_activity.video_url %>
-					<% if @user_activity.video_url.include?('youtube') or @user_activity.video_url.include?('youtu.be') %>
-						<%= auto_html(@user_activity.video_url) { youtube } %>
-					<% elsif @user_activity.video_url.include? 'vimeo' %>
-						<%= auto_html(@user_activity.video_url) { vimeo } %>
-					<% else %>
-						<%= auto_html(@user_activity.video_url) { simple_format; link(:target => 'blank') } %>
-					<% end %>
-				<% end %>
-			</div>
-		</li>
-		<% end %>
-
-		<% unless @activity.video_url.blank? %>
-		<li>
-			<div>
-				<label><b>Activty Video:</b></label>
-				<% if @activity.video_url %>
-					<% if @activity.video_url.include?('youtube') or @activity.video_url.include?('youtu.be') %>
-						<%= auto_html(@activity.video_url) { youtube } %>
-					<% elsif @activity.video_url.include? 'vimeo' %>
-						<%= auto_html(@activity.video_url) { vimeo } %>
-					<% else %>
-						<%= auto_html(@activity.video_url) { simple_format; link(:target => 'blank') } %>
-					<% end %>
-				<% end %>
-			</div>
-		</li>
-		<% end %>
-
-
-		<% unless @activity.activity_images.empty? %>
-		<li>
-
-			<label><b>Activity Pictures:</b></label>
-			<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
-				<% @activity.activity_images.each do |activity_image| %>
-					<%= link_to image_tag(activity_image.image.url(:thumb)), activity_image.image.url(:large), title: activity_image.image_file_name, 'data-gallery' => 'gallery' %>
-			 	<% end %>
-			</div>
-		</li>
-		<% end %>
-
-		<% unless @user_activity.user_activity_images.empty? %>
-		<li>
-			<label><b>User Pictures:</b></label>
-			<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
-				<% @user_activity.user_activity_images.each do |activity_image| %>
-					<%= link_to image_tag(activity_image.image.url(:thumb)), activity_image.image.url(:large), title: activity_image.image_file_name, 'data-gallery' => 'gallery' %>
-			 	<% end %>
-			</div>
-		</li>
-		<% end %>
-
-
-	</ul>
-
-		<!-- modal-gallery is the modal dialog used for the image gallery -->
-		<div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
-		  <div class="modal-header">
-		      <a class="close" data-dismiss="modal">&times;</a>
-		      <h3 class="modal-title"></h3>
-		  </div>
-		  <div class="modal-body"><div class="modal-image"></div></div>
-		  <div class="modal-footer">
-		      <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
-		      <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
-		      <a class="btn btn-success modal-play modal-slideshow" data-slideshow="5000"><i class="icon-play icon-white"></i> Slideshow</a>
-		      <a class="btn modal-download" target="_blank"><i class="icon-download"></i> Download</a>
-		  </div>
+		<div class="text-right">
+			<h1><%= @activity.name %></h1>
 		</div>
-	
+			
+		<div>
+			<%= @activity.description %>
+		</div>
+		<div>
+			<span>
+				<b><%= @activity.tag_list %></b>
+			</span>
+			<span>
+					
+			<span class="activity-actions">
+				<%= render 'action'%>
+			</span>
+				<% if @current_user and (@current_user.id == @user_activity.user.id or @current_user.role = User::SUPER_ADMIN) %>
+					<%= link_to 'Edit', edit_activity_user_activity_path(@activity,@user_activity), class: 'btn' %>
+				<% end %>
+			</span>	
+		</div>
+
+	</div>
+
+
+
+
+	<div class="well well-small span11">
+		<label><b>Report:</b></label>
+		<%= @user_activity.report %>
+	</div>		
+
+
+
+
+
+	<div class="well well-small span5">
+		<label style="padding-left:5%;"><b>User Activty Video:</b></label>
+		<div class="center">
+			<% if @user_activity.video_url %>
+				<% if @user_activity.video_url.include?('youtube') or @user_activity.video_url.include?('youtu.be') %>
+					<%= auto_html(@user_activity.video_url) { youtube } %>
+				<% elsif @user_activity.video_url.include? 'vimeo' %>
+					<%= auto_html(@user_activity.video_url) { vimeo } %>
+				<% else %>
+					<%= auto_html(@user_activity.video_url) { simple_format; link(:target => 'blank') } %>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+
+	<div class="well well-small span6">
+		<label><b>User Pictures:</b></label>
+		<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+			<% @user_activity.user_activity_images.each do |activity_image| %>
+				<%= link_to image_tag(activity_image.image.url(:thumb)), activity_image.image.url(:large), title: activity_image.image_file_name, 'data-gallery' => 'gallery' %>
+		 	<% end %>
+		</div>
+	</div>
+
+
+	<div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
+	  <div class="modal-header">
+	      <a class="close" data-dismiss="modal">&times;</a>
+	      <h3 class="modal-title"></h3>
+	  </div>
+	  <div class="modal-body"><div class="modal-image"></div></div>
+	  <div class="modal-footer">
+	      <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
+	      <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
+	      <a class="btn btn-success modal-play modal-slideshow" data-slideshow="5000"><i class="icon-play icon-white"></i> Slideshow</a>
+	      <a class="btn modal-download" target="_blank"><i class="icon-download"></i> Download</a>
+	  </div>
+	</div>
+		
 <script type="text/javascript">
 
 $(document).ready(function() { 
+
+	$('.grid_container').isotope({});
+
 	$(document)
 	.on('ajax:success', '.accept-user-activity-select', function(event, data, status, xhf) {
 		$('.activity-actions').html(data);

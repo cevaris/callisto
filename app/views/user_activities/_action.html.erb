@@ -1,9 +1,3 @@
-<% if @user and @user_activity %>
-	<%= @user.id  %>
-	<%= @user_activity.user.id %>
-	<%= @user and @user.id == @user_activity.user.id %>
-<% end %>
-
 <div class="btn-group">
 	<% if @user and @user.id == @user_activity.user.id %>
 
