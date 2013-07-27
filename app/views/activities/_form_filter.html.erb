@@ -19,6 +19,11 @@ $(document).ready(function() {
     typeaheadAjaxPolling: true
   });
 
+  $('#filter_activity_tags').change(function(){
+  	console.log("Change!!");
+  	$('#filter_form_activities').submit();
+  });
+
 	var timer;
 	$(document).on('keyup input', '#filter_activity_text', function() {    
     var form = $('#filter_form_activities');

@@ -37,11 +37,11 @@ class ActivitiesController < ApplicationController
       activity_names = Activity.where( Activity.arel_table[:name].matches("%#{params[:filter_activity_text].strip}%") )
     end
 
-    if params.has_key?('filter_activity_tags') and !params[:filter_activity_tags].empty?
-    	tags = ActsAsTaggableOn::Tag.where(id: params[:filter_activity_tags]) 
-    	if !tags.empty?
-      	activity_tags = Activity.tagged_with(tags.pluck(:name), :any => true)
-      end
+    if params.has_key?('hidden-filter_activity_tags') and !params['hidden-filter_activity_tags'].empty?
+    	# tags = ActsAsTaggableOn::Tag.where(id: params['hidden-filter_activity_tags']) 
+    	# if !tags.empty?
+    	activity_tags = Activity.tagged_with(params['hidden-filter_activity_tags'], :any => true)
+      # end
     end
 
     # Combine results
@@ -50,6 +50,10 @@ class ActivitiesController < ApplicationController
     @activities.uniq!
 
     @activities = @activities.first(ActivitiesController::MAX_SEARCH_RESULTS)
+
+    Rails.logger.info params.has_key?('hidden-filter_activity_tags')
+    Rails.logger.info !params['hidden-filter_activity_tags'].empty?
+    Rails.logger.info params['hidden-filter_activity_tags']
 
     render partial: 'activities/table_activities'
   end
