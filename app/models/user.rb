@@ -44,6 +44,16 @@ class User < ActiveRecord::Base
 
   validates :password, presence: true, length: { minimum: 6 }, confirmation: true, if: :password_digest_changed?
 
+  def stats
+  	stats = {}
+  	# Activities
+  	stats[:accepted]  =  self.activities_accepted.count
+  	stats[:completed] =  self.activities_completed.count
+		# Users
+  	stats[:following] =  self.users_watching.count
+
+  	stats
+  end
 
   def request_key
     Digest::MD5.hexdigest(self.email + self.confirmed.to_s + self.password_digest + self.created_at.iso8601)
@@ -53,17 +63,30 @@ class User < ActiveRecord::Base
   	[User::ADMIN, User::SUPER_ADMIN].include? self.role
   end
 
+  def activities_completed
+  	# Activities I have completed
+  	self.user_activities.where(activity_state_id: ActivityState.find_by_name(ActivityState::COMPLETED))
+  end
+
   def activities_accepted
-  	self.user_activities.where(activity_state_id: ActivityState.find_by_name(ActivityState::ACCEPTED)).limit(20)
+  	# Activities I have accepted
+  	self.user_activities.where(activity_state_id: ActivityState.find_by_name(ActivityState::ACCEPTED))
   end
 
   def activities_following
+  	# User Activities of Users I am following
   	user_ids = self.following_by_type('User').pluck(:id)
-  	UserActivity.where(user_id: user_ids).order("created_at DESC").limit(20)
+  	UserActivity.where(user_id: user_ids).order("created_at DESC")
   end
 
   def activities_watching
-  	self.following_by_type('Activity').limit(20)
+  	# Activities I am watching
+  	self.following_by_type('Activity')
+  end
+
+  def users_watching
+  	# Users following me
+  	self.followers_by_type('User')
   end
 
   private

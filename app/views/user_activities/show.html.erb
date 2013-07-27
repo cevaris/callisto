@@ -8,6 +8,14 @@
 		<div class="span3" >
 			<label><h2><%= @user_activity.user.name %></h2></label>
 			<%= image_tag(@user_activity.user.avatar.url(:square), size: '300x300', class: 'img-rounded') %>	
+			<hr/>
+			<div>
+				<ul class="list-unstyled" >
+					<li><b>Acitivies Completed: </b><%= @user.stats[:completed] %></li>
+					<li><b>Acitivies Accepted: </b><%= @user.stats[:accepted] %></li>
+					<li><b>Users Following: </b><%= @user.stats[:following] %></li>
+				</ul>
+			</div>
 		</div><!-- user -->
 
 
