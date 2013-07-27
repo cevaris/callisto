@@ -13,6 +13,25 @@ class UsersController < ApplicationController
   	@user = User.find params[:user_id]
     @user_activities = @user.user_activities
     @current_user = current_user
+
+    @wall_content = []
+
+    @user_activities.each do |user_activity|
+    	# Add images
+    	user_activity.user_activity_images.each do |user_activity_image|
+    		if !user_activity_image.nil?
+    			@wall_content << [user_activity, 'IMAGE', user_activity_image]
+    		end
+    	end
+    	# Add video
+    	if !user_activity.video_url.blank?
+    		@wall_content << [user_activity, 'VIDEO', user_activity.video_url]
+    	end
+    end
+
+    Rails.logger.info @wall_content.inspect
+
+
   end 
 
   def show
