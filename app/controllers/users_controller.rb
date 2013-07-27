@@ -31,6 +31,7 @@ class UsersController < ApplicationController
 
     @wall_content.shuffle!
 
+    @no_container = true
   end 
 
   def show

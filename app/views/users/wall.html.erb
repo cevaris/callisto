@@ -9,13 +9,13 @@
 		</li>
 	<% end %>
 	<% if type == 'VIDEO' %>
-		<li class="item w2" style="margin-bottom:-5px;">
+		<li class="item w2">
 			<% if item.include?('youtube') or item.include?('youtu.be') %>
-				<%= auto_html(item) { youtube(:width => 400, :height => 200) } %>
+				<%= auto_html(item) { youtube(:width => 200, :height => 200) } %>
 			<% elsif item.include? 'vimeo' %>
-				<%= auto_html(item) { vimeo(:width => 400, :height => 200) } %>
+				<%= auto_html(item) { vimeo(:width => 200, :height => 200) } %>
 			<% else %>
-				<%= auto_html(item) { simple_format(:width => 400, :height => 200); link(:target => 'blank') } %>
+				<%= auto_html(item) { simple_format(:width => 200, :height => 200); link(:target => 'blank') } %>
 			<% end %>
 		</li>
 	<% end %>
@@ -24,6 +24,13 @@
 <% end %>
 
 </ul>
+
+<style type="text/css">
+	img {border-width: 10px;border-color: black;}
+	.item.w2 { margin-bottom:-5px; }
+
+
+</style>
 
 <script type="text/javascript">
 
