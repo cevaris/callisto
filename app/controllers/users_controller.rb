@@ -29,8 +29,7 @@ class UsersController < ApplicationController
     	end
     end
 
-    Rails.logger.info @wall_content.inspect
-
+    @wall_content.shuffle!
 
   end 
 

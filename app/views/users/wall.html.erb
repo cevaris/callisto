@@ -1,21 +1,32 @@
-<div class="main_user_wall">
-	<ul class="user_wall">
+<ul class="user_wall" style="list-style-type: none; position:relative;">
 
-	<% @user_activities.each do |user_activity| %>
-		<% user_activity.user_activity_images.each do |user_activity_image| %>
+<% @wall_content.each do |user_activity, type, item| %>
 
-			<% if !user_activity_image.nil? %>
-			<li><%= image_tag user_activity_image.image.url(:square), class: 'item' %></li>
+	
+	<% if type == 'IMAGE' %>
+		<li class="item">
+			<%= link_to image_tag(item.image(:square), size: "200x200"), activity_user_activity_path(user_activity.activity, user_activity) %>
+		</li>
+	<% end %>
+	<% if type == 'VIDEO' %>
+		<li class="item w2">
+			<% if item.include?('youtube') or item.include?('youtu.be') %>
+				<%= auto_html(item) { youtube(:width => 400, :height => 200) } %>
+			<% elsif item.include? 'vimeo' %>
+				<%= auto_html(item) { vimeo(:width => 400, :height => 200) } %>
+			<% else %>
+				<%= auto_html(item) { simple_format(:width => 400, :height => 200); link(:target => 'blank') } %>
 			<% end %>
-
-		<% end %>
+		</li>
 	<% end %>
 
-	</ul>
-</div>
+
+<% end %>
+
+</ul>
 
 <script type="text/stylesheet">
-	.item { width: 25%; }
+	.item { width: 25%;}
 	.item.w2 { width: 50%; }
 </script>
 
@@ -27,7 +38,5 @@ $(window).load(function() {
 	  itemSelector: '.item'
 	});
 });
-
-window.resize();
 	  
 </script>
