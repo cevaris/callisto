@@ -38,17 +38,14 @@ class ActivitiesController < ApplicationController
     end
 
     if params.has_key?('hidden-filter_activity_tags') and !params['hidden-filter_activity_tags'].empty?
-    	# tags = ActsAsTaggableOn::Tag.where(id: params['hidden-filter_activity_tags']) 
-    	# if !tags.empty?
     	activity_tags = Activity.tagged_with(params['hidden-filter_activity_tags'], :any => true)
-      # end
     end
 
     # Combine results
     @activities = activity_tags + activity_names
-    # return results
+    # Return results
     @activities.uniq!
-
+    # Limit return results
     @activities = @activities.first(ActivitiesController::MAX_SEARCH_RESULTS)
 
     Rails.logger.info params.has_key?('hidden-filter_activity_tags')
