@@ -1,36 +1,21 @@
 <%= hidden_field_tag 'activity-id', @activity.id %>
 <%= hidden_field_tag 'user-activity-id', @user_activity.id %>
 
-<div class="well well-small">
-	
-	<div class="row">
+<div class="">
+
+	<div class="row" >
 
 		<div class="span3" >
 			<label><h2><%= @user_activity.user.name %></h2></label>
-			<%= image_tag(@user_activity.user.avatar.url(:square), size: '300x300') %>	
+			<%= image_tag(@user_activity.user.avatar.url(:square), size: '300x300', class: 'img-rounded') %>	
 		</div><!-- user -->
+
+
 		<div class="span9">
 
-			<div>
-				<div class="text-right">
-					<h1><%= @activity.name %></h1>
-				</div>
-					
-				<div class="activity_info" style="height:200px; overflow:hidden;">
-					<%= with_new_lines @activity.description %>
-				</div>
-			</div>
-
-			<hr/>
-
 			<div class="center">
-
-				<span  class="pull-left">
-					<b><%= @activity.tag_list %></b>
-				</span>
-				<span>
-					<small><%= link_to 'Click to expand','javascript:void(0);', class: 'expander' %></small>
-				</span>
+				
+				
 				<span class=" pull-right" >
 					<%= render 'action'%>
 					<% if @current_user and (@current_user.id == @user_activity.user.id or @current_user.role = User::SUPER_ADMIN) %>
@@ -38,75 +23,98 @@
 					<% end %>
 				</span>	
 			</div>
+
+			<div>
+				<div class="text-left">
+					<h1><%= @activity.name %></h1>
+					<span  class="text-left">
+						<b><%= @activity.tag_list %></b>
+					</span>
+				</div>
+					
+				<hr/>
+				<div>
+					<label><b>Description:</b></label>
+					<%= with_new_lines @activity.description %>
+				</div>
+			</div>
+
+			
 		</div><!-- activity -->
 	</div><!-- row -->
 </div><!-- well -->
 
-<div class="row">
 
-	<div class="well well-small span12">
+
+<% if !@user_activity.report.blank? %>
+
+<br/>
+<hr/>
+<br/>
+
+<div class="row">
+	<div class="span12">
 		<label><b>Report:</b></label>
 		<%= with_new_lines @user_activity.report %>
 	</div>		
-
 </div>
+<% end %>
 
-<div class="well well-small">
-	<div class="row">
+<br/>
+<hr/>
+<br/>
+
+<div class="row">
 
 
-		<div class="span6">
+	<div class="span6">
+		<% if !@user_activity.video_url.blank? %>
+		<div class="center">
 			<label><b>User Activty Video:</b></label>
-			<div class="center">
-				<% if @user_activity.video_url %>
-					<% if @user_activity.video_url.include?('youtube') or @user_activity.video_url.include?('youtu.be') %>
-						<%= auto_html(@user_activity.video_url) { youtube } %>
-					<% elsif @user_activity.video_url.include? 'vimeo' %>
-						<%= auto_html(@user_activity.video_url) { vimeo } %>
-					<% else %>
-						<%= auto_html(@user_activity.video_url) { simple_format; link(:target => 'blank') } %>
-					<% end %>
+			<% if @user_activity.video_url %>
+				<% if @user_activity.video_url.include?('youtube') or @user_activity.video_url.include?('youtu.be') %>
+					<%= auto_html(@user_activity.video_url) { youtube } %>
+				<% elsif @user_activity.video_url.include? 'vimeo' %>
+					<%= auto_html(@user_activity.video_url) { vimeo } %>
+				<% else %>
+					<%= auto_html(@user_activity.video_url) { simple_format; link(:target => 'blank') } %>
 				<% end %>
-			</div>
+			<% end %>
 		</div>
+		<% end %>
+	</div>
 
-		<div class="span6">
+	<div class="span6">
+		<% if !@user_activity.user_activity_images.empty? %>
+		<div class="center">
 			<label><b>User Pictures:</b></label>
 			<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
 				<% @user_activity.user_activity_images.each do |activity_image| %>
-					<%= link_to image_tag(activity_image.image.url(:thumb)), activity_image.image.url(:large), title: activity_image.image_file_name, 'data-gallery' => 'gallery' %>
+					<%= link_to image_tag(activity_image.image.url(:square)), activity_image.image.url(:large), title: activity_image.image_file_name, 'data-gallery' => 'gallery' %>
 			 	<% end %>
 			</div>
 		</div>
-
+		<% end %>
 	</div>
+
 </div>
 
-	<div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
-	  <div class="modal-header">
-	      <a class="close" data-dismiss="modal">&times;</a>
-	      <h3 class="modal-title"></h3>
-	  </div>
-	  <div class="modal-body"><div class="modal-image"></div></div>
-	  <div class="modal-footer">
-	      <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
-	      <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
-	      <a class="btn btn-success modal-play modal-slideshow" data-slideshow="5000"><i class="icon-play icon-white"></i> Slideshow</a>
-	      <a class="btn modal-download" target="_blank"><i class="icon-download"></i> Download</a>
-	  </div>
-	</div>
+
+<div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
+  <div class="modal-header">
+      <a class="close" data-dismiss="modal">&times;</a>
+      <h3 class="modal-title"></h3>
+  </div>
+  <div class="modal-body"><div class="modal-image"></div></div>
+  <div class="modal-footer center">
+      <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
+      <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
+  </div>
+</div>
 		
 <script type="text/javascript">
 
 $(document).ready(function() { 
-
-
-	$(document)
-	.on('click', '.expander', function() {
-		$('.activity_info').animate({height:'100%'},200);
-		$('.activity_info').css('min-height','200px');
-		$(this).hide();
-	});	
 
 	$(document)
 	.on('ajax:success', '.accept-user-activity-select', function(event, data, status, xhf) {
