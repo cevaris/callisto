@@ -9,7 +9,7 @@
 		</li>
 	<% end %>
 	<% if type == 'VIDEO' %>
-		<li class="item w2">
+		<li class="item w2" style="margin-bottom:-5px;">
 			<% if item.include?('youtube') or item.include?('youtu.be') %>
 				<%= auto_html(item) { youtube(:width => 400, :height => 200) } %>
 			<% elsif item.include? 'vimeo' %>
@@ -24,11 +24,6 @@
 <% end %>
 
 </ul>
-
-<script type="text/stylesheet">
-	.item { width: 25%;}
-	.item.w2 { width: 50%; }
-</script>
 
 <script type="text/javascript">
 
