@@ -11,9 +11,9 @@
 			<hr/>
 			<div>
 				<ul class="list-unstyled" >
-					<li><b>Acitivies Completed: </b><%= @user.stats[:completed] %></li>
-					<li><b>Acitivies Accepted: </b><%= @user.stats[:accepted] %></li>
-					<li><b>Users Following: </b><%= @user.stats[:following] %></li>
+					<li><b>Acitivies Completed: </b><%= @user_activity.user.stats[:completed] %></li>
+					<li><b>Acitivies Accepted: </b><%= @user_activity.user.stats[:accepted] %></li>
+					<li><b>Users Following: </b><%= @user_activity.user.stats[:following] %></li>
 				</ul>
 			</div>
 		</div><!-- user -->
@@ -21,11 +21,13 @@
 
 		<div class="span9">
 
-			<div class="center">
+			<div >
 				
 				
-				<span class=" pull-right" >
+				<span class="pull-right" >
+					<span class="activity-actions">
 					<%= render 'action'%>
+					</span>
 					<% if @current_user and (@current_user.id == @user_activity.user.id or @current_user.role = User::SUPER_ADMIN) %>
 						<%= link_to 'Edit', edit_activity_user_activity_path(@activity,@user_activity), class: 'btn' %>
 					<% end %>
@@ -120,18 +122,4 @@
   </div>
 </div>
 		
-<script type="text/javascript">
 
-$(document).ready(function() { 
-
-	$(document)
-	.on('ajax:success', '.accept-user-activity-select', function(event, data, status, xhf) {
-		$('.activity-actions').html(data);
-	});	
-
-	$(document)
-	.on('ajax:error', '.accept-user-activity-select', function(event, data, status, xhf) {
-		pushFlash({message:'Error selecting activity action.', state: 'error', fadeOut: 5000});
-	});
-});
-</script>

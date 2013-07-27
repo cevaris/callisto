@@ -29,3 +29,19 @@
 		</a>
 	<% end %>
 </div>
+
+<script type="text/javascript">
+
+$(document).ready(function() { 
+
+	$(document)
+	.on('ajax:success', '.accept-user-activity-select', function(event, data, status, xhf) {
+		$('.activity-actions').html(data);
+	});	
+
+	$(document)
+	.on('ajax:error', '.accept-user-activity-select', function(event, data, status, xhf) {
+		pushFlash({message:'Error selecting activity action.', state: 'error', fadeOut: 5000});
+	});
+});
+</script>
