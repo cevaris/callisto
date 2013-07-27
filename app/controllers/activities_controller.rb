@@ -48,10 +48,6 @@ class ActivitiesController < ApplicationController
     # Limit return results
     @activities = @activities.first(ActivitiesController::MAX_SEARCH_RESULTS)
 
-    Rails.logger.info params.has_key?('hidden-filter_activity_tags')
-    Rails.logger.info !params['hidden-filter_activity_tags'].empty?
-    Rails.logger.info params['hidden-filter_activity_tags']
-
     render partial: 'activities/table_activities'
   end
 
