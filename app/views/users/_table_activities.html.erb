@@ -6,8 +6,8 @@
 
 <% activities.each do |activity| %>
   <tr>
-    <td><%= link_to "#{activity.name.titlecase}", activity %></td>
-    <td><%= link_to "#{activity.user.name.titlecase}", activity.user %></td>
+    <td width="60%"><%= link_to "#{activity.name.titlecase}", activity %></td>
+    <td width="40%"><%= link_to "#{activity.user.name.titlecase}", activity.user %></td>
   </tr>
 <% end %>
 </table>

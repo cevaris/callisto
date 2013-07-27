@@ -12,8 +12,6 @@
 			</div>
 		</div><!-- user -->
 
-
-
 	<div class="span9">
 		<span class="pull-right">
 		<% if @current_user and @current_user.id != @user.id %>
@@ -25,7 +23,14 @@
 		<% end %>
 		</span>
 
+		<% if !@user.activities_accepted.empty? %>
+		<h3>Accpeted Activities</h3>
 		<%= render :partial => 'table_user_activities', locals: {user_activities: @user.activities_accepted} %>
+		<% end %>
+		<% if !@user.activities_completed.empty? %>
+		<h3>Completed Activities</h3>
+		<%= render :partial => 'table_user_activities', locals: {user_activities: @user.activities_completed} %>
+		<% end %>
 	</div>
 
 </div>

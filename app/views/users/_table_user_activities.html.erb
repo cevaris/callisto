@@ -1,15 +1,16 @@
 <table class="table table-hover table-condensed">
+	<thead>
   <tr>
     <th>Name</th>
     <th>User</th>
-    <th>Status</th>
   </tr>
-
-<% user_activities.each do |user_activity| %>
-  <tr>
-    <td><%= link_to "#{user_activity.activity.name.titlecase}", activity_user_activity_path(user_activity.activity, user_activity) %></td>
-    <td><%= link_to "#{user_activity.user.name.titlecase}", user_path(user_activity.user) %></td>
-    <td><%= user_activity.activity_state.name %></td>
-  </tr>
-<% end %>
+  </thead>
+  <tbody>
+	<% user_activities.each do |user_activity| %>
+		<tr>
+	    <td width="60%"><%= link_to truncate("#{user_activity.activity.name.titlecase}", length: 40), activity_user_activity_path(user_activity.activity, user_activity) %></td>
+	    <td width="40%"><%= link_to truncate("#{user_activity.user.name.titlecase}", length: 40), user_path(user_activity.user) %></td>
+	  </tr>
+	<% end %>
+	</tbody>
 </table>
