@@ -1,5 +1,6 @@
 <%= hidden_field_tag 'activity-id', @activity.id %>
 
+<% if @user %>
 <span class="pull-right">
 <% if @user.following? @activity %>
 	<%= link_to 'Ignore', activity_unwatch_path(@activity), class: 'btn', remote: true, id:'unwatch_user_select' %>
@@ -10,6 +11,7 @@
 	<%= link_to 'Edit', edit_activity_path(@activity), class: 'btn' %>
 <% end %>
 </span>
+<% end %>
 
 <h1><%= @activity.name %></h1>
 
