@@ -1,3 +1,23 @@
+<% if @wall_content.empty? %>
+
+<div class="row lead">
+	<div class="span2"></div>
+	<div class="span10">
+		<b><%= @current_user.name %></b>: Let me see your wall. <br/>
+		<b><%= @user.name %></b>: [with a small wave of the hand] You don’t need to see this wall. <br/>
+		<b><%= @current_user.name %></b>: We don’t need to see this wall. <br/>
+		<b><%= @user.name %></b>: This is not the wall you’re looking for. <br/>
+		<b><%= @current_user.name %></b>: This is not the wall I am looking for. <br/>
+		<br/>
+		<br/>
+		<h2>There is really nothing to see here ... yet.</h2>
+	</div>
+	<!-- <div class="span"></div> -->
+</div>
+
+
+
+<% else %>
 <ul class="user_wall" style="list-style-type: none; position:relative;">
 
 <% @wall_content.each do |user_activity, type, item| %>
@@ -39,3 +59,4 @@ $(window).load(function() {
 });
 	  
 </script>
+<% end %>

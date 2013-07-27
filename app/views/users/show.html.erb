@@ -1,22 +1,31 @@
 
-<aside class="span3">
-  <section>
-  	<p><strong><%= @user.name %></strong></p>
-  	<p><%= image_tag @user.avatar.url :thumb %></p>
-  </section>
-</aside>
+<div class="row">
+	<div class="span3">
+	  <section>
+	  	<p><strong><%= @user.name %></strong></p>
+	  	<p><%= image_tag @user.avatar.url :thumb %></p>
+	  </section>
+	</div>
 
+	<div class="span4">
 
-<span class="pull-right">
-<% if @current_user and @current_user.id != @user.id %>
-	<% if @current_user.following? @user %>
-		<%= link_to 'Unfollow', user_unfollow_url(@user), class: 'btn', remote: true, id:'unfollow_user_select' %>
-	<% else %>	
-		<%= link_to 'Follow', user_follow_url(@user), class: 'btn', remote: true, id:'follow_user_select' %>
-	<% end %>
-<% end %>
-</span>
+		Check out my wall <%= link_to 'here', user_wall_path(@user), class: 'btn btn-primary' %>
 
+	</div>
+
+	<div class="span5">
+		<span class="pull-right">
+		<% if @current_user and @current_user.id != @user.id %>
+			<% if @current_user.following? @user %>
+				<%= link_to 'Unfollow', user_unfollow_url(@user), class: 'btn', remote: true, id:'unfollow_user_select' %>
+			<% else %>	
+				<%= link_to 'Follow', user_follow_url(@user), class: 'btn', remote: true, id:'follow_user_select' %>
+			<% end %>
+		<% end %>
+		</span>
+	</div>
+
+</div>
 
 <%= render :partial => 'table_user_activities', locals: {user_activities: @user.activities_accepted} %>
 

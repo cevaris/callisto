@@ -1,12 +1,14 @@
 class ActivitiesController < ApplicationController
 
+	MAX_SEARCH_RESULTS = 50
+
 	before_filter :require_session, 
 		:only => [:new, :create, :update, :destroy]
 
   # GET /activities
   # GET /activities.json
   def index
-  	@activities = Activity.all
+  	@activities = Activity.all(limit: ActivitiesController::MAX_SEARCH_RESULTS)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -46,6 +48,8 @@ class ActivitiesController < ApplicationController
     @activities = activity_tags + activity_names
     # return results
     @activities.uniq!
+
+    @activities = @activities.first(ActivitiesController::MAX_SEARCH_RESULTS)
 
     render partial: 'activities/table_activities'
   end

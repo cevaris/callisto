@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   def wall
   	@user = User.find params[:user_id]
     @user_activities = @user.user_activities
-    @current_user = current_user
+    @current_user = current_user || @user
 
     @wall_content = []
 
@@ -31,7 +31,11 @@ class UsersController < ApplicationController
 
     @wall_content.shuffle!
 
-    @no_container = true
+    if !@wall_content.empty?
+    	@no_container = true
+    end	
+
+   
   end 
 
   def show
