@@ -1,7 +1,7 @@
 <%= hidden_field_tag 'activity-id', @activity.id %>
 <%= hidden_field_tag 'user-activity-id', @user_activity.id %>
 
-<div class="">
+<div>
 
 	<div class="row" >
 
@@ -10,11 +10,7 @@
 			<label><h2><%= @user_activity.user.name %></h2></label>
 			<hr/>
 			<div>
-				<ul class="list-unstyled" >
-					<li><b>Acitivies Completed: </b><%= @user_activity.user.stats[:completed] %></li>
-					<li><b>Acitivies Accepted: </b><%= @user_activity.user.stats[:accepted] %></li>
-					<li><b>Users Following: </b><%= @user_activity.user.stats[:following] %></li>
-				</ul>
+				<%= render partial: 'users/stats', locals: { user: @user_activity.user} %>
 			</div>
 		</div><!-- user -->
 
@@ -76,7 +72,7 @@
 
 	<div class="span6">
 		<% if !@user_activity.video_url.blank? %>
-		<div class="center">
+		<div class="center video-container">
 			<label><b>User Activty Video:</b></label>
 			<% if @user_activity.video_url %>
 				<% if @user_activity.video_url.include?('youtube') or @user_activity.video_url.include?('youtu.be') %>
