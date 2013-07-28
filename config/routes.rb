@@ -18,12 +18,16 @@ Callisto::Application.routes.draw do
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
-
+  
   resources :users do
   	get 'follow'
   	get 'unfollow'
   	get 'wall'
   end 
+  match '/watching', to: 'users#watching'
+  match '/following', to: 'users#following'
+  match '/completed', to: 'users#completed'
+  match '/accepted', to: 'users#accepted'
 
   match '/activities/filter' => 'activities#filter'
   match '/activities/filter_tags' => 'activities#filter_tags'

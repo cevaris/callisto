@@ -1,8 +1,17 @@
 class UsersController < ApplicationController
 
+	before_filter :require_session, 
+		:only => [:watching, :accepted, :completed, :following,
+							:unfollow, :follow, :update]
+
 	def home
     if signed_in?
     	@user = current_user
+    	max_num_results = 20
+    	@completed = @user.activities_completed.limit(max_num_results).order('updated_at DESC')
+    	@accepted = @user.activities_accepted.limit(max_num_results).order('updated_at DESC')
+    	@watching = @user.activities_watching.limit(max_num_results).order('updated_at DESC')
+    	@following = @user.activities_following.limit(max_num_results).order('updated_at DESC')
 
     else
     	render 'static_pages/home'
@@ -40,10 +49,33 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find params[:id]
-    @activities = @user.user_activities
     @current_user = current_user
   end
 
+  def watching
+  	@user = current_user
+  	@activities = @user.activities_watching.order('updated_at DESC')
+  	render 'all_activities'
+  end
+
+ 	def accepted
+  	@user = current_user
+  	@activities = @user.activities_accepted.order('updated_at DESC')
+  	render 'all_user_activities'
+  end
+
+  def following
+		@user = current_user
+  	@activities = @user.activities_following.order('updated_at DESC')
+  	render 'all_user_activities'
+  end
+
+  def completed
+  	@user = current_user
+  	@activities = @user.activities_completed.order('updated_at DESC')
+  	Rails.logger.info @activities.inspect
+  	render 'all_user_activities'
+  end
 
   def unfollow
   	@user = User.find params[:user_id]

@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
   	stats[:accepted]  =  self.activities_accepted.count
   	stats[:completed] =  self.activities_completed.count
 		# Users
-  	stats[:following] =  self.users_watching.count
+  	stats[:following] =  self.user_followers.count
 
   	stats
   end
@@ -84,7 +84,7 @@ class User < ActiveRecord::Base
   	self.following_by_type('Activity')
   end
 
-  def users_watching
+  def user_followers
   	# Users following me
   	self.followers_by_type('User')
   end

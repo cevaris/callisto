@@ -1,7 +1,10 @@
 <h3>Accpeted Activities</h3>
-<%= render :partial => 'table_user_activities', locals: {user_activities: @user.activities_accepted} %>
+<%= render :partial => 'table_user_activities', locals: {user_activities: @accepted} %>
 <h3>Users Following</h3>
-<%= render :partial => 'table_user_activities', locals: {user_activities: @user.activities_following} %>
+<%= render :partial => 'table_user_activities', locals: {user_activities: @following} %>
 <h3>Activites Watching</h3>
-<%= render partial: 'table_activities', locals: {activities: @user.activities_watching} %>
+<%= render partial: 'table_activities', locals: {activities: @watching} %>
+<h3>Completed Activities</h3>
+<%= render :partial => 'table_user_activities', locals: {user_activities: @completed} %>
+
 
