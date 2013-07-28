@@ -3,11 +3,11 @@ class UsersController < ApplicationController
 	before_filter :require_session, 
 		:only => [:watching, :accepted, :completed, :following,
 							:unfollow, :follow, :update,
-							:followers
-						 ]
+							:followers]
 
 	def home
     if signed_in?
+
     	@user = current_user
     	max_num_results = 20
     	@completed = @user.activities_completed.limit(max_num_results).order('updated_at DESC')

@@ -1,10 +1,32 @@
-<h3>Accpeted Activities</h3>
+<h3> <%= link_to 'Accpeted Activities', activities_accepted_path %> </h3>
+<% if !@accepted.empty? %>
 <%= render :partial => 'table_user_activities', locals: {user_activities: @accepted} %>
-<h3>Users Following</h3>
+<% else %>
+<p class="lead">No accepted activities</p>
+<% end %>
+
+
+<h3> <%= link_to 'Activities Following', activities_following_path %> </h3>
+<% if !@following.empty? %>
 <%= render :partial => 'table_user_activities', locals: {user_activities: @following} %>
-<h3>Activites Watching</h3>
+<% else %>
+<p class="lead">Follow other users</p>
+<% end %>
+
+
+<h3> <%= link_to ' Activities Watching', activities_watching_path %> </h3>
+<% if !@watching.empty? %>
 <%= render partial: 'table_activities', locals: {activities: @watching} %>
-<h3>Completed Activities</h3>
+<% else %>
+<p class="lead">Currenlty not watching any activites</p>
+<% end %>
+
+<h3> <%= link_to ' Activities Completed', activities_completed_path %> </h3>
+<% if !@completed.empty? %>
 <%= render :partial => 'table_user_activities', locals: {user_activities: @completed} %>
+<% else %>
+<p class="lead">No completed activities</p>
+<% end %>
+
 
 

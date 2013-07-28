@@ -1,13 +1,17 @@
 <table class="table table-hover table-condensed">
+	<thead>
   <tr>
     <th>Name</th>
     <th>User</th>
   </tr>
+  </thead>
+  <tbody>
 
-<% activities.each do |activity| %>
-  <tr>
-    <td width="60%"><%= link_to "#{activity.name.titlecase}", activity %></td>
-    <td width="40%"><%= link_to "#{activity.user.name.titlecase}", activity.user %></td>
-  </tr>
-<% end %>
+	<% activities.each do |activity| %>
+	  <tr>
+	    <td width="60%"><%= link_to "#{activity.name.titlecase}", activity %></td>
+	    <td width="40%"><%= link_to "#{activity.user.name.titlecase}", activity.user %></td>
+	  </tr>
+	<% end %>
+	</tbody>
 </table>

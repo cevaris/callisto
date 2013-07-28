@@ -3,7 +3,7 @@
 <% if @user %>
 <span class="pull-right">
 <% if @user.following? @activity %>
-	<%= link_to 'Ignore', activity_unwatch_path(@activity), class: 'btn', remote: true, id:'unwatch_user_select' %>
+	<%= link_to 'Unwatch', activity_unwatch_path(@activity), class: 'btn', remote: true, id:'unwatch_user_select' %>
 <% else %>	
 	<%= link_to 'Watch', activity_watch_path(@activity), class: 'btn', remote: true, remote: true, id:'watch_user_select' %>
 <% end %>
