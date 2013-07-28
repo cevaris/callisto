@@ -1,0 +1,53 @@
+<ul class="user_wall" style="list-style-type: none; position:relative;">
+
+<% users.each do |user| %>
+
+	<li class="item">
+
+		<div class="image_box">
+	    <div class="image_box_content">
+	    	<%= link_to truncate(user.name, length:30) %>
+	    </div>
+	    <div class="image_box_image">
+	    	<%= link_to image_tag(user.avatar(:square)), user_path(user) %>
+	    </div>
+		</div>
+	</li>
+
+<% end %>
+
+</ul>
+
+
+<style type="text/css">
+	.image_box {
+    width: 200px;
+    height: 200px;
+    position: relative;
+	}
+
+	.image_box_content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+	}
+
+	.image_box_image {
+	    z-index: 10;
+	}
+	
+</style>
+
+
+<script type="text/javascript">
+
+$(window).load(function() { 
+	$('.user_wall').masonry( {
+	  columnWidth: 200,
+	  itemSelector: '.item'
+	});
+});
+	  
+</script>

@@ -1,0 +1,25 @@
+<table class="table table-hover">
+	<thead>
+  <tr>
+    <th>Name</th>
+  </tr>
+  </thead>
+  <tbody>
+	<% users.each do |user| %>
+		<tr>
+	    <td>
+	    	
+	    	<div>
+	    		<span>
+	    			<%= image_tag(@user.avatar.url(:icon), size: '50x50', class: 'img-rounded') %>	
+    			</span>
+  				<span class="lead">
+  					<%= link_to truncate("#{user.name}", length: 100), user_path(user) %>
+					</span>	    		
+    		<div>
+
+	    </td>
+	  </tr>
+	<% end %>
+	</tbody>
+</table>

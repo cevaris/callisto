@@ -2,7 +2,9 @@ class UsersController < ApplicationController
 
 	before_filter :require_session, 
 		:only => [:watching, :accepted, :completed, :following,
-							:unfollow, :follow, :update]
+							:unfollow, :follow, :update,
+							:followers
+						 ]
 
 	def home
     if signed_in?
@@ -55,26 +57,31 @@ class UsersController < ApplicationController
   def watching
   	@user = current_user
   	@activities = @user.activities_watching.order('updated_at DESC')
-  	render 'all_activities'
+  	render 'activities'
   end
 
  	def accepted
   	@user = current_user
   	@activities = @user.activities_accepted.order('updated_at DESC')
-  	render 'all_user_activities'
+  	render 'user_activities'
   end
 
   def following
 		@user = current_user
   	@activities = @user.activities_following.order('updated_at DESC')
-  	render 'all_user_activities'
+  	render 'user_activities'
+  end
+
+  def followers
+		@user = current_user
+  	@users = @user.followers.order('created_at DESC')
+  	Rails.logger.info @users.inspect
   end
 
   def completed
   	@user = current_user
   	@activities = @user.activities_completed.order('updated_at DESC')
-  	Rails.logger.info @activities.inspect
-  	render 'all_user_activities'
+  	render 'user_activities'
   end
 
   def unfollow

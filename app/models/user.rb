@@ -84,7 +84,7 @@ class User < ActiveRecord::Base
   	self.following_by_type('Activity')
   end
 
-  def user_followers
+  def followers
   	# Users following me
   	self.followers_by_type('User')
   end

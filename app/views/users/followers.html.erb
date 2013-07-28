@@ -1,0 +1,24 @@
+<div class="row">
+	<div class="span3" >
+			<%= image_tag(@user.avatar.url(:square), size: '300x300', class: 'img-rounded') %>	
+			<label><h2><%= @user.name %></h2></label>
+			<hr/>
+			<div>
+				<%= render partial: 'users/stats', locals: { user: @user } %>
+			</div>
+			<div class="center">
+				Check out my wall <%= link_to 'here', user_wall_path(@user), class: 'btn btn-primary' %>
+			</div>
+	</div><!-- user -->
+
+	<div class="span9">
+		
+		<% if !@user.followers.empty? %>
+		<h3>Users Following You</h3>
+		<%= render :partial => 'list_users', locals: { users: @users } %>
+		<% else %>
+		<h3>No Followers Found</h3>
+		<% end %>
+	</div>
+
+</div>
