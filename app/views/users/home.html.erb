@@ -1,11 +1,6 @@
 <div class="row">
 	<div class="span3" >
-			<%= image_tag(@current_user.avatar.url(:square), size: '300x300', class: 'img-rounded') %>	
-			<label><h2><%= @current_user.name %></h2></label>
-			<hr/>
-			<div>
-				<%= render partial: 'users/stats', locals: { user: @current_user } %>
-			</div>
+		<%= render partial: 'user', locals: { user: @current_user } %>
 	</div><!-- current_user -->
 
 	<div class="span9">

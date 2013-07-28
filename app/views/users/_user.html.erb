@@ -1,0 +1,15 @@
+<div>
+	<%= image_tag(user.avatar.url(:square), size: '300x300', class: 'img-rounded') %>	
+	<label><h2><%= user.name %></h2></label>
+	<hr/>
+	<div>
+		<ul class="list-unstyled" >
+			<li><b>Completed: </b><%= user.stats[:completed] %></li>
+			<li><b>Accepted: </b><%= user.stats[:accepted] %></li>
+			<li><b>Followers: </b><%= user.stats[:following] %></li>
+		</ul>
+	</div>
+	<div class="center">
+		Check out my wall <%= link_to 'here', user_wall_path(@user), class: 'btn btn-primary' %>
+	</div>
+</div>
