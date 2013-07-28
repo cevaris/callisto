@@ -7,7 +7,9 @@
 
 		<div class="span3" >
 			<%= image_tag(@user_activity.user.avatar.url(:square), size: '300x300', class: 'img-rounded') %>	
-			<label><h2><%= @user_activity.user.name %></h2></label>
+			<div class="text-center">
+				<label><h2><%= link_to @user_activity.user.name, user_path(@user_activity.user) %></h2></label>
+			</div>
 			<hr/>
 			<div>
 				<%= render partial: 'users/stats', locals: { user: @user_activity.user} %>
@@ -30,7 +32,7 @@
 
 			<div>
 				<div class="text-left">
-					<h1><%= @activity.name %></h1>
+					<h1><%= link_to @activity.name, activity_path(@activity) %></h1>
 					<span  class="text-left">
 						<b><%= @activity.tag_list %></b>
 					</span>
@@ -103,6 +105,8 @@
 </div>
 
 
+
+
 <div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
   <div class="modal-header">
       <a class="close" data-dismiss="modal">&times;</a>
@@ -110,8 +114,8 @@
   </div>
   <div class="modal-body"><div class="modal-image"></div></div>
   <div class="modal-footer center">
-      <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
-      <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
+		<a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
+    <a class="btn btn-info modal-next">Next <i class="icon-arrow-right icon-white"></i></a>      
   </div>
 </div>
 		
