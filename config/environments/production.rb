@@ -28,7 +28,8 @@ Callisto::Application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl = true
+  # config.force_ssl = true
+  config.force_ssl = false
 
   # See everything in the log (default is :info)
   # config.log_level = :debug
@@ -87,7 +88,8 @@ Callisto::Application.configure do
 	  :s3_credentials => {
 	    :bucket => ENV['AWS_BUCKET'],
 	    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-	    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+	    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
+	    :s3_protocol => 'https'
 	  }
 	}
 
