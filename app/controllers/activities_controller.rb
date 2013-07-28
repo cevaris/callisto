@@ -130,12 +130,12 @@ class ActivitiesController < ApplicationController
   # POST /activities
   # POST /activities.json
   def create
-
+  	Rails.logger.info params
     @activity = Activity.new(params[:activity])
     @activity.user = current_user
 
     if params.has_key?('hidden-activity') and params['hidden-activity'].has_key?('tag_list')
-    	params[:activity][:tag_list] = params['hidden-activity'][:tag_list]
+    	@activity.tag_list = params['hidden-activity'][:tag_list]
     end
 
     respond_to do |format|
