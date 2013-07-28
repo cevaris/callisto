@@ -11,7 +11,8 @@ class User < ActiveRecord::Base
 	has_secure_password
 	before_save :default_values
 
-  attr_accessible :email, :name, :password, :password_confirmation, :avatar, :role
+  attr_accessible :email, :password, :password_confirmation, 
+  								:avatar, :role, :first_name, :last_name
 
   has_one  :setting
   has_many :activities
@@ -29,6 +30,8 @@ class User < ActiveRecord::Base
   	
   before_save do |user|
     user.email = user.email.downcase
+    user.first_name.strip!
+    user.last_name.strip!
   end
 
   before_save :create_remember_token
@@ -43,6 +46,10 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
 
   validates :password, presence: true, length: { minimum: 6 }, confirmation: true, if: :password_digest_changed?
+
+  def name
+  	"#{self.first_name} #{self.last_name}"
+  end
 
   def stats
   	stats = {}

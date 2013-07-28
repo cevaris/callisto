@@ -5,8 +5,16 @@
     <%= form_for(@user) do |f| %>
       <%= render partial: 'shared/error_messages', locals: { object: @user } %>
 
-      <%= f.label :name, t('signup.name_label') %>
-      <%= f.text_field :name %>
+      <div class="row">
+      	<div class="span3">
+      		<%= f.label :first_name, 'First Name' %>
+		      <%= f.text_field :first_name %>
+      	</div>
+      	<div class="span3">
+      		<%= f.label :last_name, 'Last Name' %>
+		      <%= f.text_field :last_name %>
+      	</div>
+      </div>
 
       <%= f.label :email, t('signup.email_label') %>
       <%= f.text_field :email %>
