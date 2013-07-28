@@ -1,65 +1,65 @@
 <%= hidden_field_tag 'activity-id', @activity.id %>
 <%= hidden_field_tag 'user-activity-id', @user_activity.id %>
 
-<div>
 
-	<div class="row" >
 
-		<div class="span3" >
-			<%= image_tag(@user_activity.user.avatar.url(:square), size: '300x300', class: 'img-rounded') %>	
-			<div class="text-center">
-				<label><h2><%= link_to @user_activity.user.name, user_path(@user_activity.user) %></h2></label>
+<div class="row" >
+
+	<div class="span3" >
+		<%= image_tag(@user_activity.user.avatar.url(:square), size: '300x300', class: 'img-rounded') %>	
+		<div class="text-center">
+			<label><h2><%= link_to @user_activity.user.name, user_path(@user_activity.user) %></h2></label>
+		</div>
+		<hr/>
+		<div>
+			<%= render partial: 'users/stats', locals: { user: @user_activity.user} %>
+		</div>
+	</div><!-- user -->
+
+
+	<div class="span9">
+
+		<div >
+			<span class="pull-right" >
+				<span class="activity-actions">
+				<%= render 'action'%>
+				</span>
+				<% if @current_user and ((@current_user.id == @user_activity.user.id) or (@current_user.role == User::SUPER_ADMIN)) %>
+					<%= link_to 'Edit', edit_activity_user_activity_path(@activity,@user_activity), class: 'btn' %>
+				<% end %>
+			</span>	
+		</div>
+
+		<div>
+			<div class="text-left">
+				<h1><%= link_to @activity.name, activity_path(@activity) %></h1>
+				<span  class="text-left">
+					<b><%= @activity.tag_list %></b>
+				</span>
 			</div>
+				
 			<hr/>
 			<div>
-				<%= render partial: 'users/stats', locals: { user: @user_activity.user} %>
+				<label><b>Description:</b></label>
+				<%= with_new_lines @activity.description %>
 			</div>
-		</div><!-- user -->
+		</div>
 
 
-		<div class="span9">
+		<% if !@user_activity.report.blank? %>
 
-			<div >
-				<span class="pull-right" >
-					<span class="activity-actions">
-					<%= render 'action'%>
-					</span>
-					<% if @current_user and (@current_user.id == @user_activity.user.id or @current_user.role = User::SUPER_ADMIN) %>
-						<%= link_to 'Edit', edit_activity_user_activity_path(@activity,@user_activity), class: 'btn' %>
-					<% end %>
-				</span>	
-			</div>
+		<div>
+			<hr/>
+			<label><b>Report:</b></label>
+			<%= with_new_lines @user_activity.report %>
+		</div>
 
-			<div>
-				<div class="text-left">
-					<h1><%= link_to @activity.name, activity_path(@activity) %></h1>
-					<span  class="text-left">
-						<b><%= @activity.tag_list %></b>
-					</span>
-				</div>
-					
-				<hr/>
-				<div>
-					<label><b>Description:</b></label>
-					<%= with_new_lines @activity.description %>
-				</div>
-			</div>
+		<% end %>
 
+		
+	</div><!-- activity -->
+</div><!-- row -->
 
-			<% if !@user_activity.report.blank? %>
-
-			<div>
-				<hr/>
-				<label><b>Report:</b></label>
-				<%= with_new_lines @user_activity.report %>
-			</div>
-
-			<% end %>
-
-			
-		</div><!-- activity -->
-	</div><!-- row -->
-</div><!-- well -->
 
 
 
@@ -72,9 +72,12 @@
 <div class="row">
 
 
-	<div class="span6">
+	<div class="span6 text-center">
 		<% if !@user_activity.video_url.blank? %>
-		<div class="center video-container">
+		<div>
+			<label><b>Activity Video:</b></label>
+		</div>
+		<div class="video-container">
 			<label><b>User Activty Video:</b></label>
 			<% if @user_activity.video_url %>
 				<% if @user_activity.video_url.include?('youtube') or @user_activity.video_url.include?('youtu.be') %>
@@ -91,12 +94,19 @@
 
 	<div class="span6">
 		<% if !@user_activity.user_activity_images.empty? %>
-		<div class="center">
+		<div>
+			<div class="text-center">
 			<label><b>User Pictures:</b></label>
+			</div>
+			
 			<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+				<ul class="wall" style="list-style-type: none; position:relative;">
 				<% @user_activity.user_activity_images.each do |activity_image| %>
-					<%= link_to image_tag(activity_image.image.url(:square)), activity_image.image.url(:large), title: activity_image.image_file_name, 'data-gallery' => 'gallery' %>
+					<li class="item">
+					<%= link_to image_tag(activity_image.image.url(:square), size: '175x175'), activity_image.image.url(:large), title: activity_image.image_file_name, 'data-gallery' => 'gallery' %>
+					</li>
 			 	<% end %>
+			 	</ul>
 			</div>
 		</div>
 		<% end %>
@@ -118,5 +128,16 @@
     <a class="btn btn-info modal-next">Next <i class="icon-arrow-right icon-white"></i></a>      
   </div>
 </div>
-		
 
+<script type="text/javascript">
+	
+$(window).load(function() { 
+	$('.wall').masonry( {
+		"isFitWidth": true,
+	  columnWidth: 175,
+	  itemSelector: '.item'
+	});
+});
+
+
+</script>

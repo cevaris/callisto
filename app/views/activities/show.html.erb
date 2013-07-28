@@ -1,117 +1,143 @@
 <%= hidden_field_tag 'activity-id', @activity.id %>
 
-<% if @user %>
-<span class="pull-right">
-<% if @user.following? @activity %>
-	<%= link_to 'Unwatch', activity_unwatch_path(@activity), class: 'btn', remote: true, id:'unwatch_user_select' %>
-<% else %>	
-	<%= link_to 'Watch', activity_watch_path(@activity), class: 'btn', remote: true, remote: true, id:'watch_user_select' %>
-<% end %>
-<% if can? :edit, @activity %>
-	<%= link_to 'Edit', edit_activity_path(@activity), class: 'btn' %>
-<% end %>
-</span>
-<% end %>
+<div class="row" >
+		<div class="span12">
 
-<h1><%= @activity.name %></h1>
+			<div>
+				<% if @user %>
+					<span class="pull-right">
 
-<p>
-	<label><b>Tags:</b></label>
-	<%= @activity.tag_list %>
-<p>
+					<% if !@user_activity.nil? %>
+						<%= link_to activity_user_activity_path(@activity, @user_activity), class: 'btn' do %> 
+							<% if @user_activity.activity_state.name == ActivityState::ACCEPTED %>
+									Accpeted <i class="<%= @user_activity.activity_state.thumbnail %>"></i>
+							<% elsif @user_activity.activity_state.name == ActivityState::COMPLETED %>
+									Completed <i class="<%= @user_activity.activity_state.thumbnail %>"></i>			
+							<% elsif @user_activity.activity_state.name == ActivityState::FORFEITED %>
+									Forfeited <i class="<%= @user_activity.activity_state.thumbnail %>"></i>
+							<% end %>
+						<% end %>
+					<% else %>
+						<%= link_to activity_user_activities_path(@activity), class: 'btn', method: :post do %> 
+							Accept <i class="icon-plus"></i> 
+						<% end %>
+					<% end %>
 
-<p>
-	<label><b>Description:</b></label>
-	<%= with_new_lines @activity.description %>
-<p>
+					<% if @user.following? @activity %>
+						<%= link_to 'Unwatch', activity_unwatch_path(@activity), class: 'btn', remote: true, id:'unwatch_user_select' %>
+					<% else %>	
+						<%= link_to 'Watch', activity_watch_path(@activity), class: 'btn', remote: true, remote: true, id:'watch_user_select' %>
+					<% end %>
+					<% if can? :edit, @activity %>
+						<%= link_to 'Edit', edit_activity_path(@activity), class: 'btn' %>
+					<% end %>
 
-<% if !@user_activity.nil? %>
+					</span>
+				<% end %>
+			</div>
 
-	<%= link_to activity_user_activity_path(@activity, @user_activity), class: 'btn' do %> 
-		<% if @user_activity.activity_state.name == ActivityState::ACCEPTED %>
-				Accpeted <i class="<%= @user_activity.activity_state.thumbnail %>"></i>
-		<% elsif @user_activity.activity_state.name == ActivityState::COMPLETED %>
-				Completed <i class="<%= @user_activity.activity_state.thumbnail %>"></i>			
-		<% elsif @user_activity.activity_state.name == ActivityState::FORFEITED %>
-				Forfeited <i class="<%= @user_activity.activity_state.thumbnail %>"></i>
+			<div>
+				<div class="text-left">
+					<h1><%= link_to @activity.name, activity_path(@activity) %></h1>
+					<span  class="text-left">
+						<b><%= @activity.tag_list %></b>
+					</span>
+				</div>
+				<hr/>
+				<div>
+					<label><b>Description:</b></label>
+					<%= with_new_lines @activity.description %>
+				</div>
+			</div>
+
+
+			<div>
+				<p>
+					<label><b>Description:</b></label>
+					<%= with_new_lines @activity.description %>
+				<p>
+			</div>
+
+		</div><!-- activity -->
+	</div><!-- row -->
+
+
+
+	<br/>
+<hr/>
+<br/>
+
+<div class="row">
+
+
+	<div class="span6 text-center">
+		<% if !@activity.video_url.blank? %>
+		<div>
+			<label><b>Activity Video:</b></label>
+		</div>
+		<div class="video-container">
+			<% if @activity.video_url %>
+				<% if @activity.video_url.include?('youtube') or @activity.video_url.include?('youtu.be') %>
+					<%= auto_html(@activity.video_url) { youtube } %>
+				<% elsif @activity.video_url.include? 'vimeo' %>
+					<%= auto_html(@activity.video_url) { vimeo } %>
+				<% else %>
+					<%= auto_html(@activity.video_url) { simple_format; link(:target => 'blank') } %>
+				<% end %>
+			<% end %>
+		</div>
 		<% end %>
-	<% end %>
-	
-<% else %>
-	<%= link_to activity_user_activities_path(@activity), class: 'btn', method: :post do %> 
-		Accept <i class="icon-plus"></i> 
-	<% end %>
-<% end %>
+	</div>
 
-<div>
-	<label><b>Video:</b></label>
-	<% if @activity.video_url %>
-		<% if @activity.video_url.include?('youtube') or @activity.video_url.include?('youtu.be') %>
-			<%= auto_html(@activity.video_url) { youtube } %>
-		<% elsif @activity.video_url.include? 'vimeo' %>
-			<%= auto_html(@activity.video_url) { vimeo } %>
-		<% else %>
-			<%= auto_html(@activity.video_url) { simple_format; link(:target => 'blank') } %>
+	<div class="span6">
+		<% if !@activity.activity_images.empty? %>
+		<div>
+
+			<div class="text-center">
+			<label><b>Activity Pictures:</b></label>
+			</div>
+			
+			<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+				<ul class="wall" style="list-style-type: none; position:relative;">
+				<% @activity.activity_images.each do |activity_image| %>
+				<li class="item">
+					<%= link_to image_tag(activity_image.image.url(:square), size: '175x175'), activity_image.image.url(:large), title: activity_image.image_file_name, 'data-gallery' => 'gallery' %>
+				</li>
+			 	<% end %>
+			 </ul>
+			</div>
+
+		</div>
 		<% end %>
-	<% end %>
+	</div>
+
 </div>
 
-<p>
-	<label><b>Pictures:</b></label>
-<p>
 
-<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
-	<% @activity.activity_images.each do |activity_image| %>
-		<%= link_to image_tag(activity_image.image.url(:thumb)), activity_image.image.url(:large), title: activity_image.image_file_name, 'data-gallery' => 'gallery' %>
- 	<% end %>
-</div>
 
-<!-- modal-gallery is the modal dialog used for the image gallery -->
+
 <div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
   <div class="modal-header">
       <a class="close" data-dismiss="modal">&times;</a>
       <h3 class="modal-title"></h3>
   </div>
   <div class="modal-body"><div class="modal-image"></div></div>
-  <div class="modal-footer">
-      <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
-      <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
-      <a class="btn btn-success modal-play modal-slideshow" data-slideshow="5000"><i class="icon-play icon-white"></i> Slideshow</a>
-      <a class="btn modal-download" target="_blank"><i class="icon-download"></i> Download</a>
+  <div class="modal-footer center">
+		<a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
+    <a class="btn btn-info modal-next">Next <i class="icon-arrow-right icon-white"></i></a>      
   </div>
 </div>
 
 
-
 <script type="text/javascript">
 
-$(document).ready(function() { 
-	
-	$(document)
-	.on('ajax:success', '#watch_user_select', function(event, data, status, xhf) {
-		$('#watch_user_select').text('Ignore');
-		$('#watch_user_select').prop("href", "<%= activity_unwatch_url(@activity) %>");
-		$('#watch_user_select').attr('id','unwatch_user_select')
-	});	
-
-	$(document)
-	.on('ajax:error', '#follow_user_select', function(event, data, status, xhf) {
-		pushFlash({message:'Error watching activity.', state: 'error', fadeOut: 5000});
+$(window).load(function() { 
+	$('.wall').masonry( {
+		"isFitWidth": false,
+	  columnWidth: 175,
+	  itemSelector: '.item'
 	});
-
-
-	$(document)
-	.on('ajax:success', '#unwatch_user_select', function(event, data, status, xhf) {
-		$('#unwatch_user_select').text('Watch');
-		$('#unwatch_user_select').prop("href", "<%= activity_watch_url(@activity) %>");
-		$('#unwatch_user_select').attr('id','watch_user_select')
-	});	
-
-	$(document)
-	.on('ajax:error', '#unwatch_user_select', function(event, data, status, xhf) {
-		pushFlash({message:'Error unwatching activity.', state: 'error', fadeOut: 5000});
-	});
-
 });
+
 </script>
 
