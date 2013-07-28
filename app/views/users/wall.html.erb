@@ -1,4 +1,4 @@
-<% if @wall_content.empty? %>
+<% if @wall_content.empty? and @current_user and @user and @user.id != @current_user.id %>
 
 <div class="row lead">
 	<div class="span2"></div>
@@ -10,6 +10,15 @@
 		<b><%= @current_user.name %></b>: This is not the wall I am looking for. <br/>
 		<br/>
 		<br/>
+		<h2>There is really nothing to see here ... yet.</h2>
+	</div>
+</div>
+
+<% elsif @wall_content.empty? %>
+
+<div class="row lead">
+	<div class="span2"></div>
+	<div class="span10">
 		<h2>There is really nothing to see here ... yet.</h2>
 	</div>
 </div>

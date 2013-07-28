@@ -10,7 +10,7 @@
 <% if !@following.empty? %>
 <%= render :partial => 'table_user_activities', locals: {user_activities: @following} %>
 <% else %>
-<p class="lead">Follow other users</p>
+<p class="lead">Not following any users</p>
 <% end %>
 
 
@@ -18,7 +18,7 @@
 <% if !@watching.empty? %>
 <%= render partial: 'table_activities', locals: {activities: @watching} %>
 <% else %>
-<p class="lead">Currenlty not watching any activites</p>
+<p class="lead">Not watching any activites</p>
 <% end %>
 
 <h3> <%= link_to ' Activities Completed', activities_completed_path %> </h3>
