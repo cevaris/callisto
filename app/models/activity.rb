@@ -1,4 +1,6 @@
 class Activity < ActiveRecord::Base
+	MAX_NUM_TAGS = 3
+
 	acts_as_taggable
 	acts_as_followable
 
@@ -13,5 +15,11 @@ class Activity < ActiveRecord::Base
 
   validates :name, presence: true, length: { minimum: 5 }
   validates :description, presence: true, length: { minimum: 5 }
+  validate :maximum_amount_of_tags
+	
+	def maximum_amount_of_tags
+		number_of_tags = tag_list_cache_on('tags').uniq.length
+		errors.add(:base, "Invalid number of tags, max is #{Activity::MAX_NUM_TAGS}") if number_of_tags > Activity::MAX_NUM_TAGS
+	end
 	
 end
