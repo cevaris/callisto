@@ -20,8 +20,8 @@ textarea {
 	list-style:none;
 }
 
-.center {
-  text-align: center;
+.pointer { 
+	cursor: pointer; cursor: hand; 
 }
 
 /* component-specific */
@@ -131,3 +131,7 @@ input {
     width: 100%;
     height: 100%;
 }
+
+
+
+
