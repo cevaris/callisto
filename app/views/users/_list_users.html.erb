@@ -5,16 +5,14 @@
 	<li class="item">
 
 		<div class="image_box pointer">
-
 	    <div class="image_box_content lead" >
-	    	<%= link_to truncate(user.name, length:30),user_path(user) %>
+	    	<%= truncate(user.name, length:30) %>
 	    </div>
 	    <div class="image_box_image">
-	    	<%= link_to image_tag(user.avatar(:square)),user_path(user) %>
+	    	<%= link_to image_tag(user.avatar(:square)), user_path(user) %>
 	    </div>
-
 	  </div>
-				
+	
 	</li>
 
 <% end %>
@@ -24,32 +22,9 @@
 
 <style type="text/css">
 
-	/* Text in Box */
-
-	.image_box_content a {
-		text-decoration:none !important	;
-		color: white;
-	}
-
-	.image_box_content {
-		padding:5px;
-		background-color: rgba(0,0,0,0.30);
-		font-size: 2.0em;
-	  width: 100%;
-	  height:100%;
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  z-index: 15;
-	}
-
-	.image_box_image {
-	  z-index: 10;
-	}
-
 	.item {
-		max-width:200px;
-		max-height:200px;
+		max-width:150px;
+		max-height:150px;
 		overflow: hidden;
 	}
 	
@@ -60,9 +35,23 @@
 
 $(window).load(function() { 
 	$('.user_wall').masonry( {
-	  columnWidth: 200,
+	  columnWidth: 150,
 	  itemSelector: '.item'
 	});
 });
-  
+
+$(document).ready(function() { 
+
+
+	$(document)
+	.on('mouseenter', '.image_box', function() {
+		$(this).find('.image_box_content').hide();
+	});
+	$(document)
+	.on('mouseleave', '.image_box', function() {
+		$(this).find('.image_box_content').show();
+	});
+
+});
+	  
 </script>
