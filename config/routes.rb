@@ -12,8 +12,12 @@ Callisto::Application.routes.draw do
   match '/500',  to: 'static_pages#page500', as: 'page500'
 
   match '/signup',  to: 'users#new'
-  match '/signin',  to: 'sessions#new', :as => 'signin'
-  match '/signout', to: 'sessions#destroy', via: :delete
+  # match '/signin',  to: 'sessions#new', :as => 'signin'
+  # match '/signout', to: 'sessions#destroy', via: :delete
+
+  match '/login', :to => 'sessions#new', :as => :signin
+  match '/auth/:provider/callback', :to => 'sessions#create'
+  match '/auth/failure', :to => 'sessions#failure'
 
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'

@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
   has_one  :setting
   has_many :activities
   has_many :user_activities
+  has_many :authorizations
 
   # This method associates the attribute ":avatar" with a file attachment
   has_attached_file :avatar, 

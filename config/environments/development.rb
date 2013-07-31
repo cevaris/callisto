@@ -62,4 +62,13 @@ Callisto::Application.configure do
 	Paperclip.options[:command_path] = "/usr/local/bin/"
 
 
+  # Facebook
+  FACEBOOK_APP_ID = '636516353026790'
+  FACEBOOK_APP_SECRET = 'f01ce2db0693bb5549e7429e9af2fb1c'
+  
+
+
+
+
+
 end
