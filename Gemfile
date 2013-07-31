@@ -19,6 +19,7 @@ gem 'bootstrap-addons-rails', '~> 0.1.2'
 gem 'auto_html', '~> 1.6.0'
 gem 'cancan', '~> 1.6.10'
 gem 'acts_as_follower', '~> 0.1.1'
+gem 'omniauth', '~1.1.4'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.7'
