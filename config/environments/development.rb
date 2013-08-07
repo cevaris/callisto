@@ -59,7 +59,7 @@ Callisto::Application.configure do
 	  }
 	}
 
-	Paperclip.options[:command_path] = "/usr/local/bin/"
+	Paperclip.options[:command_path] = "/opt/ImageMagick/bin/"
 
 
   # Facebook
