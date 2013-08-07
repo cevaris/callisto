@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  include Amistad::FriendModel
+  
 	ADMIN = 'admin'
 	SUPER_ADMIN = 'super_admin'
 	DEFAULT = 'default'

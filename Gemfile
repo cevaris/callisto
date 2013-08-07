@@ -14,11 +14,11 @@ gem 'rails3-jquery-autocomplete', '~> 1.0.11'
 gem 'paperclip', '~> 3.4.2'
 gem 'cocaine', '~> 0.5.1'
 gem 'aws-sdk', '~> 1.11.1'
-# gem 'jquery-fileupload-rails'
 gem 'bootstrap-addons-rails', '~> 0.1.2'
 gem 'auto_html', '~> 1.6.0'
 gem 'cancan', '~> 1.6.10'
 gem 'acts_as_follower', '~> 0.1.1'
+gem 'amistad', '~> 0.9.2'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.7'

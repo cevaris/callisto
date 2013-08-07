@@ -15,17 +15,16 @@ Callisto::Application.routes.draw do
   match '/signin',  to: 'sessions#new', :as => 'signin'
   match '/signout', to: 'sessions#destroy', via: :delete
 
-  # match '/login', :to => 'sessions#new', :as => :signin
-  # match '/auth/:provider/callback', :to => 'sessions#create'
-  # match '/auth/failure', :to => 'sessions#failure'
-
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
   
 
 
-
+  resources :friends, :controller => 'friendships', :except => [:show, :edit] do
+    get "requests", :on => :collection
+    get "invites", :on => :collection
+  end
   
   match '/users/following', to: 'users#followers'
 
