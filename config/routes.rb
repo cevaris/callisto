@@ -21,9 +21,16 @@ Callisto::Application.routes.draw do
   
 
 
-  resources :friends, :controller => 'friendships', :except => [:show, :edit] do
-    get "requests", :on => :collection
-    get "invites", :on => :collection
+  # resources :friends, :controller => 'friendships', :except => [:show, :edit] do
+  #   get "requests", :on => :collection
+  #   get "invites", :on => :collection
+  # end
+
+  resources :friends, :controller => 'friendships' do
+    get 'invite'
+    get 'approve'
+    get 'requests'
+    # get 'invites'
   end
   
   match '/users/following', to: 'users#followers'

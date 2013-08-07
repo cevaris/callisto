@@ -6,13 +6,20 @@
 
 	<div class="span9">
 		<span class="pull-right">
-		<% if @current_user and @current_user.id != @user.id %>
-			<% if @current_user.following? @user %>
-				<%= link_to 'Unfollow', user_unfollow_url(@user), class: 'btn', remote: true, id:'unfollow_user_select' %>
-			<% else %>	
-				<%= link_to 'Follow', user_follow_url(@user), class: 'btn', remote: true, id:'follow_user_select' %>
+
+			<% if @current_user.id != @user.id %>
+				<% if @current_user.friend_with? @user %>
+					<%= link_to 'Friends', 'javascript:void(0)', class: 'btn' %>
+					<%= link_to friend_invite_url(@user), class: 'btn', remote: true, id:'follow_user_select' do %> 
+						Friends <i class="icon-ok"></i> 
+					<% end %>
+				<% else %>	
+					<%= link_to friend_invite_url(@user), class: 'btn', remote: true, id:'follow_user_select' do %> 
+						Add Friend <i class="icon-plus"></i> 
+					<% end %>
+				<% end %>
 			<% end %>
-		<% end %>
+
 		</span>
 
 		<% if !@user.activities_accepted.empty? %>
@@ -36,29 +43,12 @@ $(document).ready(function() {
 	
 	$(document)
 	.on('ajax:success', '#follow_user_select', function(event, data, status, xhf) {
-		// $('#follow_user_select').addClass('disabled');
-		$('#follow_user_select').text('Unfollow');
-		$('#follow_user_select').prop("href", "<%= user_unfollow_url(@user) %>");
-		$('#follow_user_select').attr('id','unfollow_user_select')
+		$('#follow_user_select').text('Sent Request');
 	});	
 
 	$(document)
 	.on('ajax:error', '#follow_user_select', function(event, data, status, xhf) {
-		pushFlash({message:'Error following user', state: 'error', fadeOut: 5000});
-	});
-
-
-	$(document)
-	.on('ajax:success', '#unfollow_user_select', function(event, data, status, xhf) {
-		// $('#unfollow_user_select').addClass('disabled');
-		$('#unfollow_user_select').text('Follow');
-		$('#unfollow_user_select').prop("href", "<%= user_follow_url(@user) %>");
-		$('#unfollow_user_select').attr('id','follow_user_select')
-	});	
-
-	$(document)
-	.on('ajax:error', '#unfollow_user_select', function(event, data, status, xhf) {
-		pushFlash({message:'Error unfollowing user.', state: 'error', fadeOut: 5000});
+		pushFlash({message:<%= "Error adding #{@user.name}" %>, state: 'error', fadeOut: 5000});
 	});
 
 });
