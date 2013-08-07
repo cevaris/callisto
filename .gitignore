@@ -20,3 +20,4 @@ bundler_stubs/
 *~
 .project
 .DS_Store
+*.xcuserstate
