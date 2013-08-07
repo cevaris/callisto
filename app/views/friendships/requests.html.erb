@@ -5,6 +5,12 @@
 	</div><!-- user -->
 
 	<div class="span9">
+		<h3>Pending Friend Requests</h3>
+		<% if !@pending_requests.empty? %>
+		<%= render :partial => 'table_friend_requests', locals: {friend_requests: @pending_requests} %>
+		<% else %>
+		<p class="lead">No pending friend requests</p>
+		<% end %>
 	</div>
 
 </div>
