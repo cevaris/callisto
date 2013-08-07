@@ -26,10 +26,11 @@ Callisto::Application.routes.draw do
   #   get "invites", :on => :collection
   # end
 
+
+  match '/friends/requests', to: 'friendships#requests'
   resources :friends, :controller => 'friendships' do
     get 'invite'
     get 'approve'
-    get 'requests'
     # get 'invites'
   end
   

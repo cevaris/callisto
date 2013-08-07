@@ -1,4 +1,5 @@
 class FriendshipsController < ApplicationController
+	
 	def index
     @friends = current_user.friends
     @pending_invited_by = current_user.pending_invited_by
@@ -15,7 +16,9 @@ class FriendshipsController < ApplicationController
   end
 
   def requests
+		@current_user = current_user
     @pending_requests = current_user.pending_invited_by
+    Rails.logger.info @current_user.inspect
   end
   
   def invites
@@ -37,8 +40,6 @@ class FriendshipsController < ApplicationController
     @pending_invited_by = current_user.pending_invited_by
     flash.now[:notice] = "La demande d'amiti de #{@friend.fullname} a t approuve"
   end
-
-  
 
   def destroy
     @Friend = User.find(params[:user_id])
