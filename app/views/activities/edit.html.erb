@@ -1,7 +1,8 @@
 <h1>Editing activity</h1>
 
 <%= form_for @activity, :html => { :multipart => true } do |f| %>
-	<% if @activity.errors.any? %>
+	
+  <% if @activity.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
 
@@ -29,15 +30,11 @@
   <div class="row">
 
     <div class="span6">
-      <p>
         <%= f.label :video_url %>
         <%= f.text_field :video_url %>
-      </p>
     </div>
     
-    <div class="span5" id="render_video_container">
-
-    </div>
+    <div class="span5" id="render_video_container"></div>
       
   </div>
   
