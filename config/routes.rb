@@ -31,6 +31,8 @@ Callisto::Application.routes.draw do
   resources :friends, :controller => 'friendships' do
     get 'invite'
     get 'approve'
+    get 'block'
+    get 'deny'
     # get 'invites'
   end
   

@@ -1,4 +1,5 @@
 class FriendshipsController < ApplicationController
+	# include Amistad::FriendModel
 	
 	def index
     @friends = current_user.friends
@@ -25,11 +26,18 @@ class FriendshipsController < ApplicationController
     @pending_invites = current_user.pending_invited
   end
 
-  def create
-    @Friend = User.find(params[:user_id])
-    @friendship_created = current_user.invite(@Friend)
-    if @friendship_created
-      flash.now[:notice] = "Une demande d'amiti a t envoye  #{@friend.fullname}"
+  def invite
+  	Rails.logger.info params
+    @friend = User.find params[:friend_id]
+    @current_user = current_user
+    Rails.logger.info @friend.inspect
+    Rails.logger.info @current_user.inspect
+    respond_to do |format|
+			if @current_user.invite(@friend)
+				format.html { render :nothing => true, :status => 200 }
+			else
+				format.html { render :nothing => true, :status => 500 }
+			end
     end
   end
 

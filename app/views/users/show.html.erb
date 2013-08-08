@@ -10,7 +10,7 @@
 			<% if @current_user.id != @user.id %>
 				<% if @current_user.friend_with? @user %>
 					<%= link_to 'Friends', 'javascript:void(0)', class: 'btn' %>
-					<%= link_to friend_invite_url(@user), class: 'btn', remote: true, id:'follow_user_select' do %> 
+					<%= link_to friend_invite_url(@user), class: 'btn', remote: true do %> 
 						Friends <i class="icon-ok"></i> 
 					<% end %>
 				<% else %>	
@@ -43,6 +43,7 @@ $(document).ready(function() {
 	
 	$(document)
 	.on('ajax:success', '#follow_user_select', function(event, data, status, xhf) {
+		pushFlash({message:<%= "Added #{@user.name}" %>, state: 'success', fadeOut: 5000});
 		$('#follow_user_select').text('Sent Request');
 	});	
 
