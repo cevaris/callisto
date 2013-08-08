@@ -44,7 +44,7 @@ $(document).ready(function() {
 	.on('ajax:success', '#friend_invite_select', function(event, data, status, xhf) {
 		console.log("Success");
 		$('#friend_invite_select').html('Sent Request <i class="icon-envelope"></i>');
-		pushFlash({message:'<%= "Added #{@user.name}" %>', state: 'success', fadeOut: 5000});
+		pushFlash({message:'<%= "Sent friend request to #{@user.name}" %>', state: 'success', fadeOut: 5000});
 	});	
 
 	$(document)

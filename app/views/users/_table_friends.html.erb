@@ -11,8 +11,8 @@
 	<% friends.each do |friend| %>
 		<tr>
 	    <td><%= link_to truncate("#{friend.name}", length: 40), user_path(friend) %></td>
-	    <td><%= link_to 'Remove', friend_deny_path(friend), remote: true %></td>
-	    <td><%= link_to 'Block', friend_block_path(friend), remote: true %></td>
+	    <td><%= link_to 'Remove', friend_deny_path(friend) %></td>
+	    <td><%= link_to 'Block', friend_block_path(friend) %></td>
 	  </tr>
 	<% end %>
 	</tbody>
