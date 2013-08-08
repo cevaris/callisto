@@ -25,10 +25,22 @@
     <%= f.label :description %>
     <%= f.text_area :description, size: '30x10' %>
   </p>
-  <p>
-    <%= f.label :video_url %>
-    <%= f.text_field :video_url %>
-  </p>
+
+  <div class="row">
+
+    <div class="span6">
+      <p>
+        <%= f.label :video_url %>
+        <%= f.text_field :video_url %>
+      </p>
+    </div>
+    
+    <div class="span5" id="render_video_container">
+
+    </div>
+      
+  </div>
+  
 
 	<h4>New Files</h4>
   <% if @activity.activity_images.count < 5 %>
@@ -76,6 +88,32 @@ $(document).ready(function() {
     typeaheadAjaxSource: '<%= activities_filter_tags_path format: :json %>',
     typeaheadAjaxPolling: true
   });
+
+
+
+  $('#activity_video_url').change(function(){
+
+    console.log($(this).val());
+    if( $(this).val() == undefined ) return false;
+    if($.trim($(this).val()).length == 0) return false;
+
+    $.ajax({
+      type: 'POST',
+      url: '<%= render_video_url %>',
+      data: { 'url': $(this).val() },
+      success: function(response){
+        console.log(response);
+        $('#render_video_container').html(response);
+      },
+      error: function(response){
+
+      }
+    });
+
+    return true;
+  });
+
+
 	
 });
 </script>

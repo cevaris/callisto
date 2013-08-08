@@ -1,0 +1,9 @@
+<% if @video_url %>
+	<% if @video_url.include?('youtube') or @video_url.include?('youtu.be') %>
+		<%= auto_html(@video_url) { youtube } %>
+	<% elsif @video_url.include? 'vimeo' %>
+		<%= auto_html(@video_url) { vimeo } %>
+	<% else %>
+		<%= auto_html(@video_url) { simple_format; link(:target => 'blank') } %>
+	<% end %>
+<% end %>

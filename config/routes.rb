@@ -19,6 +19,8 @@ Callisto::Application.routes.draw do
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
 
+  match '/util/render/video/', to: 'util#ajax_auto_html', as: 'render_video'
+
 
   match '/friends/requests', to: 'friendships#requests'
   resources :friends, :controller => 'friendships' do
