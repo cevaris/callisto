@@ -19,6 +19,7 @@ gem 'auto_html', '~> 1.6.0'
 gem 'cancan', '~> 1.6.10'
 gem 'acts_as_follower', '~> 0.1.1'
 gem 'amistad', '~> 0.9.2'
+gem 'font-awesome-rails', '~> 3.2.1.2'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.7'

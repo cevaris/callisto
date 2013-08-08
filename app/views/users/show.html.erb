@@ -9,7 +9,7 @@
 
 			<% if @current_user.id != @user.id %>
 				<% if @current_user.pending_invited.include? @user %>
-					<label class="btn">Pending Request ... </label>
+					<label class="btn">Pending Request <i class="icon-smile"></i> </label>
 				<% elsif @current_user.friend_with? @user %>
 					<label class="btn">Friends <i class="icon-ok"></i></label>
 				<% else %>	
