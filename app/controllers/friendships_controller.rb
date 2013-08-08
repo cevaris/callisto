@@ -2,9 +2,12 @@ class FriendshipsController < ApplicationController
 	# include Amistad::FriendModel
 	
 	def index
-    @friends = current_user.friends
-    @pending_invited_by = current_user.pending_invited_by
-    @pending_invited = current_user.pending_invited
+    @current_user = current_user
+    Rails.logger.info @current_user.friends.inspect
+    render 'users/friends'
+    # @friends = current_user.friends
+    # @pending_invited_by = current_user.pending_invited_by
+    # @pending_invited = current_user.pending_invited
   end
 
   def update

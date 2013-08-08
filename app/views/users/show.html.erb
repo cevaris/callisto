@@ -9,11 +9,11 @@
 
 			<% if @current_user.id != @user.id %>
 				<% if @current_user.pending_invited.include? @user %>
-					<label class="btn">Pending Request <i class="icon-smile"></i> </label>
+					<label class="btn">Pending Request <i class="icon-envelope"></i> </label>
 				<% elsif @current_user.friend_with? @user %>
 					<label class="btn">Friends <i class="icon-ok"></i></label>
 				<% else %>	
-					<%= link_to friend_invite_url(@user), class: 'btn', remote: true, id:'follow_user_select' do %> 
+					<%= link_to friend_invite_url(@user), class: 'btn', remote: true, id:'friend_invite_select' do %> 
 						Add Friend <i class="icon-plus"></i> 
 					<% end %>
 				<% end %>
@@ -41,14 +41,14 @@
 $(document).ready(function() { 
 	
 	$(document)
-	.on('ajax:success', '#follow_user_select', function(event, data, status, xhf) {
+	.on('ajax:success', '#friend_invite_select', function(event, data, status, xhf) {
 		console.log("Success");
-		$('#follow_user_select').html('Sent Request <i class="icon-thumbs-up-alt"></i>');
+		$('#friend_invite_select').html('Sent Request <i class="icon-envelope"></i>');
 		pushFlash({message:'<%= "Added #{@user.name}" %>', state: 'success', fadeOut: 5000});
 	});	
 
 	$(document)
-	.on('ajax:error', '#follow_user_select', function(event, data, status, xhf) {
+	.on('ajax:error', '#friend_invite_select', function(event, data, status, xhf) {
 		console.log("Error");
 		pushFlash({message:'<%= "Error adding #{@user.name}" %>', state: 'error', fadeOut: 5000});
 	});

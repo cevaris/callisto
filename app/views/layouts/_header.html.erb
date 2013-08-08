@@ -18,6 +18,7 @@
             	<li><%= link_to 'Search', activities_path %></li>
             <% if signed_in? %>
             	<li><%= link_to "#{current_user.name.titlecase}", current_user %></li>
+              <li><%= link_to "Friends", friends_url %></li>
             	<li><%= link_to t('signin.settings'), settings_path %></li>
               <li> <%= link_to t('signin.signout'), signout_path, method: "delete" %> </li>              
             <% else %>

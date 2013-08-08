@@ -1,0 +1,17 @@
+<div class="row">
+	<div class="span3" >
+		<%= render partial: 'users/user', locals: { user: @current_user } %>
+	</div><!-- user -->
+
+	<div class="span9">
+		
+		<h3>Friends</h3>
+		<% unless @current_user.friends.empty? %>
+		<%= render :partial => 'users/table_friends', locals: {friends: @current_user.friends} %>
+		<% else %>
+		<p class="lead">No friends found</p>
+		<% end %>
+
+	</div>
+
+</div>

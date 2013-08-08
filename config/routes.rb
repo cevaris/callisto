@@ -18,13 +18,6 @@ Callisto::Application.routes.draw do
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
-  
-
-
-  # resources :friends, :controller => 'friendships', :except => [:show, :edit] do
-  #   get "requests", :on => :collection
-  #   get "invites", :on => :collection
-  # end
 
 
   match '/friends/requests', to: 'friendships#requests'
@@ -33,18 +26,16 @@ Callisto::Application.routes.draw do
     get 'approve'
     get 'block'
     get 'deny'
-    # get 'invites'
   end
   
-  match '/users/following', to: 'users#followers'
 
+  
+  match '/users/following', to: 'users#followers'
   resources :users do
   	get 'follow'
   	get 'unfollow'
   	get 'wall'
   end 
-  
-
 
 
   match '/activities/filter' => 'activities#filter'
