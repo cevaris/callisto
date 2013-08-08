@@ -13,7 +13,7 @@
 		Check out my wall <%= link_to 'here', user_wall_path(user), class: 'btn btn-primary' %>
 	</div>
 	<div>
-		<% if user and @current_user.id == user.id %>
+		<% if  @current_user and @current_user.id == user.id %>
 		<%= link_to 'Friend Requests', friends_requests_url %>
 		<% end %>
 	</div>

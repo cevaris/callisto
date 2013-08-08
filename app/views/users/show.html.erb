@@ -7,7 +7,7 @@
 	<div class="span9">
 		<span class="pull-right">
 
-			<% if @current_user.id != @user.id %>
+			<% if @current_user and (@current_user.id != @user.id) %>
 				<% if @current_user.pending_invited.include? @user %>
 					<label class="btn">Pending Request <i class="icon-envelope"></i> </label>
 				<% elsif @current_user.friend_with? @user %>
