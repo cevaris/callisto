@@ -8,7 +8,11 @@
 		<span class="pull-right">
 
 			<% if @current_user.id != @user.id %>
-				<% if @current_user.friend_with? @user %>
+				<% if @current_user.pending_invited_by @user %>
+					<%= link_to friend_invite_url(@user), class: 'btn', remote: true do %> 
+						Pending Request
+					<% end %>
+				<% elsif @current_user.friend_with? @user %>
 					<%= link_to 'Friends', 'javascript:void(0)', class: 'btn' %>
 					<%= link_to friend_invite_url(@user), class: 'btn', remote: true do %> 
 						Friends <i class="icon-ok"></i> 
@@ -43,13 +47,15 @@ $(document).ready(function() {
 	
 	$(document)
 	.on('ajax:success', '#follow_user_select', function(event, data, status, xhf) {
-		pushFlash({message:<%= "Added #{@user.name}" %>, state: 'success', fadeOut: 5000});
-		$('#follow_user_select').text('Sent Request');
+		console.log("Success");
+		$('#follow_user_select').html('Sent Request <i class="icon-thumbs-up-alt"></i>');
+		pushFlash({message:'<%= "Added #{@user.name}" %>', state: 'success', fadeOut: 5000});
 	});	
 
 	$(document)
 	.on('ajax:error', '#follow_user_select', function(event, data, status, xhf) {
-		pushFlash({message:<%= "Error adding #{@user.name}" %>, state: 'error', fadeOut: 5000});
+		console.log("Error");
+		pushFlash({message:'<%= "Error adding #{@user.name}" %>', state: 'error', fadeOut: 5000});
 	});
 
 });
