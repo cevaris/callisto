@@ -11,9 +11,9 @@
 	<% friend_requests.each do |requesting_user| %>
 		<tr>
 	    <td><%= link_to truncate("#{requesting_user.name}", length: 40), user_path(requesting_user) %></td>
-	    <td><%= link_to 'Accept', friend_approve_path(requesting_user) %></td>
-	    <td><%= link_to 'Deny', friend_deny_path(requesting_user) %></td>
-	    <td><%= link_to 'Block', friend_block_path(requesting_user) %></td>
+	    <td><%= link_to 'Accept', friend_approve_path(requesting_user), remote: true %></td>
+	    <td><%= link_to 'Deny', friend_deny_path(requesting_user), remote: true %></td>
+	    <td><%= link_to 'Block', friend_block_path(requesting_user), remote: true %></td>
 	  </tr>
 	<% end %>
 	</tbody>
