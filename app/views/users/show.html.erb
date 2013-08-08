@@ -8,15 +8,10 @@
 		<span class="pull-right">
 
 			<% if @current_user.id != @user.id %>
-				<% if @current_user.pending_invited_by @user %>
-					<%= link_to friend_invite_url(@user), class: 'btn', remote: true do %> 
-						Pending Request
-					<% end %>
+				<% if @current_user.pending_invited.include? @user %>
+					<label class="btn">Pending Request ... </label>
 				<% elsif @current_user.friend_with? @user %>
-					<%= link_to 'Friends', 'javascript:void(0)', class: 'btn' %>
-					<%= link_to friend_invite_url(@user), class: 'btn', remote: true do %> 
-						Friends <i class="icon-ok"></i> 
-					<% end %>
+					<label class="btn">Friends <i class="icon-ok"></i></label>
 				<% else %>	
 					<%= link_to friend_invite_url(@user), class: 'btn', remote: true, id:'follow_user_select' do %> 
 						Add Friend <i class="icon-plus"></i> 
