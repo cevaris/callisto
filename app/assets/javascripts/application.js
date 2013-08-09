@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require_tree .
 //= require i18n
 //= require i18n/translations
@@ -22,3 +23,4 @@
 //= require bootstrap/image-gallery.min
 //= require bootstrap-tagmanager
 //= require jquery-autogrow-textarea
+//= require jasny-bootstrap.min

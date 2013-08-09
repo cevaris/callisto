@@ -37,24 +37,9 @@
     <div class="span5" id="render_video_container"></div>
       
   </div>
+
+   
   
-
-  <div class="fileupload fileupload-new" data-provides="fileupload">
-    <div class="input-append">
-      
-      <div class="uneditable-input span3">
-        <i class="icon-file fileupload-exists"></i>
-        <span class="fileupload-preview"></span>
-      </div>
-
-      <span class="btn btn-file">
-        <span class="fileupload-new">Select file</span>
-        <span class="fileupload-exists">Change</span>
-        <input type="file" />
-      </span>
-      <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
-    </div>
-  </div>
 
 	<h4>New Files</h4>
   <% if @activity.activity_images.count < 5 %>
@@ -63,7 +48,18 @@
 
 			<% if asset_fields.object.new_record? %>
 			<p>
-				<%= asset_fields.file_field :image %>
+				
+
+        <div class="fileupload fileupload-new" data-provides="fileupload">
+          <span class="btn btn-file">
+            <span class="fileupload-new">Select file</span>
+            <span class="fileupload-exists">Change</span>
+            <%= asset_fields.file_field :image %>
+          </span>
+          <span class="fileupload-preview"></span>
+          <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+        </div>
+
 			</p>
 			<% end %>
 
@@ -107,7 +103,6 @@ $(document).ready(function() {
 
   $('#activity_video_url').change(function(){
 
-    console.log($(this).val());
     if( $(this).val() == undefined ) return false;
     if($.trim($(this).val()).length == 0) return false;
 
