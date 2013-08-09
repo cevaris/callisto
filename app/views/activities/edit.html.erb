@@ -34,52 +34,72 @@
         <%= f.text_field :video_url %>
     </div>
     
-    <div class="span5" id="render_video_container"></div>
+    <div class="span6" id="render_video_container"></div>
       
   </div>
 
-   
+  <div class="row">
+    <div class="span6" >
+      
+      <h4>New Files</h4>
+      <% if @activity.activity_images.count < 5 %>
+        
+        <%= f.fields_for :activity_images do |asset_fields| %>
+
+          <% if asset_fields.object.new_record? %>
+          <p>
+            
+
+            <div class="fileupload fileupload-new" data-provides="fileupload">
+              <span class="btn btn-file">
+                <span class="fileupload-new">Select file</span>
+                <span class="fileupload-exists">Change</span>
+                <%= asset_fields.file_field :image %>
+              </span>
+              <span class="fileupload-preview"></span>
+              <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+            </div>
+
+          </p>
+          <% end %>
+
+        <% end %>
+      <% else %>
+        <p>Cannot add new images, max is 5. Delete some images to add new ones.<p>
+      <% end %>
+
+    </div>
+
+    <div class="span6" >
+
+      <h4>Old Files</h4> 
+
+      <%= f.fields_for :activity_images do |asset_fields| %>      
+
+
+        <% unless asset_fields.object.new_record? %>
+        <div class="row">
+        <div class="span2">
+          <%= link_to image_tag(asset_fields.object.image.url(:square)), asset_fields.object.image.url(:square) %>     
+        </div>  
+        <label class="checkbox span2">
+          <%= asset_fields.check_box :_destroy %> Delete
+        </label>
+        </div>
+          
+        <% end %>
+
+      <% end %>
+      
+    </div>
+
+
+  </div>
   
 
-	<h4>New Files</h4>
-  <% if @activity.activity_images.count < 5 %>
-		
-		<%= f.fields_for :activity_images do |asset_fields| %>
+	
 
-			<% if asset_fields.object.new_record? %>
-			<p>
-				
-
-        <div class="fileupload fileupload-new" data-provides="fileupload">
-          <span class="btn btn-file">
-            <span class="fileupload-new">Select file</span>
-            <span class="fileupload-exists">Change</span>
-            <%= asset_fields.file_field :image %>
-          </span>
-          <span class="fileupload-preview"></span>
-          <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
-        </div>
-
-			</p>
-			<% end %>
-
-		<% end %>
-	<% else %>
-		<p>Cannot add new images, max is 5. Delete some images to add new ones.<p>
-	<% end %>
-
-	<h4>Old Files</h4>
-
-	<%= f.fields_for :activity_images do |asset_fields| %>			
-
-		<% unless asset_fields.object.new_record? %>
-		<div class="thumb">
-			<%= link_to image_tag(asset_fields.object.image.url(:thumb)), asset_fields.object.image.url(:original) %>
-			<%= asset_fields.check_box :_destroy %>			
-		</div>	
-		<% end %>
-
-	<% end %>
+	
 
   <p><%= f.submit class: 'btn btn-primary' %></p>
 
