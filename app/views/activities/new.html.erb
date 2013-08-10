@@ -1,80 +1,183 @@
 <h1>New Activity</h1>
 
 <%= form_for @activity, :html => { :multipart => true } do |f| %>
-	<% if @activity.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+  
+  <% if @activity.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
 
-      <ul>
-      <% @activity.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+    <ul>
+    <% @activity.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
   <% end %>
   
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :tag_list %>
-    <%= f.text_field :tag_list, autocomplete: :off, placeholder: 'Add tags here' %>
-  </p>
-  <p>
-    <%= f.label :description %>
-    <%= f.text_area :description, size: '30x10' %>
-  </p>
-  <p>
-    <%= f.label :video_url %>
-    <%= f.text_field :video_url %>
-  </p>
+  <p><%= f.text_field :name, placeholder: 'Name' %></p>
+  <p><%= f.text_field :tag_list, autocomplete: :off, placeholder: 'Add tags here' %></p>
+  <p><%= f.text_area :description, size: '30x10', placeholder: 'Description' %></p>
 
-	<h4>New Files</h4>
-  <% if @activity.activity_images.count < 5 %>
-		
-		<%= f.fields_for :activity_images do |asset_fields| %>
 
-			<% if asset_fields.object.new_record? %>
-			<p>
-				<%= asset_fields.file_field :image %>
-			</p>
-			<% end %>
+  <hr/>
 
-		<% end %>
-	<% else %>
-		<p>Cannot add new images, max is 5. Delete some images to add new ones.<p>
-	<% end %>
 
-	<h4>Old Files</h4>
+  <div class="row">
 
-	<%= f.fields_for :activity_images do |asset_fields| %>			
+    <div class="span12 text-center">
+      <h3>Video</h3>
+    </div>
 
-		<% unless asset_fields.object.new_record? %>
-		<div class="thumb">
-			<%= link_to image_tag(asset_fields.object.image.url(:thumb)), asset_fields.object.image.url(:original) %>
-			<%= asset_fields.check_box :_destroy %>			
-		</div>	
-		<% end %>
+    <div class="span6">
+      <%= f.text_field :video_url, placeholder: 'Video URL' %>
+    </div>
+    
+    <div class="span6" id="render_video_container"></div>
+      
+  </div>
+  
+  <hr/>
 
-	<% end %>
 
-  <p><%= f.submit class: 'btn btn-primary' %></p>
+
+  <div class="row">
+
+    <div class="span12">
+      <h3>Photos</h3>
+    </div>
+    
+    <div class="span6" >
+      
+      <h4>New Photos</h4>
+      <% if @activity.activity_images.count < ActivitiesController::MAX_IMAGES %>
+        
+        <%= f.fields_for :activity_images do |asset_fields| %>
+          <% if asset_fields.object.new_record? %>
+
+            
+            <div class="fileupload fileupload-new" data-provides="fileupload">
+              <span class="btn btn-file">
+                <span class="fileupload-new">Select file</span>
+                <span class="fileupload-exists">Change</span>
+                <%= asset_fields.file_field :image %>
+              </span>
+              <span class="fileupload-preview"></span>
+              <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+            </div>
+
+
+          <% end %>
+        <% end %>
+
+      <% else %>
+        <p>Cannot add new images, max is <%= ActivitiesController::MAX_IMAGES %>. Please delete some images to add new ones.<p>
+      <% end %>
+
+    </div>
+
+    
+
+    <div class="span6" >
+
+      <h4>Old Photos</h4> 
+
+      <ul class="wall" style="list-style-type: none; position:relative;">
+        <%= f.fields_for :activity_images do |asset_fields| %>      
+
+          <% unless asset_fields.object.new_record? %>
+
+          <li class="item">
+            <%= link_to image_tag(asset_fields.object.image.url(:square), size: '200x200'), asset_fields.object.image.url(:square) %>     
+            <label class="checkbox">
+              <%= asset_fields.check_box :_destroy%> <i class="icon-trash"> Delete </i> 
+            </label>
+          </li>
+                  
+          <% end %>
+
+        <% end %>
+      </ul>
+      
+    </div>
+
+
+  </div>
+  
+
+  
+  <div>
+  <%= button_tag class: 'btn btn-primary', type: 'submit'  do %>
+    <i class="icon-ok"> Save </i>
+  <% end %>
+  <%= link_to activities_path, class: 'btn btn-danger' do %>
+    <i class="icon-ban-circle"> Cancel </i>
+  <% end %>
+  </div>
 
 <% end %>
 
+
 <script type="text/javascript">
+
+$(window).load(function() { 
+  $('.wall').masonry( {
+    columnWidth: 200,
+    itemSelector: '.item'
+  });
+
+
+});
 
 $(document).ready(function() { 
 
-	$('#activity_description').autoGrowTextArea();
-	
-	$('#activity_tag_list').tagsManager({
+  var processVideoUrl = function(){
+
+    if( $('#activity_video_url').val() == undefined ) return false;
+    if($.trim($('#activity_video_url').val()).length == 0) return false;
+
+    $.ajax({
+      type: 'POST',
+      url: '<%= render_video_url %>',
+      data: { 'url': $('#activity_video_url').val() },
+      success: function(response){
+        console.log(response);
+        $('#render_video_container').html(response);
+      },
+      error: function(response){
+
+      }
+    });
+
+    return true;
+  }
+
+  $('#activity_description').autoGrowTextArea();
+
+  $('#activity_tag_list').tagsManager({
+    prefilled: "<%= @activity.tag_list %>",
     typeahead: true,
     typeaheadAjaxSource: '<%= activities_filter_tags_path format: :json %>',
     typeaheadAjaxPolling: true
   });
-	
+
+
+  $('#activity_video_url').bind('paste', function(e) {
+    var element = this;
+    setTimeout(function () {
+      // Wait for paste to finish
+      var text = $(element).val();
+      return processVideoUrl();
+    }, 100);
+    
+  });
+
+  $('#activity_video_url').change(function(){
+    return processVideoUrl();
+  });
+
+  // Render any videos
+  processVideoUrl();
+  
 });
 </script>
 

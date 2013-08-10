@@ -23,8 +23,11 @@
 
   <div class="row">
 
+    <div class="span12">
+      <h3>Video</h3>
+    </div>
+
     <div class="span6">
-      <h3>Video</h3>  
       <%= f.text_field :video_url, placeholder: 'Video URL' %>
     </div>
     
@@ -37,6 +40,10 @@
 
 
   <div class="row">
+
+    <div class="span12">
+      <h3>Photos</h3>
+    </div>
     
     <div class="span6" >
       
@@ -122,8 +129,6 @@ $(document).ready(function() {
 
   var processVideoUrl = function(){
 
-    console.log("Proceessing");
-
     if( $('#activity_video_url').val() == undefined ) return false;
     if($.trim($('#activity_video_url').val()).length == 0) return false;
 
@@ -166,6 +171,9 @@ $(document).ready(function() {
   $('#activity_video_url').change(function(){
     return processVideoUrl();
   });
+
+  // Render any videos
+  processVideoUrl();
 	
 });
 </script>
