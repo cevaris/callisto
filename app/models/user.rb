@@ -5,9 +5,9 @@ class User < ActiveRecord::Base
 	SUPER_ADMIN = 'super_admin'
 	DEFAULT = 'default'
 	
-	acts_as_follower
-	acts_as_taggable_on
-	acts_as_followable
+  acts_as_taggable_on
+	# acts_as_follower
+	# acts_as_followable
 
 
 	has_secure_password
@@ -60,7 +60,7 @@ class User < ActiveRecord::Base
   	stats[:accepted]  =  self.activities_accepted.count
   	stats[:completed] =  self.activities_completed.count
 		# Users
-  	stats[:following] =  self.user_followers.count
+  	# stats[:following] =  self.user_followers.count
 
   	stats
   end
@@ -83,21 +83,21 @@ class User < ActiveRecord::Base
   	self.user_activities.where(activity_state_id: ActivityState.find_by_name(ActivityState::ACCEPTED))
   end
 
-  def activities_following
-  	# User Activities of Users I am following
-  	user_ids = self.following_by_type('User').pluck(:id)
-  	UserActivity.where(user_id: user_ids).order("created_at DESC")
-  end
+  # def activities_following
+  # 	# User Activities of Users I am following
+  # 	user_ids = self.following_by_type('User').pluck(:id)
+  # 	UserActivity.where(user_id: user_ids).order("created_at DESC")
+  # end
 
-  def activities_watching
-  	# Activities I am watching
-  	self.following_by_type('Activity')
-  end
+  # def activities_watching
+  # 	# Activities I am watching
+  # 	self.following_by_type('Activity')
+  # end
 
-  def followers
-  	# Users following me
-  	self.followers_by_type('User')
-  end
+  # def followers
+  # 	# Users following me
+  # 	self.followers_by_type('User')
+  # end
 
   private
 

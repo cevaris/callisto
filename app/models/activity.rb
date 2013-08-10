@@ -2,7 +2,7 @@ class Activity < ActiveRecord::Base
 	MAX_NUM_TAGS = 3
 
 	acts_as_taggable
-	acts_as_followable
+	# acts_as_followable
 
   acts_as_taggable_on :tags
 

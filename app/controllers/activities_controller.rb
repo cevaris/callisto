@@ -53,33 +53,33 @@ class ActivitiesController < ApplicationController
   end
 
 
-  def unwatch
-  	@activity = Activity.find params[:activity_id]
-		@current_user = current_user || false
+  # def unwatch
+  # 	@activity = Activity.find params[:activity_id]
+		# @current_user = current_user || false
 
-  	respond_to do |format|
-			if @current_user and @current_user.stop_following(@activity)
-				Rails.logger.info "#{@current_user.name} is no longer watching #{@activity.name}"
-				format.html { render :nothing => true, :status => 200 }
-			else
-				format.html { render :nothing => true, :status => 500 }
-			end
-    end
-  end
+  # 	respond_to do |format|
+		# 	if @current_user and @current_user.stop_following(@activity)
+		# 		Rails.logger.info "#{@current_user.name} is no longer watching #{@activity.name}"
+		# 		format.html { render :nothing => true, :status => 200 }
+		# 	else
+		# 		format.html { render :nothing => true, :status => 500 }
+		# 	end
+  #   end
+  # end
 
-  def watch
-  	@activity = Activity.find params[:activity_id]
-		@current_user = current_user || false
+  # def watch
+  # 	@activity = Activity.find params[:activity_id]
+		# @current_user = current_user || false
 
-  	respond_to do |format|
-			if @current_user and @current_user.follow(@activity)
-				Rails.logger.info "#{@current_user.name} is now watching #{@activity.name}"
-				format.html { render :nothing => true, :status => 200 }
-			else
-				format.html { render :nothing => true, :status => 500 }
-			end
-    end
-  end
+  # 	respond_to do |format|
+		# 	if @current_user and @current_user.follow(@activity)
+		# 		Rails.logger.info "#{@current_user.name} is now watching #{@activity.name}"
+		# 		format.html { render :nothing => true, :status => 200 }
+		# 	else
+		# 		format.html { render :nothing => true, :status => 500 }
+		# 	end
+  #   end
+  # end
 
   # GET /activities/1
   # GET /activities/1.json

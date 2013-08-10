@@ -6,12 +6,8 @@
 
 	<div class="span9">
 		
-		<% if !@user.followers.empty? %>
-		<h3>Users Following You</h3>
-		<%= render :partial => 'list_users', locals: { users: @users } %>
-		<% else %>
+	
 		<h3>No Followers Found</h3>
-		<% end %>
 		
 	</div>
 

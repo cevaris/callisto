@@ -32,26 +32,28 @@ Callisto::Application.routes.draw do
   
 
   
-  match '/users/following', to: 'users#followers'
+  # match '/users/following', to: 'users#followers'
   resources :users do
-  	get 'follow'
-  	get 'unfollow'
+  	# get 'follow'
+  	# get 'unfollow'
   	get 'wall'
   end 
 
 
   match '/activities/filter' => 'activities#filter'
   match '/activities/filter_tags' => 'activities#filter_tags'
-
-  match '/activities/forfeited', to: 'users#forfeited'
-  match '/activities/watching', to: 'users#watching'
-  match '/activities/following', to: 'users#following'
-  match '/activities/completed', to: 'users#completed'
   match '/activities/accepted', to: 'users#accepted'
+  match '/activities/completed', to: 'users#completed'
+  match '/activities/forfeited', to: 'users#forfeited'
+  
+  # match '/activities/watching', to: 'users#watching'
+  # match '/activities/following', to: 'users#following'
+
+  
 
   resources :activities do 
-  	get 'watch'
-  	get 'unwatch'
+  	# get 'watch'
+  	# get 'unwatch'
   	resources :user_activities do
   		get 'accept'
   		get 'forfeit'

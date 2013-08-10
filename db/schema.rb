@@ -37,19 +37,6 @@ ActiveRecord::Schema.define(:version => 20130807221426) do
     t.string "thumbnail"
   end
 
-  create_table "follows", :force => true do |t|
-    t.integer  "followable_id",                      :null => false
-    t.string   "followable_type",                    :null => false
-    t.integer  "follower_id",                        :null => false
-    t.string   "follower_type",                      :null => false
-    t.boolean  "blocked",         :default => false, :null => false
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
-  end
-
-  add_index "follows", ["followable_id", "followable_type"], :name => "fk_followables"
-  add_index "follows", ["follower_id", "follower_type"], :name => "fk_follows"
-
   create_table "friendships", :force => true do |t|
     t.integer "friendable_id"
     t.integer "friend_id"
