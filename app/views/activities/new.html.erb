@@ -24,7 +24,7 @@
 
   <div class="row">
 
-    <div class="span12 text-center">
+    <div class="span12">
       <h3>Video</h3>
     </div>
 
@@ -48,7 +48,6 @@
     
     <div class="span6" >
       
-      <h4>New Photos</h4>
       <% if @activity.activity_images.count < ActivitiesController::MAX_IMAGES %>
         
         <%= f.fields_for :activity_images do |asset_fields| %>
@@ -77,37 +76,14 @@
 
     
 
-    <div class="span6" >
-
-      <h4>Old Photos</h4> 
-
-      <ul class="wall" style="list-style-type: none; position:relative;">
-        <%= f.fields_for :activity_images do |asset_fields| %>      
-
-          <% unless asset_fields.object.new_record? %>
-
-          <li class="item">
-            <%= link_to image_tag(asset_fields.object.image.url(:square), size: '200x200'), asset_fields.object.image.url(:square) %>     
-            <label class="checkbox">
-              <%= asset_fields.check_box :_destroy%> <i class="icon-trash"> Delete </i> 
-            </label>
-          </li>
-                  
-          <% end %>
-
-        <% end %>
-      </ul>
-      
-    </div>
-
 
   </div>
   
 
   
-  <div>
+  <div class="pull-right">
   <%= button_tag class: 'btn btn-primary', type: 'submit'  do %>
-    <i class="icon-ok"> Save </i>
+    <i class="icon-ok"> Create </i>
   <% end %>
   </div>
 

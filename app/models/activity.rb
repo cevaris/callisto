@@ -15,6 +15,7 @@ class Activity < ActiveRecord::Base
 
   validates :name, presence: true, length: { minimum: 5 }
   validates :description, presence: true, length: { minimum: 5 }
+  validates :tag_list, presence: true, length: { minimum: 1 }
   validate :maximum_amount_of_tags
 	
 	def maximum_amount_of_tags

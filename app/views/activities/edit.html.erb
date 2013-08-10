@@ -37,8 +37,6 @@
   
   <hr/>
 
-
-
   <div class="row">
 
     <div class="span12">
@@ -80,22 +78,24 @@
 
       <h4>Old Photos</h4> 
 
-      <ul class="wall" style="list-style-type: none; position:relative;">
-        <%= f.fields_for :activity_images do |asset_fields| %>      
+      <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+        <ul class="wall" style="list-style-type: none; position:relative;">
+          <%= f.fields_for :activity_images do |asset_fields| %>      
 
-          <% unless asset_fields.object.new_record? %>
+            <% unless asset_fields.object.new_record? %>
 
-          <li class="item">
-            <%= link_to image_tag(asset_fields.object.image.url(:square), size: '200x200'), asset_fields.object.image.url(:square) %>     
-            <label class="checkbox">
-              <%= asset_fields.check_box :_destroy%> <i class="icon-trash"> Delete </i> 
-            </label>
-          </li>
-                  
+            <li class="item">
+              <%= link_to image_tag(asset_fields.object.image.url(:square), size: '200x200'), asset_fields.object.image.url(:large), 'data-gallery' => 'gallery' %>     
+              <label class="checkbox">
+                <%= asset_fields.check_box :_destroy%> <i class="icon-trash"> Delete </i> 
+              </label>
+            </li>
+                    
+            <% end %>
+
           <% end %>
-
-        <% end %>
-      </ul>
+        </ul>
+      </div>
       
     </div>
 
@@ -104,13 +104,26 @@
   
 
 	
-  <div>
+  <div class="pull-right">
   <%= button_tag class: 'btn btn-primary', type: 'submit'  do %>
     <i class="icon-ok"> Save </i>
   <% end %>
   </div>
 
 <% end %>
+
+
+<div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
+  <div class="modal-header">
+      <a class="close" data-dismiss="modal">&times;</a>
+      <h3 class="modal-title"></h3>
+  </div>
+  <div class="modal-body"><div class="modal-image"></div></div>
+  <div class="modal-footer center">
+    <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
+    <a class="btn btn-info modal-next">Next <i class="icon-arrow-right icon-white"></i></a>      
+  </div>
+</div>
 
 
 <script type="text/javascript">
