@@ -15,33 +15,34 @@
   <% end %>
   
   <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, placeholder: 'Name' %>
   </p>
   <p>
-    <%= f.label :tag_list %>
     <%= f.text_field :tag_list, autocomplete: :off, placeholder: 'Add tags here' %>
   </p>
   <p>
-    <%= f.label :description %>
-    <%= f.text_area :description, size: '30x10' %>
+    <%= f.text_area :description, size: '30x10', placeholder: 'Description' %>
   </p>
+
+  <hr/>
 
   <div class="row">
 
     <div class="span6">
-        <%= f.label :video_url %>
-        <%= f.text_field :video_url %>
+      <h3>Video</h3>  
+      <%= f.text_field :video_url, placeholder: 'Video URL' %>
     </div>
     
     <div class="span6" id="render_video_container"></div>
       
   </div>
+  
+  <hr/>
 
   <div class="row">
     <div class="span6" >
       
-      <h4>New Files</h4>
+      <h4>New Photos</h4>
       <% if @activity.activity_images.count < ActivitiesController::MAX_IMAGES %>
         
         <%= f.fields_for :activity_images do |asset_fields| %>
@@ -63,30 +64,31 @@
         <% end %>
 
       <% else %>
-        <p>Please Cannot add new images, max is <%= ActivitiesController::MAX_IMAGES %>. Delete some images to add new ones.<p>
+        <p>Cannot add new images, max is <%= ActivitiesController::MAX_IMAGES %>. Please delete some images to add new ones.<p>
       <% end %>
 
     </div>
 
     <div class="span6" >
 
-      <h4>Old Files</h4> 
+      <h4>Old Photos</h4> 
 
-      <%= f.fields_for :activity_images do |asset_fields| %>      
+      <ul class="wall" style="list-style-type: none; position:relative;">
+        <%= f.fields_for :activity_images do |asset_fields| %>      
 
-        <% unless asset_fields.object.new_record? %>
-        <div class="row">
-        <div class="span2">
-          <%= link_to image_tag(asset_fields.object.image.url(:square)), asset_fields.object.image.url(:square) %>     
-        </div>  
-        <label class="checkbox span1">
-          <%= asset_fields.check_box :_destroy %> Delete
-        </label>
-        </div>
-          
+          <% unless asset_fields.object.new_record? %>
+
+          <li class="item">
+            <%= link_to image_tag(asset_fields.object.image.url(:square), size: '200x200'), asset_fields.object.image.url(:square) %>     
+            <label class="checkbox">
+              <%= asset_fields.check_box :_destroy%> <i class="icon-trash"> Delete</i> 
+            </label>
+          </li>
+                  
+          <% end %>
+
         <% end %>
-
-      <% end %>
+      </ul>
       
     </div>
 
@@ -95,15 +97,21 @@
   
 
 	
-
-	
-
-  <p><%= f.submit class: 'btn btn-primary' %></p>
+  <div>
+  <%= f.submit class: 'btn btn-primary', value: 'Save Activity' %>
+  </div>
 
 <% end %>
 
 
 <script type="text/javascript">
+
+$(window).load(function() { 
+  $('.wall').masonry( {
+    columnWidth: 200,
+    itemSelector: '.item'
+  });
+});
 
 $(document).ready(function() { 
 
@@ -153,8 +161,6 @@ $(document).ready(function() {
   $('#activity_video_url').change(function(){
     return processVideoUrl();
   });
-
-
 	
 });
 </script>
