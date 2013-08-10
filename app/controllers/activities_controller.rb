@@ -144,6 +144,11 @@ class ActivitiesController < ApplicationController
         format.html { redirect_to @activity, notice: 'Activity was successfully created.' }
         format.json { render json: @activity, status: :created, location: @activity }
       else
+        # Delete images post invalidation
+        @activity.activity_images.map(&:destroy)
+        @activity.activity_images = []
+        ActivitiesController::MAX_IMAGES.times { @activity.activity_images.build }
+
         format.html { render action: "new" }
         format.json { render json: @activity.errors, status: :unprocessable_entity }
       end
