@@ -79,7 +79,7 @@
         <div class="span2">
           <%= link_to image_tag(asset_fields.object.image.url(:square)), asset_fields.object.image.url(:square) %>     
         </div>  
-        <label class="checkbox span2">
+        <label class="checkbox span1">
           <%= asset_fields.check_box :_destroy %> Delete
         </label>
         </div>
@@ -107,26 +107,17 @@
 
 $(document).ready(function() { 
 
-	$('#activity_description').autoGrowTextArea();
+  var processVideoUrl = function(){
 
-	$('#activity_tag_list').tagsManager({
-		prefilled: "<%= @activity.tag_list %>",
-    typeahead: true,
-    typeaheadAjaxSource: '<%= activities_filter_tags_path format: :json %>',
-    typeaheadAjaxPolling: true
-  });
+    console.log("Proceessing");
 
-
-
-  $('#activity_video_url').change(function(){
-
-    if( $(this).val() == undefined ) return false;
-    if($.trim($(this).val()).length == 0) return false;
+    if( $('#activity_video_url').val() == undefined ) return false;
+    if($.trim($('#activity_video_url').val()).length == 0) return false;
 
     $.ajax({
       type: 'POST',
       url: '<%= render_video_url %>',
-      data: { 'url': $(this).val() },
+      data: { 'url': $('#activity_video_url').val() },
       success: function(response){
         console.log(response);
         $('#render_video_container').html(response);
@@ -137,6 +128,30 @@ $(document).ready(function() {
     });
 
     return true;
+  }
+
+	$('#activity_description').autoGrowTextArea();
+
+	$('#activity_tag_list').tagsManager({
+		prefilled: "<%= @activity.tag_list %>",
+    typeahead: true,
+    typeaheadAjaxSource: '<%= activities_filter_tags_path format: :json %>',
+    typeaheadAjaxPolling: true
+  });
+
+
+  $('#activity_video_url').bind('paste', function(e) {
+    var element = this;
+    setTimeout(function () {
+      // Wait for paste to finish
+      var text = $(element).val();
+      return processVideoUrl();
+    }, 100);
+    
+  });
+
+  $('#activity_video_url').change(function(){
+    return processVideoUrl();
   });
 
 
