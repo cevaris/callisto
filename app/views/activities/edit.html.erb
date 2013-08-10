@@ -3,28 +3,23 @@
 <%= form_for @activity, :html => { :multipart => true } do |f| %>
 	
   <% if @activity.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+  <div id="error_explanation">
+    <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
 
-      <ul>
-      <% @activity.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+    <ul>
+    <% @activity.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
   <% end %>
   
-  <p>
-    <%= f.text_field :name, placeholder: 'Name' %>
-  </p>
-  <p>
-    <%= f.text_field :tag_list, autocomplete: :off, placeholder: 'Add tags here' %>
-  </p>
-  <p>
-    <%= f.text_area :description, size: '30x10', placeholder: 'Description' %>
-  </p>
+  <p><%= f.text_field :name, placeholder: 'Name' %></p>
+  <p><%= f.text_field :tag_list, autocomplete: :off, placeholder: 'Add tags here' %></p>
+  <p><%= f.text_area :description, size: '30x10', placeholder: 'Description' %></p>
 
   <hr/>
+
 
   <div class="row">
 
@@ -39,7 +34,10 @@
   
   <hr/>
 
+
+
   <div class="row">
+    
     <div class="span6" >
       
       <h4>New Photos</h4>
@@ -69,6 +67,8 @@
 
     </div>
 
+    
+
     <div class="span6" >
 
       <h4>Old Photos</h4> 
@@ -81,7 +81,7 @@
           <li class="item">
             <%= link_to image_tag(asset_fields.object.image.url(:square), size: '200x200'), asset_fields.object.image.url(:square) %>     
             <label class="checkbox">
-              <%= asset_fields.check_box :_destroy%> <i class="icon-trash"> Delete</i> 
+              <%= asset_fields.check_box :_destroy%> <i class="icon-trash"> Delete </i> 
             </label>
           </li>
                   
@@ -98,7 +98,12 @@
 
 	
   <div>
-  <%= f.submit class: 'btn btn-primary', value: 'Save Activity' %>
+  <%= button_tag class: 'btn btn-primary', type: 'submit'  do %>
+    <i class="icon-ok"> Save </i>
+  <% end %>
+  <%= link_to activity_path(@activity), class: 'btn btn-danger' do %>
+    <i class="icon-ban-circle"> Cancel </i>
+  <% end %>
   </div>
 
 <% end %>
