@@ -42,14 +42,12 @@
     <div class="span6" >
       
       <h4>New Files</h4>
-      <% if @activity.activity_images.count < 5 %>
+      <% if @activity.activity_images.count < ActivitiesController::MAX_IMAGES %>
         
         <%= f.fields_for :activity_images do |asset_fields| %>
-
           <% if asset_fields.object.new_record? %>
-          <p>
-            
 
+            
             <div class="fileupload fileupload-new" data-provides="fileupload">
               <span class="btn btn-file">
                 <span class="fileupload-new">Select file</span>
@@ -60,12 +58,12 @@
               <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
             </div>
 
-          </p>
-          <% end %>
 
+          <% end %>
         <% end %>
+
       <% else %>
-        <p>Cannot add new images, max is 5. Delete some images to add new ones.<p>
+        <p>Please Cannot add new images, max is <%= ActivitiesController::MAX_IMAGES %>. Delete some images to add new ones.<p>
       <% end %>
 
     </div>
@@ -75,7 +73,6 @@
       <h4>Old Files</h4> 
 
       <%= f.fields_for :activity_images do |asset_fields| %>      
-
 
         <% unless asset_fields.object.new_record? %>
         <div class="row">

@@ -1,6 +1,7 @@
 class ActivitiesController < ApplicationController
 
 	MAX_SEARCH_RESULTS = 50
+  MAX_IMAGES = 6
 
 	before_filter :require_session, 
 		:only => [:new, :create, :update, :destroy]
@@ -102,7 +103,7 @@ class ActivitiesController < ApplicationController
   # GET /activities/new.json
   def new
     @activity = Activity.new
-    images_left = (5 - @activity.activity_images.count)
+    images_left = (ActivitiesController::MAX_IMAGES - @activity.activity_images.count)
     images_left.times { @activity.activity_images.build }
 
     respond_to do |format|
@@ -115,7 +116,7 @@ class ActivitiesController < ApplicationController
   def edit
     @activity = Activity.find(params[:id])
 
-    images_left = (5 - @activity.activity_images.count)
+    images_left = (ActivitiesController::MAX_IMAGES - @activity.activity_images.count)
     images_left.times { @activity.activity_images.build }
 
     Rails.logger.info "Activity: #{@activity.name}"
