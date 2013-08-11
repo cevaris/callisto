@@ -1,3 +1,5 @@
+# Undo rake db:migrate:down VERSION=20130717211236
+
 class ActsAsFollowerMigration < ActiveRecord::Migration
   def self.up
     create_table :follows, :force => true do |t|
