@@ -6,20 +6,14 @@
 <div class="row" >
 
 	<div class="span3" >
-		<%= image_tag(@user_activity.user.avatar.url(:square), size: '300x300', class: 'img-rounded') %>	
-		<div class="text-center">
-			<label><h2><%= link_to @user_activity.user.name, user_path(@user_activity.user) %></h2></label>
-		</div>
-		<hr/>
-		<div>
-			<%= render partial: 'users/stats', locals: { user: @user_activity.user} %>
-		</div>
+		<%= render partial: '/users/user', locals: { user: @user_activity.user } %>
 	</div><!-- user -->
 
 
 	<div class="span9">
 
 		<div class="row">
+			<div class="span9">
 			<span class="pull-right" >
 				<span class="activity-actions">
 				<%= render 'action'%>
@@ -29,17 +23,24 @@
 				<% end %>
 			</span>	
 		</div>
+		</div>
 
 		<div class="row">
-			<div class="text-left">
-				<h1><%= link_to @activity.name, activity_path(@activity) %></h1>
-				<span  class="text-left">
-					<b><%= @activity.tag_list %></b>
-				</span>
+			<div class="span9">
+				<div class="text-left">
+					<h1><%= link_to @activity.name, activity_path(@activity) %></h1>
+					<span  class="text-left">
+						<b><%= @activity.tag_list %></b>
+					</span>
+				</div>
 			</div>
+		</div>
 				
-			<hr/>
-			<div>
+		<hr/>
+
+		<div class="row">
+			<div class="span9">
+		
 				<label><b>Description:</b></label>
 				<%= with_new_lines @activity.description %>
 			</div>
@@ -48,17 +49,20 @@
 
 		<% if !@user_activity.report.blank? %>
 
+		<hr/>
 		<div class="row">
-			<hr/>
-			<label><b>Report:</b></label>
-			<%= with_new_lines @user_activity.report %>
+			<div class="span9">
+				<label><b>Report:</b></label>
+				<%= with_new_lines @user_activity.report %>
+			</div>
 		</div>
 
 		<% end %>
 
 
-	</div><!-- activity -->
-</div><!-- row -->
+	</div>
+	
+</div>
 
 
 

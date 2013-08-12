@@ -29,22 +29,26 @@
 
 <% @wall_content.each do |user_activity, type, item| %>
 
-	
-	<% if type == 'IMAGE' %>
-		<li class="item">
-			<%= link_to image_tag(item.image(:square), size: "200x200"), activity_user_activity_path(user_activity.activity, user_activity) %>
-		</li>
-	<% end %>
-	<% if type == 'VIDEO' %>
-		<li class="item w2">
-			<% if item.include?('youtube') or item.include?('youtu.be') %>
-				<%= auto_html(item) { youtube(:width => 200, :height => 200) } %>
-			<% elsif item.include? 'vimeo' %>
-				<%= auto_html(item) { vimeo(:width => 200, :height => 200) } %>
-			<% else %>
-				<%= auto_html(item) { simple_format(:width => 200, :height => 200); link(:target => 'blank') } %>
-			<% end %>
-		</li>
+ 
+	<% if can_view? @current_user  %>
+
+		<% if type == 'IMAGE' %>
+			<li class="item">
+				<%= link_to image_tag(item.image(:square), size: "200x200"), activity_user_activity_path(user_activity.activity, user_activity) %>
+			</li>
+		<% end %>
+		<% if type == 'VIDEO' %>
+			<li class="item w2">
+				<% if item.include?('youtube') or item.include?('youtu.be') %>
+					<%= auto_html(item) { youtube(:width => 200, :height => 200) } %>
+				<% elsif item.include? 'vimeo' %>
+					<%= auto_html(item) { vimeo(:width => 200, :height => 200) } %>
+				<% else %>
+					<%= auto_html(item) { simple_format(:width => 200, :height => 200); link(:target => 'blank') } %>
+				<% end %>
+			</li>
+		<% end %>
+		
 	<% end %>
 
 
