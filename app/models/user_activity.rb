@@ -20,14 +20,14 @@ class UserActivity < ActiveRecord::Base
 
   def can_view? user
 
-  	Rails.logger.info "User: #{user.inspect}"
-  	# If user is not logged in
-  	return false unless user
-  	Rails.logger.info "User: #{user.inspect}"
+  	# Rails.logger.info "User: #{user.inspect}"
 		return true if (self.privacy == UserActivity::PUBLIC)
-		return true if (self.user.id == user.id)
-		return true if ((self.privacy == UserActivity::FRIENDS) and (self.user.friend_with? user))
-  	return true if (user.role == User::SUPER_ADMIN)
+  	
+  	if user # If logged in
+			return true if (self.user.id == user.id) # If I am the owner
+			return true if ((self.privacy == UserActivity::FRIENDS) and (self.user.friend_with? user))
+	  	return true if (user.role == User::SUPER_ADMIN)
+  	end
   	
   	false
 

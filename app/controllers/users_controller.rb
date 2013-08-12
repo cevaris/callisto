@@ -10,9 +10,6 @@ class UsersController < ApplicationController
     	max_num_results = 20
     	@completed = @user.activities_completed.limit(max_num_results).order('updated_at DESC')
     	@accepted = @user.activities_accepted.limit(max_num_results).order('updated_at DESC')
-    	# @watching = @user.activities_watching.limit(max_num_results).order('updated_at DESC')
-    	# @following = @user.activities_following.limit(max_num_results).order('updated_at DESC')
-
     else
     	render 'static_pages/home'
     end
@@ -21,7 +18,7 @@ class UsersController < ApplicationController
   def wall
   	@user = User.find params[:user_id]
     @user_activities = @user.user_activities
-    @current_user = current_user || @user
+    @current_user = current_user
 
     @wall_content = []
 

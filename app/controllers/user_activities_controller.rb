@@ -5,14 +5,11 @@ class UserActivitiesController < ApplicationController
 
 	def show 
 		@activity = Activity.find params[:activity_id]
-		@user = current_user || false
+		@user_activity = UserActivity.find params[:id]
+		@user = @user_activity.user
+		@current_user = current_user
 
-		if @user and params[:id] == @user.id
-			@user_activity = UserActivity.find_by_user_id_and_activity_id @user.id, @activity.id
-		else
-			@user_activity = UserActivity.find params[:id]
-		end
-		unless @user_activity and @user_activity.can_view?(@user)
+		unless @user_activity and @user_activity.can_view?(@current_user)
 			render 'static_pages/404', :status => 404
 		end
 	end
