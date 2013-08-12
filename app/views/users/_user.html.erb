@@ -3,10 +3,7 @@
 	<label><h2><%= user.name %></h2></label>
 	<hr/>
 	<div>
-		<ul class="list-unstyled" style="margin-left:0px;" >
-			<li><b>Completed: </b><%= user.stats[:completed] %></li>
-			<li><b>Accepted: </b><%= user.stats[:accepted] %></li>
-		</ul>
+		<%= render partial: '/users/stats', locals: { user: @current_user } %>
 	</div>
 	<div class="">
 		Check out my wall <%= link_to 'here', user_wall_path(user), class: 'btn btn-primary' %>

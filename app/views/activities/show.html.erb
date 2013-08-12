@@ -3,54 +3,55 @@
 <div class="row" >
 		<div class="span12">
 
-			<div>
-				<% if @user %>
-					<span class="pull-right">
+			<% if @user %>
+				<span class="pull-right">
 
-					<% if !@user_activity.nil? %>
-						<%= link_to activity_user_activity_path(@activity, @user_activity), class: 'btn' do %> 
-							<% if @user_activity.activity_state.name == ActivityState::ACCEPTED %>
-									Accpeted <i class="<%= @user_activity.activity_state.thumbnail %>"></i>
-							<% elsif @user_activity.activity_state.name == ActivityState::COMPLETED %>
-									Completed <i class="<%= @user_activity.activity_state.thumbnail %>"></i>			
-							<% elsif @user_activity.activity_state.name == ActivityState::FORFEITED %>
-									Forfeited <i class="<%= @user_activity.activity_state.thumbnail %>"></i>
-							<% end %>
-						<% end %>
-					<% else %>
-						<%= link_to activity_user_activities_path(@activity), class: 'btn', method: :post do %> 
-							Accept <i class="icon-plus"></i> 
+				<% if !@user_activity.nil? %>
+					<%= link_to activity_user_activity_path(@activity, @user_activity), class: 'btn' do %> 
+						<% if @user_activity.activity_state.name == ActivityState::ACCEPTED %>
+								Accpeted <i class="<%= @user_activity.activity_state.thumbnail %>"></i>
+						<% elsif @user_activity.activity_state.name == ActivityState::COMPLETED %>
+								Completed <i class="<%= @user_activity.activity_state.thumbnail %>"></i>			
+						<% elsif @user_activity.activity_state.name == ActivityState::FORFEITED %>
+								Forfeited <i class="<%= @user_activity.activity_state.thumbnail %>"></i>
 						<% end %>
 					<% end %>
-
-					<% if can? :edit, @activity %>
-						<%= link_to 'Edit', edit_activity_path(@activity), class: 'btn' %>
+				<% else %>
+					<%= link_to activity_user_activities_path(@activity), class: 'btn', method: :post do %> 
+						Accept <i class="icon-plus"></i> 
 					<% end %>
-
-					</span>
 				<% end %>
-			</div>
 
-			<div>
-				<div class="text-left">
-					<h1><%= link_to @activity.name, activity_path(@activity) %></h1>
-					<span  class="text-left">
-						<b><%= @activity.tag_list %></b>
-					</span>
-				</div>
-				<hr/>
-				<div>
-					<label><b>Description:</b></label>
-					<%= with_new_lines @activity.description %>
-				</div>
-			</div>
+				<% if can? :edit, @activity %>
+					<%= link_to 'Edit', edit_activity_path(@activity), class: 'btn' %>
+				<% end %>
 
-		</div><!-- activity -->
-	</div><!-- row -->
+				</span>
+			<% end %>
+
+	</div><!-- activity -->
+</div><!-- row -->
+
+<div class="row" >
+	<div class="span12">
+
+		<div class="text-left">
+			<h1><%= link_to @activity.name, activity_path(@activity) %></h1>
+			<span  class="text-left">
+				<b><%= @activity.tag_list %></b>
+			</span>
+		</div>
+		<hr/>
+		<div>
+			<label><b>Description:</b></label>
+			<%= with_new_lines @activity.description %>
+		</div>
+
+	</div><!-- activity -->
+</div><!-- row -->
 
 
-
-	<br/>
+<br/>
 <hr/>
 <br/>
 

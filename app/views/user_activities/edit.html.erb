@@ -1,4 +1,7 @@
-<h1>Editing activity</h1>
+<div class="row">
+	<div class="span6"><h1>Editing User Activity</h1></div>
+	<div class="span6"><h2><%= link_to @user_activity.user.name, user_path(@user_activity.user), class: 'pull-right' %></h2></div>
+</div>
 
 <%= form_for [@activity,@user_activity], :html => { :multipart => true } do |f| %>
 	<% if @user_activity.errors.any? %>
@@ -13,72 +16,169 @@
     </div>
   <% end %>
   
-  <h1><%= @activity.name %></h1>
+  <h1><%= link_to @activity.name, activity_path(@activity) %></h1>
 
-	<p>
-		<label><b>User:</b></label>
-		<%= @user_activity.user.name %>
-	<p>
+	<hr/>
 
-	<p>
-		<label><b>Tags:</b></label>
-		<%= @activity.tag_list %>
-	<p>
+  <p><%= f.text_area :report, size: '30x10', placeholder: 'Description' %></p>
 
-	<p>
-		<label><b>Description:</b></label>
-		<%= @activity.description %>
-	<p>
+  <hr/>
+
+  <div class="row">
+
+    <div class="span12">
+      <h3>Video</h3>
+    </div>
+
+    <div class="span6">
+      <%= f.text_field :video_url, placeholder: 'Video URL' %>
+    </div>
+    
+    <div class="span6" id="render_video_container"></div>
+      
+  </div>
+  
+  <hr/>
+
+  <div class="row">
+
+    <div class="span12">
+      <h3>Photos</h3>
+    </div>
+    
+    <div class="span6" >
+      
+      <h4>New Photos</h4>
+      <% if @user_activity.user_activity_images.count < ActivitiesController::MAX_IMAGES %>
+        
+        <%= f.fields_for :user_activity_images do |asset_fields| %>
+          <% if asset_fields.object.new_record? %>
+
+            
+            <div class="fileupload fileupload-new" data-provides="fileupload">
+              <span class="btn btn-file">
+                <span class="fileupload-new">Select file</span>
+                <span class="fileupload-exists">Change</span>
+                <%= asset_fields.file_field :image %>
+              </span>
+              <span class="fileupload-preview"></span>
+              <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+            </div>
 
 
-  <p>
-    <%= f.label :report %>
-    <%= f.text_area :report, size: '30x10' %>
-  </p>
-  <p>
-    <%= f.label :video_url %>
-    <%= f.text_field :video_url %>
-  </p>
+          <% end %>
+        <% end %>
 
-	<h4>New Images</h4>
-  <% if @user_activity.user_activity_images.count < UserActivity::MAX_PHOTOS %>
-		
-		<%= f.fields_for :user_activity_images do |asset_fields| %>
+      <% else %>
+        <p>Cannot add new images, max is <%= ActivitiesController::MAX_IMAGES %>. Please delete some images to add new ones.<p>
+      <% end %>
 
-			<% if asset_fields.object.new_record? %>
-			<p>
-				<%= asset_fields.file_field :image %>
-			</p>
-			<% end %>
+    </div>
 
-		<% end %>
-	<% else %>
-		<p>Cannot add new images, max is <%= UserActivity::MAX_PHOTOS %>. Delete some images to add new ones.<p>
-	<% end %>
+    
 
-	<h4>Images</h4>
+    <div class="span6" >
 
-	<%= f.fields_for :user_activity_images do |asset_fields| %>			
+      <h4>Old Photos</h4> 
 
-		<% unless asset_fields.object.new_record? %>
-		<div class="thumb">
-			<%= link_to image_tag(asset_fields.object.image.url(:thumb)), asset_fields.object.image.url(:original) %>
-			<%= asset_fields.check_box :_destroy %>			
-		</div>	
-		<% end %>
+      <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+        <ul class="wall" style="list-style-type: none; position:relative;">
+          <%= f.fields_for :user_activity_images do |asset_fields| %>      
 
-	<% end %>
+            <% unless asset_fields.object.new_record? %>
 
-  <p><%= f.submit class: 'btn btn-primary' %></p>
+            <li class="item">
+              <%= link_to image_tag(asset_fields.object.image.url(:square), size: '200x200'), asset_fields.object.image.url(:large), 'data-gallery' => 'gallery' %>     
+              <label class="checkbox">
+                <%= asset_fields.check_box :_destroy%> <i class="icon-trash"> Delete </i> 
+              </label>
+            </li>
+                    
+            <% end %>
+
+          <% end %>
+        </ul>
+      </div>
+      
+    </div>
+
+
+  </div>
+  
+
+	
+  <div >
+  <%= button_tag class: 'btn btn-primary', type: 'submit'  do %>
+    <i class="icon-ok"> Save </i>
+  <% end %>
+  </div>
 
 <% end %>
 
 
+<div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
+  <div class="modal-header">
+      <a class="close" data-dismiss="modal">&times;</a>
+      <h3 class="modal-title"></h3>
+  </div>
+  <div class="modal-body"><div class="modal-image"></div></div>
+  <div class="modal-footer center">
+    <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
+    <a class="btn btn-info modal-next">Next <i class="icon-arrow-right icon-white"></i></a>      
+  </div>
+</div>
+
+
 <script type="text/javascript">
+
+$(window).load(function() { 
+  $('.wall').masonry( {
+    columnWidth: 200,
+    itemSelector: '.item'
+  });
+});
 
 $(document).ready(function() { 
 
+  var processVideoUrl = function(){
+
+    if( $('#user_activity_video_url').val() == undefined ) return false;
+    if($.trim($('#user_activity_video_url').val()).length == 0) return false;
+
+    $.ajax({
+      type: 'POST',
+      url: '<%= render_video_url %>',
+      data: { 'url': $('#user_activity_video_url').val() },
+      success: function(response){
+        console.log(response);
+        $('#render_video_container').html(response);
+      },
+      error: function(response){
+
+      }
+    });
+
+    return true;
+  }
+
 	$('#user_activity_report').autoGrowTextArea();
+
+  $('#user_activity_video_url').bind('paste', function(e) {
+    var element = this;
+    setTimeout(function () {
+      // Wait for paste to finish
+      var text = $(element).val();
+      return processVideoUrl();
+    }, 100);
+    
+  });
+
+  $('#user_activity_video_url').change(function(){
+    return processVideoUrl();
+  });
+
+  // Render any videos
+  processVideoUrl();
 	
 });
 </script>

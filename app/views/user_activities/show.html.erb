@@ -19,7 +19,7 @@
 
 	<div class="span9">
 
-		<div >
+		<div class="row">
 			<span class="pull-right" >
 				<span class="activity-actions">
 				<%= render 'action'%>
@@ -30,7 +30,7 @@
 			</span>	
 		</div>
 
-		<div>
+		<div class="row">
 			<div class="text-left">
 				<h1><%= link_to @activity.name, activity_path(@activity) %></h1>
 				<span  class="text-left">
@@ -48,7 +48,7 @@
 
 		<% if !@user_activity.report.blank? %>
 
-		<div>
+		<div class="row">
 			<hr/>
 			<label><b>Report:</b></label>
 			<%= with_new_lines @user_activity.report %>
@@ -56,7 +56,7 @@
 
 		<% end %>
 
-		
+
 	</div><!-- activity -->
 </div><!-- row -->
 

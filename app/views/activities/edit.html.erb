@@ -1,4 +1,7 @@
-<h1>Editing activity</h1>
+<div class="row">
+  <div class="span6"><h1>Editing activity</h1></div>
+  <div class="span6"><h2><%= link_to @activity.user.name, user_path(@activity.user), class: 'pull-right' %></h2></div>
+</div>
 
 <%= form_for @activity, :html => { :multipart => true } do |f| %>
 	
