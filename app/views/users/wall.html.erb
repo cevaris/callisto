@@ -30,7 +30,7 @@
 <% @wall_content.each do |user_activity, type, item| %>
 
  
-	<% if can_view? @current_user  %>
+	<% if user_activity.can_view? @current_user  %>
 
 		<% if type == 'IMAGE' %>
 			<li class="item">
@@ -48,7 +48,7 @@
 				<% end %>
 			</li>
 		<% end %>
-		
+
 	<% end %>
 
 
