@@ -51,6 +51,8 @@ Callisto::Application.routes.draw do
 
   
 
+  match '/user_activities/:id/privacy', to: 'user_activities#privacy_state', as: 'user_activities_privacy_state'
+
   resources :activities do 
   	# get 'watch'
   	# get 'unwatch'

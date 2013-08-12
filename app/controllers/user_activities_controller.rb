@@ -1,7 +1,7 @@
 class UserActivitiesController < ApplicationController
 
 	before_filter :require_session, 
-		:only => [:create, :accept, :complete, :forfeit, :new, :edit, :update]
+		:only => [:create, :accept, :complete, :forfeit, :new, :edit, :update, :privacy_state]
 
 	def show 
 		@activity = Activity.find params[:activity_id]
@@ -37,7 +37,7 @@ class UserActivitiesController < ApplicationController
   	@user_activity = UserActivity.find params[:id]
 		@user = current_user || false		
 
-		@has_permission = @user# and ((@user.id == @user_activity.user.id) or (@user.role == User::SUPER_ADMIN))
+		@has_permission = @user
 
     respond_to do |format|
       if @has_permission and @user_activity.update_attributes(params[:user_activity])
@@ -121,6 +121,20 @@ class UserActivitiesController < ApplicationController
     end
   end
 
+  def privacy_state
+
+  	@user_activity = UserActivity.find params[:id]
+  	@user_activity.privacy = params[:state]
+		
+		respond_to do |format|
+			if @user_activity.save
+				format.html { render :nothing => true, :status => 200 }
+			else
+				format.html { render :nothing => true, :status => 500 }
+			end
+    end
+
+  end
 
   private 
 
