@@ -4,7 +4,6 @@ class UserActivitiesController < ApplicationController
 		:only => [:create, :accept, :complete, :forfeit, :new, :edit, :update]
 
 	def show 
-		Rails.logger.info params
 		@activity = Activity.find params[:activity_id]
 		@user = current_user || false
 
@@ -13,8 +12,7 @@ class UserActivitiesController < ApplicationController
 		else
 			@user_activity = UserActivity.find params[:id]
 		end
-
-		unless @user_activity
+		unless @user_activity and @user_activity.can_view?(@user)
 			render 'static_pages/404', :status => 404
 		end
 	end
@@ -24,9 +22,7 @@ class UserActivitiesController < ApplicationController
 		@user_activity = UserActivity.find params[:id]
 		@user = current_user || false
 
-		@has_permission = @user# and ((@user.id == @user_activity.user.id) or (@user.role == User::SUPER_ADMIN))
-
-		if @has_permission
+		if @user
 			images_left = (UserActivity::MAX_PHOTOS - @user_activity.user_activity_images.count)
     	images_left.times { @user_activity.user_activity_images.build }
 		end
@@ -40,7 +36,6 @@ class UserActivitiesController < ApplicationController
 	end
 
 	def update
-  	@user = current_user
   	@activity = Activity.find params[:activity_id]
   	@user_activity = UserActivity.find params[:id]
 		@user = current_user || false		
