@@ -22,9 +22,9 @@
 				<% if @current_user and ((@current_user.id == @user_activity.user.id) or (@current_user.role == User::SUPER_ADMIN)) %>
 					<span>
 						<div class="btn-group" data-toggle="buttons-radio">
-						  <button id="select_public" type="button" class="btn btn-primary <%= active_privacy_public(@user_activity) %>">Public</button>
-						  <button id="select_friends" type="button" class="btn btn-primary <%= active_privacy_friends(@user_activity) %>">Friends</button>
-						  <button id="select_only_me" type="button" class="btn btn-primary <%= active_privacy_only_me(@user_activity) %>">Only Me</button>
+						  <button id="select_public" type="button" class="btn  <%= active_privacy_public(@user_activity)  %>"><i class="icon-globe"> Public</i></button>
+						  <button id="select_friends" type="button" class="btn <%= active_privacy_friends(@user_activity) %>"><i class="icon-group"> Friends</i></button>
+						  <button id="select_only_me" type="button" class="btn <%= active_privacy_only_me(@user_activity) %>"><i class="icon-male"> Only Me</i></button>
 						</div>
 					</span>
 					<span>
