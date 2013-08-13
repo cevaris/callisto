@@ -55,7 +55,6 @@ class UserActivitiesController < ApplicationController
   end
 
 	def accept
-  	@activity = Activity.find params[:activity_id]
 		@user_activity = UserActivity.find params[:user_activity_id]
 		@user = current_user || false
 
@@ -71,7 +70,6 @@ class UserActivitiesController < ApplicationController
   end
 
   def complete
-  	@activity = Activity.find params[:activity_id]
 		@user_activity = UserActivity.find params[:user_activity_id]
 		@user = current_user || false
 
@@ -88,7 +86,6 @@ class UserActivitiesController < ApplicationController
   end
 
   def forfeit
-  	@activity = Activity.find params[:activity_id]
 		@user_activity = UserActivity.find params[:user_activity_id]
 		@user = current_user || false
 

@@ -12,9 +12,9 @@
 			<span class="caret"></span>
 		</a>
 		<ul class="dropdown-menu">
-			<li><%= link_to 'Accept',   user_user_activity_accept_path(@user_activity.activity,@user_activity),    :remote => true, class: 'accept-user-activity-select' %></li>
-		  <li><%= link_to 'Complete', user_user_activity_complete_path(@user_activity.activity, @user_activity), :remote => true, class: 'accept-user-activity-select' %></li>
-		  <li><%= link_to 'Forfeit',  user_user_activity_forfeit_path(@user_activity.activity,@user_activity),   :remote => true, class: 'accept-user-activity-select' %></li>
+			<li><%= link_to 'Accept',   user_user_activity_accept_path(@user_activity.user,@user_activity),    :remote => true, class: 'user-activity-select' %></li>
+		  <li><%= link_to 'Complete', user_user_activity_complete_path(@user_activity.user, @user_activity), :remote => true, class: 'user-activity-select' %></li>
+		  <li><%= link_to 'Forfeit',  user_user_activity_forfeit_path(@user_activity.user,@user_activity),   :remote => true, class: 'user-activity-select' %></li>
 		</ul>
 	<% else %>
 
@@ -35,12 +35,12 @@
 $(document).ready(function() { 
 
 	$(document)
-	.on('ajax:success', '.accept-user-activity-select', function(event, data, status, xhf) {
+	.on('ajax:success', '.user-activity-select', function(event, data, status, xhf) {
 		$('.activity-actions').html(data);
 	});	
 
 	$(document)
-	.on('ajax:error', '.accept-user-activity-select', function(event, data, status, xhf) {
+	.on('ajax:error', '.user-activity-select', function(event, data, status, xhf) {
 		pushFlash({message:'Error selecting activity action.', state: 'error', fadeOut: 5000});
 	});
 });
