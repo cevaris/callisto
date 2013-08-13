@@ -8,12 +8,12 @@
 
 				<% if !@user_activity.nil? %>
 					<%= link_to user_user_activity_path(@user_activity.user, @user_activity), class: 'btn' do %> 
-						<% if @user_activity.activity_state.name == ActivityState::ACCEPTED %>
-								Accpeted <i class="<%= @user_activity.activity_state.thumbnail %>"></i>
-						<% elsif @user_activity.activity_state.name == ActivityState::COMPLETED %>
-								Completed <i class="<%= @user_activity.activity_state.thumbnail %>"></i>			
-						<% elsif @user_activity.activity_state.name == ActivityState::FORFEITED %>
-								Forfeited <i class="<%= @user_activity.activity_state.thumbnail %>"></i>
+						<% if @user_activity.state.name == UserActivity::ACCEPTED %>
+								Accpeted <i class="<%= @user_activity.state.thumbnail %>"></i>
+						<% elsif @user_activity.state.name == ActivityState::COMPLETED %>
+								Completed <i class="<%= @user_activity.state.thumbnail %>"></i>			
+						<% elsif @user_activity.state.name == ActivityState::FORFEITED %>
+								Forfeited <i class="<%= @user_activity.state.thumbnail %>"></i>
 						<% end %>
 					<% end %>
 				<% else %>

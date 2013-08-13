@@ -71,12 +71,12 @@ class User < ActiveRecord::Base
 
   def activities_completed
   	# Activities I have completed
-  	self.user_activities.where(activity_state_id: ActivityState.find_by_name(ActivityState::COMPLETED))
+  	self.user_activities.where(state: UserActivity::COMPLETED)
   end
 
   def activities_accepted
   	# Activities I have accepted
-  	self.user_activities.where(activity_state_id: ActivityState.find_by_name(ActivityState::ACCEPTED))
+  	self.user_activities.where(state: UserActivity::ACCEPTED)
   end
 
   private

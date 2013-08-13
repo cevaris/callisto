@@ -4,7 +4,7 @@ class CreateUserActivities < ActiveRecord::Migration
     create_table :user_activities do |t|
     	t.integer	:user_id
     	t.integer :activity_id
-    	t.integer :activity_state_id
+    	t.string  :state
 
       t.timestamps
     end

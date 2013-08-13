@@ -1,16 +1,19 @@
 class UserActivity < ActiveRecord::Base
 
 	# Privacy
-	FRIENDS = 'FRIENDS'
-	ONLY_ME = 'ONLY_ME'
-	PUBLIC  = 'PUBLIC'
+	FRIENDS = 'Friends'
+	ONLY_ME = 'Only Me'
+	PUBLIC  = 'Public'
+
+  ACCEPTED  = 'Accepted'
+  COMPLETED = 'Completed'
+  FORFEITED = 'Forfeited'
 
 	MAX_PHOTOS = 6
-  attr_accessible :report, :video_url, :user_activity_images_attributes
+  attr_accessible :report, :video_url, :user_activity_images_attributes, :state
   
   belongs_to :user
   belongs_to :activity
-  belongs_to :activity_state
 
   has_many :user_activity_images
 

@@ -12,14 +12,14 @@ require 'yaml'
 
 
 
-# Activiyt States
-seed = YAML::load_file('db/seeds/activity_states.yaml')
-seed.each_pair do |key,type|  
-	print "#{key}, #{type}\n"
-	type_object = ActivityState.find_or_create_by_name type['name']
-	type_object.thumbnail = type['thumbnail']
-	type_object.save
-end  
+# # Activiyt States
+# seed = YAML::load_file('db/seeds/activity_states.yaml')
+# seed.each_pair do |key,type|  
+# 	print "#{key}, #{type}\n"
+# 	type_object = ActivityState.find_or_create_by_name type['name']
+# 	type_object.thumbnail = type['thumbnail']
+# 	type_object.save
+# end  
 
 
 

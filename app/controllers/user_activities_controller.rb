@@ -106,7 +106,7 @@ class UserActivitiesController < ApplicationController
 
     @user_activity = UserActivity.new
     @user_activity.activity = @activity
-    @user_activity.activity_state = ActivityState.find_by_name ActivityState::ACCEPTED
+    @user_activity.state = UserActivity::ACCEPTED
     @user_activity.user = current_user
 
     return respond_to do |format|
@@ -139,14 +139,14 @@ class UserActivitiesController < ApplicationController
 
   	case request
 	  	when :accept
-	  		state = ActivityState.find_by_name ActivityState::ACCEPTED
+	  		state = UserActivity::ACCEPTED
 	  	when :complete
-	  		state = ActivityState.find_by_name ActivityState::COMPLETED
+	  		state = UserActivity::COMPLETED
 	  	when :forfeit
-	  		state = ActivityState.find_by_name ActivityState::FORFEITED
+	  		state = UserActivity::FORFEITED
 	  	end
 
-		@user_activity.activity_state = state
+		@user_activity.state = state
   end
 
 end

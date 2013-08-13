@@ -32,8 +32,6 @@ Callisto::Application.routes.draw do
   
 
   
-
-
   match '/user_activities/:id/privacy', to: 'user_activities#privacy_state', as: 'user_activities_privacy_state'
   resources :users do
   	get 'wall'
@@ -53,7 +51,7 @@ Callisto::Application.routes.draw do
   resources :activities
 
 
-  
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

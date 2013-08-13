@@ -1,9 +1,0 @@
-accepted:
-  name: 'Accepted'
-  thumbnail: icon-tasks
-completed:
-  name: 'Completed'
-  thumbnail: icon-ok
-forfieted:
-  name: 'Forfeited'
-  thumbnail: icon-ban-circle
