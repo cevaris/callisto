@@ -12,11 +12,6 @@ class SettingsController < ApplicationController
     end
   end
 
-  # # GET /settings/1/edit
-  # def edit
-  #   @setting = Setting.find(params[:id])
-  # end
-
   # PUT /settings/1
   # PUT /settings/1.json
   def update

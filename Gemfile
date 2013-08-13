@@ -17,7 +17,7 @@ gem 'aws-sdk', '~> 1.11.1'
 gem 'bootstrap-addons-rails', '~> 0.1.2'
 gem 'auto_html', '~> 1.6.0'
 gem 'cancan', '~> 1.6.10'
-gem 'acts_as_follower', '~> 0.1.1'
+# gem 'acts_as_follower', '~> 0.1.1'
 gem 'amistad', '~> 0.9.2'
 gem 'font-awesome-rails', '~> 3.2.1.2'
 
