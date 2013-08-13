@@ -1,30 +1,44 @@
 <div class="btn-group">
-	<% if @user and @user.id == @user_activity.user.id %>
+	<% if @current_user and @current_user.id == @user_activity.user.id %>
 
 		<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 			<% if @user_activity.state == UserActivity::ACCEPTED %>
-				<i class="icon-ok"></i> Accpeted 
+				<i class="icon-tasks"> Accpeted</i>
 			<% elsif @user_activity.state == UserActivity::COMPLETED %>
-				<i class="icon-ok"></i> Completed
+				<i class="icon-ok"> Completed</i>
 			<% elsif @user_activity.state == UserActivity::FORFEITED %>
-				<i class="icon-ok"></i> Forfeited
+				<i class="icon-ban-circle"> Forfeited</i>
 			<% end %>
 			<span class="caret"></span>
 		</a>
 		<ul class="dropdown-menu">
-			<li><%= link_to 'Accept',   user_user_activity_accept_path(@user_activity.user,@user_activity),    :remote => true, class: 'user-activity-select' %></li>
-		  <li><%= link_to 'Complete', user_user_activity_complete_path(@user_activity.user, @user_activity), :remote => true, class: 'user-activity-select' %></li>
-		  <li><%= link_to 'Forfeit',  user_user_activity_forfeit_path(@user_activity.user,@user_activity),   :remote => true, class: 'user-activity-select' %></li>
+			<li>
+				<%= link_to 'javascript:void(0);', :remote => true, class: 'user-activity-select', action: "#{UserActivity::ACCEPTED}" do %>
+					<i class="icon-check"> Accept</i>
+				<% end %>
+			</li>
+		  <li>
+		  	<%= link_to 'javascript:void(0);', :remote => true, class: 'user-activity-select', action: "#{UserActivity::COMPLETED}" do %>
+					<i class="icon-ok"> Complete</i>
+				<% end %>
+	  	</li>
+		  <li>
+		  	<%= link_to 'javascript:void(0);', :remote => true, class: 'user-activity-select', action: "#{UserActivity::FORFEITED}" do %>
+					<i class="icon-ban-circle"> Forfeit</i>
+				<% end %>
+	  	</li>
 		</ul>
+
+
 	<% else %>
 
 		<a class="btn" href="javascript:void(0);">
 			<% if @user_activity.state == UserActivity::ACCEPTED %>
-				<i class="icon-ok"></i> Accpeted 
+				<i class="icon-tasks"> Accpeted</i>
 			<% elsif @user_activity.state == UserActivity::COMPLETED %>
-				<i class="icon-ok"></i> Completed
+				<i class="icon-ok"> Completed</i>
 			<% elsif @user_activity.state == UserActivity::FORFEITED %>
-				<i class="icon-ok"></i> Forfeited
+				<i class="icon-ban-circle"> Forfeited</i>
 			<% end %>
 		</a>
 	<% end %>

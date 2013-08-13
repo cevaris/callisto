@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
 	before_filter :require_session, 
-		:only => [:accepted, :completed, :update ]
+		:only => [ :update ]
 
 	def home
     if signed_in?

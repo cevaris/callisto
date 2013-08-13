@@ -16,7 +16,7 @@
 			<div class="span9">
 			<span class="pull-right" >
 				<span class="activity-actions">
-				<%= render 'action'%>
+					<%= render 'action'%>
 				</span>
 				<span>
 				<% if @current_user and ((@current_user.id == @user_activity.user.id) or (@current_user.role == User::SUPER_ADMIN)) %>

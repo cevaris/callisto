@@ -7,15 +7,9 @@
 				<span class="pull-right">
 
 				<% if !@user_activity.nil? %>
-					<%= link_to user_user_activity_path(@user_activity.user, @user_activity), class: 'btn' do %> 
-						<% if @user_activity.state == UserActivity::ACCEPTED %>
-								Accepted <i class="icon-tasks"></i>
-						<% elsif @user_activity.state == ActivityState::COMPLETED %>
-								Completed <i class="icon-ok"></i>			
-						<% elsif @user_activity.state == ActivityState::FORFEITED %>
-								Forfeited <i class="icon-circle-ban"></i>
-						<% end %>
-					<% end %>
+					<span class="activity-actions">
+						<%= render '/user_activities/action' %>
+					</span>
 				<% else %>
 					<%= link_to activity_accept_path(@activity), class: 'btn', method: :post do %> 
 						Accept <i class="icon-plus"></i> 

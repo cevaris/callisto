@@ -54,61 +54,15 @@ class UserActivitiesController < ApplicationController
 
   end
 
-	def accept
-		@user_activity = UserActivity.find params[:user_activity_id]
-		@user = current_user || false
-
-  	update_action(:accept)
-
-  	respond_to do |format|
-			if @user_activity.save
-				format.html { render :partial => 'action', :layout=>false }
-			else
-				format.html { render :nothing => true, :status => 500 }
-			end
-    end
-  end
-
-  def complete
-		@user_activity = UserActivity.find params[:user_activity_id]
-		@user = current_user || false
-
-  	update_action(:complete)
-
-  	respond_to do |format|
-			if @user_activity.save
-				format.html { render :partial => 'action', :layout=>false }
-			else
-				format.html { render :nothing => true, :status => 500 }
-			end
-    end
-
-  end
-
-  def forfeit
-		@user_activity = UserActivity.find params[:user_activity_id]
-		@user = current_user || false
-
-  	update_action(:forfeit)
-
-  	respond_to do |format|
-			if @user_activity.save
-				format.html { render :partial => 'action', :layout=>false }
-			else
-				format.html { render :nothing => true, :status => 500 }
-			end
-    end
-  	
-  end
-
   def create
   	@current_user = current_user
     @activity = Activity.find params[:activity_id]
 
     if UserActivity.exists?(activity_id: @activity.id, user_id: @current_user.id)
-    	# If duplicate found, redirect to that user activity
+    	# If duplicate found, use that one
     	@user_activity = UserActivity.find(:first, conditions: {activity_id: 1, user_id: 1})
     else
+    	# If duplicate not found, create new user activity
     	@user_activity = UserActivity.new
 	    @user_activity.activity = @activity
 	    @user_activity.state = UserActivity::ACCEPTED
