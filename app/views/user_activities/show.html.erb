@@ -15,9 +15,7 @@
 		<div class="row">
 			<div class="span9">
 			<span class="pull-right" >
-				<span class="activity-actions">
 					<%= render 'action'%>
-				</span>
 				<span>
 				<% if @current_user and ((@current_user.id == @user_activity.user.id) or (@current_user.role == User::SUPER_ADMIN)) %>
 					<span>
@@ -31,7 +29,7 @@
 						<%= link_to 'Update', edit_user_user_activity_path(@user_activity.user, @user_activity), class: 'btn' %>
 					</span>
 				<% end %>
-				</span
+				</span>
 			</span>	
 		</div>
 		</div>

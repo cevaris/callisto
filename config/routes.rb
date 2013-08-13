@@ -33,6 +33,7 @@ Callisto::Application.routes.draw do
 
   
   match '/user_activities/:id/privacy', to: 'user_activities#privacy_state', as: 'user_activities_privacy_state'
+  match '/user_activities/:id/activity_state', to: 'user_activities#activity_state', as: 'user_activities_activity_state'
   resources :users do
   	
     get 'wall'

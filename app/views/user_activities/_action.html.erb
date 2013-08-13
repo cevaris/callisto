@@ -1,52 +1,79 @@
-<div class="btn-group">
-	<% if @current_user and @current_user.id == @user_activity.user.id %>
+<span class="activity-actions">				
+	<div class="btn-group">
+		<% if @current_user and @current_user.id == @user_activity.user.id %>
 
-		<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-			<% if @user_activity.state == UserActivity::ACCEPTED %>
-				<i class="icon-tasks"> Accpeted</i>
-			<% elsif @user_activity.state == UserActivity::COMPLETED %>
-				<i class="icon-ok"> Completed</i>
-			<% elsif @user_activity.state == UserActivity::FORFEITED %>
-				<i class="icon-ban-circle"> Forfeited</i>
-			<% end %>
-			<span class="caret"></span>
-		</a>
-		<ul class="dropdown-menu">
-			<li>
-				<%= link_to 'javascript:void(0);', :remote => true, class: 'user-activity-select', action: "#{UserActivity::ACCEPTED}" do %>
-					<i class="icon-check"> Accept</i>
+			<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+				<% if @user_activity.state == UserActivity::ACCEPTED %>
+					<i class="icon-tasks"> Accpeted</i>
+				<% elsif @user_activity.state == UserActivity::COMPLETED %>
+					<i class="icon-ok"> Completed</i>
+				<% elsif @user_activity.state == UserActivity::FORFEITED %>
+					<i class="icon-ban-circle"> Forfeited</i>
 				<% end %>
-			</li>
-		  <li>
-		  	<%= link_to 'javascript:void(0);', :remote => true, class: 'user-activity-select', action: "#{UserActivity::COMPLETED}" do %>
-					<i class="icon-ok"> Complete</i>
+				<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu">
+				<li>
+					<%= link_to 'javascript:void(0);', class: 'user-activity-select', 'data-state' => "#{UserActivity::ACCEPTED}" do %>
+						<i class="icon-check"> Accept</i>
+					<% end %>
+				</li>
+			  <li>
+			  	<%= link_to 'javascript:void(0);', class: 'user-activity-select', 'data-state' => "#{UserActivity::COMPLETED}" do %>
+						<i class="icon-ok"> Complete</i>
+					<% end %>
+		  	</li>
+			  <li>
+			  	<%= link_to 'javascript:void(0);', class: 'user-activity-select', 'data-state' => "#{UserActivity::FORFEITED}" do %>
+						<i class="icon-ban-circle"> Forfeit</i>
+					<% end %>
+		  	</li>
+			</ul>
+
+
+		<% else %>
+
+			<a class="btn" href="javascript:void(0);">
+				<% if @user_activity.state == UserActivity::ACCEPTED %>
+					<i class="icon-tasks"> Accpeted</i>
+				<% elsif @user_activity.state == UserActivity::COMPLETED %>
+					<i class="icon-ok"> Completed</i>
+				<% elsif @user_activity.state == UserActivity::FORFEITED %>
+					<i class="icon-ban-circle"> Forfeited</i>
 				<% end %>
-	  	</li>
-		  <li>
-		  	<%= link_to 'javascript:void(0);', :remote => true, class: 'user-activity-select', action: "#{UserActivity::FORFEITED}" do %>
-					<i class="icon-ban-circle"> Forfeit</i>
-				<% end %>
-	  	</li>
-		</ul>
-
-
-	<% else %>
-
-		<a class="btn" href="javascript:void(0);">
-			<% if @user_activity.state == UserActivity::ACCEPTED %>
-				<i class="icon-tasks"> Accpeted</i>
-			<% elsif @user_activity.state == UserActivity::COMPLETED %>
-				<i class="icon-ok"> Completed</i>
-			<% elsif @user_activity.state == UserActivity::FORFEITED %>
-				<i class="icon-ban-circle"> Forfeited</i>
-			<% end %>
-		</a>
-	<% end %>
-</div>
+			</a>
+		<% end %>
+	</div>
+</span>
 
 <script type="text/javascript">
 
 $(document).ready(function() { 
+
+	$(document)
+	.on('click', '.user-activity-select', function(){
+
+		if( $(this).attr('data-state') == undefined ) return false;
+    if($(this).attr('data-state').length == 0) return false;
+
+    console.log($(this).attr('data-state'));
+
+    $.ajax({
+      type: 'POST',
+      url: '<%= user_activities_activity_state_url(@user_activity) %>',
+      data: { 'state': $(this).attr('data-state') },
+      success: function(response){
+        console.log(response);
+        $('.activity-actions').html(response);
+      },
+      error: function(response){
+      	console.log(response);
+      }
+    });
+
+    return true;
+
+	});
 
 	$(document)
 	.on('ajax:success', '.user-activity-select', function(event, data, status, xhf) {
@@ -59,3 +86,4 @@ $(document).ready(function() {
 	});
 });
 </script>
+

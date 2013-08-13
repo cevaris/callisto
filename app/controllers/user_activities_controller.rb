@@ -95,20 +95,19 @@ class UserActivitiesController < ApplicationController
 
   end
 
-  private 
+  def activity_state
 
-  def update_action(request)
+  	@user_activity = UserActivity.find params[:id]
+  	@user_activity.state = params[:state]
 
-  	case request
-	  	when :accept
-	  		state = UserActivity::ACCEPTED
-	  	when :complete
-	  		state = UserActivity::COMPLETED
-	  	when :forfeit
-	  		state = UserActivity::FORFEITED
-	  	end
+  	respond_to do |format|
+			if @user_activity.save
+				format.html { render :partial => 'action', :layout=>false }
+			else
+				format.html { render :nothing => true, :status => 500 }
+			end
+    end
 
-		@user_activity.state = state
   end
 
 end
