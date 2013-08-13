@@ -2,12 +2,12 @@
 	<% if @user and @user.id == @user_activity.user.id %>
 
 		<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-			<% if @user_activity.state.name == ActivityState::ACCEPTED %>
-				<i class="<%= @user_activity.state.thumbnail %>"></i> Accpeted 
-			<% elsif @user_activity.state.name == ActivityState::COMPLETED %>
-				<i class="<%= @user_activity.state.thumbnail %>"></i> Completed
-			<% elsif @user_activity.state.name == ActivityState::FORFEITED %>
-				<i class="<%= @user_activity.state.thumbnail %>"></i> Forfeited
+			<% if @user_activity.state == UserActivity::ACCEPTED %>
+				<i class="icon-ok"></i> Accpeted 
+			<% elsif @user_activity.state == UserActivity::COMPLETED %>
+				<i class="icon-ok"></i> Completed
+			<% elsif @user_activity.state == UserActivity::FORFEITED %>
+				<i class="icon-ok"></i> Forfeited
 			<% end %>
 			<span class="caret"></span>
 		</a>
@@ -19,12 +19,12 @@
 	<% else %>
 
 		<a class="btn" href="javascript:void(0);">
-			<% if @user_activity.state.name == ActivityState::ACCEPTED %>
-				<i class="<%= @user_activity.state.thumbnail %>"></i> Accpeted 
-			<% elsif @user_activity.state.name == ActivityState::COMPLETED %>
-				<i class="<%= @user_activity.state.thumbnail %>"></i> Completed
-			<% elsif @user_activity.state.name == ActivityState::FORFEITED %>
-				<i class="<%= @user_activity.state.thumbnail %>"></i> Forfeited
+			<% if @user_activity.state == UserActivity::ACCEPTED %>
+				<i class="icon-ok"></i> Accpeted 
+			<% elsif @user_activity.state == UserActivity::COMPLETED %>
+				<i class="icon-ok"></i> Completed
+			<% elsif @user_activity.state == UserActivity::FORFEITED %>
+				<i class="icon-ok"></i> Forfeited
 			<% end %>
 		</a>
 	<% end %>

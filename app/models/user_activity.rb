@@ -17,9 +17,11 @@ class UserActivity < ActiveRecord::Base
 
   has_many :user_activity_images
 
-  validates_uniqueness_of :user_id, :scope => [:activity_id, :id]
+  validates_uniqueness_of :user_id, scope: [:activity_id]
 
   accepts_nested_attributes_for :user_activity_images, :allow_destroy => true    
+
+
 
   def can_view? user
 

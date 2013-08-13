@@ -41,7 +41,7 @@ class UserActivitiesController < ApplicationController
 
     respond_to do |format|
       if @has_permission and @user_activity.update_attributes(params[:user_activity])
-        format.html { redirect_to activity_user_activity_url(@activity, @user_activity), notice: 'Your Activity was successfully updated.' }
+        format.html { redirect_to user_user_activity_path(@activity, @user_activity), notice: 'Your Activity was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -102,18 +102,26 @@ class UserActivitiesController < ApplicationController
   end
 
   def create
+  	@current_user = current_user
     @activity = Activity.find params[:activity_id]
 
-    @user_activity = UserActivity.new
-    @user_activity.activity = @activity
-    @user_activity.state = UserActivity::ACCEPTED
-    @user_activity.user = current_user
+    if UserActivity.exists?(activity_id: @activity.id, user_id: @current_user.id)
+    	# If duplicate found, redirect to that user activity
+    	@user_activity = UserActivity.find(:first, conditions: {activity_id: 1, user_id: 1})
+    else
+    	@user_activity = UserActivity.new
+	    @user_activity.activity = @activity
+	    @user_activity.state = UserActivity::ACCEPTED
+	    @user_activity.user = @current_user
+    end
 
     return respond_to do |format|
     	if @user_activity.save
-    		format.html { redirect_to activity_user_activity_url(@activity, @user_activity), notice: 'Activity was successfully accepted.' }
+    		flash[:success] = 'Activity was successfully accepted.'
+    		format.html { redirect_to user_user_activity_path(@user_activity.user, @user_activity) }
     	else
-  			format.html { redirect_to @activity, error: 'Activity could not be accepted.' }
+    		flash[:error] = 'Activity could not be accepted.'
+  			format.html { redirect_to activity_path(@activity) }
     	end
     end
   end
