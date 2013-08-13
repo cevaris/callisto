@@ -32,8 +32,16 @@ Callisto::Application.routes.draw do
   
 
   
+
+
+  match '/user_activities/:id/privacy', to: 'user_activities#privacy_state', as: 'user_activities_privacy_state'
   resources :users do
   	get 'wall'
+    resources :user_activities, path: 'activities' do
+      get 'accept'
+      get 'forfeit'
+      get 'complete'
+    end
   end 
 
 
@@ -42,24 +50,10 @@ Callisto::Application.routes.draw do
   match '/activities/accepted', to: 'users#accepted'
   match '/activities/completed', to: 'users#completed'
   match '/activities/forfeited', to: 'users#forfeited'
+  resources :activities
+
 
   
-
-  match '/user_activities/:id/privacy', to: 'user_activities#privacy_state', as: 'user_activities_privacy_state'
-
-  resources :activities do 
-  	resources :user_activities do
-  		get 'accept'
-  		get 'forfeit'
-  		get 'complete'
-  	end
-  end
-
-  
-
-
-
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

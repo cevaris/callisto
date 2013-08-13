@@ -34,7 +34,7 @@
 
 		<% if type == 'IMAGE' %>
 			<li class="item">
-				<%= link_to image_tag(item.image(:square), size: "200x200"), activity_user_activity_path(user_activity.activity, user_activity) %>
+				<%= link_to image_tag(item.image(:square), size: "200x200"), user_user_activity_path(user_activity.user, user_activity) %>
 			</li>
 		<% end %>
 		<% if type == 'VIDEO' %>

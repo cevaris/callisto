@@ -7,7 +7,7 @@
 				<span class="pull-right">
 
 				<% if !@user_activity.nil? %>
-					<%= link_to activity_user_activity_path(@activity, @user_activity), class: 'btn' do %> 
+					<%= link_to user_user_activity_path(@user_activity.user, @user_activity), class: 'btn' do %> 
 						<% if @user_activity.activity_state.name == ActivityState::ACCEPTED %>
 								Accpeted <i class="<%= @user_activity.activity_state.thumbnail %>"></i>
 						<% elsif @user_activity.activity_state.name == ActivityState::COMPLETED %>
