@@ -12,9 +12,9 @@
 			<span class="caret"></span>
 		</a>
 		<ul class="dropdown-menu">
-			<li><%= link_to 'Accept',   activity_user_activity_accept_path(@activity,@user_activity),    :remote => true, class: 'accept-user-activity-select' %></li>
-		  <li><%= link_to 'Complete', activity_user_activity_complete_path(@activity, @user_activity), :remote => true, class: 'accept-user-activity-select' %></li>
-		  <li><%= link_to 'Forfeit',  activity_user_activity_forfeit_path(@activity,@user_activity),   :remote => true, class: 'accept-user-activity-select' %></li>
+			<li><%= link_to 'Accept',   user_user_activity_accept_path(@user_activity.activity,@user_activity),    :remote => true, class: 'accept-user-activity-select' %></li>
+		  <li><%= link_to 'Complete', user_user_activity_complete_path(@user_activity.activity, @user_activity), :remote => true, class: 'accept-user-activity-select' %></li>
+		  <li><%= link_to 'Forfeit',  user_user_activity_forfeit_path(@user_activity.activity,@user_activity),   :remote => true, class: 'accept-user-activity-select' %></li>
 		</ul>
 	<% else %>
 

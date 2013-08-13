@@ -4,8 +4,8 @@ class UserActivitiesController < ApplicationController
 		:only => [:create, :accept, :complete, :forfeit, :new, :edit, :update, :privacy_state]
 
 	def show 
-		@activity = Activity.find params[:activity_id]
 		@user_activity = UserActivity.find params[:id]
+		@activity = @user_activity.activity
 		@user = @user_activity.user
 		@current_user = current_user
 
