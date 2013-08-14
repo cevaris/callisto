@@ -7,199 +7,189 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5393327617B2E3BD00F988A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5393327517B2E3BD00F988A3 /* UIKit.framework */; };
-		5393327817B2E3BD00F988A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5393327717B2E3BD00F988A3 /* Foundation.framework */; };
-		5393327A17B2E3BD00F988A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5393327917B2E3BD00F988A3 /* CoreGraphics.framework */; };
-		5393327C17B2E3BD00F988A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5393327B17B2E3BD00F988A3 /* CoreData.framework */; };
-		5393328217B2E3BD00F988A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5393328017B2E3BD00F988A3 /* InfoPlist.strings */; };
-		5393328417B2E3BD00F988A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5393328317B2E3BD00F988A3 /* main.m */; };
-		5393328817B2E3BD00F988A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5393328717B2E3BD00F988A3 /* AppDelegate.m */; };
-		5393328A17B2E3BD00F988A3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5393328917B2E3BD00F988A3 /* Default.png */; };
-		5393328C17B2E3BD00F988A3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5393328B17B2E3BD00F988A3 /* Default@2x.png */; };
-		5393328E17B2E3BD00F988A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5393328D17B2E3BD00F988A3 /* Default-568h@2x.png */; };
-		5393329117B2E3BD00F988A3 /* callisto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5393328F17B2E3BD00F988A3 /* callisto.xcdatamodeld */; };
-		5393329917B2E3BD00F988A3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5393329817B2E3BD00F988A3 /* SenTestingKit.framework */; };
-		5393329A17B2E3BD00F988A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5393327517B2E3BD00F988A3 /* UIKit.framework */; };
-		5393329B17B2E3BD00F988A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5393327717B2E3BD00F988A3 /* Foundation.framework */; };
-		5393329C17B2E3BD00F988A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5393327B17B2E3BD00F988A3 /* CoreData.framework */; };
-		539332A417B2E3BD00F988A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 539332A217B2E3BD00F988A3 /* InfoPlist.strings */; };
-		539332A717B2E3BD00F988A3 /* callistoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 539332A617B2E3BD00F988A3 /* callistoTests.m */; };
-		539332B517B2E46100F988A3 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 539332B417B2E46100F988A3 /* Activity.m */; };
+		5310CB4217BB42F6000CD782 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5310CB4117BB42F6000CD782 /* UIKit.framework */; };
+		5310CB4417BB42F6000CD782 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5310CB4317BB42F6000CD782 /* Foundation.framework */; };
+		5310CB4617BB42F6000CD782 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5310CB4517BB42F6000CD782 /* CoreGraphics.framework */; };
+		5310CB4C17BB42F6000CD782 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB4A17BB42F6000CD782 /* InfoPlist.strings */; };
+		5310CB4E17BB42F6000CD782 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310CB4D17BB42F6000CD782 /* main.m */; };
+		5310CB5217BB42F6000CD782 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310CB5117BB42F6000CD782 /* AppDelegate.m */; };
+		5310CB5417BB42F6000CD782 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB5317BB42F6000CD782 /* Default.png */; };
+		5310CB5617BB42F6000CD782 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB5517BB42F6000CD782 /* Default@2x.png */; };
+		5310CB5817BB42F6000CD782 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB5717BB42F6000CD782 /* Default-568h@2x.png */; };
+		5310CB5B17BB42F6000CD782 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB5917BB42F6000CD782 /* MainStoryboard_iPhone.storyboard */; };
+		5310CB5E17BB42F6000CD782 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB5C17BB42F6000CD782 /* MainStoryboard_iPad.storyboard */; };
+		5310CB6117BB42F6000CD782 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310CB6017BB42F6000CD782 /* FirstViewController.m */; };
+		5310CB6317BB42F6000CD782 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB6217BB42F6000CD782 /* first.png */; };
+		5310CB6517BB42F6000CD782 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB6417BB42F6000CD782 /* first@2x.png */; };
+		5310CB6817BB42F6000CD782 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310CB6717BB42F6000CD782 /* SecondViewController.m */; };
+		5310CB6A17BB42F6000CD782 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB6917BB42F6000CD782 /* second.png */; };
+		5310CB6C17BB42F6000CD782 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB6B17BB42F6000CD782 /* second@2x.png */; };
+		5310CB7417BB42F7000CD782 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5310CB7317BB42F7000CD782 /* SenTestingKit.framework */; };
+		5310CB7517BB42F7000CD782 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5310CB4117BB42F6000CD782 /* UIKit.framework */; };
+		5310CB7617BB42F7000CD782 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5310CB4317BB42F6000CD782 /* Foundation.framework */; };
+		5310CB7E17BB42F7000CD782 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB7C17BB42F7000CD782 /* InfoPlist.strings */; };
+		5310CB8117BB42F7000CD782 /* callistoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310CB8017BB42F7000CD782 /* callistoTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5393329D17B2E3BD00F988A3 /* PBXContainerItemProxy */ = {
+		5310CB7717BB42F7000CD782 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5393326A17B2E3BD00F988A3 /* Project object */;
+			containerPortal = 5310CB3617BB42F6000CD782 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5393327117B2E3BD00F988A3;
+			remoteGlobalIDString = 5310CB3D17BB42F6000CD782;
 			remoteInfo = callisto;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5393327217B2E3BD00F988A3 /* callisto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = callisto.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5393327517B2E3BD00F988A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		5393327717B2E3BD00F988A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5393327917B2E3BD00F988A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5393327B17B2E3BD00F988A3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		5393327F17B2E3BD00F988A3 /* callisto-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "callisto-Info.plist"; sourceTree = "<group>"; };
-		5393328117B2E3BD00F988A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5393328317B2E3BD00F988A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5393328517B2E3BD00F988A3 /* callisto-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "callisto-Prefix.pch"; sourceTree = "<group>"; };
-		5393328617B2E3BD00F988A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5393328717B2E3BD00F988A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5393328917B2E3BD00F988A3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		5393328B17B2E3BD00F988A3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		5393328D17B2E3BD00F988A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		5393329017B2E3BD00F988A3 /* callisto.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = callisto.xcdatamodel; sourceTree = "<group>"; };
-		5393329717B2E3BD00F988A3 /* callistoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = callistoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5393329817B2E3BD00F988A3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		539332A117B2E3BD00F988A3 /* callistoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "callistoTests-Info.plist"; sourceTree = "<group>"; };
-		539332A317B2E3BD00F988A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		539332A517B2E3BD00F988A3 /* callistoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = callistoTests.h; sourceTree = "<group>"; };
-		539332A617B2E3BD00F988A3 /* callistoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = callistoTests.m; sourceTree = "<group>"; };
-		539332B317B2E46100F988A3 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
-		539332B417B2E46100F988A3 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		5310CB3E17BB42F6000CD782 /* callisto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = callisto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5310CB4117BB42F6000CD782 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5310CB4317BB42F6000CD782 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5310CB4517BB42F6000CD782 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5310CB4917BB42F6000CD782 /* callisto-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "callisto-Info.plist"; sourceTree = "<group>"; };
+		5310CB4B17BB42F6000CD782 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5310CB4D17BB42F6000CD782 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5310CB4F17BB42F6000CD782 /* callisto-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "callisto-Prefix.pch"; sourceTree = "<group>"; };
+		5310CB5017BB42F6000CD782 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5310CB5117BB42F6000CD782 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5310CB5317BB42F6000CD782 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5310CB5517BB42F6000CD782 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5310CB5717BB42F6000CD782 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5310CB5A17BB42F6000CD782 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		5310CB5D17BB42F6000CD782 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		5310CB5F17BB42F6000CD782 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		5310CB6017BB42F6000CD782 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		5310CB6217BB42F6000CD782 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		5310CB6417BB42F6000CD782 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		5310CB6617BB42F6000CD782 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		5310CB6717BB42F6000CD782 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		5310CB6917BB42F6000CD782 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		5310CB6B17BB42F6000CD782 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		5310CB7217BB42F7000CD782 /* callistoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = callistoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5310CB7317BB42F7000CD782 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5310CB7B17BB42F7000CD782 /* callistoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "callistoTests-Info.plist"; sourceTree = "<group>"; };
+		5310CB7D17BB42F7000CD782 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5310CB7F17BB42F7000CD782 /* callistoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = callistoTests.h; sourceTree = "<group>"; };
+		5310CB8017BB42F7000CD782 /* callistoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = callistoTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5393326F17B2E3BD00F988A3 /* Frameworks */ = {
+		5310CB3B17BB42F6000CD782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5393327617B2E3BD00F988A3 /* UIKit.framework in Frameworks */,
-				5393327817B2E3BD00F988A3 /* Foundation.framework in Frameworks */,
-				5393327A17B2E3BD00F988A3 /* CoreGraphics.framework in Frameworks */,
-				5393327C17B2E3BD00F988A3 /* CoreData.framework in Frameworks */,
+				5310CB4217BB42F6000CD782 /* UIKit.framework in Frameworks */,
+				5310CB4417BB42F6000CD782 /* Foundation.framework in Frameworks */,
+				5310CB4617BB42F6000CD782 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5393329317B2E3BD00F988A3 /* Frameworks */ = {
+		5310CB6E17BB42F7000CD782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5393329917B2E3BD00F988A3 /* SenTestingKit.framework in Frameworks */,
-				5393329A17B2E3BD00F988A3 /* UIKit.framework in Frameworks */,
-				5393329B17B2E3BD00F988A3 /* Foundation.framework in Frameworks */,
-				5393329C17B2E3BD00F988A3 /* CoreData.framework in Frameworks */,
+				5310CB7417BB42F7000CD782 /* SenTestingKit.framework in Frameworks */,
+				5310CB7517BB42F7000CD782 /* UIKit.framework in Frameworks */,
+				5310CB7617BB42F7000CD782 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5393326917B2E3BD00F988A3 = {
+		5310CB3517BB42F6000CD782 = {
 			isa = PBXGroup;
 			children = (
-				5393327D17B2E3BD00F988A3 /* callisto */,
-				5393329F17B2E3BD00F988A3 /* callistoTests */,
-				5393327417B2E3BD00F988A3 /* Frameworks */,
-				5393327317B2E3BD00F988A3 /* Products */,
+				5310CB4717BB42F6000CD782 /* callisto */,
+				5310CB7917BB42F7000CD782 /* callistoTests */,
+				5310CB4017BB42F6000CD782 /* Frameworks */,
+				5310CB3F17BB42F6000CD782 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5393327317B2E3BD00F988A3 /* Products */ = {
+		5310CB3F17BB42F6000CD782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5393327217B2E3BD00F988A3 /* callisto.app */,
-				5393329717B2E3BD00F988A3 /* callistoTests.octest */,
+				5310CB3E17BB42F6000CD782 /* callisto.app */,
+				5310CB7217BB42F7000CD782 /* callistoTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5393327417B2E3BD00F988A3 /* Frameworks */ = {
+		5310CB4017BB42F6000CD782 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5393327517B2E3BD00F988A3 /* UIKit.framework */,
-				5393327717B2E3BD00F988A3 /* Foundation.framework */,
-				5393327917B2E3BD00F988A3 /* CoreGraphics.framework */,
-				5393327B17B2E3BD00F988A3 /* CoreData.framework */,
-				5393329817B2E3BD00F988A3 /* SenTestingKit.framework */,
+				5310CB4117BB42F6000CD782 /* UIKit.framework */,
+				5310CB4317BB42F6000CD782 /* Foundation.framework */,
+				5310CB4517BB42F6000CD782 /* CoreGraphics.framework */,
+				5310CB7317BB42F7000CD782 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5393327D17B2E3BD00F988A3 /* callisto */ = {
+		5310CB4717BB42F6000CD782 /* callisto */ = {
 			isa = PBXGroup;
 			children = (
-				539332B217B2E43A00F988A3 /* utils */,
-				539332B117B2E42C00F988A3 /* views */,
-				539332B017B2E41500F988A3 /* models */,
-				5393328617B2E3BD00F988A3 /* AppDelegate.h */,
-				5393328717B2E3BD00F988A3 /* AppDelegate.m */,
-				5393328F17B2E3BD00F988A3 /* callisto.xcdatamodeld */,
-				5393327E17B2E3BD00F988A3 /* Supporting Files */,
+				5310CB5017BB42F6000CD782 /* AppDelegate.h */,
+				5310CB5117BB42F6000CD782 /* AppDelegate.m */,
+				5310CB5917BB42F6000CD782 /* MainStoryboard_iPhone.storyboard */,
+				5310CB5C17BB42F6000CD782 /* MainStoryboard_iPad.storyboard */,
+				5310CB5F17BB42F6000CD782 /* FirstViewController.h */,
+				5310CB6017BB42F6000CD782 /* FirstViewController.m */,
+				5310CB6217BB42F6000CD782 /* first.png */,
+				5310CB6417BB42F6000CD782 /* first@2x.png */,
+				5310CB6617BB42F6000CD782 /* SecondViewController.h */,
+				5310CB6717BB42F6000CD782 /* SecondViewController.m */,
+				5310CB6917BB42F6000CD782 /* second.png */,
+				5310CB6B17BB42F6000CD782 /* second@2x.png */,
+				5310CB4817BB42F6000CD782 /* Supporting Files */,
 			);
 			path = callisto;
 			sourceTree = "<group>";
 		};
-		5393327E17B2E3BD00F988A3 /* Supporting Files */ = {
+		5310CB4817BB42F6000CD782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5393327F17B2E3BD00F988A3 /* callisto-Info.plist */,
-				5393328017B2E3BD00F988A3 /* InfoPlist.strings */,
-				5393328317B2E3BD00F988A3 /* main.m */,
-				5393328517B2E3BD00F988A3 /* callisto-Prefix.pch */,
-				5393328917B2E3BD00F988A3 /* Default.png */,
-				5393328B17B2E3BD00F988A3 /* Default@2x.png */,
-				5393328D17B2E3BD00F988A3 /* Default-568h@2x.png */,
+				5310CB4917BB42F6000CD782 /* callisto-Info.plist */,
+				5310CB4A17BB42F6000CD782 /* InfoPlist.strings */,
+				5310CB4D17BB42F6000CD782 /* main.m */,
+				5310CB4F17BB42F6000CD782 /* callisto-Prefix.pch */,
+				5310CB5317BB42F6000CD782 /* Default.png */,
+				5310CB5517BB42F6000CD782 /* Default@2x.png */,
+				5310CB5717BB42F6000CD782 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5393329F17B2E3BD00F988A3 /* callistoTests */ = {
+		5310CB7917BB42F7000CD782 /* callistoTests */ = {
 			isa = PBXGroup;
 			children = (
-				539332A517B2E3BD00F988A3 /* callistoTests.h */,
-				539332A617B2E3BD00F988A3 /* callistoTests.m */,
-				539332A017B2E3BD00F988A3 /* Supporting Files */,
+				5310CB7F17BB42F7000CD782 /* callistoTests.h */,
+				5310CB8017BB42F7000CD782 /* callistoTests.m */,
+				5310CB7A17BB42F7000CD782 /* Supporting Files */,
 			);
 			path = callistoTests;
 			sourceTree = "<group>";
 		};
-		539332A017B2E3BD00F988A3 /* Supporting Files */ = {
+		5310CB7A17BB42F7000CD782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				539332A117B2E3BD00F988A3 /* callistoTests-Info.plist */,
-				539332A217B2E3BD00F988A3 /* InfoPlist.strings */,
+				5310CB7B17BB42F7000CD782 /* callistoTests-Info.plist */,
+				5310CB7C17BB42F7000CD782 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		539332B017B2E41500F988A3 /* models */ = {
-			isa = PBXGroup;
-			children = (
-				539332B317B2E46100F988A3 /* Activity.h */,
-				539332B417B2E46100F988A3 /* Activity.m */,
-			);
-			name = models;
-			sourceTree = "<group>";
-		};
-		539332B117B2E42C00F988A3 /* views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = views;
-			sourceTree = "<group>";
-		};
-		539332B217B2E43A00F988A3 /* utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5393327117B2E3BD00F988A3 /* callisto */ = {
+		5310CB3D17BB42F6000CD782 /* callisto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 539332AA17B2E3BD00F988A3 /* Build configuration list for PBXNativeTarget "callisto" */;
+			buildConfigurationList = 5310CB8417BB42F7000CD782 /* Build configuration list for PBXNativeTarget "callisto" */;
 			buildPhases = (
-				5393326E17B2E3BD00F988A3 /* Sources */,
-				5393326F17B2E3BD00F988A3 /* Frameworks */,
-				5393327017B2E3BD00F988A3 /* Resources */,
+				5310CB3A17BB42F6000CD782 /* Sources */,
+				5310CB3B17BB42F6000CD782 /* Frameworks */,
+				5310CB3C17BB42F6000CD782 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -207,79 +197,85 @@
 			);
 			name = callisto;
 			productName = callisto;
-			productReference = 5393327217B2E3BD00F988A3 /* callisto.app */;
+			productReference = 5310CB3E17BB42F6000CD782 /* callisto.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5393329617B2E3BD00F988A3 /* callistoTests */ = {
+		5310CB7117BB42F7000CD782 /* callistoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 539332AD17B2E3BD00F988A3 /* Build configuration list for PBXNativeTarget "callistoTests" */;
+			buildConfigurationList = 5310CB8717BB42F7000CD782 /* Build configuration list for PBXNativeTarget "callistoTests" */;
 			buildPhases = (
-				5393329217B2E3BD00F988A3 /* Sources */,
-				5393329317B2E3BD00F988A3 /* Frameworks */,
-				5393329417B2E3BD00F988A3 /* Resources */,
-				5393329517B2E3BD00F988A3 /* ShellScript */,
+				5310CB6D17BB42F7000CD782 /* Sources */,
+				5310CB6E17BB42F7000CD782 /* Frameworks */,
+				5310CB6F17BB42F7000CD782 /* Resources */,
+				5310CB7017BB42F7000CD782 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5393329E17B2E3BD00F988A3 /* PBXTargetDependency */,
+				5310CB7817BB42F7000CD782 /* PBXTargetDependency */,
 			);
 			name = callistoTests;
 			productName = callistoTests;
-			productReference = 5393329717B2E3BD00F988A3 /* callistoTests.octest */;
+			productReference = 5310CB7217BB42F7000CD782 /* callistoTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5393326A17B2E3BD00F988A3 /* Project object */ = {
+		5310CB3617BB42F6000CD782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = Cevaris;
+				ORGANIZATIONNAME = Callisto;
 			};
-			buildConfigurationList = 5393326D17B2E3BD00F988A3 /* Build configuration list for PBXProject "callisto" */;
+			buildConfigurationList = 5310CB3917BB42F6000CD782 /* Build configuration list for PBXProject "callisto" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 5393326917B2E3BD00F988A3;
-			productRefGroup = 5393327317B2E3BD00F988A3 /* Products */;
+			mainGroup = 5310CB3517BB42F6000CD782;
+			productRefGroup = 5310CB3F17BB42F6000CD782 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5393327117B2E3BD00F988A3 /* callisto */,
-				5393329617B2E3BD00F988A3 /* callistoTests */,
+				5310CB3D17BB42F6000CD782 /* callisto */,
+				5310CB7117BB42F7000CD782 /* callistoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5393327017B2E3BD00F988A3 /* Resources */ = {
+		5310CB3C17BB42F6000CD782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5393328217B2E3BD00F988A3 /* InfoPlist.strings in Resources */,
-				5393328A17B2E3BD00F988A3 /* Default.png in Resources */,
-				5393328C17B2E3BD00F988A3 /* Default@2x.png in Resources */,
-				5393328E17B2E3BD00F988A3 /* Default-568h@2x.png in Resources */,
+				5310CB4C17BB42F6000CD782 /* InfoPlist.strings in Resources */,
+				5310CB5417BB42F6000CD782 /* Default.png in Resources */,
+				5310CB5617BB42F6000CD782 /* Default@2x.png in Resources */,
+				5310CB5817BB42F6000CD782 /* Default-568h@2x.png in Resources */,
+				5310CB5B17BB42F6000CD782 /* MainStoryboard_iPhone.storyboard in Resources */,
+				5310CB5E17BB42F6000CD782 /* MainStoryboard_iPad.storyboard in Resources */,
+				5310CB6317BB42F6000CD782 /* first.png in Resources */,
+				5310CB6517BB42F6000CD782 /* first@2x.png in Resources */,
+				5310CB6A17BB42F6000CD782 /* second.png in Resources */,
+				5310CB6C17BB42F6000CD782 /* second@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5393329417B2E3BD00F988A3 /* Resources */ = {
+		5310CB6F17BB42F7000CD782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				539332A417B2E3BD00F988A3 /* InfoPlist.strings in Resources */,
+				5310CB7E17BB42F7000CD782 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5393329517B2E3BD00F988A3 /* ShellScript */ = {
+		5310CB7017BB42F7000CD782 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -295,48 +291,64 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5393326E17B2E3BD00F988A3 /* Sources */ = {
+		5310CB3A17BB42F6000CD782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5393328417B2E3BD00F988A3 /* main.m in Sources */,
-				5393328817B2E3BD00F988A3 /* AppDelegate.m in Sources */,
-				5393329117B2E3BD00F988A3 /* callisto.xcdatamodeld in Sources */,
-				539332B517B2E46100F988A3 /* Activity.m in Sources */,
+				5310CB4E17BB42F6000CD782 /* main.m in Sources */,
+				5310CB5217BB42F6000CD782 /* AppDelegate.m in Sources */,
+				5310CB6117BB42F6000CD782 /* FirstViewController.m in Sources */,
+				5310CB6817BB42F6000CD782 /* SecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5393329217B2E3BD00F988A3 /* Sources */ = {
+		5310CB6D17BB42F7000CD782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				539332A717B2E3BD00F988A3 /* callistoTests.m in Sources */,
+				5310CB8117BB42F7000CD782 /* callistoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5393329E17B2E3BD00F988A3 /* PBXTargetDependency */ = {
+		5310CB7817BB42F7000CD782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5393327117B2E3BD00F988A3 /* callisto */;
-			targetProxy = 5393329D17B2E3BD00F988A3 /* PBXContainerItemProxy */;
+			target = 5310CB3D17BB42F6000CD782 /* callisto */;
+			targetProxy = 5310CB7717BB42F7000CD782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5393328017B2E3BD00F988A3 /* InfoPlist.strings */ = {
+		5310CB4A17BB42F6000CD782 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5393328117B2E3BD00F988A3 /* en */,
+				5310CB4B17BB42F6000CD782 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		539332A217B2E3BD00F988A3 /* InfoPlist.strings */ = {
+		5310CB5917BB42F6000CD782 /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				539332A317B2E3BD00F988A3 /* en */,
+				5310CB5A17BB42F6000CD782 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		5310CB5C17BB42F6000CD782 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5310CB5D17BB42F6000CD782 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		5310CB7C17BB42F7000CD782 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5310CB7D17BB42F7000CD782 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -344,7 +356,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		539332A817B2E3BD00F988A3 /* Debug */ = {
+		5310CB8217BB42F7000CD782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -376,7 +388,7 @@
 			};
 			name = Debug;
 		};
-		539332A917B2E3BD00F988A3 /* Release */ = {
+		5310CB8317BB42F7000CD782 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -402,7 +414,7 @@
 			};
 			name = Release;
 		};
-		539332AB17B2E3BD00F988A3 /* Debug */ = {
+		5310CB8517BB42F7000CD782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -413,7 +425,7 @@
 			};
 			name = Debug;
 		};
-		539332AC17B2E3BD00F988A3 /* Release */ = {
+		5310CB8617BB42F7000CD782 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -424,7 +436,7 @@
 			};
 			name = Release;
 		};
-		539332AE17B2E3BD00F988A3 /* Debug */ = {
+		5310CB8817BB42F7000CD782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/callisto.app/callisto";
@@ -441,7 +453,7 @@
 			};
 			name = Debug;
 		};
-		539332AF17B2E3BD00F988A3 /* Release */ = {
+		5310CB8917BB42F7000CD782 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/callisto.app/callisto";
@@ -461,45 +473,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5393326D17B2E3BD00F988A3 /* Build configuration list for PBXProject "callisto" */ = {
+		5310CB3917BB42F6000CD782 /* Build configuration list for PBXProject "callisto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				539332A817B2E3BD00F988A3 /* Debug */,
-				539332A917B2E3BD00F988A3 /* Release */,
+				5310CB8217BB42F7000CD782 /* Debug */,
+				5310CB8317BB42F7000CD782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		539332AA17B2E3BD00F988A3 /* Build configuration list for PBXNativeTarget "callisto" */ = {
+		5310CB8417BB42F7000CD782 /* Build configuration list for PBXNativeTarget "callisto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				539332AB17B2E3BD00F988A3 /* Debug */,
-				539332AC17B2E3BD00F988A3 /* Release */,
+				5310CB8517BB42F7000CD782 /* Debug */,
+				5310CB8617BB42F7000CD782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		539332AD17B2E3BD00F988A3 /* Build configuration list for PBXNativeTarget "callistoTests" */ = {
+		5310CB8717BB42F7000CD782 /* Build configuration list for PBXNativeTarget "callistoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				539332AE17B2E3BD00F988A3 /* Debug */,
-				539332AF17B2E3BD00F988A3 /* Release */,
+				5310CB8817BB42F7000CD782 /* Debug */,
+				5310CB8917BB42F7000CD782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		5393328F17B2E3BD00F988A3 /* callisto.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				5393329017B2E3BD00F988A3 /* callisto.xcdatamodel */,
-			);
-			currentVersion = 5393329017B2E3BD00F988A3 /* callisto.xcdatamodel */;
-			path = callisto.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = 5393326A17B2E3BD00F988A3 /* Project object */;
+	rootObject = 5310CB3617BB42F6000CD782 /* Project object */;
 }
