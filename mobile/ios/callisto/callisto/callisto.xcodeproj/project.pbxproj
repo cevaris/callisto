@@ -29,6 +29,7 @@
 		5310CB7617BB42F7000CD782 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5310CB4317BB42F6000CD782 /* Foundation.framework */; };
 		5310CB7E17BB42F7000CD782 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB7C17BB42F7000CD782 /* InfoPlist.strings */; };
 		5310CB8117BB42F7000CD782 /* callistoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310CB8017BB42F7000CD782 /* callistoTests.m */; };
+		5310CB8B17BB4ABC000CD782 /* cog.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB8A17BB4ABC000CD782 /* cog.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		5310CB7D17BB42F7000CD782 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5310CB7F17BB42F7000CD782 /* callistoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = callistoTests.h; sourceTree = "<group>"; };
 		5310CB8017BB42F7000CD782 /* callistoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = callistoTests.m; sourceTree = "<group>"; };
+		5310CB8A17BB4ABC000CD782 /* cog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cog.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,12 +138,8 @@
 				5310CB5C17BB42F6000CD782 /* MainStoryboard_iPad.storyboard */,
 				5310CB5F17BB42F6000CD782 /* FirstViewController.h */,
 				5310CB6017BB42F6000CD782 /* FirstViewController.m */,
-				5310CB6217BB42F6000CD782 /* first.png */,
-				5310CB6417BB42F6000CD782 /* first@2x.png */,
 				5310CB6617BB42F6000CD782 /* SecondViewController.h */,
 				5310CB6717BB42F6000CD782 /* SecondViewController.m */,
-				5310CB6917BB42F6000CD782 /* second.png */,
-				5310CB6B17BB42F6000CD782 /* second@2x.png */,
 				5310CB4817BB42F6000CD782 /* Supporting Files */,
 			);
 			path = callisto;
@@ -150,6 +148,11 @@
 		5310CB4817BB42F6000CD782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5310CB8A17BB4ABC000CD782 /* cog.png */,
+				5310CB6217BB42F6000CD782 /* first.png */,
+				5310CB6417BB42F6000CD782 /* first@2x.png */,
+				5310CB6917BB42F6000CD782 /* second.png */,
+				5310CB6B17BB42F6000CD782 /* second@2x.png */,
 				5310CB4917BB42F6000CD782 /* callisto-Info.plist */,
 				5310CB4A17BB42F6000CD782 /* InfoPlist.strings */,
 				5310CB4D17BB42F6000CD782 /* main.m */,
@@ -261,6 +264,7 @@
 				5310CB6517BB42F6000CD782 /* first@2x.png in Resources */,
 				5310CB6A17BB42F6000CD782 /* second.png in Resources */,
 				5310CB6C17BB42F6000CD782 /* second@2x.png in Resources */,
+				5310CB8B17BB4ABC000CD782 /* cog.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
