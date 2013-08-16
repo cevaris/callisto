@@ -30,6 +30,8 @@
 		5310CB7E17BB42F7000CD782 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB7C17BB42F7000CD782 /* InfoPlist.strings */; };
 		5310CB8117BB42F7000CD782 /* callistoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310CB8017BB42F7000CD782 /* callistoTests.m */; };
 		5310CB8B17BB4ABC000CD782 /* cog.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB8A17BB4ABC000CD782 /* cog.png */; };
+		5389BDF517BDB8A500FC8FBC /* MyActivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389BDF417BDB8A500FC8FBC /* MyActivitiesViewController.m */; };
+		5389BDF817BDB8C900FC8FBC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389BDF717BDB8C900FC8FBC /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,10 @@
 		5310CB7F17BB42F7000CD782 /* callistoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = callistoTests.h; sourceTree = "<group>"; };
 		5310CB8017BB42F7000CD782 /* callistoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = callistoTests.m; sourceTree = "<group>"; };
 		5310CB8A17BB4ABC000CD782 /* cog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cog.png; sourceTree = "<group>"; };
+		5389BDF317BDB8A500FC8FBC /* MyActivitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyActivitiesViewController.h; sourceTree = "<group>"; };
+		5389BDF417BDB8A500FC8FBC /* MyActivitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyActivitiesViewController.m; sourceTree = "<group>"; };
+		5389BDF617BDB8C900FC8FBC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		5389BDF717BDB8C900FC8FBC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 		5310CB4717BB42F6000CD782 /* callisto */ = {
 			isa = PBXGroup;
 			children = (
+				5389BDF217BDB85700FC8FBC /* views */,
 				5310CB5017BB42F6000CD782 /* AppDelegate.h */,
 				5310CB5117BB42F6000CD782 /* AppDelegate.m */,
 				5310CB5917BB42F6000CD782 /* MainStoryboard_iPhone.storyboard */,
@@ -181,6 +188,17 @@
 				5310CB7C17BB42F7000CD782 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5389BDF217BDB85700FC8FBC /* views */ = {
+			isa = PBXGroup;
+			children = (
+				5389BDF317BDB8A500FC8FBC /* MyActivitiesViewController.h */,
+				5389BDF417BDB8A500FC8FBC /* MyActivitiesViewController.m */,
+				5389BDF617BDB8C900FC8FBC /* LoginViewController.h */,
+				5389BDF717BDB8C900FC8FBC /* LoginViewController.m */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +321,8 @@
 				5310CB5217BB42F6000CD782 /* AppDelegate.m in Sources */,
 				5310CB6117BB42F6000CD782 /* FirstViewController.m in Sources */,
 				5310CB6817BB42F6000CD782 /* SecondViewController.m in Sources */,
+				5389BDF517BDB8A500FC8FBC /* MyActivitiesViewController.m in Sources */,
+				5389BDF817BDB8C900FC8FBC /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +513,7 @@
 				5310CB8617BB42F7000CD782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5310CB8717BB42F7000CD782 /* Build configuration list for PBXNativeTarget "callistoTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +522,7 @@
 				5310CB8917BB42F7000CD782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
