@@ -215,6 +215,7 @@
 		5310CB4717BB42F6000CD782 /* callisto */ = {
 			isa = PBXGroup;
 			children = (
+				53CFA54917C16BB100882E52 /* models */,
 				53CFA52017C0970500882E52 /* requests */,
 				5389BDF217BDB85700FC8FBC /* views */,
 				5310CB5017BB42F6000CD782 /* AppDelegate.h */,
@@ -300,6 +301,13 @@
 				53CFA53717C0992100882E52 /* RestKitFrameworkTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		53CFA54917C16BB100882E52 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

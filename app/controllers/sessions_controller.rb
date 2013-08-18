@@ -6,8 +6,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-    Rails.logger.info params
-
     user = User.find_by_email(params[:session][:name].downcase)
 
     if user && user.authenticate(params[:session][:password])

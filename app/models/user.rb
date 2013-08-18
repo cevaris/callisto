@@ -61,6 +61,10 @@ class User < ActiveRecord::Base
   	stats
   end
 
+  def update_authtoken
+    self.authtoken ||= SecureRandom.uuid + '-' + SecureRandom.uuid.reverse
+  end
+
   def request_key
     Digest::MD5.hexdigest(self.email + self.confirmed.to_s + self.password_digest + self.created_at.iso8601)
   end
@@ -87,5 +91,8 @@ class User < ActiveRecord::Base
 
   def create_remember_token
     self.remember_token ||= SecureRandom.urlsafe_base64
+    self.authtoken ||= update_authtoken
   end
+
+  
 end

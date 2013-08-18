@@ -182,7 +182,7 @@
                             <constraint firstItem="7AD-nq-IZR" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="m7c-x4-6ab"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="second" id="6"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="cog.png" id="6"/>
                     <navigationItem key="navigationItem" id="9Ly-s4-7ON"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
@@ -227,7 +227,7 @@
             </objects>
             <point key="canvasLocation" x="1579" y="-664"/>
         </scene>
-        <!--View Controller - Search-->
+        <!--View Controller-->
         <scene sceneID="cnw-fI-vjS">
             <objects>
                 <viewController id="h0B-QR-j1u" sceneMemberID="viewController">
@@ -286,7 +286,7 @@
                             <constraint firstItem="ecG-r1-Vqo" firstAttribute="trailing" secondItem="uL3-5X-h8Z" secondAttribute="trailing" type="default" id="si0-Uf-ULh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" id="BI4-zP-QBx"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="BI4-zP-QBx"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="hKS-aL-dlm" id="ico-q5-giQ"/>
                     </connections>
@@ -382,11 +382,11 @@
             </objects>
             <point key="canvasLocation" x="1579" y="-1319"/>
         </scene>
-        <!--Navigation Controller - My Activities-->
+        <!--Navigation Controller - My Activites-->
         <scene sceneID="IWW-g1-XHm">
             <objects>
                 <navigationController id="NPt-kd-JWD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Activities" id="XaI-3g-hGV"/>
+                    <tabBarItem key="tabBarItem" title="My Activites" image="second.png" id="XaI-3g-hGV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iWZ-8Q-Saa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -403,7 +403,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="second" width="16" height="16"/>
+        <image name="cog.png" width="30" height="30"/>
+        <image name="second.png" width="30" height="30"/>
     </resources>
     <classes>
         <class className="LoginViewController" superclassName="UIViewController">
