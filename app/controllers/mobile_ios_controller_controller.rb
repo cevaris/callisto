@@ -1,0 +1,2 @@
+class MobileIosControllerController < ApplicationController
+end
