@@ -18,10 +18,8 @@
 		5310CB5817BB42F6000CD782 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB5717BB42F6000CD782 /* Default-568h@2x.png */; };
 		5310CB5B17BB42F6000CD782 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB5917BB42F6000CD782 /* MainStoryboard_iPhone.storyboard */; };
 		5310CB5E17BB42F6000CD782 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB5C17BB42F6000CD782 /* MainStoryboard_iPad.storyboard */; };
-		5310CB6117BB42F6000CD782 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310CB6017BB42F6000CD782 /* FirstViewController.m */; };
 		5310CB6317BB42F6000CD782 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB6217BB42F6000CD782 /* first.png */; };
 		5310CB6517BB42F6000CD782 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB6417BB42F6000CD782 /* first@2x.png */; };
-		5310CB6817BB42F6000CD782 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310CB6717BB42F6000CD782 /* SecondViewController.m */; };
 		5310CB6A17BB42F6000CD782 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB6917BB42F6000CD782 /* second.png */; };
 		5310CB6C17BB42F6000CD782 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB6B17BB42F6000CD782 /* second@2x.png */; };
 		5310CB7417BB42F7000CD782 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5310CB7317BB42F7000CD782 /* SenTestingKit.framework */; };
@@ -106,12 +104,8 @@
 		5310CB5717BB42F6000CD782 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "callisto/Default-568h@2x.png"; sourceTree = "<group>"; };
 		5310CB5A17BB42F6000CD782 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		5310CB5D17BB42F6000CD782 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		5310CB5F17BB42F6000CD782 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		5310CB6017BB42F6000CD782 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		5310CB6217BB42F6000CD782 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = first.png; path = callisto/first.png; sourceTree = "<group>"; };
 		5310CB6417BB42F6000CD782 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first@2x.png"; path = "callisto/first@2x.png"; sourceTree = "<group>"; };
-		5310CB6617BB42F6000CD782 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		5310CB6717BB42F6000CD782 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		5310CB6917BB42F6000CD782 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = second.png; path = callisto/second.png; sourceTree = "<group>"; };
 		5310CB6B17BB42F6000CD782 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "second@2x.png"; path = "callisto/second@2x.png"; sourceTree = "<group>"; };
 		5310CB7217BB42F7000CD782 /* callistoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = callistoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,10 +216,6 @@
 				5310CB5117BB42F6000CD782 /* AppDelegate.m */,
 				5310CB5917BB42F6000CD782 /* MainStoryboard_iPhone.storyboard */,
 				5310CB5C17BB42F6000CD782 /* MainStoryboard_iPad.storyboard */,
-				5310CB5F17BB42F6000CD782 /* FirstViewController.h */,
-				5310CB6017BB42F6000CD782 /* FirstViewController.m */,
-				5310CB6617BB42F6000CD782 /* SecondViewController.h */,
-				5310CB6717BB42F6000CD782 /* SecondViewController.m */,
 			);
 			path = callisto;
 			sourceTree = "<group>";
@@ -466,8 +456,6 @@
 			files = (
 				5310CB4E17BB42F6000CD782 /* main.m in Sources */,
 				5310CB5217BB42F6000CD782 /* AppDelegate.m in Sources */,
-				5310CB6117BB42F6000CD782 /* FirstViewController.m in Sources */,
-				5310CB6817BB42F6000CD782 /* SecondViewController.m in Sources */,
 				5389BDF517BDB8A500FC8FBC /* MyActivitiesViewController.m in Sources */,
 				5389BDF817BDB8C900FC8FBC /* LoginViewController.m in Sources */,
 				5389BDFC17BE8A0800FC8FBC /* UserActivityCell.m in Sources */,
