@@ -14,19 +14,15 @@ module SessionsHelper
   
   def current_user
     @current_user ||= User.find_by_remember_token(cookies[:remember_token])
+    if !@current_user and params.has_key?(:authtoken)
+      @current_user ||= User.find_by_authtoken(params[:authtoken])
+    end
   end
   
   def sign_out
     self.current_user = nil
     cookies.delete(:remember_token)
   end
-
-  # def login_required  
-  #   unless current_user  
-  #     flash[:error] = 'You must be logged in to view this page.'  
-  #     redirect_to signin_path  
-  #   end  
-  # end  
 
   def require_session
     unless current_user

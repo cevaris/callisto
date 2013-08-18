@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130812034847) do
+ActiveRecord::Schema.define(:version => 20130818195521) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -99,6 +99,7 @@ ActiveRecord::Schema.define(:version => 20130812034847) do
     t.string   "role",                :default => "default"
     t.string   "first_name"
     t.string   "last_name"
+    t.text     "authtoken"
   end
 
 end
