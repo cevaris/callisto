@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "LoginViewController.h"
+#import "UserActivityCell.h"
 
-@interface MyActivitiesViewController : UITableViewController
+@interface MyActivitiesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate >
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

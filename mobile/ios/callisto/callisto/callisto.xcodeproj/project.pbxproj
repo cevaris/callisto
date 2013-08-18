@@ -32,6 +32,8 @@
 		5310CB8B17BB4ABC000CD782 /* cog.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB8A17BB4ABC000CD782 /* cog.png */; };
 		5389BDF517BDB8A500FC8FBC /* MyActivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389BDF417BDB8A500FC8FBC /* MyActivitiesViewController.m */; };
 		5389BDF817BDB8C900FC8FBC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389BDF717BDB8C900FC8FBC /* LoginViewController.m */; };
+		5389BDFC17BE8A0800FC8FBC /* UserActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389BDFB17BE8A0800FC8FBC /* UserActivityCell.m */; };
+		53CFA52317C0975C00882E52 /* DataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFA52217C0975C00882E52 /* DataRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,36 +51,40 @@
 		5310CB4117BB42F6000CD782 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5310CB4317BB42F6000CD782 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5310CB4517BB42F6000CD782 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5310CB4917BB42F6000CD782 /* callisto-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "callisto-Info.plist"; sourceTree = "<group>"; };
+		5310CB4917BB42F6000CD782 /* callisto-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "callisto-Info.plist"; path = "callisto/callisto-Info.plist"; sourceTree = "<group>"; };
 		5310CB4B17BB42F6000CD782 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5310CB4D17BB42F6000CD782 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5310CB4F17BB42F6000CD782 /* callisto-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "callisto-Prefix.pch"; sourceTree = "<group>"; };
+		5310CB4D17BB42F6000CD782 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = callisto/main.m; sourceTree = "<group>"; };
+		5310CB4F17BB42F6000CD782 /* callisto-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "callisto-Prefix.pch"; path = "callisto/callisto-Prefix.pch"; sourceTree = "<group>"; };
 		5310CB5017BB42F6000CD782 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5310CB5117BB42F6000CD782 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5310CB5317BB42F6000CD782 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		5310CB5517BB42F6000CD782 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		5310CB5717BB42F6000CD782 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5310CB5317BB42F6000CD782 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = callisto/Default.png; sourceTree = "<group>"; };
+		5310CB5517BB42F6000CD782 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "callisto/Default@2x.png"; sourceTree = "<group>"; };
+		5310CB5717BB42F6000CD782 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "callisto/Default-568h@2x.png"; sourceTree = "<group>"; };
 		5310CB5A17BB42F6000CD782 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		5310CB5D17BB42F6000CD782 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		5310CB5F17BB42F6000CD782 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		5310CB6017BB42F6000CD782 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		5310CB6217BB42F6000CD782 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		5310CB6417BB42F6000CD782 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		5310CB6217BB42F6000CD782 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = first.png; path = callisto/first.png; sourceTree = "<group>"; };
+		5310CB6417BB42F6000CD782 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first@2x.png"; path = "callisto/first@2x.png"; sourceTree = "<group>"; };
 		5310CB6617BB42F6000CD782 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		5310CB6717BB42F6000CD782 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		5310CB6917BB42F6000CD782 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		5310CB6B17BB42F6000CD782 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		5310CB6917BB42F6000CD782 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = second.png; path = callisto/second.png; sourceTree = "<group>"; };
+		5310CB6B17BB42F6000CD782 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "second@2x.png"; path = "callisto/second@2x.png"; sourceTree = "<group>"; };
 		5310CB7217BB42F7000CD782 /* callistoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = callistoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5310CB7317BB42F7000CD782 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		5310CB7B17BB42F7000CD782 /* callistoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "callistoTests-Info.plist"; sourceTree = "<group>"; };
 		5310CB7D17BB42F7000CD782 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5310CB7F17BB42F7000CD782 /* callistoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = callistoTests.h; sourceTree = "<group>"; };
 		5310CB8017BB42F7000CD782 /* callistoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = callistoTests.m; sourceTree = "<group>"; };
-		5310CB8A17BB4ABC000CD782 /* cog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cog.png; sourceTree = "<group>"; };
+		5310CB8A17BB4ABC000CD782 /* cog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cog.png; path = callisto/cog.png; sourceTree = "<group>"; };
 		5389BDF317BDB8A500FC8FBC /* MyActivitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyActivitiesViewController.h; sourceTree = "<group>"; };
 		5389BDF417BDB8A500FC8FBC /* MyActivitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyActivitiesViewController.m; sourceTree = "<group>"; };
 		5389BDF617BDB8C900FC8FBC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		5389BDF717BDB8C900FC8FBC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		5389BDFA17BE8A0800FC8FBC /* UserActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserActivityCell.h; sourceTree = "<group>"; };
+		5389BDFB17BE8A0800FC8FBC /* UserActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserActivityCell.m; sourceTree = "<group>"; };
+		53CFA52117C0975C00882E52 /* DataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequest.h; sourceTree = "<group>"; };
+		53CFA52217C0975C00882E52 /* DataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 		5310CB3517BB42F6000CD782 = {
 			isa = PBXGroup;
 			children = (
+				53CFA52517C0980900882E52 /* Resources */,
 				5310CB4717BB42F6000CD782 /* callisto */,
 				5310CB7917BB42F7000CD782 /* callistoTests */,
 				5310CB4017BB42F6000CD782 /* Frameworks */,
@@ -138,6 +145,7 @@
 		5310CB4717BB42F6000CD782 /* callisto */ = {
 			isa = PBXGroup;
 			children = (
+				53CFA52017C0970500882E52 /* requests */,
 				5389BDF217BDB85700FC8FBC /* views */,
 				5310CB5017BB42F6000CD782 /* AppDelegate.h */,
 				5310CB5117BB42F6000CD782 /* AppDelegate.m */,
@@ -147,28 +155,8 @@
 				5310CB6017BB42F6000CD782 /* FirstViewController.m */,
 				5310CB6617BB42F6000CD782 /* SecondViewController.h */,
 				5310CB6717BB42F6000CD782 /* SecondViewController.m */,
-				5310CB4817BB42F6000CD782 /* Supporting Files */,
 			);
 			path = callisto;
-			sourceTree = "<group>";
-		};
-		5310CB4817BB42F6000CD782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5310CB8A17BB4ABC000CD782 /* cog.png */,
-				5310CB6217BB42F6000CD782 /* first.png */,
-				5310CB6417BB42F6000CD782 /* first@2x.png */,
-				5310CB6917BB42F6000CD782 /* second.png */,
-				5310CB6B17BB42F6000CD782 /* second@2x.png */,
-				5310CB4917BB42F6000CD782 /* callisto-Info.plist */,
-				5310CB4A17BB42F6000CD782 /* InfoPlist.strings */,
-				5310CB4D17BB42F6000CD782 /* main.m */,
-				5310CB4F17BB42F6000CD782 /* callisto-Prefix.pch */,
-				5310CB5317BB42F6000CD782 /* Default.png */,
-				5310CB5517BB42F6000CD782 /* Default@2x.png */,
-				5310CB5717BB42F6000CD782 /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		5310CB7917BB42F7000CD782 /* callistoTests */ = {
@@ -193,12 +181,50 @@
 		5389BDF217BDB85700FC8FBC /* views */ = {
 			isa = PBXGroup;
 			children = (
+				5389BDF917BE89DB00FC8FBC /* cells */,
 				5389BDF317BDB8A500FC8FBC /* MyActivitiesViewController.h */,
 				5389BDF417BDB8A500FC8FBC /* MyActivitiesViewController.m */,
 				5389BDF617BDB8C900FC8FBC /* LoginViewController.h */,
 				5389BDF717BDB8C900FC8FBC /* LoginViewController.m */,
 			);
 			name = views;
+			sourceTree = "<group>";
+		};
+		5389BDF917BE89DB00FC8FBC /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				5389BDFA17BE8A0800FC8FBC /* UserActivityCell.h */,
+				5389BDFB17BE8A0800FC8FBC /* UserActivityCell.m */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
+		53CFA52017C0970500882E52 /* requests */ = {
+			isa = PBXGroup;
+			children = (
+				53CFA52117C0975C00882E52 /* DataRequest.h */,
+				53CFA52217C0975C00882E52 /* DataRequest.m */,
+			);
+			name = requests;
+			sourceTree = "<group>";
+		};
+		53CFA52517C0980900882E52 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5310CB8A17BB4ABC000CD782 /* cog.png */,
+				5310CB6217BB42F6000CD782 /* first.png */,
+				5310CB6417BB42F6000CD782 /* first@2x.png */,
+				5310CB6917BB42F6000CD782 /* second.png */,
+				5310CB6B17BB42F6000CD782 /* second@2x.png */,
+				5310CB4917BB42F6000CD782 /* callisto-Info.plist */,
+				5310CB4A17BB42F6000CD782 /* InfoPlist.strings */,
+				5310CB4D17BB42F6000CD782 /* main.m */,
+				5310CB4F17BB42F6000CD782 /* callisto-Prefix.pch */,
+				5310CB5317BB42F6000CD782 /* Default.png */,
+				5310CB5517BB42F6000CD782 /* Default@2x.png */,
+				5310CB5717BB42F6000CD782 /* Default-568h@2x.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +349,8 @@
 				5310CB6817BB42F6000CD782 /* SecondViewController.m in Sources */,
 				5389BDF517BDB8A500FC8FBC /* MyActivitiesViewController.m in Sources */,
 				5389BDF817BDB8C900FC8FBC /* LoginViewController.m in Sources */,
+				5389BDFC17BE8A0800FC8FBC /* UserActivityCell.m in Sources */,
+				53CFA52317C0975C00882E52 /* DataRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +379,7 @@
 				5310CB4B17BB42F6000CD782 /* en */,
 			);
 			name = InfoPlist.strings;
+			path = callisto;
 			sourceTree = "<group>";
 		};
 		5310CB5917BB42F6000CD782 /* MainStoryboard_iPhone.storyboard */ = {

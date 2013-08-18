@@ -15,28 +15,28 @@
 
 @implementation MyActivitiesViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
-    LoginViewController *modalViewController = [[LoginViewController alloc] init];
-    [self presentViewController:modalViewController animated:YES completion:nil];
-    
+    self.tableView.delegate = self;
+    self.navigationController.delegate = self;
+
     return self;
+    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    
-    
-//    [modalViewController addTarget:self action:@selector(_dismissModal) forControlEvents:UIControlEventTouchUpInside];
-//    [self presentModalViewController:modalViewController animated:YES];
+    //LoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    //[self.navigationController presentViewController:loginViewController animated:YES completion:nil];
+    //[self.navigationController pushViewController:loginViewController animated:YES];
+    //[self.navigationController presentViewController:loginViewController animated:YES completion:nil];
 
-    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -53,29 +53,47 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+- (int) numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 2;
+- (int) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 5;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSString *identifier = @"USER_ACTIVITY_CELL";
+    
+    UserActivityCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
+    if (cell == nil){
+        cell = [[UserActivityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    
+    cell.name.text = @"User Bet 0";
+    
+//    Bet *bet = [actveBets objectAtIndex:[indexPath row]];
+//    cell.lblTitle.text = bet.title;
+//    cell.lblFriendUsername.text = bet.friend;
+//    cell.lblWager.text = [[bet wager] stringValue];
+    
+    
+    return cell;
+    
+}
+
+/*
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"USER_ACTIVITY_CELL";
+    static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
     
     return cell;
 }
+ */
 
 /*
 // Override to support conditional editing of the table view.
