@@ -17,9 +17,7 @@
     password = val;
 }
 
-
-
-- (void)sendRequest {
+- (BOOL)sendRequest {
     
     NSAssert(email != (id)[NSNull null] || email.length != 0, @"Email is not set");
     NSAssert(password != (id)[NSNull null] || password.length != 0, @"Password is not set");
@@ -96,10 +94,23 @@
     [httpClient postPath:@"signin" parameters:package success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         NSLog(@"Request Successful, response '%@'", responseStr);
+        requestResult = TRUE;
+        [requestLock unlock];
+
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"[HTTPClient Error]: %@", error.localizedDescription);
+        requestResult = FALSE;
+        [requestLock unlock];
     }];
-
+    
+    NSLog(@"Lockdown %d", requestResult);
+    requestLock = [NSLock new];
+    // Wait for result
+    [requestLock lock];
+    NSLog(@"Lockdown %d", requestResult);
+    
+    // Return result
+    return requestResult;
     
 }
 

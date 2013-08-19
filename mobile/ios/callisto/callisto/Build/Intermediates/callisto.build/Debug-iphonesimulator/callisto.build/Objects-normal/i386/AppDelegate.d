@@ -1,6 +1,7 @@
 dependencies: \
   /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/AppDelegate.m \
   /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/AppDelegate.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/User.h \
   /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/RestKit.h \
   /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping.h \
   /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network/RKObjectManager.h \
@@ -69,5 +70,4 @@ dependencies: \
   /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping/RKPropertyInspector.h \
   /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/NSManagedObjectContext+RKAdditions.h \
   /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/NSManagedObject+RKAdditions.h \
-  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginRequest.h \
-  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/User.h
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginRequest.h

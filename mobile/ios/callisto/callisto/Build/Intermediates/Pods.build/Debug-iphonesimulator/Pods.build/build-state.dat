@@ -58,7 +58,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencieseed167519ac2b741^1e1868519ac2b741^---0#1#0#--18"Check dependencies36"E009DFF7-49FD-416A-8640-38F0E848E03A-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesd6a807a9a1c2b741^f4df07a9a1c2b741^---0#1#0#--18"Check dependencies36"83B9CE76-1646-4421-A7BC-767867220C83-
 
 CCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods.build/Objects-normal/i386/Pods-dummy.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Pods-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s398623456.162902

@@ -3,8 +3,8 @@ v5
 r1
 cCheck dependencies
 cProcessPCH /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/Pods-SOCKit-prefix-bctaasqkdbfhcqfbkblymvrmaged/Pods-SOCKit-prefix.pch.pth Pods-SOCKit-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SOCKit.build/Objects-normal/i386/Pods-SOCKit-dummy.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Pods-SOCKit-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SOCKit.build/Objects-normal/i386/SOCKit.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/SOCKit/SOCKit.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SOCKit.build/Objects-normal/i386/Pods-SOCKit-dummy.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Pods-SOCKit-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cLibtool /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/libPods-SOCKit.a normal i386
 
 N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
@@ -71,7 +71,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies06a041519ac2b741^a0e042519ac2b741^---0#1#0#--18"Check dependencies36"120B9FC5-77E9-407E-83D5-BEAC35A80C12-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesd3dee4a8a1c2b741^f33be5a8a1c2b741^---0#1#0#--18"Check dependencies36"6DDDC834-7CD0-4214-A4BC-F02726C5494A-
 
 CCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-SOCKit.build/Objects-normal/i386/Pods-SOCKit-dummy.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Pods-SOCKit-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s398623451.394380

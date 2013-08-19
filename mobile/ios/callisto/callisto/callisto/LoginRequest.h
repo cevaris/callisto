@@ -13,6 +13,9 @@
 
 
 @interface LoginRequest : NSObject{
+    NSLock *requestLock;
+    BOOL requestResult;
+    
     NSString *email;
     NSString *password;
 }
@@ -21,6 +24,6 @@
 - (void)setEmail:(NSString*) val;
 - (void)setPassword:(NSString*) val;
 
-- (void)sendRequest;
+- (BOOL)sendRequest;
 
 @end

@@ -1,6 +1,7 @@
 dependencies: \
   /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/main.m \
   /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/AppDelegate.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/User.h \
   /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/RestKit.h \
   /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping.h \
   /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network/RKObjectManager.h \

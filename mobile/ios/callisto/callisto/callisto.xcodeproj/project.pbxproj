@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		288F76FEE0A642E9880244DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A962F720E1426E97B20A22 /* libPods.a */; };
+		53092ECE17C29D5F004AF5D1 /* ActivitiesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 53092ECD17C29D5F004AF5D1 /* ActivitiesRequest.m */; };
 		5310CB4217BB42F6000CD782 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5310CB4117BB42F6000CD782 /* UIKit.framework */; };
 		5310CB4417BB42F6000CD782 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5310CB4317BB42F6000CD782 /* Foundation.framework */; };
 		5310CB4617BB42F6000CD782 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5310CB4517BB42F6000CD782 /* CoreGraphics.framework */; };
@@ -33,7 +34,6 @@
 		5389BDF517BDB8A500FC8FBC /* MyActivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389BDF417BDB8A500FC8FBC /* MyActivitiesViewController.m */; };
 		5389BDF817BDB8C900FC8FBC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389BDF717BDB8C900FC8FBC /* LoginViewController.m */; };
 		5389BDFC17BE8A0800FC8FBC /* UserActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389BDFB17BE8A0800FC8FBC /* UserActivityCell.m */; };
-		53CFA52317C0975C00882E52 /* DataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFA52217C0975C00882E52 /* DataRequest.m */; };
 		53CFA52817C098B000882E52 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFA52717C098B000882E52 /* LoginRequest.m */; };
 		53CFA53C17C099C500882E52 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CFA53B17C099C500882E52 /* CFNetwork.framework */; };
 		53CFA53E17C099CC00882E52 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CFA53D17C099CC00882E52 /* CoreData.framework */; };
@@ -56,6 +56,8 @@
 
 /* Begin PBXFileReference section */
 		38A962F720E1426E97B20A22 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		53092ECC17C29D5F004AF5D1 /* ActivitiesRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitiesRequest.h; sourceTree = "<group>"; };
+		53092ECD17C29D5F004AF5D1 /* ActivitiesRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiesRequest.m; sourceTree = "<group>"; };
 		5310CB3E17BB42F6000CD782 /* callisto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = callisto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5310CB4117BB42F6000CD782 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5310CB4317BB42F6000CD782 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,8 +92,6 @@
 		5389BDF717BDB8C900FC8FBC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		5389BDFA17BE8A0800FC8FBC /* UserActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserActivityCell.h; sourceTree = "<group>"; };
 		5389BDFB17BE8A0800FC8FBC /* UserActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserActivityCell.m; sourceTree = "<group>"; };
-		53CFA52117C0975C00882E52 /* DataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequest.h; sourceTree = "<group>"; };
-		53CFA52217C0975C00882E52 /* DataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataRequest.m; sourceTree = "<group>"; };
 		53CFA52617C098B000882E52 /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
 		53CFA52717C098B000882E52 /* LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
 		53CFA53B17C099C500882E52 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -223,10 +223,10 @@
 		53CFA52017C0970500882E52 /* requests */ = {
 			isa = PBXGroup;
 			children = (
-				53CFA52117C0975C00882E52 /* DataRequest.h */,
-				53CFA52217C0975C00882E52 /* DataRequest.m */,
 				53CFA52617C098B000882E52 /* LoginRequest.h */,
 				53CFA52717C098B000882E52 /* LoginRequest.m */,
+				53092ECC17C29D5F004AF5D1 /* ActivitiesRequest.h */,
+				53092ECD17C29D5F004AF5D1 /* ActivitiesRequest.m */,
 			);
 			name = requests;
 			sourceTree = "<group>";
@@ -414,9 +414,9 @@
 				5389BDF517BDB8A500FC8FBC /* MyActivitiesViewController.m in Sources */,
 				5389BDF817BDB8C900FC8FBC /* LoginViewController.m in Sources */,
 				5389BDFC17BE8A0800FC8FBC /* UserActivityCell.m in Sources */,
-				53CFA52317C0975C00882E52 /* DataRequest.m in Sources */,
 				53CFA52817C098B000882E52 /* LoginRequest.m in Sources */,
 				5324665D17C17E780098DE95 /* User.m in Sources */,
+				53092ECE17C29D5F004AF5D1 /* ActivitiesRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,8 +40,8 @@
     LoginRequest *login = [[LoginRequest alloc] init];
     [login setEmail:self.txtEmail.text];
     [login setPassword:self.txtPassword.text];
-    [login sendRequest];
-    
+    NSLog(@"LoginRequest Result %d", [login sendRequest]);
+       
     
     
 
