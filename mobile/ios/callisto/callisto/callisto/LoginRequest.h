@@ -11,6 +11,9 @@
 #import "User.h"
 
 
+
 @interface LoginRequest : NSObject
+
+- (void)sendRequest;
 
 @end

@@ -16,8 +16,8 @@ t1357769467
 s272
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods.build/Objects-normal/i386/Pods-dummy.o
-t1376930656
-s3360
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods.build/Objects-normal/i386/Pods.LinkFileList
 c0000000052124B6000000000000000BA
@@ -45,8 +45,8 @@ t1376930652
 s112112
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/libPods.a
-t1376930658
-s3870400
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Pods-dummy.m
 c0000000052124B2A0000000000000070
@@ -58,7 +58,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesde93cf7c8ac2b741^c3d3cf7c8ac2b741^---0#1#0#--18"Check dependencies36"7138C6C2-81E7-4EE9-8F76-08A0A660A781-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies499c11e082c2b741^a0f928e082c2b741^---0#1#0#--18"Check dependencies36"3B0C4DF9-6336-4AE3-BB5E-28151B62B2A6-
 
 CCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods.build/Objects-normal/i386/Pods-dummy.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Pods-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s398623456.162902

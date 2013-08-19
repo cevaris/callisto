@@ -2,10 +2,10 @@ TPods-TransitionKit
 v5
 r1
 cCheck dependencies
-cProcessPCH /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/Pods-TransitionKit-prefix-eqzqubeuffvoyigdpduxroveyqdr/Pods-TransitionKit-prefix.pch.pth Pods-TransitionKit-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cProcessPCH /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/Pods-TransitionKit-prefix-cscgzeypliderqfvwmltketxgbty/Pods-TransitionKit-prefix.pch.pth Pods-TransitionKit-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/TKState.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKState.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/Pods-TransitionKit-prefix-eqzqubeuffvoyigdpduxroveyqdr/Pods-TransitionKit-prefix.pch.pth Pods-TransitionKit-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/TKEvent.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKEvent.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/TKState.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKState.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/TKStateMachine.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKStateMachine.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/Pods-TransitionKit-dummy.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Pods-TransitionKit-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cLibtool /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/libPods-TransitionKit.a normal i386
@@ -21,8 +21,8 @@ t1357769467
 s272
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/Pods-TransitionKit-dummy.o
-t1376930652
-s3472
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/Pods-TransitionKit.LinkFileList
 c0000000052124B59000000000000032C
@@ -30,28 +30,28 @@ t1376930649
 s812
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/TKEvent.o
-t1376930651
-s27676
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/TKState.o
-t1376930650
-s19984
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/TKStateMachine.o
-t1376930652
-s58728
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/Pods-TransitionKit-prefix-cscgzeypliderqfvwmltketxgbty/Pods-TransitionKit-prefix.pch.pth
-t1376930650
-s4680104
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/Pods-TransitionKit-prefix-eqzqubeuffvoyigdpduxroveyqdr/Pods-TransitionKit-prefix.pch.pth
-t1376930650
-s4673552
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/libPods-TransitionKit.a
-t1376930652
-s112112
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Pods-TransitionKit-dummy.m
 c0000000052124B2A000000000000008C
@@ -63,35 +63,15 @@ c0000000052124B2A000000000000004D
 t1376930602
 s77
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Pods-environment.h
-c0000000052124B2A0000000000000839
-t1376930602
-s2105
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKEvent.h
-c00000000521144FA0000000000000F40
-t1376863482
-s3904
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKEvent.m
 c00000000521144FA0000000000000E49
 t1376863482
 s3657
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKState.h
-c00000000521144FA0000000000000D9D
-t1376863482
-s3485
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKState.m
 c00000000521144FA0000000000000949
 t1376863482
 s2377
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKStateMachine.h
-c00000000521144FA000000000000275E
-t1376863482
-s10078
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKStateMachine.m
 c00000000521144FA000000000000323E
@@ -112,7 +92,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies2ee3ae7c8ac2b741^d576af7c8ac2b741^---0#1#0#--18"Check dependencies36"6CF6969B-E919-4039-BFC0-FC51C7402348-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies548b5cd982c2b741^0f7e86d982c2b741^---0#1#0#--18"Check dependencies36"B2703E22-EDAB-4E9C-B899-1A9F97E613D9-
 
 CCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/Pods-TransitionKit-dummy.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Pods-TransitionKit-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s398623451.770833

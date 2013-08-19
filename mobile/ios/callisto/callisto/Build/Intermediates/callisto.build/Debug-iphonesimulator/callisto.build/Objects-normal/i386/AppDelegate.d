@@ -68,4 +68,6 @@ dependencies: \
   /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/RKPropertyInspector+CoreData.h \
   /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping/RKPropertyInspector.h \
   /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/NSManagedObjectContext+RKAdditions.h \
-  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/NSManagedObject+RKAdditions.h
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/NSManagedObject+RKAdditions.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginRequest.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/User.h

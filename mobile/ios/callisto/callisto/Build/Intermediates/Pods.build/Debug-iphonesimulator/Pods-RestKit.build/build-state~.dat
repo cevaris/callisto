@@ -4,24 +4,24 @@ r1
 cCheck dependencies
 cProcessPCH /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/Pods-RestKit-prefix-eoljffhkinghhwfyqqxjuwlzivld/Pods-RestKit-prefix.pch.pth Pods-RestKit-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cProcessPCH /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/Pods-RestKit-prefix-fsozviyzyawzxaafaijdlxtsymoo/Pods-RestKit-prefix.pch.pth Pods-RestKit-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKManagedObjectMappingOperationDataSource.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKManagedObjectMappingOperationDataSource.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKRelationshipConnectionOperation.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKRelationshipConnectionOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKObjectManager.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKObjectManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/NSManagedObjectContext+RKAdditions.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/NSManagedObjectContext+RKAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/lcl_RK.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Vendor/LibComponentLogging/Core/lcl_RK.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/LCLNSLog_RK.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Vendor/LibComponentLogging/NSLog/LCLNSLog_RK.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/NSManagedObject+RKAdditions.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/NSManagedObject+RKAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/NSManagedObjectContext+RKAdditions.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/NSManagedObjectContext+RKAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKConnectionDescription.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKConnectionDescription.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/lcl_RK.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Vendor/LibComponentLogging/Core/lcl_RK.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKEntityByAttributeCache.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKEntityByAttributeCache.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKEntityCache.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKEntityCache.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKEntityMapping.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKEntityMapping.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKFetchRequestManagedObjectCache.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKFetchRequestManagedObjectCache.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKInMemoryManagedObjectCache.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKInMemoryManagedObjectCache.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKManagedObjectImporter.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKManagedObjectImporter.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKManagedObjectMappingOperationDataSource.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKManagedObjectMappingOperationDataSource.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKManagedObjectStore.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKManagedObjectStore.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKPropertyInspector+CoreData.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKPropertyInspector+CoreData.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKRelationshipConnectionOperation.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKRelationshipConnectionOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKHTTPRequestOperation.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKHTTPRequestOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKManagedObjectRequestOperation.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKManagedObjectRequestOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKObjectManager.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKObjectManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKObjectParameterization.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKObjectParameterization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKObjectRequestOperation.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKObjectRequestOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKPaginator.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKPaginator.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
@@ -38,17 +38,17 @@ cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKMapperOperation.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKMapperOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKMapping.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKMapping.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKMappingOperation.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKMappingOperation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKObjectMapping.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKObjectMapping.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKMappingResult.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKMappingResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKObjectMapping.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKObjectMapping.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKObjectMappingMatcher.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKObjectMappingMatcher.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKObjectMappingOperationDataSource.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKObjectMappingOperationDataSource.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKObjectUtilities.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKObjectUtilities.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKPropertyInspector.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKPropertyInspector.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKPropertyMapping.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKPropertyMapping.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKRelationshipMapping.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKRelationshipMapping.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKValueTransformers.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKValueTransformers.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKDictionaryUtilities.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKDictionaryUtilities.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKRelationshipMapping.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKRelationshipMapping.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKDotNetDateFormatter.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKDotNetDateFormatter.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKDictionaryUtilities.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKDictionaryUtilities.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKErrors.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKErrors.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKISO8601DateFormatter.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKISO8601DateFormatter.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKLog.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKLog.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
@@ -73,20 +73,20 @@ t1357769467
 s272
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/LCLNSLog_RK.o
-t1376930654
-s1968
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/NSManagedObject+RKAdditions.o
-t1376930654
-s10168
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/NSManagedObjectContext+RKAdditions.o
-t1376930654
-s24772
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/Pods-RestKit-dummy.o
-t1376930655
-s3424
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/Pods-RestKit.LinkFileList
 c0000000052124B5D0000000000002C7E
@@ -94,294 +94,224 @@ t1376930653
 s11390
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKAttributeMapping.o
-t1376930655
-s7736
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKConnectionDescription.o
-t1376930654
-s38776
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKDictionaryUtilities.o
-t1376930655
-s12568
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKDotNetDateFormatter.o
-t1376930655
-s25984
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKDynamicMapping.o
-t1376930655
-s23316
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKEntityByAttributeCache.o
-t1376930654
-s125840
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKEntityCache.o
-t1376930654
-s59300
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKEntityMapping.o
-t1376930654
-s85716
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKErrorMessage.o
-t1376930655
-s8428
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKErrors.o
-t1376930655
-s3900
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKFetchRequestManagedObjectCache.o
-t1376930654
-s46736
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKHTTPRequestOperation.o
-t1376930654
-s34556
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKHTTPUtilities.o
-t1376930655
-s51416
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKISO8601DateFormatter.o
-t1376930655
-s71036
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKInMemoryManagedObjectCache.o
-t1376930654
-s49220
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKLog.o
-t1376930655
-s26400
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKMIMETypeSerialization.o
-t1376930655
-s37412
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKMIMETypes.o
-t1376930655
-s10456
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKManagedObjectImporter.o
-t1376930654
-s83220
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKManagedObjectMappingOperationDataSource.o
-t1376930654
-s117372
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKManagedObjectRequestOperation.o
-t1376930654
-s219464
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKManagedObjectStore.o
-t1376930654
-s98020
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKMapperOperation.o
-t1376930655
-s83728
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKMapping.o
-t1376930655
-s7552
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKMappingOperation.o
-t1376930655
-s191568
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKMappingResult.o
-t1376930655
-s15564
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKNSJSONSerialization.o
-t1376930655
-s9372
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKObjectManager.o
-t1376930654
-s195920
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKObjectMapping.o
-t1376930655
-s106404
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKObjectMappingMatcher.o
-t1376930655
-s28864
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKObjectMappingOperationDataSource.o
-t1376930655
-s10620
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKObjectParameterization.o
-t1376930654
-s36236
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKObjectRequestOperation.o
-t1376930655
-s147912
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKObjectUtilities.o
-t1376930655
-s18784
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKOperationStateMachine.o
-t1376930655
-s64412
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKPaginator.o
-t1376930654
-s85028
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKPathMatcher.o
-t1376930655
-s40268
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKPathUtilities.o
-t1376930655
-s23476
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKPropertyInspector+CoreData.o
-t1376930654
-s41116
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKPropertyInspector.o
-t1376930655
-s34564
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKPropertyMapping.o
-t1376930655
-s14428
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKRelationshipConnectionOperation.o
-t1376930654
-s59188
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKRelationshipMapping.o
-t1376930655
-s14172
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKRequestDescriptor.o
-t1376930654
-s26052
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKResponseDescriptor.o
-t1376930655
-s34592
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKResponseMapperOperation.o
-t1376930655
-s131308
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKRoute.o
-t1376930655
-s31508
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKRouteSet.o
-t1376930655
-s40596
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKRouter.o
-t1376930655
-s19452
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKURLEncodedSerialization.o
-t1376930655
-s18344
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/RKValueTransformers.o
-t1376930655
-s17268
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/lcl_RK.o
-t1376930654
-s10056
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/Pods-RestKit-prefix-eoljffhkinghhwfyqqxjuwlzivld/Pods-RestKit-prefix.pch.pth
-t1376930653
-s5165448
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/Pods-RestKit-prefix-fsozviyzyawzxaafaijdlxtsymoo/Pods-RestKit-prefix.pch.pth
-t1376930653
-s5161940
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/libPods-RestKit.a
-t1376930656
-s2868192
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFHTTPClient.h
-c00000000521144F500000000000094F6
-t1376863477
-s38134
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
-c00000000521144F50000000000001907
-t1376863477
-s6407
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFImageRequestOperation.h
-c00000000521144F500000000000017D7
-t1376863477
-s6103
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFJSONRequestOperation.h
-c00000000521144F50000000000000E83
-t1376863477
-s3715
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFNetworkActivityIndicatorManager.h
-c00000000521144F50000000000000EB8
-t1376863477
-s3768
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFNetworking.h
-c00000000521144F500000000000006BF
-t1376863477
-s1727
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFPropertyListRequestOperation.h
-c00000000521144F50000000000000DCB
-t1376863477
-s3531
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h
-c00000000521144F50000000000004A28
-t1376863477
-s18984
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFXMLRequestOperation.h
-c00000000521144F500000000000013E0
-t1376863477
-s5088
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/UIImageView+AFNetworking.h
-c00000000521144F5000000000000152E
-t1376863477
-s5422
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/BuildHeaders/RestKit/RestKit/CoreData.h
-c00000000521144F70000000000000484
-t1376863479
-s1156
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/BuildHeaders/RestKit/RestKit/ObjectMapping.h
-c00000000521144F700000000000003B5
-t1376863479
-s949
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/BuildHeaders/RestKit/RestKit/RestKit.h
-c00000000521144F80000000000000471
-t1376863480
-s1137
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/BuildHeaders/RestKit/RestKit/Support.h
-c00000000521144F80000000000000416
-t1376863480
-s1046
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Pods-RestKit-dummy.m
 c0000000052124B290000000000000080
@@ -393,640 +323,280 @@ c0000000052124B290000000000000328
 t1376930601
 s808
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Pods-environment.h
-c0000000052124B2A0000000000000839
-t1376930602
-s2105
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/NSManagedObject+RKAdditions.h
-c00000000521144F700000000000003D6
-t1376863479
-s982
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/NSManagedObject+RKAdditions.m
 c00000000521144F7000000000000028E
 t1376863479
 s654
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/NSManagedObjectContext+RKAdditions.h
-c00000000521144F70000000000000D50
-t1376863479
-s3408
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/NSManagedObjectContext+RKAdditions.m
 c00000000521144F70000000000000E0A
 t1376863479
 s3594
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKConnectionDescription.h
-c00000000521144F70000000000002348
-t1376863479
-s9032
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKConnectionDescription.m
 c00000000521144F70000000000001435
 t1376863479
 s5173
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKEntityByAttributeCache.h
-c00000000521144F700000000000021A8
-t1376863479
-s8616
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKEntityByAttributeCache.m
 c00000000521144F70000000000004650
 t1376863479
 s18000
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKEntityCache.h
-c00000000521144F70000000000001C98
-t1376863479
-s7320
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKEntityCache.m
 c00000000521144F7000000000000236C
 t1376863479
 s9068
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKEntityMapping.h
-c00000000521144F70000000000004C4E
-t1376863479
-s19534
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKEntityMapping.m
 c00000000521144F70000000000003CA2
 t1376863479
 s15522
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKFetchRequestManagedObjectCache.h
-c00000000521144F700000000000004A0
-t1376863479
-s1184
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKFetchRequestManagedObjectCache.m
 c00000000521144F70000000000001511
 t1376863479
 s5393
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKInMemoryManagedObjectCache.h
-c00000000521144F70000000000000688
-t1376863479
-s1672
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKInMemoryManagedObjectCache.m
 c00000000521144F70000000000001A1C
 t1376863479
 s6684
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKManagedObjectCaching.h
-c00000000521144F70000000000000A6B
-t1376863479
-s2667
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKManagedObjectImporter.h
-c00000000521144F70000000000001C67
-t1376863479
-s7271
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKManagedObjectImporter.m
 c00000000521144F70000000000003193
 t1376863479
 s12691
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKManagedObjectMappingOperationDataSource.h
-c00000000521144F70000000000001177
-t1376863479
-s4471
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKManagedObjectMappingOperationDataSource.m
 c00000000521144F70000000000006342
 t1376863479
 s25410
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKManagedObjectStore.h
-c00000000521144F700000000000058A4
-t1376863479
-s22692
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKManagedObjectStore.m
 c00000000521144F70000000000005F6A
 t1376863479
 s24426
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKPropertyInspector+CoreData.h
-c00000000521144F7000000000000070F
-t1376863479
-s1807
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKPropertyInspector+CoreData.m
 c00000000521144F70000000000001C9D
 t1376863479
 s7325
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKRelationshipConnectionOperation.h
-c00000000521144F70000000000001347
-t1376863479
-s4935
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/CoreData/RKRelationshipConnectionOperation.m
 c00000000521144F700000000000027BC
 t1376863479
 s10172
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network.h
-c00000000521144F80000000000000373
-t1376863480
-s883
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKHTTPRequestOperation.h
-c00000000521144F80000000000000B78
-t1376863480
-s2936
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKHTTPRequestOperation.m
 c00000000521144F800000000000014FD
 t1376863480
 s5373
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKManagedObjectRequestOperation.h
-c00000000521144F800000000000046A6
-t1376863480
-s18086
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKManagedObjectRequestOperation.m
 c00000000521144F8000000000000A356
 t1376863480
 s41814
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKObjectManager.h
-c00000000521144F8000000000001136E
-t1376863480
-s70510
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKObjectManager.m
 c00000000521144F8000000000000B35F
 t1376863480
 s45919
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKObjectParameterization.h
-c00000000521144F7000000000000079F
-t1376863479
-s1951
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKObjectParameterization.m
 c00000000521144F700000000000016C5
 t1376863479
 s5829
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKObjectRequestOperation.h
-c00000000521144F70000000000004029
-t1376863479
-s16425
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKObjectRequestOperation.m
 c00000000521144F8000000000000738F
 t1376863480
 s29583
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKPaginator.h
-c00000000521144F80000000000002B39
-t1376863480
-s11065
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKPaginator.m
 c00000000521144F80000000000002AFC
 t1376863480
 s11004
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKRequestDescriptor.h
-c00000000521144F7000000000000143C
-t1376863479
-s5180
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKRequestDescriptor.m
 c00000000521144F700000000000012EA
 t1376863479
 s4842
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKRequestOperationSubclass.h
-c00000000521144F8000000000000072A
-t1376863480
-s1834
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKResponseDescriptor.h
-c00000000521144F70000000000002241
-t1376863479
-s8769
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKResponseDescriptor.m
 c00000000521144F700000000000017D8
 t1376863479
 s6104
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKResponseMapperOperation.h
-c00000000521144F80000000000003ECE
-t1376863480
-s16078
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKResponseMapperOperation.m
 c00000000521144F80000000000005847
 t1376863480
 s22599
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKRoute.h
-c00000000521144F700000000000017BE
-t1376863479
-s6078
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKRoute.m
 c00000000521144F7000000000000141E
 t1376863479
 s5150
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKRouteSet.h
-c00000000521144F700000000000015A7
-t1376863479
-s5543
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKRouteSet.m
 c00000000521144F80000000000001834
 t1376863480
 s6196
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKRouter.h
-c00000000521144F70000000000001887
-t1376863479
-s6279
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKRouter.m
 c00000000521144F70000000000000AC8
 t1376863479
 s2760
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKAttributeMapping.h
-c00000000521144F70000000000000F63
-t1376863479
-s3939
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKAttributeMapping.m
 c00000000521144F70000000000000563
 t1376863479
 s1379
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKDynamicMapping.h
-c00000000521144F70000000000001834
-t1376863479
-s6196
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKDynamicMapping.m
 c00000000521144F70000000000000B30
 t1376863479
 s2864
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKErrorMessage.h
-c00000000521144F700000000000005BA
-t1376863479
-s1466
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKErrorMessage.m
 c00000000521144F70000000000000339
 t1376863479
 s825
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKHTTPUtilities.h
-c00000000521144F70000000000001604
-t1376863479
-s5636
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKHTTPUtilities.m
 c00000000521144F70000000000006A91
 t1376863479
 s27281
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKMapperOperation.h
-c00000000521144F80000000000003543
-t1376863480
-s13635
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKMapperOperation.m
 c00000000521144F70000000000004A9D
 t1376863479
 s19101
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKMapperOperation_Private.h
-c00000000521144F700000000000004E3
-t1376863479
-s1251
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKMapping.h
-c00000000521144F700000000000008B8
-t1376863479
-s2232
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKMapping.m
 c00000000521144F70000000000000220
 t1376863479
 s544
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKMappingErrors.h
-c00000000521144F7000000000000083F
-t1376863479
-s2111
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKMappingOperation.h
-c00000000521144F70000000000004723
-t1376863479
-s18211
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKMappingOperation.m
 c00000000521144F8000000000000D04C
 t1376863480
 s53324
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKMappingOperationDataSource.h
-c00000000521144F7000000000000137E
-t1376863479
-s4990
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKMappingResult.h
-c00000000521144F70000000000000E5A
-t1376863479
-s3674
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKMappingResult.m
 c00000000521144F7000000000000088D
 t1376863479
 s2189
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKObjectMapping.h
-c00000000521144F70000000000005E1C
-t1376863479
-s24092
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKObjectMapping.m
 c00000000521144F700000000000052FE
 t1376863479
 s21246
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKObjectMappingMatcher.h
-c00000000521144F70000000000000D19
-t1376863479
-s3353
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKObjectMappingMatcher.m
 c00000000521144F70000000000000E7E
 t1376863479
 s3710
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKObjectMappingOperationDataSource.h
-c00000000521144F70000000000000468
-t1376863479
-s1128
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKObjectMappingOperationDataSource.m
 c00000000521144F70000000000000468
 t1376863479
 s1128
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKObjectUtilities.h
-c00000000521144F70000000000001145
-t1376863479
-s4421
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKObjectUtilities.m
 c00000000521144F70000000000001ACD
 t1376863479
 s6861
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKPropertyInspector.h
-c00000000521144F7000000000000118F
-t1376863479
-s4495
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKPropertyInspector.m
 c00000000521144F800000000000018EC
 t1376863480
 s6380
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKPropertyMapping.h
-c00000000521144F70000000000000AC5
-t1376863479
-s2757
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKPropertyMapping.m
 c00000000521144F700000000000006CC
 t1376863479
 s1740
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKRelationshipMapping.h
-c00000000521144F80000000000001976
-t1376863480
-s6518
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKRelationshipMapping.m
 c00000000521144F7000000000000085D
 t1376863479
 s2141
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKValueTransformers.h
-c00000000521144F700000000000001F9
-t1376863479
-s505
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKValueTransformers.m
 c00000000521144F700000000000005C7
 t1376863479
 s1479
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKDictionaryUtilities.h
-c00000000521144F700000000000006DC
-t1376863479
-s1756
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKDictionaryUtilities.m
 c00000000521144F70000000000000681
 t1376863479
 s1665
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKDotNetDateFormatter.h
-c00000000521144F70000000000000DB9
-t1376863479
-s3513
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKDotNetDateFormatter.m
 c00000000521144F7000000000000102E
 t1376863479
 s4142
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKErrors.h
-c00000000521144F7000000000000076E
-t1376863479
-s1902
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKErrors.m
 c00000000521144F70000000000000411
 t1376863479
 s1041
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKISO8601DateFormatter.h
-c00000000521144F70000000000000BDB
-t1376863479
-s3035
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKISO8601DateFormatter.m
 c00000000521144F7000000000000666B
 t1376863479
 s26219
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKLog.h
-c00000000521144F800000000000022CD
-t1376863480
-s8909
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKLog.m
 c00000000521144F8000000000000186A
 t1376863480
 s6250
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKMIMETypeSerialization.h
-c00000000521144F70000000000001644
-t1376863479
-s5700
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKMIMETypeSerialization.m
 c00000000521144F70000000000001B29
 t1376863479
 s6953
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKMIMETypes.h
-c00000000521144F700000000000005B5
-t1376863479
-s1461
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKMIMETypes.m
 c00000000521144F7000000000000081B
 t1376863479
 s2075
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKMacros.h
-c00000000521144F700000000000007BC
-t1376863479
-s1980
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKNSJSONSerialization.h
-c00000000521144F7000000000000045B
-t1376863479
-s1115
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKNSJSONSerialization.m
 c00000000521144F70000000000000438
 t1376863479
 s1080
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKOperationStateMachine.h
-c00000000521144F800000000000016B9
-t1376863480
-s5817
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKOperationStateMachine.m
 c00000000521144F80000000000002024
 t1376863480
 s8228
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKPathMatcher.h
-c00000000521144F70000000000001D6C
-t1376863479
-s7532
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKPathMatcher.m
 c00000000521144F70000000000001BAF
 t1376863479
 s7087
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKPathUtilities.h
-c00000000521144F70000000000000CD0
-t1376863479
-s3280
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKPathUtilities.m
 c00000000521144F70000000000001754
 t1376863479
 s5972
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKSerialization.h
-c00000000521144F700000000000008D4
-t1376863479
-s2260
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKURLEncodedSerialization.h
-c00000000521144F700000000000014B3
-t1376863479
-s5299
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKURLEncodedSerialization.m
 c00000000521144F7000000000000101D
 t1376863479
 s4125
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/lcl_config_components_RK.h
-c00000000521144F70000000000000B6E
-t1376863479
-s2926
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/lcl_config_extensions_RK.h
-c00000000521144F700000000000002CA
-t1376863479
-s714
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/lcl_config_logger_RK.h
-c00000000521144F7000000000000032A
-t1376863479
-s810
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Vendor/LibComponentLogging/Core/lcl_RK.h
-c00000000521144F80000000000003A94
-t1376863480
-s14996
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Vendor/LibComponentLogging/Core/lcl_RK.m
 c00000000521144F800000000000016FA
 t1376863480
 s5882
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Vendor/LibComponentLogging/NSLog/LCLNSLog_RK.h
-c00000000521144F8000000000000108C
-t1376863480
-s4236
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Vendor/LibComponentLogging/NSLog/LCLNSLog_RK.m
 c00000000521144F80000000000000490
 t1376863480
 s1168
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/SOCKit/SOCKit.h
-c00000000521144F90000000000002694
-t1376863481
-s9876
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKEvent.h
-c00000000521144FA0000000000000F40
-t1376863482
-s3904
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKState.h
-c00000000521144FA0000000000000D9D
-t1376863482
-s3485
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKStateMachine.h
-c00000000521144FA000000000000275E
-t1376863482
-s10078
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TransitionKit.h
-c00000000521144FA000000000000035F
-t1376863482
-s863
 
 CBuild AST from /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Pods-RestKit-dummy.m
 r0
@@ -1198,7 +768,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies41d3be7c8ac2b741^2314bf7c8ac2b741^---0#1#0#--18"Check dependencies36"881479A1-4A58-4630-B7BF-61CF6F03B836-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies745c45dd82c2b741^062d54dd82c2b741^---0#1#0#--18"Check dependencies36"105C5F9B-35BA-4628-AF05-4E2B1DEC6197-
 
 CCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-RestKit.build/Objects-normal/i386/LCLNSLog_RK.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Vendor/LibComponentLogging/NSLog/LCLNSLog_RK.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s398623454.044194

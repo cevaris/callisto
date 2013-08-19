@@ -5,24 +5,24 @@ cCheck dependencies
 cProcessInfoPlistFile /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/Info.plist callisto/callisto-Info.plist
 cPhaseScriptExecution "Check Pods Manifest.lock" /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Script-E6BB7B7FB7224D1CBD89B649.sh
 cProcessPCH /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/callisto-Prefix-ddpgsiftmlugvmfmcrqqmkcycmwe/callisto-Prefix.pch.pth callisto/callisto-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/LoginViewController.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/main.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/AppDelegate.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/MyActivitiesViewController.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/MyActivitiesViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/DataRequest.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/DataRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/LoginViewController.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/UserActivityCell.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/UserActivityCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/DataRequest.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/DataRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/LoginRequest.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/User.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/User.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cLd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/callisto normal i386
 cGenerateDSYMFile /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app.dSYM /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/callisto
-cCpResource callisto/Default@2x.png Build/Products/Debug-iphonesimulator/callisto.app/Default@2x.png
 cCpResource callisto/Default.png Build/Products/Debug-iphonesimulator/callisto.app/Default.png
-cCpResource callisto/Default-568h@2x.png Build/Products/Debug-iphonesimulator/callisto.app/Default-568h@2x.png
 cCopyStringsFile /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/en.lproj/InfoPlist.strings callisto/en.lproj/InfoPlist.strings
+cCpResource callisto/Default@2x.png Build/Products/Debug-iphonesimulator/callisto.app/Default@2x.png
+cCpResource callisto/Default-568h@2x.png Build/Products/Debug-iphonesimulator/callisto.app/Default-568h@2x.png
 cCompileStoryboard /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/en.lproj/MainStoryboard_iPhone.storyboard
 cCompileStoryboard /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/en.lproj/MainStoryboard_iPad.storyboard
-cCpResource callisto/first@2x.png Build/Products/Debug-iphonesimulator/callisto.app/first@2x.png
 cCpResource callisto/first.png Build/Products/Debug-iphonesimulator/callisto.app/first.png
+cCpResource callisto/first@2x.png Build/Products/Debug-iphonesimulator/callisto.app/first@2x.png
 cCpResource callisto/second.png Build/Products/Debug-iphonesimulator/callisto.app/second.png
 cCpResource callisto/second@2x.png Build/Products/Debug-iphonesimulator/callisto.app/second@2x.png
 cCpResource callisto/cog.png Build/Products/Debug-iphonesimulator/callisto.app/cog.png
@@ -115,36 +115,36 @@ t1375905431
 s1214496
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/callisto-Prefix-ddpgsiftmlugvmfmcrqqmkcycmwe/callisto-Prefix.pch.pth
-t1376930659
-s4938440
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/AppDelegate.o
-t1376932562
-s87324
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/DataRequest.o
-t1376930660
-s3368
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/LoginRequest.o
-t1376932562
-s32752
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/LoginViewController.o
-t1376930660
-s68808
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/MyActivitiesViewController.o
-t1376930660
-s85728
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/User.o
-t1376930660
-s3304
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/UserActivityCell.o
-t1376930660
-s70668
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/callisto.LinkFileList
 c0000000052124B620000000000000627
@@ -152,8 +152,8 @@ t1376930658
 s1575
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/main.o
-t1376930660
-s3432
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Script-48E387351C084ADCA52C60F2.sh
 c0000000052124B62000000000000002F
@@ -166,428 +166,78 @@ t1376930658
 s259
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app
-t1376932562
-s476
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app.dSYM
-t1376932562
-s102
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/Default-568h@2x.png
-t1376930661
-s18594
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/Default.png
-t1376930661
-s6540
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/Default@2x.png
-t1376930661
-s16107
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/Info.plist
-t1376930658
-s1118
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/PkgInfo
-t1376930658
-s8
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/callisto
-t1376932562
-s1682404
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/cog.png
-t1376930661
-s3635
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/en.lproj/InfoPlist.strings
-t1376930661
-s42
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/en.lproj/MainStoryboard_iPad.storyboardc
-t1376930664
-s204
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/en.lproj/MainStoryboard_iPhone.storyboardc
-t1376930662
-s510
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/first.png
-t1376930661
-s253
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/first@2x.png
-t1376930661
-s402
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/second.png
-t1376930661
-s128
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/second@2x.png
-t1376930661
-s130
+t2
+s0
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/libPods.a
 c0000000052124B6200000000003B0EC0
 t1376930658
 s3870400
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/AFNetworking/AFHTTPClient.h
-c00000000521144F500000000000094F6
-t1376863477
-s38134
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/AFNetworking/AFHTTPRequestOperation.h
-c00000000521144F50000000000001907
-t1376863477
-s6407
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/AFNetworking/AFImageRequestOperation.h
-c00000000521144F500000000000017D7
-t1376863477
-s6103
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/AFNetworking/AFJSONRequestOperation.h
-c00000000521144F50000000000000E83
-t1376863477
-s3715
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/AFNetworking/AFNetworkActivityIndicatorManager.h
-c00000000521144F50000000000000EB8
-t1376863477
-s3768
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/AFNetworking/AFNetworking.h
-c00000000521144F500000000000006BF
-t1376863477
-s1727
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/AFNetworking/AFPropertyListRequestOperation.h
-c00000000521144F50000000000000DCB
-t1376863477
-s3531
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/AFNetworking/AFURLConnectionOperation.h
-c00000000521144F50000000000004A28
-t1376863477
-s18984
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/AFNetworking/AFXMLRequestOperation.h
-c00000000521144F500000000000013E0
-t1376863477
-s5088
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/AFNetworking/UIImageView+AFNetworking.h
-c00000000521144F5000000000000152E
-t1376863477
-s5422
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData.h
-c00000000521144F70000000000000484
-t1376863479
-s1156
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/NSManagedObject+RKAdditions.h
-c00000000521144F700000000000003D6
-t1376863479
-s982
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/NSManagedObjectContext+RKAdditions.h
-c00000000521144F70000000000000D50
-t1376863479
-s3408
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/RKConnectionDescription.h
-c00000000521144F70000000000002348
-t1376863479
-s9032
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/RKEntityMapping.h
-c00000000521144F70000000000004C4E
-t1376863479
-s19534
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/RKFetchRequestManagedObjectCache.h
-c00000000521144F700000000000004A0
-t1376863479
-s1184
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/RKInMemoryManagedObjectCache.h
-c00000000521144F70000000000000688
-t1376863479
-s1672
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/RKManagedObjectCaching.h
-c00000000521144F70000000000000A6B
-t1376863479
-s2667
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/RKManagedObjectImporter.h
-c00000000521144F70000000000001C67
-t1376863479
-s7271
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/RKManagedObjectMappingOperationDataSource.h
-c00000000521144F70000000000001177
-t1376863479
-s4471
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/RKManagedObjectStore.h
-c00000000521144F700000000000058A4
-t1376863479
-s22692
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData/RKPropertyInspector+CoreData.h
-c00000000521144F7000000000000070F
-t1376863479
-s1807
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/LCLNSLog_RK.h
-c00000000521144F8000000000000108C
-t1376863480
-s4236
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network.h
-c00000000521144F80000000000000373
-t1376863480
-s883
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network/RKHTTPRequestOperation.h
-c00000000521144F80000000000000B78
-t1376863480
-s2936
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network/RKManagedObjectRequestOperation.h
-c00000000521144F800000000000046A6
-t1376863480
-s18086
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network/RKObjectManager.h
-c00000000521144F8000000000001136E
-t1376863480
-s70510
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network/RKObjectParameterization.h
-c00000000521144F7000000000000079F
-t1376863479
-s1951
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network/RKObjectRequestOperation.h
-c00000000521144F70000000000004029
-t1376863479
-s16425
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network/RKPaginator.h
-c00000000521144F80000000000002B39
-t1376863480
-s11065
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network/RKRequestDescriptor.h
-c00000000521144F7000000000000143C
-t1376863479
-s5180
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network/RKResponseDescriptor.h
-c00000000521144F70000000000002241
-t1376863479
-s8769
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network/RKRoute.h
-c00000000521144F700000000000017BE
-t1376863479
-s6078
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network/RKRouteSet.h
-c00000000521144F700000000000015A7
-t1376863479
-s5543
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network/RKRouter.h
-c00000000521144F70000000000001887
-t1376863479
-s6279
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping.h
-c00000000521144F700000000000003B5
-t1376863479
-s949
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping/RKAttributeMapping.h
-c00000000521144F70000000000000F63
-t1376863479
-s3939
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping/RKDynamicMapping.h
-c00000000521144F70000000000001834
-t1376863479
-s6196
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping/RKErrorMessage.h
-c00000000521144F700000000000005BA
-t1376863479
-s1466
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping/RKHTTPUtilities.h
-c00000000521144F70000000000001604
-t1376863479
-s5636
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping/RKMapperOperation.h
-c00000000521144F80000000000003543
-t1376863480
-s13635
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping/RKMapping.h
-c00000000521144F700000000000008B8
-t1376863479
-s2232
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping/RKMappingOperation.h
-c00000000521144F70000000000004723
-t1376863479
-s18211
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping/RKMappingOperationDataSource.h
-c00000000521144F7000000000000137E
-t1376863479
-s4990
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping/RKMappingResult.h
-c00000000521144F70000000000000E5A
-t1376863479
-s3674
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping/RKObjectMapping.h
-c00000000521144F70000000000005E1C
-t1376863479
-s24092
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping/RKObjectMappingMatcher.h
-c00000000521144F70000000000000D19
-t1376863479
-s3353
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping/RKPropertyInspector.h
-c00000000521144F7000000000000118F
-t1376863479
-s4495
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping/RKPropertyMapping.h
-c00000000521144F70000000000000AC5
-t1376863479
-s2757
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping/RKRelationshipMapping.h
-c00000000521144F80000000000001976
-t1376863480
-s6518
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/RestKit.h
-c00000000521144F80000000000000471
-t1376863480
-s1137
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support.h
-c00000000521144F80000000000000416
-t1376863480
-s1046
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support/RKDictionaryUtilities.h
-c00000000521144F700000000000006DC
-t1376863479
-s1756
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support/RKDotNetDateFormatter.h
-c00000000521144F70000000000000DB9
-t1376863479
-s3513
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support/RKErrors.h
-c00000000521144F7000000000000076E
-t1376863479
-s1902
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support/RKLog.h
-c00000000521144F800000000000022CD
-t1376863480
-s8909
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support/RKMIMETypeSerialization.h
-c00000000521144F70000000000001644
-t1376863479
-s5700
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support/RKMIMETypes.h
-c00000000521144F700000000000005B5
-t1376863479
-s1461
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support/RKMacros.h
-c00000000521144F700000000000007BC
-t1376863479
-s1980
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support/RKNSJSONSerialization.h
-c00000000521144F7000000000000045B
-t1376863479
-s1115
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support/RKPathMatcher.h
-c00000000521144F70000000000001D6C
-t1376863479
-s7532
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support/RKPathUtilities.h
-c00000000521144F70000000000000CD0
-t1376863479
-s3280
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support/RKSerialization.h
-c00000000521144F700000000000008D4
-t1376863479
-s2260
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support/RKURLEncodedSerialization.h
-c00000000521144F700000000000014B3
-t1376863479
-s5299
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support/lcl_config_components_RK.h
-c00000000521144F70000000000000B6E
-t1376863479
-s2926
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support/lcl_config_extensions_RK.h
-c00000000521144F700000000000002CA
-t1376863479
-s714
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support/lcl_config_logger_RK.h
-c00000000521144F7000000000000032A
-t1376863479
-s810
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/lcl_RK.h
-c00000000521144F80000000000003A94
-t1376863480
-s14996
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/AppDelegate.h
-c0000000052114586000000000000012B
-t1376863622
-s299
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/AppDelegate.m
-c0000000052124CAE0000000000000844
-t1376930990
-s2116
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/DataRequest.h
-c0000000052105FDC00000000000000CD
-t1376804828
-s205
+c00000000520B0B7600000000000007D1
+t1376455542
+s2001
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/DataRequest.m
 c0000000052105FDC00000000000000BD
@@ -609,50 +259,25 @@ c0000000051B1755C0000000000003EEB
 t1370584412
 s16107
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginRequest.h
-c00000000521252E70000000000000114
-t1376932583
-s276
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginRequest.m
-c00000000521252FC0000000000000DEB
-t1376932604
-s3563
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginViewController.h
-c00000000520D814900000000000000DB
-t1376616777
-s219
+c00000000521249BF0000000000000B0C
+t1376930239
+s2828
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginViewController.m
 c00000000520D814900000000000002CA
 t1376616777
 s714
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/MyActivitiesViewController.h
-c00000000520E5BF300000000000001B2
-t1376672755
-s434
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/MyActivitiesViewController.m
 c00000000520E5FC800000000000011EC
 t1376673736
 s4588
 
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/User.h
-c00000000521146F800000000000000BF
-t1376863992
-s191
-
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/User.m
 c00000000521146F800000000000000A8
 t1376863992
 s168
-
-N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/UserActivityCell.h
-c00000000520E5623000000000000010B
-t1376671267
-s267
 
 N/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/UserActivityCell.m
 c00000000520E52880000000000000261
@@ -748,11 +373,11 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesc426d67c8ac2b741^05a7d67c8ac2b741^---0#1#0#--18"Check dependencies36"2F8BF262-61AC-4D8C-8549-3779FA4F13C3-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies81cf77e282c2b741^d42ba5e282c2b741^---0#1#0#--18"Check dependencies36"420D3E4C-B4AF-41C7-9EC8-7767CC0B5B39-
 
 CCompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/AppDelegate.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s398625404.886700
-e398625404.995110
+s398623460.268907
+e398623460.415769
 r1
 xCompileC
 xBuild/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/AppDelegate.o
@@ -761,7 +386,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compile /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/AppDelegate.m6556e37c8ac2b741^f9c0fe7c8ac2b741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/AppDelegate.m0000000000000000^5498"CompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/AppDelegate.o callisto/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/cevaris/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/bin:/usr/local/sbt/bin:/usr/local/neo4j/bin:/usr/local/spark/bin:/usr/local/scala-2.9.3/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/ImageMagick/bin:/usr/texbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-generated-files.hmap -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-own-target-headers.hmap -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-all-target-headers.hmap -iquote /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-project-headers.hmap -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/include -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/AFNetworking -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/SOCKit -IPods/Headers/TransitionKit -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/DerivedSources/i386 -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/DerivedSources -F/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator -include /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/callisto-Prefix-ddpgsiftmlugvmfmcrqqmkcycmwe/callisto-Prefix.pch -MMD -MT dependencies -MF /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/AppDelegate.dia -c /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/AppDelegate.m -o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/AppDelegate.o36"06EDCB6C-8712-4FF3-BEF0-3E3014ED1C23-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compile /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/AppDelegate.m831745e482c2b741^eb6e6ae482c2b741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/AppDelegate.m0000000000000000^5498"CompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/AppDelegate.o callisto/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/cevaris/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/bin:/usr/local/sbt/bin:/usr/local/neo4j/bin:/usr/local/spark/bin:/usr/local/scala-2.9.3/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/ImageMagick/bin:/usr/texbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-generated-files.hmap -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-own-target-headers.hmap -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-all-target-headers.hmap -iquote /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-project-headers.hmap -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/include -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/AFNetworking -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/SOCKit -IPods/Headers/TransitionKit -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/DerivedSources/i386 -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/DerivedSources -F/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator -include /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/callisto-Prefix-ddpgsiftmlugvmfmcrqqmkcycmwe/callisto-Prefix.pch -MMD -MT dependencies -MF /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/AppDelegate.dia -c /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/AppDelegate.m -o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/AppDelegate.o36"22FABE7E-57B5-4C30-B936-52D513E3801D-
 
 CCompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/DataRequest.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/DataRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s398623460.425786
@@ -777,8 +402,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compile /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/DataRequest.m7f336de482c2b741^5d707ae482c2b741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/DataRequest.m0000000000000000^5498"CompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/DataRequest.o callisto/DataRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/cevaris/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/bin:/usr/local/sbt/bin:/usr/local/neo4j/bin:/usr/local/spark/bin:/usr/local/scala-2.9.3/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/ImageMagick/bin:/usr/texbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-generated-files.hmap -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-own-target-headers.hmap -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-all-target-headers.hmap -iquote /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-project-headers.hmap -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/include -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/AFNetworking -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/SOCKit -IPods/Headers/TransitionKit -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/DerivedSources/i386 -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/DerivedSources -F/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator -include /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/callisto-Prefix-ddpgsiftmlugvmfmcrqqmkcycmwe/callisto-Prefix.pch -MMD -MT dependencies -MF /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/DataRequest.d --serialize-diagnostics /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/DataRequest.dia -c /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/DataRequest.m -o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/DataRequest.o36"EF704BCB-B93C-4E8B-B565-5FA0ABAFE82F-
 
 CCompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/LoginRequest.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s398625404.888022
-e398625404.973553
+s398623460.473625
+e398623460.542155
 r1
 xCompileC
 xBuild/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/LoginRequest.o
@@ -787,7 +412,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Compile /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginRequest.ma391e37c8ac2b741^fc39f97c8ac2b741^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginRequest.m0000000000000000^5504"CompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/LoginRequest.o callisto/LoginRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/cevaris/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/bin:/usr/local/sbt/bin:/usr/local/neo4j/bin:/usr/local/spark/bin:/usr/local/scala-2.9.3/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/ImageMagick/bin:/usr/texbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-generated-files.hmap -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-own-target-headers.hmap -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-all-target-headers.hmap -iquote /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-project-headers.hmap -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/include -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/AFNetworking -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/SOCKit -IPods/Headers/TransitionKit -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/DerivedSources/i386 -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/DerivedSources -F/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator -include /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/callisto-Prefix-ddpgsiftmlugvmfmcrqqmkcycmwe/callisto-Prefix.pch -MMD -MT dependencies -MF /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/LoginRequest.d --serialize-diagnostics /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/LoginRequest.dia -c /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginRequest.m -o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/LoginRequest.o36"429148FE-D132-463A-9AAA-39C070117ABF-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Compile /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginRequest.mef7279e482c2b741^2dcc8ae482c2b741^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginRequest.m0000000000000000^5504"CompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/LoginRequest.o callisto/LoginRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/cevaris/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/bin:/usr/local/sbt/bin:/usr/local/neo4j/bin:/usr/local/spark/bin:/usr/local/scala-2.9.3/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/ImageMagick/bin:/usr/texbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -DCOCOAPODS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-generated-files.hmap -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-own-target-headers.hmap -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-all-target-headers.hmap -iquote /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/callisto-project-headers.hmap -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/include -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/AFNetworking -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/CoreData -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Network -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/ObjectMapping -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/RestKit/RestKit/Support -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Headers/SOCKit -IPods/Headers/TransitionKit -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/DerivedSources/i386 -I/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/DerivedSources -F/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator -include /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/callisto-Prefix-ddpgsiftmlugvmfmcrqqmkcycmwe/callisto-Prefix.pch -MMD -MT dependencies -MF /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/LoginRequest.d --serialize-diagnostics /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/LoginRequest.dia -c /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginRequest.m -o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/LoginRequest.o36"0DA109CD-2E9C-4B45-90DD-9CE8253DF2E6-
 
 CCompileC Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/LoginViewController.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/LoginViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s398623460.373287
@@ -955,36 +580,36 @@ xBuild/Products/Debug-iphonesimulator/callisto.app/second@2x.png
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Copy Build/Products/Debug-iphonesimulator/callisto.app/second@2x.png86c6c7e582c2b741^9d82c8e582c2b741^---0#0#0#-19%DVTDocumentLocation2@168"file://localhost/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/second@2x.png000000000080d041^1106"CpResource "callisto/second@2x.png" "Build/Products/Debug-iphonesimulator/callisto.app/second@2x.png"    cd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/cevaris/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/bin:/usr/local/sbt/bin:/usr/local/neo4j/bin:/usr/local/spark/bin:/usr/local/scala-2.9.3/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/ImageMagick/bin:/usr/texbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/callisto/second@2x.png" /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app36"98322696-DF3F-4A3D-B219-4458635D0423-
 
 CGenerateDSYMFile /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app.dSYM /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/callisto
-s398625405.112191
-e398625405.203179
+s398623461.471251
+e398623461.722313
 r1
 xGenerateDSYMFile
 x/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app.dSYM
 x/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/callisto
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection152"Generate /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app.dSYM90da1c7d8ac2b741^e202347d8ac2b741^---0#0#0#-19%DVTDocumentLocation2@160"file://localhost/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app.dSYM/0000000000000000^1165"GenerateDSYMFile Build/Products/Debug-iphonesimulator/callisto.app.dSYM Build/Products/Debug-iphonesimulator/callisto.app/callisto    cd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/cevaris/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/bin:/usr/local/sbt/bin:/usr/local/neo4j/bin:/usr/local/spark/bin:/usr/local/scala-2.9.3/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/ImageMagick/bin:/usr/texbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/callisto -o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app.dSYM36"03F2164B-100F-45FA-B456-4284C7C5D621-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection152"Generate /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app.dSYMbec078e582c2b741^4fe9b8e582c2b741^---0#0#0#-19%DVTDocumentLocation2@159"file://localhost/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app.dSYM000000000080d041^1165"GenerateDSYMFile Build/Products/Debug-iphonesimulator/callisto.app.dSYM Build/Products/Debug-iphonesimulator/callisto.app/callisto    cd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/cevaris/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/bin:/usr/local/sbt/bin:/usr/local/neo4j/bin:/usr/local/spark/bin:/usr/local/scala-2.9.3/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/ImageMagick/bin:/usr/texbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/callisto -o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app.dSYM36"9B5E5CA9-BE6E-4FE2-948F-300484FD2443-
 
 CLd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/callisto normal i386
-s398625405.001871
-e398625405.105199
+s398623460.549178
+e398623461.463565
 r1
 xLd
 x/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/callisto
 xnormal
 xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection152"Link /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/callistoc498007d8ac2b741^31ee1a7d8ac2b741^---0#0#0#--2112"Ld Build/Products/Debug-iphonesimulator/callisto.app/callisto normal i386    cd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto    setenv IPHONEOS_DEPLOYMENT_TARGET 6.1    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/cevaris/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/bin:/usr/local/sbt/bin:/usr/local/neo4j/bin:/usr/local/spark/bin:/usr/local/scala-2.9.3/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/ImageMagick/bin:/usr/texbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator -F/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator -filelist /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/callisto.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -ObjC -framework CFNetwork -framework CoreData -framework CoreGraphics -framework MobileCoreServices -framework Security -framework SystemConfiguration -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=6.1 -framework SystemConfiguration -framework Security -framework QuartzCore -framework MobileCoreServices -lxml2 -framework CoreData -framework CFNetwork -framework UIKit -framework Foundation -framework CoreGraphics -lPods -o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/callisto36"A95F26AC-4E35-4561-8D6D-8F022FB41E5E-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection152"Link /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/callisto8cd78ce482c2b741^e6ad76e582c2b741^---0#0#0#--2112"Ld Build/Products/Debug-iphonesimulator/callisto.app/callisto normal i386    cd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto    setenv IPHONEOS_DEPLOYMENT_TARGET 6.1    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/cevaris/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/bin:/usr/local/sbt/bin:/usr/local/neo4j/bin:/usr/local/spark/bin:/usr/local/scala-2.9.3/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/ImageMagick/bin:/usr/texbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator -F/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator -filelist /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Objects-normal/i386/callisto.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -ObjC -framework CFNetwork -framework CoreData -framework CoreGraphics -framework MobileCoreServices -framework Security -framework SystemConfiguration -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=6.1 -framework SystemConfiguration -framework Security -framework QuartzCore -framework MobileCoreServices -lxml2 -framework CoreData -framework CFNetwork -framework UIKit -framework Foundation -framework CoreGraphics -lPods -o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/callisto36"27E9B704-308D-4D6A-BFA0-2EC50A4FF6D5-
 
 CPhaseScriptExecution "Check Pods Manifest.lock" /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Script-E6BB7B7FB7224D1CBD89B649.sh
-s398625404.855771
-e398625404.870343
+s398623458.704645
+e398623458.864852
 r1
 xPhaseScriptExecution
 xCheck Pods Manifest.lock
 x/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Script-E6BB7B7FB7224D1CBD89B649.sh
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Run custom shell script 'Check Pods Manifest.lock'5f95db7c8ac2b741^d1cdde7c8ac2b741^---0#0#0#--462"PhaseScriptExecution "Check Pods Manifest.lock" Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Script-E6BB7B7FB7224D1CBD89B649.sh    cd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto    /bin/sh -c /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Script-E6BB7B7FB7224D1CBD89B649.sh36"88F64286-BA7F-4345-8895-E3D225E88A8F-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Run custom shell script 'Check Pods Manifest.lock'56f3b4e282c2b741^cf66dde282c2b741^---0#0#0#--462"PhaseScriptExecution "Check Pods Manifest.lock" Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Script-E6BB7B7FB7224D1CBD89B649.sh    cd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto    /bin/sh -c /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Script-E6BB7B7FB7224D1CBD89B649.sh36"051A547A-6AAA-49E6-A50F-4520E8E556AF-
 
 CPhaseScriptExecution "Copy Pods Resources" /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Script-48E387351C084ADCA52C60F2.sh
-s398625405.224129
-e398625405.292426
+s398623464.603856
+e398623465.002401
 r1
 xPhaseScriptExecution
 xCopy Pods Resources
@@ -993,7 +618,7 @@ obuilding file list ... done
 o
 osent 29 bytes  received 20 bytes  98.00 bytes/sec
 ototal size is 0  speedup is 0.00
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection45"Run custom shell script 'Copy Pods Resources'0de0397d8ac2b741^b6db4a7d8ac2b741^-112"building file list ... donesent 29 bytes  received 20 bytes  98.00 bytes/sectotal size is 0  speedup is 0.003(21%IDEActivityLogMessage2@28"building file list ... done-398625405#0#28#-0#-----2@50"sent 29 bytes  received 20 bytes  98.00 bytes/sec-398625405#29#50#-0#-----2@33"total size is 0  speedup is 0.00-398625405#79#33#-0#-----0#0#0#--457"PhaseScriptExecution "Copy Pods Resources" Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Script-48E387351C084ADCA52C60F2.sh    cd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto    /bin/sh -c /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Script-48E387351C084ADCA52C60F2.sh36"BADA5563-5FDE-4948-9459-A6B5404A78D0-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection45"Run custom shell script 'Copy Pods Resources'8d269be882c2b741^809c00e982c2b741^-112"building file list ... donesent 29 bytes  received 20 bytes  98.00 bytes/sectotal size is 0  speedup is 0.003(21%IDEActivityLogMessage2@28"building file list ... done-398623464#0#28#-0#-----2@50"sent 29 bytes  received 20 bytes  98.00 bytes/sec-398623464#29#50#-0#-----2@33"total size is 0  speedup is 0.00-398623464#79#33#-0#-----0#0#0#--457"PhaseScriptExecution "Copy Pods Resources" Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Script-48E387351C084ADCA52C60F2.sh    cd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto    /bin/sh -c /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/callisto.build/Debug-iphonesimulator/callisto.build/Script-48E387351C084ADCA52C60F2.sh36"A844982B-D9AE-4998-8615-CB16E8D54DC7-
 
 CProcessInfoPlistFile /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app/Info.plist callisto/callisto-Info.plist
 s398623458.652681
@@ -1021,10 +646,10 @@ CProcessPCH /Users/cevaris/Library/Developer/Xcode/DerivedData/callisto-epqkxzxc
 r0
 
 CTouch /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app
-s398625405.300487
-e398625405.305290
+s398623465.012143
+e398623465.024307
 r1
 xTouch
 x/Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection144"Touch /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app7e014d7d8ac2b741^41294e7d8ac2b741^---0#0#0#--856"Touch Build/Products/Debug-iphonesimulator/callisto.app    cd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/cevaris/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/bin:/usr/local/sbt/bin:/usr/local/neo4j/bin:/usr/local/spark/bin:/usr/local/scala-2.9.3/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/ImageMagick/bin:/usr/texbin"    /usr/bin/touch -c /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app36"97E271D9-EC99-45DA-85DF-30969161587F-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection144"Touch /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app1d3803e982c2b741^503906e982c2b741^---0#0#0#--856"Touch Build/Products/Debug-iphonesimulator/callisto.app    cd /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/cevaris/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/cevaris/.rvm/bin:/usr/local/sbt/bin:/usr/local/neo4j/bin:/usr/local/spark/bin:/usr/local/scala-2.9.3/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/ImageMagick/bin:/usr/texbin"    /usr/bin/touch -c /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/callisto.app36"AA4C0349-A89D-4DCD-92E2-838AFF10D989-
 

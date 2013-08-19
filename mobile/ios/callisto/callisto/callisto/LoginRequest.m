@@ -13,26 +13,17 @@
 
 
 - (void)sendRequest {
+    
+    RKObjectManager *objectManager = [RKObjectManager sharedManager];
     NSString *email = @"jim.kobol@gmail.com";
     NSString *password = @"adam2007";
-    NSURL *url = [NSURL URLWithString:@"http://rails:3000/"];
-    
-    NSDictionary *queryParams;
-    queryParams = [NSDictionary dictionaryWithObjectsAndKeys:email, @"email", password,@"password", nil];
-//    RKObjectManager *objectManager = [RKObjectManager sharedManager];
-//    
-//    [objectManager.router.routeSet addRoute:[RKRoute
-//                                             routeWithClass:[User class]
-//                                             pathPattern:@"/signin"
-//                                             method:RKRequestMethodPOST]];
+    NSURL *url = [NSURL URLWithString:@"http://rails:3000/signin"];
 
     // Activity Indicator
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    
-    RKRequestDescriptor *responseDescriptor;
   
-    NSDictionary *user = [[NSDictionary alloc] initWithObjectsAndKeys:password, @"password", email, @"email", nil];
-    NSDictionary *package = [[NSDictionary alloc] initWithObjectsAndKeys:user, @"session", nil];
+    NSDictionary *user = [NSDictionary dictionaryWithObjectsAndKeys: password, @"password", email, @"email", nil];
+    NSDictionary *package = [NSDictionary dictionaryWithObjectsAndKeys: user, @"session", nil];
 
     
     NSError *error;
@@ -44,11 +35,14 @@
         NSLog(@"Got an error: %@", error);
     } else {
         jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        NSLog(@"Successfull JSON serialization: %@", jsonString);
     }
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
     NSData *requestData = [NSData dataWithBytes:[jsonString UTF8String] length:[jsonString length]];
+    
+    NSLog(@"Successfull POST serialization: %@", requestData);
     
     [request setHTTPMethod:@"POST"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
@@ -56,14 +50,35 @@
     [request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody: requestData];
     
-    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
-    [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-        // This is the success block
-    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        // This is the failure block
-    }];
-    [operation start];
+//    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
+//    [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+//        // This is the success block
+//        NSLog(@"Successfull in Restkit");
+//    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+//        // This is the failure block
+//        NSLog(@"Error in Restkit");
+//    }];
+//    [operation start];
     
+    RKObjectRequestOperation *operation =
+    [objectManager objectRequestOperationWithRequest:request
+                                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
+     {
+         // Success handler.
+//         NSLog(@"%@", [mappingResult firstObject]);
+         NSLog(@"Successfull in Restkit");
+     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+         // Error handler.
+         NSLog(@"Error in Restkit %@", error);
+     }];
+    
+    // enqueue operation
+    [RKObjectManager.sharedManager enqueueObjectRequestOperation:operation];
+    
+    // monitor upload progress
+    [operation.HTTPRequestOperation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
+        NSLog(@"bytesWritten: %d, totalBytesWritten: %lld, totalBytesExpectedToWrite: %lld", bytesWritten, totalBytesWritten, totalBytesExpectedToWrite);
+    }];
 
     
 }
