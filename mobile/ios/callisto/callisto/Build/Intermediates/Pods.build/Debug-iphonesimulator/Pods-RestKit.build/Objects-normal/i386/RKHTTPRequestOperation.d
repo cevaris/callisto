@@ -1,0 +1,21 @@
+dependencies: \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKHTTPRequestOperation.m \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Network/RKHTTPRequestOperation.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFNetworking.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFJSONRequestOperation.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFXMLRequestOperation.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFPropertyListRequestOperation.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFHTTPClient.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFImageRequestOperation.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/AFNetworkActivityIndicatorManager.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/AFNetworking/AFNetworking/UIImageView+AFNetworking.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKLog.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Vendor/LibComponentLogging/Core/lcl_RK.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/lcl_config_components_RK.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/lcl_config_logger_RK.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Vendor/LibComponentLogging/NSLog/LCLNSLog_RK.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/lcl_config_extensions_RK.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/ObjectMapping/RKHTTPUtilities.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/RestKit/Code/Support/RKMIMETypes.h

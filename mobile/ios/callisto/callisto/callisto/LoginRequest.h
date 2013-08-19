@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <RestKit/RestKit.h>
-#import <RestKit/RKURLEncodedSerialization.h>
+#import "User.h"
+
 
 @interface LoginRequest : NSObject
 

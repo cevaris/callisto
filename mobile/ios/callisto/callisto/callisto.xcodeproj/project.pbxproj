@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		288F76FEE0A642E9880244DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A962F720E1426E97B20A22 /* libPods.a */; };
 		5310CB4217BB42F6000CD782 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5310CB4117BB42F6000CD782 /* UIKit.framework */; };
 		5310CB4417BB42F6000CD782 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5310CB4317BB42F6000CD782 /* Foundation.framework */; };
 		5310CB4617BB42F6000CD782 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5310CB4517BB42F6000CD782 /* CoreGraphics.framework */; };
@@ -28,12 +29,12 @@
 		5310CB7E17BB42F7000CD782 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB7C17BB42F7000CD782 /* InfoPlist.strings */; };
 		5310CB8117BB42F7000CD782 /* callistoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5310CB8017BB42F7000CD782 /* callistoTests.m */; };
 		5310CB8B17BB4ABC000CD782 /* cog.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB8A17BB4ABC000CD782 /* cog.png */; };
+		5324665D17C17E780098DE95 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5324665C17C17E780098DE95 /* User.m */; };
 		5389BDF517BDB8A500FC8FBC /* MyActivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389BDF417BDB8A500FC8FBC /* MyActivitiesViewController.m */; };
 		5389BDF817BDB8C900FC8FBC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389BDF717BDB8C900FC8FBC /* LoginViewController.m */; };
 		5389BDFC17BE8A0800FC8FBC /* UserActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389BDFB17BE8A0800FC8FBC /* UserActivityCell.m */; };
 		53CFA52317C0975C00882E52 /* DataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFA52217C0975C00882E52 /* DataRequest.m */; };
 		53CFA52817C098B000882E52 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFA52717C098B000882E52 /* LoginRequest.m */; };
-		53CFA53A17C099B300882E52 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CFA53117C0992100882E52 /* libRestKit.a */; };
 		53CFA53C17C099C500882E52 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CFA53B17C099C500882E52 /* CFNetwork.framework */; };
 		53CFA53E17C099CC00882E52 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CFA53D17C099CC00882E52 /* CoreData.framework */; };
 		53CFA54017C099EA00882E52 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CFA53F17C099EA00882E52 /* libxml2.dylib */; };
@@ -51,44 +52,10 @@
 			remoteGlobalIDString = 5310CB3D17BB42F6000CD782;
 			remoteInfo = callisto;
 		};
-		53CFA53017C0992100882E52 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 53CFA52917C0992100882E52 /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160D1614564E810060A5C5;
-			remoteInfo = RestKit;
-		};
-		53CFA53217C0992100882E52 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 53CFA52917C0992100882E52 /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160D2614564E820060A5C5;
-			remoteInfo = RestKitTests;
-		};
-		53CFA53417C0992100882E52 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 53CFA52917C0992100882E52 /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160E62145651060060A5C5;
-			remoteInfo = RestKitFramework;
-		};
-		53CFA53617C0992100882E52 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 53CFA52917C0992100882E52 /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160E78145651060060A5C5;
-			remoteInfo = RestKitFrameworkTests;
-		};
-		53CFA53817C099A200882E52 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 53CFA52917C0992100882E52 /* RestKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 25160D1514564E810060A5C5;
-			remoteInfo = RestKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38A962F720E1426E97B20A22 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5310CB3E17BB42F6000CD782 /* callisto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = callisto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5310CB4117BB42F6000CD782 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5310CB4317BB42F6000CD782 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -115,6 +82,8 @@
 		5310CB7F17BB42F7000CD782 /* callistoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = callistoTests.h; sourceTree = "<group>"; };
 		5310CB8017BB42F7000CD782 /* callistoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = callistoTests.m; sourceTree = "<group>"; };
 		5310CB8A17BB4ABC000CD782 /* cog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cog.png; path = callisto/cog.png; sourceTree = "<group>"; };
+		5324665B17C17E780098DE95 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		5324665C17C17E780098DE95 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		5389BDF317BDB8A500FC8FBC /* MyActivitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyActivitiesViewController.h; sourceTree = "<group>"; };
 		5389BDF417BDB8A500FC8FBC /* MyActivitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyActivitiesViewController.m; sourceTree = "<group>"; };
 		5389BDF617BDB8C900FC8FBC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -125,7 +94,6 @@
 		53CFA52217C0975C00882E52 /* DataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataRequest.m; sourceTree = "<group>"; };
 		53CFA52617C098B000882E52 /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
 		53CFA52717C098B000882E52 /* LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
-		53CFA52917C0992100882E52 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = "libs/RestKit-0.20.2/RestKit.xcodeproj"; sourceTree = "<group>"; };
 		53CFA53B17C099C500882E52 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		53CFA53D17C099CC00882E52 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		53CFA53F17C099EA00882E52 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -133,6 +101,7 @@
 		53CFA54317C099F800882E52 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		53CFA54517C09A0000882E52 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		53CFA54717C09B2C00882E52 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		61EFA3112A8A4E618F907D55 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,10 +116,10 @@
 				53CFA54017C099EA00882E52 /* libxml2.dylib in Frameworks */,
 				53CFA53E17C099CC00882E52 /* CoreData.framework in Frameworks */,
 				53CFA53C17C099C500882E52 /* CFNetwork.framework in Frameworks */,
-				53CFA53A17C099B300882E52 /* libRestKit.a in Frameworks */,
 				5310CB4217BB42F6000CD782 /* UIKit.framework in Frameworks */,
 				5310CB4417BB42F6000CD782 /* Foundation.framework in Frameworks */,
 				5310CB4617BB42F6000CD782 /* CoreGraphics.framework in Frameworks */,
+				288F76FEE0A642E9880244DF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,12 +139,12 @@
 		5310CB3517BB42F6000CD782 = {
 			isa = PBXGroup;
 			children = (
-				53CFA52917C0992100882E52 /* RestKit.xcodeproj */,
 				53CFA52517C0980900882E52 /* Resources */,
 				5310CB4717BB42F6000CD782 /* callisto */,
 				5310CB7917BB42F7000CD782 /* callistoTests */,
 				5310CB4017BB42F6000CD782 /* Frameworks */,
 				5310CB3F17BB42F6000CD782 /* Products */,
+				61EFA3112A8A4E618F907D55 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,6 +171,7 @@
 				5310CB4317BB42F6000CD782 /* Foundation.framework */,
 				5310CB4517BB42F6000CD782 /* CoreGraphics.framework */,
 				5310CB7317BB42F7000CD782 /* SenTestingKit.framework */,
+				38A962F720E1426E97B20A22 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -282,20 +252,11 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		53CFA52A17C0992100882E52 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				53CFA53117C0992100882E52 /* libRestKit.a */,
-				53CFA53317C0992100882E52 /* RestKitTests.octest */,
-				53CFA53517C0992100882E52 /* RestKit.framework */,
-				53CFA53717C0992100882E52 /* RestKitFrameworkTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		53CFA54917C16BB100882E52 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				5324665B17C17E780098DE95 /* User.h */,
+				5324665C17C17E780098DE95 /* User.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -307,14 +268,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5310CB8417BB42F7000CD782 /* Build configuration list for PBXNativeTarget "callisto" */;
 			buildPhases = (
+				E6BB7B7FB7224D1CBD89B649 /* Check Pods Manifest.lock */,
 				5310CB3A17BB42F6000CD782 /* Sources */,
 				5310CB3B17BB42F6000CD782 /* Frameworks */,
 				5310CB3C17BB42F6000CD782 /* Resources */,
+				48E387351C084ADCA52C60F2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				53CFA53917C099A200882E52 /* PBXTargetDependency */,
 			);
 			name = callisto;
 			productName = callisto;
@@ -359,12 +321,6 @@
 			mainGroup = 5310CB3517BB42F6000CD782;
 			productRefGroup = 5310CB3F17BB42F6000CD782 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 53CFA52A17C0992100882E52 /* Products */;
-					ProjectRef = 53CFA52917C0992100882E52 /* RestKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				5310CB3D17BB42F6000CD782 /* callisto */,
@@ -372,37 +328,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		53CFA53117C0992100882E52 /* libRestKit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRestKit.a;
-			remoteRef = 53CFA53017C0992100882E52 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		53CFA53317C0992100882E52 /* RestKitTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RestKitTests.octest;
-			remoteRef = 53CFA53217C0992100882E52 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		53CFA53517C0992100882E52 /* RestKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RestKit.framework;
-			remoteRef = 53CFA53417C0992100882E52 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		53CFA53717C0992100882E52 /* RestKitFrameworkTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RestKitFrameworkTests.octest;
-			remoteRef = 53CFA53617C0992100882E52 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5310CB3C17BB42F6000CD782 /* Resources */ = {
@@ -434,6 +359,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		48E387351C084ADCA52C60F2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5310CB7017BB42F7000CD782 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,6 +386,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		E6BB7B7FB7224D1CBD89B649 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -461,6 +416,7 @@
 				5389BDFC17BE8A0800FC8FBC /* UserActivityCell.m in Sources */,
 				53CFA52317C0975C00882E52 /* DataRequest.m in Sources */,
 				53CFA52817C098B000882E52 /* LoginRequest.m in Sources */,
+				5324665D17C17E780098DE95 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,11 +435,6 @@
 			isa = PBXTargetDependency;
 			target = 5310CB3D17BB42F6000CD782 /* callisto */;
 			targetProxy = 5310CB7717BB42F7000CD782 /* PBXContainerItemProxy */;
-		};
-		53CFA53917C099A200882E52 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RestKit;
-			targetProxy = 53CFA53817C099A200882E52 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -585,26 +536,30 @@
 		};
 		5310CB8517BB42F7000CD782 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61EFA3112A8A4E618F907D55 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "callisto/callisto-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/../../Headers";
+				HEADER_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = "callisto/callisto-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "Standard (armv7)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		5310CB8617BB42F7000CD782 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61EFA3112A8A4E618F907D55 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "callisto/callisto-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/../../Headers";
+				HEADER_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = "callisto/callisto-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "Standard (armv7)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

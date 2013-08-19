@@ -1,0 +1,27 @@
+dependencies: \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/Testing/RKMappingTest.m \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/Testing/RKMappingTest.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/ObjectMapping/RKMappingOperation.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/ObjectMapping/RKObjectMapping.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/Support/RKMacros.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/ObjectMapping/RKMapping.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/ObjectMapping/RKAttributeMapping.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/ObjectMapping/RKPropertyMapping.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/Testing/RKPropertyMappingTestExpectation.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/CoreData/RKEntityMapping.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/CoreData/RKConnectionDescription.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/ObjectMapping/RKObjectMappingOperationDataSource.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/ObjectMapping/RKMappingOperationDataSource.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/ObjectMapping/RKRelationshipMapping.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/Support/RKErrors.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/ObjectMapping/RKObjectUtilities.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/Support/RKLog.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Vendor/LibComponentLogging/Core/lcl_RK.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/Support/lcl_config_components_RK.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/Support/lcl_config_logger_RK.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Vendor/LibComponentLogging/NSLog/LCLNSLog_RK.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/Support/lcl_config_extensions_RK.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/Testing/RKConnectionTestExpectation.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/CoreData/RKFetchRequestManagedObjectCache.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/CoreData/RKManagedObjectCaching.h \
+  /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/libs/RestKit-0.20.2/Code/CoreData/RKManagedObjectMappingOperationDataSource.h
