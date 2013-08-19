@@ -2,10 +2,10 @@ TPods-TransitionKit
 v5
 r1
 cCheck dependencies
-cProcessPCH /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/Pods-TransitionKit-prefix-eqzqubeuffvoyigdpduxroveyqdr/Pods-TransitionKit-prefix.pch.pth Pods-TransitionKit-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cProcessPCH /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/Pods-TransitionKit-prefix-cscgzeypliderqfvwmltketxgbty/Pods-TransitionKit-prefix.pch.pth Pods-TransitionKit-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/TKState.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKState.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/PrecompiledHeaders/Pods-TransitionKit-prefix-eqzqubeuffvoyigdpduxroveyqdr/Pods-TransitionKit-prefix.pch.pth Pods-TransitionKit-prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/TKEvent.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKEvent.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/TKState.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKState.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/TKStateMachine.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/TransitionKit/Code/TKStateMachine.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/Pods-TransitionKit-dummy.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Pods-TransitionKit-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cLibtool /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Products/Debug-iphonesimulator/libPods-TransitionKit.a normal i386
@@ -112,7 +112,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies2ee3ae7c8ac2b741^d576af7c8ac2b741^---0#1#0#--18"Check dependencies36"6CF6969B-E919-4039-BFC0-FC51C7402348-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies65a541519ac2b741^55de42519ac2b741^---0#1#0#--18"Check dependencies36"DFC3A6C4-A765-4290-894E-245897FAF56E-
 
 CCompileC /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-TransitionKit.build/Objects-normal/i386/Pods-TransitionKit-dummy.o /Users/cevaris/Documents/workspace-aptana/callisto/callisto/mobile/ios/callisto/callisto/Pods/Pods-TransitionKit-dummy.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s398623451.770833

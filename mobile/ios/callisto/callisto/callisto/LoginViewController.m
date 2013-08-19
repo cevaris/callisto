@@ -35,4 +35,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnLogin:(id)sender {
+    
+    LoginRequest *login = [[LoginRequest alloc] init];
+    [login setEmail:self.txtEmail.text];
+    [login setPassword:self.txtPassword.text];
+    [login sendRequest];
+    
+    
+    
+
+}
+
+-(IBAction)textFieldReturn:(id)sender {
+    [sender resignFirstResponder];
+}
+
 @end

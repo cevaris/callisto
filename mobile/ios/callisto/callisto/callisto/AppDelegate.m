@@ -13,10 +13,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    LoginRequest *login = [[LoginRequest alloc] init];
-    [login sendRequest];
-    
     // Override point for customization after application launch.
     return YES;
 }

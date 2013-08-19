@@ -62,7 +62,7 @@ class User < ActiveRecord::Base
   end
 
   def update_authtoken
-    self.authtoken ||= SecureRandom.uuid + '-' + SecureRandom.uuid.reverse
+    self.authtoken = SecureRandom.uuid + '-' + SecureRandom.uuid.reverse
   end
 
   def request_key

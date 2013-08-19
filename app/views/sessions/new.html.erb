@@ -4,8 +4,8 @@
   <div class="span6 offset3">
     <%= form_for(:session, url: sessions_path) do |f| %>
 
-      <%= f.label :name, 'Email' %>
-      <%= f.text_field :name %>
+      <%= f.label :email, 'Email' %>
+      <%= f.text_field :email %>
 
       <%= f.label :password, t('signin.password_label') %>
       <%= f.password_field :password %>

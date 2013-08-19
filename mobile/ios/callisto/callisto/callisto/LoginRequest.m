@@ -10,45 +10,55 @@
 
 @implementation LoginRequest
 
+- (void)setEmail:(NSString*) val {
+    email = val;
+}
+- (void)setPassword:(NSString*) val{
+    password = val;
+}
+
 
 
 - (void)sendRequest {
     
-    RKObjectManager *objectManager = [RKObjectManager sharedManager];
-    NSString *email = @"jim.kobol@gmail.com";
-    NSString *password = @"adam2007";
-    NSURL *url = [NSURL URLWithString:@"http://rails:3000/signin"];
+    NSAssert(email != (id)[NSNull null] || email.length != 0, @"Email is not set");
+    NSAssert(password != (id)[NSNull null] || password.length != 0, @"Password is not set");
+    
+//    RKObjectManager *objectManager = [RKObjectManager sharedManager];
+//    NSString *email = @"jim.kobol@gmail.com";
+//    NSString *password = @"adam2007";
+    NSURL *url = [NSURL URLWithString:@"http://rails:3000/mobile/ios/"];
 
     // Activity Indicator
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
   
-    NSDictionary *user = [NSDictionary dictionaryWithObjectsAndKeys: password, @"password", email, @"email", nil];
-    NSDictionary *package = [NSDictionary dictionaryWithObjectsAndKeys: user, @"session", nil];
+    NSDictionary *package = [NSDictionary dictionaryWithObjectsAndKeys: password, @"password", email, @"email", nil];
+
 
     
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:package
-                                                       options:NSJSONWritingPrettyPrinted // or 0
-                                                         error:&error];
-    NSString *jsonString = [[NSString alloc] init];
-    if (!jsonData) {
-        NSLog(@"Got an error: %@", error);
-    } else {
-        jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        NSLog(@"Successfull JSON serialization: %@", jsonString);
-    }
-    
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
-                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-    NSData *requestData = [NSData dataWithBytes:[jsonString UTF8String] length:[jsonString length]];
-    
-    NSLog(@"Successfull POST serialization: %@", requestData);
-    
-    [request setHTTPMethod:@"POST"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
-    [request setHTTPBody: requestData];
+//    NSError *error;
+//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:package
+//                                                       options:NSJSONWritingPrettyPrinted // or 0
+//                                                         error:&error];
+//    NSString *jsonString = [[NSString alloc] init];
+//    if (!jsonData) {
+//        NSLog(@"Got an error: %@", error);
+//    } else {
+//        jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+//        NSLog(@"Successfull JSON serialization: %@", jsonString);
+//    }
+//    
+//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
+//                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+//    NSData *requestData = [NSData dataWithBytes:[jsonString UTF8String] length:[jsonString length]];
+//    
+//    NSLog(@"Successfull POST serialization: %@", requestData);
+//    
+//    [request setHTTPMethod:@"POST"];
+//    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+//    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+//    [request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
+//    [request setHTTPBody: requestData];
     
 //    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
 //    [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
@@ -60,24 +70,34 @@
 //    }];
 //    [operation start];
     
-    RKObjectRequestOperation *operation =
-    [objectManager objectRequestOperationWithRequest:request
-                                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-     {
-         // Success handler.
-//         NSLog(@"%@", [mappingResult firstObject]);
-         NSLog(@"Successfull in Restkit");
-     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-         // Error handler.
-         NSLog(@"Error in Restkit %@", error);
-     }];
+//    RKObjectRequestOperation *operation =
+//    [objectManager objectRequestOperationWithRequest:request
+//                                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
+//     {
+//         // Success handler.
+////         NSLog(@"%@", [mappingResult firstObject]);
+//         NSLog(@"Successfull in Restkit");
+//     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+//         // Error handler.
+//         NSLog(@"Error in Restkit %@", error);
+//     }];
+//    
+//    // enqueue operation
+//    [RKObjectManager.sharedManager enqueueObjectRequestOperation:operation];
+//    
+//    // monitor upload progress
+//    [operation.HTTPRequestOperation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
+//        NSLog(@"bytesWritten: %d, totalBytesWritten: %lld, totalBytesExpectedToWrite: %lld", bytesWritten, totalBytesWritten, totalBytesExpectedToWrite);
+//    }];
     
-    // enqueue operation
-    [RKObjectManager.sharedManager enqueueObjectRequestOperation:operation];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    [httpClient setParameterEncoding:AFJSONParameterEncoding];
     
-    // monitor upload progress
-    [operation.HTTPRequestOperation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
-        NSLog(@"bytesWritten: %d, totalBytesWritten: %lld, totalBytesExpectedToWrite: %lld", bytesWritten, totalBytesWritten, totalBytesExpectedToWrite);
+    [httpClient postPath:@"signin" parameters:package success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"Request Successful, response '%@'", responseStr);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"[HTTPClient Error]: %@", error.localizedDescription);
     }];
 
     

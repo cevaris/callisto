@@ -56,6 +56,10 @@ Callisto::Application.routes.draw do
   end
 
 
+  # Mobile iOS
+  match '/mobile/ios/signin' => 'mobile_ios#signin'
+
+
 
 
   # The priority is based upon order of creation:

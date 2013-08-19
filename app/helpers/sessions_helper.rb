@@ -1,10 +1,12 @@
 module SessionsHelper
   def sign_in(user)
+    Rails.logger.info user.inspect
     cookies.permanent[:remember_token] = user.remember_token
-    self.current_user = user
 
-    self.current_user.update_authtoken
-    self.current_user.save
+    user.update_authtoken
+    user.save
+
+    self.current_user = user
   end
   
   def signed_in?

@@ -12,7 +12,14 @@
 
 
 
-@interface LoginRequest : NSObject
+@interface LoginRequest : NSObject{
+    NSString *email;
+    NSString *password;
+}
+
+
+- (void)setEmail:(NSString*) val;
+- (void)setPassword:(NSString*) val;
 
 - (void)sendRequest;
 
