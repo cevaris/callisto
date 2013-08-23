@@ -45,6 +45,9 @@
 		53FDBC7817C7ED3700BF32C5 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FDBC7717C7ED3700BF32C5 /* Utility.m */; };
 		53FDBC7B17C8064100BF32C5 /* UserActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FDBC7A17C8064100BF32C5 /* UserActivity.m */; };
 		53FDBC7E17C8067000BF32C5 /* UserActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FDBC7D17C8067000BF32C5 /* UserActivityViewController.m */; };
+		53FDBC8117C80FD400BF32C5 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FDBC8017C80FD400BF32C5 /* ActivityViewController.m */; };
+		53FDBC8417C80FE200BF32C5 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FDBC8317C80FE200BF32C5 /* UserViewController.m */; };
+		53FDBC8717C810DD00BF32C5 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FDBC8617C810DD00BF32C5 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +113,12 @@
 		53FDBC7A17C8064100BF32C5 /* UserActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserActivity.m; sourceTree = "<group>"; };
 		53FDBC7C17C8067000BF32C5 /* UserActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserActivityViewController.h; sourceTree = "<group>"; };
 		53FDBC7D17C8067000BF32C5 /* UserActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserActivityViewController.m; sourceTree = "<group>"; };
+		53FDBC7F17C80FD400BF32C5 /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		53FDBC8017C80FD400BF32C5 /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
+		53FDBC8217C80FE200BF32C5 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		53FDBC8317C80FE200BF32C5 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		53FDBC8517C810DD00BF32C5 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		53FDBC8617C810DD00BF32C5 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		61EFA3112A8A4E618F907D55 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -219,6 +228,12 @@
 				5389BDF717BDB8C900FC8FBC /* LoginViewController.m */,
 				53FDBC7C17C8067000BF32C5 /* UserActivityViewController.h */,
 				53FDBC7D17C8067000BF32C5 /* UserActivityViewController.m */,
+				53FDBC7F17C80FD400BF32C5 /* ActivityViewController.h */,
+				53FDBC8017C80FD400BF32C5 /* ActivityViewController.m */,
+				53FDBC8217C80FE200BF32C5 /* UserViewController.h */,
+				53FDBC8317C80FE200BF32C5 /* UserViewController.m */,
+				53FDBC8517C810DD00BF32C5 /* SettingsViewController.h */,
+				53FDBC8617C810DD00BF32C5 /* SettingsViewController.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -443,6 +458,9 @@
 				53FDBC7817C7ED3700BF32C5 /* Utility.m in Sources */,
 				53FDBC7B17C8064100BF32C5 /* UserActivity.m in Sources */,
 				53FDBC7E17C8067000BF32C5 /* UserActivityViewController.m in Sources */,
+				53FDBC8117C80FD400BF32C5 /* ActivityViewController.m in Sources */,
+				53FDBC8417C80FE200BF32C5 /* UserViewController.m in Sources */,
+				53FDBC8717C810DD00BF32C5 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

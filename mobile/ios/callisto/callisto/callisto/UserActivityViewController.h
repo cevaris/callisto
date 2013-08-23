@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ActivityViewController.h"
+#import "UserViewController.h"
 
-@interface UserActivityViewController : UIViewController
+@interface UserActivityViewController : UIViewController <UIGestureRecognizerDelegate>
 
+@property (weak, nonatomic) IBOutlet UILabel *lblActivityName;
+@property (weak, nonatomic) IBOutlet UILabel *lblUserName;
 
-@property (weak, nonatomic) IBOutlet UIButton *btnActivity;
-@property (weak, nonatomic) IBOutlet UIButton *btnUser;
 
 @end
