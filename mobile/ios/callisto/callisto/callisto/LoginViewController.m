@@ -40,13 +40,10 @@
 
 - (IBAction)btnLogin:(id)sender {
     
-    LoginRequest *login = [[LoginRequest alloc] init];
-    [login setEmail:self.txtEmail.text];
-    [login setPassword:self.txtPassword.text];
-    NSLog(@"LoginRequest Result %d", [login sendRequest]);
-       
-    
-    
+    LoginRequest *loginRequest = [[LoginRequest alloc] init];
+    [loginRequest setEmail:self.txtEmail.text];
+    [loginRequest setPassword:self.txtPassword.text];
+    NSLog(@"LoginRequest Result %d", [loginRequest sendRequest]);
 
 }
 
