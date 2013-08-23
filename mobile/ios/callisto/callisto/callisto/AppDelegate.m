@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LoginRequest.h"
+#import "Utility.h"
 
 @implementation AppDelegate
 

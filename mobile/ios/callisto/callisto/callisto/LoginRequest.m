@@ -62,6 +62,7 @@
                                                       parameters:package];
     
     RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
+
     
     [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         NSLog(@"Request Successful, response '%@'", mappingResult.array);
@@ -72,37 +73,21 @@
         }
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"[HTTPClient Error]: %@", error.localizedDescription);
+        [Utility showDefaultDialog:@"Login Error" text:@"Invalid Email/Password" ];
+        
+        
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Error"
+//                                                        message:@"Invalid Email/Password"
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"OK"
+//                                              otherButtonTitles:nil];
+//        [alert show];
+
     }];
     
     
     [manager enqueueObjectRequestOperation:operation];
 
-    
-//    [httpClient postPath:@"signin" parameters:package success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-//        NSLog(@"Request Successful, response '%@'", responseStr);
-//        requestResult = TRUE;
-//
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"[HTTPClient Error]: %@", error.localizedDescription);
-//        requestResult = FALSE;
-//    }];
-    
-    
-//    NSMutableURLRequest *apiRequest = [NSMutableURLRequest requestWithURL:url parameters:package constructingBodyWithBlock:nil];
-//
-//    AFJSONRequestOperation *operation = [[AFJSONRequestOperation alloc] initWithRequest:apiRequest];
-//    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject){
-//        //success !
-//        NSLog(@"SUCCESSSS!");
-//        completionBlock(responseObject);
-//    }failure:^(AFHTTPRequestOperation *operation, NSError *error){
-//        //Failure
-//        NSLog(@"FAILUREE!");
-//        completionBlock([NSDictionary dictionaryWithObject:[error localizedDescription] forKey:@"error"]);
-//    }];
-//    [operation start];
-    
     // Return result
     return requestResult;
     

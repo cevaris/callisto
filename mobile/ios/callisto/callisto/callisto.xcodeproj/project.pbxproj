@@ -42,6 +42,7 @@
 		53CFA54417C099F800882E52 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CFA54317C099F800882E52 /* QuartzCore.framework */; };
 		53CFA54617C09A0000882E52 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CFA54517C09A0000882E52 /* Security.framework */; };
 		53CFA54817C09B2C00882E52 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CFA54717C09B2C00882E52 /* SystemConfiguration.framework */; };
+		53FDBC7817C7ED3700BF32C5 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FDBC7717C7ED3700BF32C5 /* Utility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,8 @@
 		53CFA54317C099F800882E52 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		53CFA54517C09A0000882E52 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		53CFA54717C09B2C00882E52 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		53FDBC7617C7ED3700BF32C5 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		53FDBC7717C7ED3700BF32C5 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		61EFA3112A8A4E618F907D55 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -179,6 +182,7 @@
 		5310CB4717BB42F6000CD782 /* callisto */ = {
 			isa = PBXGroup;
 			children = (
+				53FDBC7517C7ED2200BF32C5 /* utils */,
 				53CFA54917C16BB100882E52 /* models */,
 				53CFA52017C0970500882E52 /* requests */,
 				5389BDF217BDB85700FC8FBC /* views */,
@@ -259,6 +263,15 @@
 				5324665C17C17E780098DE95 /* User.m */,
 			);
 			name = models;
+			sourceTree = "<group>";
+		};
+		53FDBC7517C7ED2200BF32C5 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				53FDBC7617C7ED3700BF32C5 /* Utility.h */,
+				53FDBC7717C7ED3700BF32C5 /* Utility.m */,
+			);
+			name = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +430,7 @@
 				53CFA52817C098B000882E52 /* LoginRequest.m in Sources */,
 				5324665D17C17E780098DE95 /* User.m in Sources */,
 				53092ECE17C29D5F004AF5D1 /* ActivitiesRequest.m in Sources */,
+				53FDBC7817C7ED3700BF32C5 /* Utility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
