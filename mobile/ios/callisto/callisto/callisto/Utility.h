@@ -10,4 +10,6 @@
 
 @interface Utility : NSObject
 
++ (void) showDefaultDialog: (NSString*)title text:(NSString*)text;
+
 @end

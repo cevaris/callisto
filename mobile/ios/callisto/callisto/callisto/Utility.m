@@ -10,4 +10,17 @@
 
 @implementation Utility
 
+
++ (void) showDefaultDialog: (NSString*)title text:(NSString*)text {
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+                                                    message:text
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+    
+}
+
+
 @end
