@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
 
   def as_json(options)
     # this example ignores the user's options
-    super(only: [:first_name, :last_name, :email, :role, :avatar, :authtoken])
+    super(only: [:id, :first_name, :last_name, :email, :role, :avatar, :authtoken])
   end
 
   def name

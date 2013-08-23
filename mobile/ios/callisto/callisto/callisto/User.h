@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface User : NSObject {
-    NSInteger *_id;
+    NSNumber *_id;
     NSString *email;
     NSString *password;
     NSString *authtoken;
@@ -23,7 +23,7 @@
 
 - (NSString*) name;
 
-- (void) setId: (NSInteger* ) val;
+- (void) setId: (NSNumber*) val;
 - (void) setEmail: (NSString *) val;
 - (void) setFirstName: (NSString *) val;
 - (void) setLastName: (NSString *) val;

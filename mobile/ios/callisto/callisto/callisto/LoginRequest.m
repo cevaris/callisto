@@ -22,13 +22,6 @@
     NSAssert(email != (id)[NSNull null] || email.length != 0, @"Email is not set");
     NSAssert(password != (id)[NSNull null] || password.length != 0, @"Password is not set");
     
-//    User *user = [User new];
-//    [user setPassword:password];
-//    [user setEmail:email];
-    
-
-//    NSString *email = @"jim.kobol@gmail.com";
-//    NSString *password = @"adam2007";
     NSURL *url = [NSURL URLWithString:@"http://rails:3000/mobile/ios/"];
 
     // Activity Indicator
@@ -73,18 +66,9 @@
         }
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"[HTTPClient Error]: %@", error.localizedDescription);
-        [Utility showDefaultDialog:@"Login Error" text:@"Invalid Email/Password" ];
-        
-        
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Error"
-//                                                        message:@"Invalid Email/Password"
-//                                                       delegate:nil
-//                                              cancelButtonTitle:@"OK"
-//                                              otherButtonTitles:nil];
-//        [alert show];
+        [Utility showDefaultDialog:@"Login Error" text:@"Invalid Email/Password"];
 
     }];
-    
     
     [manager enqueueObjectRequestOperation:operation];
 

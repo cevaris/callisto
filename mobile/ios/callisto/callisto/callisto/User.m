@@ -14,7 +14,7 @@
 - (NSString*) name {
     return [NSString stringWithFormat: @"%@ %@", firstName, lastName];
 }
-- (void) setId: (NSInteger* ) val {
+- (void) setId: (NSNumber *) val {
     _id = val;
 }
 
@@ -42,7 +42,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat: @"User: Name=%@ Email=%@ AuthToken=%@ Role=%@", [self name], email, authtoken, role];
+    return [NSString stringWithFormat: @"User: Id=%@ Name=%@ Email=%@ AuthToken=%@ Role=%@", _id, [self name], email, authtoken, role];
 }
 
 
