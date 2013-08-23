@@ -48,6 +48,11 @@ class User < ActiveRecord::Base
 
   validates :password, presence: true, length: { minimum: 6 }, confirmation: true, if: :password_digest_changed?
 
+  def as_json(options)
+    # this example ignores the user's options
+    super(only: [:first_name, :last_name, :email, :role, :avatar, :authtoken])
+  end
+
   def name
   	"#{self.first_name} #{self.last_name}"
   end

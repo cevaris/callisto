@@ -1,6 +1,9 @@
 class MobileIosController < ApplicationController
 
 	skip_before_filter :verify_authenticity_token, only: [:signin]
+  after_filter do
+    Rails.logger.info response.body
+  end
 
 	def signin
 		@user = User.find_by_email(params[:email].downcase)

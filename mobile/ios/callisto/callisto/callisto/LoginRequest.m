@@ -40,12 +40,13 @@
 
     RKObjectMapping* articleMapping = [RKObjectMapping mappingForClass:[User class]];
     [articleMapping addAttributeMappingsFromDictionary:@{
-         @"email": @"email",
-         @"authtoken": @"authtoken"
-//         @"first_name": @"first_name",
-//         @"last_name": @"last_name",
-//         @"role": @"role",
-//         @"created_at": @"created_at"
+        @"id": @"_id",
+        @"email": @"email",
+        @"authtoken": @"authtoken",
+        @"first_name": @"firstName",
+        @"last_name": @"lastName",
+        @"role": @"role",
+        @"created_at": @"createdAt"
      }];
     
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:articleMapping method:RKRequestMethodPOST pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
@@ -69,11 +70,8 @@
             User *user = [result objectAtIndex:0];
             NSLog(@"User'%@'", user);
         }
-        
-//        RKLogInfo(@"Load collection of Articles: %@", mappingResult.array);
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"[HTTPClient Error]: %@", error.localizedDescription);
-//        RKLogError(@"Operation failed with error: %@", error);
     }];
     
     

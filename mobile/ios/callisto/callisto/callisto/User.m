@@ -10,18 +10,39 @@
 
 @implementation User
 
+
+- (NSString*) name {
+    return [NSString stringWithFormat: @"%@ %@", firstName, lastName];
+}
+- (void) setId: (NSInteger* ) val {
+    _id = val;
+}
+
+- (void) setFirstName:(NSString *)val {
+    firstName = val;
+}
+
+- (void) setLastName:(NSString *)val {
+    lastName = val;
+}
+
+- (void) setCreatedAt:(NSString *)val {
+    createdAt = val;
+}
+
+- (void) setRole:(NSString *)val {
+    role = val;
+}
+
 - (void) setEmail: (NSString *) val {
     email = val;
-}
-- (void) setPassword: (NSString *) val {
-    password = val;    
 }
 - (void) setAuthtoken: (NSString *) val {
     authtoken = val;    
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat: @"User: Email=%@ Password=%@, AuthToken=%@", email, password, authtoken];
+    return [NSString stringWithFormat: @"User: Name=%@ Email=%@ AuthToken=%@ Role=%@", [self name], email, authtoken, role];
 }
 
 

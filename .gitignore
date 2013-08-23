@@ -6,7 +6,7 @@
 
 
 # Xcode files
-Build/*
+mobile/ios/callisto/callisto/Build/*
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -21,6 +21,7 @@ xcuserdata
 profile
 *.moved-aside
 DerivedData
+
 
 
 # Ignore bundler config

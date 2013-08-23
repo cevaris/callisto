@@ -1,11 +1,6 @@
 module SessionsHelper
   def sign_in(user)
-    Rails.logger.info user.inspect
     cookies.permanent[:remember_token] = user.remember_token
-
-    user.update_authtoken
-    user.save
-
     self.current_user = user
   end
   
@@ -22,6 +17,8 @@ module SessionsHelper
     if !@current_user and params.has_key?(:authtoken)
       @current_user ||= User.find_by_authtoken(params[:authtoken])
     end
+
+    @current_user
   end
   
   def sign_out

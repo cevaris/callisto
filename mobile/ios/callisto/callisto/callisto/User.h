@@ -9,19 +9,26 @@
 #import <Foundation/Foundation.h>
 
 @interface User : NSObject {
+    NSInteger *_id;
     NSString *email;
     NSString *password;
     NSString *authtoken;
-    NSString *first_name;
-    NSString *last_name;
+    NSString *firstName;
+    NSString *lastName;
     NSString *role;
-    NSString *created_at;
+    NSString *createdAt;
 }
 
 - (NSString *)description;
 
+- (NSString*) name;
+
+- (void) setId: (NSInteger* ) val;
 - (void) setEmail: (NSString *) val;
-- (void) setPassword: (NSString *) val;
+- (void) setFirstName: (NSString *) val;
+- (void) setLastName: (NSString *) val;
+- (void) setRole: (NSString *) val;
 - (void) setAuthtoken: (NSString *) val;
+- (void) setCreatedAt: (NSString *) val;
 
 @end

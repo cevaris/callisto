@@ -15,8 +15,8 @@ class UserActivitiesController < ApplicationController
 	end
 
 	def edit
-		@activity = Activity.find params[:activity_id]
 		@user_activity = UserActivity.find params[:id]
+		@activity = @user_activity.user
 		@user = current_user || false
 
 		if @user
@@ -33,8 +33,8 @@ class UserActivitiesController < ApplicationController
 	end
 
 	def update
-  	@activity = Activity.find params[:activity_id]
   	@user_activity = UserActivity.find params[:id]
+		@activity = @user_activity.user
 		@user = current_user || false		
 
 		@has_permission = @user
