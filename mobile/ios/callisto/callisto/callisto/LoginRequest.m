@@ -22,92 +22,88 @@
     NSAssert(email != (id)[NSNull null] || email.length != 0, @"Email is not set");
     NSAssert(password != (id)[NSNull null] || password.length != 0, @"Password is not set");
     
-//    RKObjectManager *objectManager = [RKObjectManager sharedManager];
+//    User *user = [User new];
+//    [user setPassword:password];
+//    [user setEmail:email];
+    
+
 //    NSString *email = @"jim.kobol@gmail.com";
 //    NSString *password = @"adam2007";
     NSURL *url = [NSURL URLWithString:@"http://rails:3000/mobile/ios/"];
 
     // Activity Indicator
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-  
+    
+    
     NSDictionary *package = [NSDictionary dictionaryWithObjectsAndKeys: password, @"password", email, @"email", nil];
+    
 
+    RKObjectMapping* articleMapping = [RKObjectMapping mappingForClass:[User class]];
+    [articleMapping addAttributeMappingsFromDictionary:@{
+         @"email": @"email",
+         @"authtoken": @"authtoken"
+//         @"first_name": @"first_name",
+//         @"last_name": @"last_name",
+//         @"role": @"role",
+//         @"created_at": @"created_at"
+     }];
+    
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:articleMapping method:RKRequestMethodPOST pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    RKObjectManager *manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://rails:3000/mobile/ios/"]];
 
     
-//    NSError *error;
-//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:package
-//                                                       options:NSJSONWritingPrettyPrinted // or 0
-//                                                         error:&error];
-//    NSString *jsonString = [[NSString alloc] init];
-//    if (!jsonData) {
-//        NSLog(@"Got an error: %@", error);
-//    } else {
-//        jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-//        NSLog(@"Successfull JSON serialization: %@", jsonString);
-//    }
-//    
-//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
-//                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-//    NSData *requestData = [NSData dataWithBytes:[jsonString UTF8String] length:[jsonString length]];
-//    
-//    NSLog(@"Successfull POST serialization: %@", requestData);
-//    
-//    [request setHTTPMethod:@"POST"];
-//    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-//    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-//    [request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
-//    [request setHTTPBody: requestData];
-    
-//    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
-//    [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-//        // This is the success block
-//        NSLog(@"Successfull in Restkit");
-//    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-//        // This is the failure block
-//        NSLog(@"Error in Restkit");
-//    }];
-//    [operation start];
-    
-//    RKObjectRequestOperation *operation =
-//    [objectManager objectRequestOperationWithRequest:request
-//                                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
-//     {
-//         // Success handler.
-////         NSLog(@"%@", [mappingResult firstObject]);
-//         NSLog(@"Successfull in Restkit");
-//     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-//         // Error handler.
-//         NSLog(@"Error in Restkit %@", error);
-//     }];
-//    
-//    // enqueue operation
-//    [RKObjectManager.sharedManager enqueueObjectRequestOperation:operation];
-//    
-//    // monitor upload progress
-//    [operation.HTTPRequestOperation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
-//        NSLog(@"bytesWritten: %d, totalBytesWritten: %lld, totalBytesExpectedToWrite: %lld", bytesWritten, totalBytesWritten, totalBytesExpectedToWrite);
-//    }];
     
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
     [httpClient setParameterEncoding:AFJSONParameterEncoding];
     
-    [httpClient postPath:@"signin" parameters:package success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        NSLog(@"Request Successful, response '%@'", responseStr);
-        requestResult = TRUE;
-        [requestLock unlock];
-
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST"
+                                                            path:@"signin"
+                                                      parameters:package];
+    
+    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
+    
+    [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        NSLog(@"Request Successful, response '%@'", mappingResult.array);
+        NSArray *result =  [mappingResult array];
+        if([result count] > 0) {
+            User *user = [result objectAtIndex:0];
+            NSLog(@"User'%@'", user);
+        }
+        
+//        RKLogInfo(@"Load collection of Articles: %@", mappingResult.array);
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"[HTTPClient Error]: %@", error.localizedDescription);
-        requestResult = FALSE;
-        [requestLock unlock];
+//        RKLogError(@"Operation failed with error: %@", error);
     }];
     
-    NSLog(@"Lockdown %d", requestResult);
-    requestLock = [NSLock new];
-    // Wait for result
-    [requestLock lock];
-    NSLog(@"Lockdown %d", requestResult);
+    
+    [manager enqueueObjectRequestOperation:operation];
+
+    
+//    [httpClient postPath:@"signin" parameters:package success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+//        NSLog(@"Request Successful, response '%@'", responseStr);
+//        requestResult = TRUE;
+//
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"[HTTPClient Error]: %@", error.localizedDescription);
+//        requestResult = FALSE;
+//    }];
+    
+    
+//    NSMutableURLRequest *apiRequest = [NSMutableURLRequest requestWithURL:url parameters:package constructingBodyWithBlock:nil];
+//
+//    AFJSONRequestOperation *operation = [[AFJSONRequestOperation alloc] initWithRequest:apiRequest];
+//    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject){
+//        //success !
+//        NSLog(@"SUCCESSSS!");
+//        completionBlock(responseObject);
+//    }failure:^(AFHTTPRequestOperation *operation, NSError *error){
+//        //Failure
+//        NSLog(@"FAILUREE!");
+//        completionBlock([NSDictionary dictionaryWithObject:[error localizedDescription] forKey:@"error"]);
+//    }];
+//    [operation start];
     
     // Return result
     return requestResult;

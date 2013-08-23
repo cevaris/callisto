@@ -8,6 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-@interface User : NSObject
+@interface User : NSObject {
+    NSString *email;
+    NSString *password;
+    NSString *authtoken;
+    NSString *first_name;
+    NSString *last_name;
+    NSString *role;
+    NSString *created_at;
+}
+
+- (NSString *)description;
+
+- (void) setEmail: (NSString *) val;
+- (void) setPassword: (NSString *) val;
+- (void) setAuthtoken: (NSString *) val;
 
 @end

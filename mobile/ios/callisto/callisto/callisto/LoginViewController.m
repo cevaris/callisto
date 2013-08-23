@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.txtEmail.text = @"jim.kobol@gmail.com";
+    self.txtPassword.text = @"adam2007";
 }
 
 - (void)didReceiveMemoryWarning

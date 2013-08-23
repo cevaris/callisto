@@ -8,14 +8,21 @@
 
 #import "User.h"
 
-@implementation User {
-    NSInteger *id;
-    NSString *email;
-    NSString *authtoken;
-    NSString *first_name;
-    NSString *last_name;
-    NSString *role;
-    NSString *created_at;
+@implementation User
+
+- (void) setEmail: (NSString *) val {
+    email = val;
 }
+- (void) setPassword: (NSString *) val {
+    password = val;    
+}
+- (void) setAuthtoken: (NSString *) val {
+    authtoken = val;    
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat: @"User: Email=%@ Password=%@, AuthToken=%@", email, password, authtoken];
+}
+
 
 @end
