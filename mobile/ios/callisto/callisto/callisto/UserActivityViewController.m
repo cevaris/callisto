@@ -25,29 +25,28 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    
-    
+- (void) setupLabelTapGestures {
     
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                  action:@selector(lblTapGesture:)];
     [[self lblActivityName] addGestureRecognizer:tapGesture];
     tapGesture.delegate = self;
     
-
+    
     tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                          action:@selector(lblTapGesture:)];
     [[self lblUserName] addGestureRecognizer:tapGesture];
     tapGesture.delegate = self;
+}
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
     
+    [self setupLabelTapGestures];
     
-	
-    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,9 +58,7 @@
 
 
 -(void) lblTapGesture:(UIGestureRecognizer *)sender {
-    
-    
-    
+
     NSInteger tag = [[(UIGestureRecognizer *)sender view] tag];
     
 //    NSLog(@"SelectedTag=%d, ActivityTag=%d, UserTag=%d", tag, [[self lblActivityName] tag], [[self lblUserName] tag]);
@@ -74,10 +71,7 @@
         
         UserViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"UserViewController"];
         [self.navigationController pushViewController:viewController animated:YES];
-    } 
-   
-
-    
+    }     
     
 }
 

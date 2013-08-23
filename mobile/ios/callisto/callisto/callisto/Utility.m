@@ -7,6 +7,7 @@
 //
 
 #import "Utility.h"
+#import <Security/Security.h>
 
 @implementation Utility
 
