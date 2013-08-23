@@ -13,8 +13,7 @@
 
 
 
-@interface LoginRequest : NSObject{
-    NSLock *requestLock;
+@interface LoginRequest : NSObject {
     BOOL requestResult;
     
     NSString *email;

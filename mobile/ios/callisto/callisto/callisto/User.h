@@ -22,6 +22,8 @@
 - (NSString *)description;
 
 - (NSString*) name;
+- (NSString*) email;
+- (NSString*) authtoken;
 
 - (void) setId: (NSNumber*) val;
 - (void) setEmail: (NSString *) val;

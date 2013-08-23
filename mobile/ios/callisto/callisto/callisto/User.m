@@ -14,6 +14,14 @@
 - (NSString*) name {
     return [NSString stringWithFormat: @"%@ %@", firstName, lastName];
 }
+
+- (NSString*) email {
+    return [self email];
+}
+- (NSString*) authtoken {
+    return [self authtoken];
+}
+
 - (void) setId: (NSNumber *) val {
     _id = val;
 }
