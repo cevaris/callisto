@@ -32,8 +32,8 @@
 {
     [super viewDidLoad];
 
-    LoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-    [self.navigationController presentViewController:loginViewController animated:YES completion:nil];
+//    LoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+//    [self.navigationController presentViewController:loginViewController animated:YES completion:nil];
 //    [self.navigationController pushViewController:loginViewController animated:YES];
 //    [self.navigationController presentViewController:loginViewController animated:YES completion:nil];
 

@@ -43,6 +43,8 @@
 		53CFA54617C09A0000882E52 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CFA54517C09A0000882E52 /* Security.framework */; };
 		53CFA54817C09B2C00882E52 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CFA54717C09B2C00882E52 /* SystemConfiguration.framework */; };
 		53FDBC7817C7ED3700BF32C5 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FDBC7717C7ED3700BF32C5 /* Utility.m */; };
+		53FDBC7B17C8064100BF32C5 /* UserActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FDBC7A17C8064100BF32C5 /* UserActivity.m */; };
+		53FDBC7E17C8067000BF32C5 /* UserActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FDBC7D17C8067000BF32C5 /* UserActivityViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,10 @@
 		53CFA54717C09B2C00882E52 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		53FDBC7617C7ED3700BF32C5 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		53FDBC7717C7ED3700BF32C5 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		53FDBC7917C8064100BF32C5 /* UserActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserActivity.h; sourceTree = "<group>"; };
+		53FDBC7A17C8064100BF32C5 /* UserActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserActivity.m; sourceTree = "<group>"; };
+		53FDBC7C17C8067000BF32C5 /* UserActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserActivityViewController.h; sourceTree = "<group>"; };
+		53FDBC7D17C8067000BF32C5 /* UserActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserActivityViewController.m; sourceTree = "<group>"; };
 		61EFA3112A8A4E618F907D55 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -211,6 +217,8 @@
 				5389BDF417BDB8A500FC8FBC /* MyActivitiesViewController.m */,
 				5389BDF617BDB8C900FC8FBC /* LoginViewController.h */,
 				5389BDF717BDB8C900FC8FBC /* LoginViewController.m */,
+				53FDBC7C17C8067000BF32C5 /* UserActivityViewController.h */,
+				53FDBC7D17C8067000BF32C5 /* UserActivityViewController.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -261,6 +269,8 @@
 			children = (
 				5324665B17C17E780098DE95 /* User.h */,
 				5324665C17C17E780098DE95 /* User.m */,
+				53FDBC7917C8064100BF32C5 /* UserActivity.h */,
+				53FDBC7A17C8064100BF32C5 /* UserActivity.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -431,6 +441,8 @@
 				5324665D17C17E780098DE95 /* User.m in Sources */,
 				53092ECE17C29D5F004AF5D1 /* ActivitiesRequest.m in Sources */,
 				53FDBC7817C7ED3700BF32C5 /* Utility.m in Sources */,
+				53FDBC7B17C8064100BF32C5 /* UserActivity.m in Sources */,
+				53FDBC7E17C8067000BF32C5 /* UserActivityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
