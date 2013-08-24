@@ -32,6 +32,7 @@
 		5310CB8B17BB4ABC000CD782 /* cog.png in Resources */ = {isa = PBXBuildFile; fileRef = 5310CB8A17BB4ABC000CD782 /* cog.png */; };
 		5324665D17C17E780098DE95 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5324665C17C17E780098DE95 /* User.m */; };
 		535528C217C824D6001E336B /* UserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 535528C117C824D6001E336B /* UserRequest.m */; };
+		535528C517C82999001E336B /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 535528C417C82999001E336B /* Session.m */; };
 		5389BDF517BDB8A500FC8FBC /* MyActivitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389BDF417BDB8A500FC8FBC /* MyActivitiesViewController.m */; };
 		5389BDF817BDB8C900FC8FBC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389BDF717BDB8C900FC8FBC /* LoginViewController.m */; };
 		5389BDFC17BE8A0800FC8FBC /* UserActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389BDFB17BE8A0800FC8FBC /* UserActivityCell.m */; };
@@ -95,6 +96,8 @@
 		5324665C17C17E780098DE95 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		535528C017C824D6001E336B /* UserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRequest.h; sourceTree = "<group>"; };
 		535528C117C824D6001E336B /* UserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRequest.m; sourceTree = "<group>"; };
+		535528C317C82999001E336B /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		535528C417C82999001E336B /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
 		5389BDF317BDB8A500FC8FBC /* MyActivitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyActivitiesViewController.h; sourceTree = "<group>"; };
 		5389BDF417BDB8A500FC8FBC /* MyActivitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyActivitiesViewController.m; sourceTree = "<group>"; };
 		5389BDF617BDB8C900FC8FBC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -300,6 +303,8 @@
 			children = (
 				53FDBC7617C7ED3700BF32C5 /* Utility.h */,
 				53FDBC7717C7ED3700BF32C5 /* Utility.m */,
+				535528C317C82999001E336B /* Session.h */,
+				535528C417C82999001E336B /* Session.m */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -467,6 +472,7 @@
 				53FDBC8417C80FE200BF32C5 /* UserViewController.m in Sources */,
 				53FDBC8717C810DD00BF32C5 /* SettingsViewController.m in Sources */,
 				535528C217C824D6001E336B /* UserRequest.m in Sources */,
+				535528C517C82999001E336B /* Session.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

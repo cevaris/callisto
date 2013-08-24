@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LoginViewController.h"
 #import "UserActivityCell.h"
+#import "UserRequest.h"
 
 @interface MyActivitiesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate >
 

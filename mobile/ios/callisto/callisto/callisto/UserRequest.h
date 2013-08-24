@@ -12,14 +12,9 @@
 
 @interface UserRequest : NSObject {
     BOOL requestResult;
-    NSString *email;
-    NSString *authtoken;
 }
 
-- (void)setEmail:(NSString*) val;
-- (void)setAuthtoken:(NSString*) val;
-
-- (BOOL)sendRequest;
++ (BOOL) sendRequest: (NSString*)email withAuthtoken:(NSString*)authtoken;
 
 
 @end

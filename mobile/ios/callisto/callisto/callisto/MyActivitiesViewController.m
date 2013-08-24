@@ -31,6 +31,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [UserRequest sendRequest:@"jim.kobol@gmail.com" withAuthtoken:@"f42ced87-2268-40ef-8c2e-a3809e3d702b-5f54274b813f-5ffb-9544-3e1a-46314b1f"];
 
 //    LoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
 //    [self.navigationController presentViewController:loginViewController animated:YES completion:nil];

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Session.h"
 
 @interface Utility : NSObject
 

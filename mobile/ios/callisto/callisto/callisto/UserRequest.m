@@ -10,14 +10,8 @@
 
 @implementation UserRequest
 
-- (void)setEmail:(NSString*) val {
-    email = val;
-}
-- (void)setAuthtoken:(NSString*) val{
-    authtoken = val;
-}
 
-- (BOOL)sendRequest {
++ (BOOL) sendRequest: (NSString*)email withAuthtoken:(NSString*)authtoken {
     
     NSAssert(email != (id)[NSNull null] || email.length != 0, @"Email is not set");
     NSAssert(authtoken != (id)[NSNull null] || authtoken.length != 0, @"AuthToken is not set");
@@ -26,9 +20,6 @@
     
     // Activity Indicator
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    
-    
-    NSDictionary *package = [NSDictionary dictionaryWithObjectsAndKeys: authtoken, @"password", email, @"email", nil];
     
     
     RKObjectMapping* articleMapping = [RKObjectMapping mappingForClass:[User class]];
@@ -46,13 +37,15 @@
     RKObjectManager *manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://rails:3000/mobile/ios/"]];
     
     
-    
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
     [httpClient setParameterEncoding:AFJSONParameterEncoding];
     
-    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST"
-                                                            path:@"signin"
-                                                      parameters:package];
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET"
+                                                            path:@"user"
+                                                      parameters:nil];
+    
+    [request setValue:authtoken forHTTPHeaderField:@"DATA_AUTHTOKEN"];
+    [request setValue:email forHTTPHeaderField:@"DATA_EMAIL"];
     
     RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
     
@@ -63,18 +56,16 @@
         if([result count] > 0) {
             User *user = [result objectAtIndex:0];
             NSLog(@"User'%@'", user);
-            requestResult = TRUE;
         }
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"[HTTPClient Error]: %@", error.localizedDescription);
-//        [Utility showDefaultDialog:@"Auto login Error" text:@"Invalid Email/Password"];
-        requestResult = FALSE;
+        //        [Utility showDefaultDialog:@"Auto login Error" text:@"Invalid Email/Password"];
     }];
     
     [manager enqueueObjectRequestOperation:operation];
     
     // Return result
-    return requestResult;
+    return FALSE;
     
 }
 

@@ -58,6 +58,7 @@ Callisto::Application.routes.draw do
 
   # Mobile iOS
   match '/mobile/ios/signin' => 'mobile_ios#signin'
+  match '/mobile/ios/user' => 'mobile_ios#user'
 
 
 
