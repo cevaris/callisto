@@ -13,9 +13,15 @@ module SessionsHelper
   end
   
   def current_user
-    @current_user ||= User.find_by_remember_token(cookies[:remember_token])
-    if !@current_user and params.has_key?(:authtoken)
-      @current_user ||= User.find_by_authtoken(params[:authtoken])
+
+    # @current_user ||= User.find_by_remember_token(cookies[:remember_token])
+
+    if request.headers.has_key?('HTTP_DATA_AUTHTOKEN') and request.headers.has_key?('HTTP_DATA_EMAIL')
+      @current_user = User.find_by_authtoken(request.headers['HTTP_DATA_AUTHTOKEN'])
+
+    else
+      @current_user ||= User.find_by_remember_token(cookies[:remember_token])
+      
     end
 
     @current_user
