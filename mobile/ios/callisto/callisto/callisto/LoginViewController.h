@@ -10,6 +10,8 @@
 
 #import <RestKit/RestKit.h>
 #import "User.h"
+#import "Utility.h"
+#import "Session.h"
 
 #import "Globals.h"
 

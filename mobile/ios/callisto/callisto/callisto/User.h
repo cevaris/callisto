@@ -21,7 +21,7 @@
 @property (nonatomic, assign) NSString *role;
 @property (nonatomic, assign) NSString *createdAt;
 
-+ (RKObjectMapping*) mapping;
++ (RKObjectMapping*) mapper;
 
 - (NSString *)description;
 - (NSString*) name;

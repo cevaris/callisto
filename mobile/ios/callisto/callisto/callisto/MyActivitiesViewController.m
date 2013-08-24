@@ -32,12 +32,21 @@
 {
     [super viewDidLoad];
     
-    [UserRequest sendRequest:@"jim.kobol@gmail.com" withAuthtoken:@"f42ced87-2268-40ef-8c2e-a3809e3d702b-5f54274b813f-5ffb-9544-3e1a-46314b1f"];
-
-//    LoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-//    [self.navigationController presentViewController:loginViewController animated:YES completion:nil];
-//    [self.navigationController pushViewController:loginViewController animated:YES];
-//    [self.navigationController presentViewController:loginViewController animated:YES completion:nil];
+    
+    if([Session hasSession]){
+        NSLog(@"Has Session");
+        NSString *email;
+        NSString *authtoken;
+        
+        [Session loadSession:&email authtoken:&authtoken];
+        NSLog(@"Session Email=%@ Authtoken=%@", email, authtoken);
+        
+        
+    } else {
+        NSLog(@"Has No Session");
+        LoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        [self.navigationController presentViewController:loginViewController animated:YES completion:nil];
+    }
 
     
     // Uncomment the following line to preserve selection between presentations.

@@ -15,6 +15,14 @@
 #import "User.h"
 #import "UserRequest.h"
 
+
+
 @interface Session : NSObject
+
++ (BOOL) hasSession;
+
++(void) deleteSession;
++(void) saveSession: (User* )user;
++(NSString*) loadSession:(NSString**)email authtoken:(NSString **)authtoken;
 
 @end

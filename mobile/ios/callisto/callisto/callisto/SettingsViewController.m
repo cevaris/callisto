@@ -35,4 +35,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnLogoutAction:(id)sender {
+    [Session deleteSession];
+    [Utility showDefaultDialog:@"User Logout" text:@"User is not longer logged in"];
+}
 @end

@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+#import "Session.h"
+#import "Utility.h"
+
 @interface SettingsViewController : UIViewController
+
+
+- (IBAction)btnLogoutAction:(id)sender;
+
 
 @end

@@ -19,9 +19,9 @@
 @synthesize role;
 
 
-+ (RKObjectMapping*) mapping {
-    RKObjectMapping *mapper = [RKObjectMapping mappingForClass:[User class]];
-    [mapper addAttributeMappingsFromDictionary:@{
++ (RKObjectMapping*) mapper {
+    RKObjectMapping *mapperObj = [RKObjectMapping mappingForClass:[User class]];
+    [mapperObj addAttributeMappingsFromDictionary:@{
         @"id": @"_id",
         @"email": @"email",
         @"authtoken": @"authtoken",
@@ -30,7 +30,7 @@
         @"role": @"role",
         @"created_at": @"createdAt"
      }];
-    return mapper;
+    return mapperObj;
 }
 
 - (NSString*) name {
