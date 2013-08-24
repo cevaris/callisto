@@ -25,9 +25,13 @@ class MobileIosController < ApplicationController
     Rails.logger.info request.headers['HTTP_DATA_AUTHTOKEN']
     Rails.logger.info request.headers['HTTP_DATA_EMAIL']
 
-    if request.headers.has_key?('HTT_DATA_AUTHTOKEN') and request.headers.has_key?('DATA_EMAIL')
+    if request.headers.has_key?('HTTP_DATA_AUTHTOKEN') and request.headers.has_key?('HTTP_DATA_EMAIL')
+      Rails.logger.info 'Checking AuthToken'
       @user = User.find_by_authtoken(request.headers['HTTP_DATA_AUTHTOKEN'])
+    else
+      Rails.logger.info 'Not Checking AuthToken'
     end
+
 
     respond_to do |format|
     	if @user and @user.email == request.headers['DATA_EMAIL']
