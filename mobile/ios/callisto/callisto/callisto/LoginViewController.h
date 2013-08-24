@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LoginRequest.h"
+
+#import <RestKit/RestKit.h>
+#import "User.h"
+
+#import "Globals.h"
 
 @interface LoginViewController : UIViewController
 

@@ -19,6 +19,19 @@
 @synthesize role;
 
 
++ (RKObjectMapping*) mapping {
+    RKObjectMapping *mapper = [RKObjectMapping mappingForClass:[User class]];
+    [mapper addAttributeMappingsFromDictionary:@{
+        @"id": @"_id",
+        @"email": @"email",
+        @"authtoken": @"authtoken",
+        @"first_name": @"firstName",
+        @"last_name": @"lastName",
+        @"role": @"role",
+        @"created_at": @"createdAt"
+     }];
+    return mapper;
+}
 
 - (NSString*) name {
     return [NSString stringWithFormat: @"%@ %@", firstName, lastName];

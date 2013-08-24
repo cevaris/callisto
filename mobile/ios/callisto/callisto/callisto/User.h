@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RestKit/RestKit.h>
 
 @interface User : NSObject 
 
@@ -20,19 +21,9 @@
 @property (nonatomic, assign) NSString *role;
 @property (nonatomic, assign) NSString *createdAt;
 
++ (RKObjectMapping*) mapping;
 
 - (NSString *)description;
-
 - (NSString*) name;
-//- (NSString*) email;
-//- (NSString*) authtoken;
-//
-//- (void) setId: (NSNumber*) val;
-//- (void) setEmail: (NSString *) val;
-//- (void) setFirstName: (NSString *) val;
-//- (void) setLastName: (NSString *) val;
-//- (void) setRole: (NSString *) val;
-//- (void) setAuthtoken: (NSString *) val;
-//- (void) setCreatedAt: (NSString *) val;
 
 @end
