@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 #import <RestKit/RestKit.h>
+#import <RestKit/CoreData.h>
+
 #import "User.h"
 #import "Utility.h"
 #import "Session.h"
-
 #import "Globals.h"
 
 @interface LoginViewController : UIViewController

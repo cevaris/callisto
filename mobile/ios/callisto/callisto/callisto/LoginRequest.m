@@ -66,7 +66,7 @@
         }
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"[HTTPClient Error]: %@", error.localizedDescription);
-        [Utility showDefaultDialog:@"Login Error" text:@"Invalid Email/Password"];
+        [Utility showDefaultDialog:@"Login Error" text:@"Invalid Email/Password" handler:nil];
 
     }];
     

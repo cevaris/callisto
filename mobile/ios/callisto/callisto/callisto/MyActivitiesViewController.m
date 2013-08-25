@@ -23,17 +23,18 @@
     }
     self.tableView.delegate = self;
     self.navigationController.delegate = self;
-
+    
     return self;
     
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self initSession];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self initSession];
-
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

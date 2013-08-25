@@ -11,7 +11,7 @@
 #import "Session.h"
 #import "Utility.h"
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController <UIAlertViewDelegate> 
 
 
 - (IBAction)btnLogoutAction:(id)sender;

@@ -11,6 +11,6 @@
 
 @interface Utility : NSObject
 
-+ (void) showDefaultDialog: (NSString*)title text:(NSString*)text;
++(void) showDefaultDialog: (NSString*)title text:(NSString*)text handler:(UIViewController*)view;
 
 @end

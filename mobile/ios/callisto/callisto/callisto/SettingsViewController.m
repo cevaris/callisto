@@ -37,6 +37,14 @@
 
 - (IBAction)btnLogoutAction:(id)sender {
     [Session deleteSession];
-    [Utility showDefaultDialog:@"User Logout" text:@"User is no longer logged in"];
+    [Utility showDefaultDialog:@"User Logout" text:@"User is no longer logged in" handler:self];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        //Code for OK button
+        NSLog(@"CLICKED ME!!");
+        [self.tabBarController setSelectedIndex:0];
+    }
 }
 @end

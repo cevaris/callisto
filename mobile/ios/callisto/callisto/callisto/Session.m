@@ -28,15 +28,20 @@ NSString * const ACTIVITY_SERVICE = @"ACTIVITY_SERVICE";
 
 +(void) saveSession: (User* )user {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[user email] forKey:USER_EMAIL];
+    if (defaults) {
+        [defaults setObject:[user email] forKey:USER_EMAIL];
+        [defaults synchronize];
+    }
     [SSKeychain setPassword:[user authtoken] forService:ACTIVITY_SERVICE account:[user email]];
     NSLog(@"Saved Session Email=%@",[defaults objectForKey:USER_EMAIL]);
 }
 
 +(void) deleteSession {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults removeObjectForKey:USER_EMAIL];
-    [defaults setNilValueForKey:USER_EMAIL];
+    if (defaults) {
+        [defaults removeObjectForKey:USER_EMAIL];
+        [defaults synchronize];
+    }
     NSLog(@"Deleted Session");
 }
 
