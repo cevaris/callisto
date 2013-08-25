@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "LoginRequest.h"
 #import "Utility.h"
+#import "Session.h"
+#import "LoginViewController.h"
 
 @implementation AppDelegate
 

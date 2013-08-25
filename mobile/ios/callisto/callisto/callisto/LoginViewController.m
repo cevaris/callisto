@@ -57,10 +57,6 @@
     NSAssert(email != (id)[NSNull null] || email.length != 0, @"Email is not set");
     NSAssert(password != (id)[NSNull null] || password.length != 0, @"Password is not set");
     
-    
-    NSDictionary *package = [NSDictionary dictionaryWithObjectsAndKeys: password, @"password", email, @"email", nil];
-
-    
     RKObjectMapping* userMapper = [User mapper];
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userMapper method:RKRequestMethodPOST pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
     RKObjectManager *manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:IOS_URL]];
@@ -69,6 +65,7 @@
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
     [httpClient setParameterEncoding:AFJSONParameterEncoding];
     
+    NSDictionary *package = [NSDictionary dictionaryWithObjectsAndKeys: password, @"password", email, @"email", nil];
     NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST"
                                                             path:@"signin"
                                                       parameters:package];
@@ -82,6 +79,7 @@
             User *user = [result objectAtIndex:0];
             NSLog(@"User'%@'", user);
             [Session saveSession:user];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"[HTTPClient Error]: %@", error.localizedDescription);

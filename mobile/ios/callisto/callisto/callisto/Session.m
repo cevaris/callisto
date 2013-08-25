@@ -13,11 +13,10 @@
 NSString * const USER_EMAIL = @"USER_EMAIL";
 NSString * const ACTIVITY_SERVICE = @"ACTIVITY_SERVICE";
 
-
 + (BOOL) hasSession {
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *email = [defaults objectForKey:USER_EMAIL];
+    NSString *email = [defaults stringForKey:USER_EMAIL];
 
     NSLog(@"Email=%@", email);
 
@@ -37,6 +36,7 @@ NSString * const ACTIVITY_SERVICE = @"ACTIVITY_SERVICE";
 +(void) deleteSession {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults removeObjectForKey:USER_EMAIL];
+    [defaults setNilValueForKey:USER_EMAIL];
     NSLog(@"Deleted Session");
 }
 

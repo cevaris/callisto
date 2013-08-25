@@ -32,21 +32,7 @@
 {
     [super viewDidLoad];
     
-    
-    if([Session hasSession]){
-        NSLog(@"Has Session");
-        NSString *email;
-        NSString *authtoken;
-        
-        [Session loadSession:&email authtoken:&authtoken];
-        NSLog(@"Session Email=%@ Authtoken=%@", email, authtoken);
-        
-        
-    } else {
-        NSLog(@"Has No Session");
-        LoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-        [self.navigationController presentViewController:loginViewController animated:YES completion:nil];
-    }
+    [self initSession];
 
     
     // Uncomment the following line to preserve selection between presentations.
@@ -61,6 +47,26 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (void) initSession {
+    
+    if([Session hasSession]){
+        NSLog(@"Found Session");
+        NSString *email;
+        NSString *authtoken;
+        
+        [Session loadSession:&email authtoken:&authtoken];
+        NSLog(@"Session Email=%@ Authtoken=%@", email, authtoken);
+        
+        
+    } else {
+        NSLog(@"Has No Session");
+        LoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        [self.navigationController presentViewController:loginViewController animated:YES completion:nil];
+    }
+}
+
 
 #pragma mark - Table view data source
 

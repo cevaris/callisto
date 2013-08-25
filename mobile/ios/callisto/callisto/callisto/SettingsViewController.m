@@ -37,6 +37,6 @@
 
 - (IBAction)btnLogoutAction:(id)sender {
     [Session deleteSession];
-    [Utility showDefaultDialog:@"User Logout" text:@"User is not longer logged in"];
+    [Utility showDefaultDialog:@"User Logout" text:@"User is no longer logged in"];
 }
 @end
