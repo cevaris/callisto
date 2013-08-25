@@ -10,19 +10,19 @@
 
 @implementation User
 
-@synthesize email;
-@synthesize authtoken;
-@synthesize _id;
-@synthesize firstName;
-@synthesize lastName;
-@synthesize createdAt;
-@synthesize role;
+@dynamic userId;
+@dynamic email;
+@dynamic authtoken;
+@dynamic createdAt;
+@dynamic role;
+@dynamic lastName;
+@dynamic firstName;
 
 
 + (RKObjectMapping*) mapper {
     RKObjectMapping *mapperObj = [RKObjectMapping mappingForClass:[User class]];
     [mapperObj addAttributeMappingsFromDictionary:@{
-        @"id": @"_id",
+        @"id": @"userId",
         @"email": @"email",
         @"authtoken": @"authtoken",
         @"first_name": @"firstName",
@@ -34,11 +34,12 @@
 }
 
 - (NSString*) name {
-    return [NSString stringWithFormat: @"%@ %@", firstName, lastName];
+    return [NSString stringWithFormat: @"%@ %@", [self firstName], [self lastName]];
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat: @"User: Id=%@ Name=%@ Email=%@ AuthToken=%@ Role=%@", _id, [self name], email, authtoken, role];
+    return [NSString stringWithFormat: @"User: Id=%@ Name=%@ Email=%@ AuthToken=%@ Role=%@",
+            [self userId], [self name], [self email], [self authtoken], [self role]];
 }
 
 

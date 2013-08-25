@@ -38,6 +38,7 @@
 		5389BDFC17BE8A0800FC8FBC /* UserActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5389BDFB17BE8A0800FC8FBC /* UserActivityCell.m */; };
 		53BB307717C959450013C564 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BB307617C959450013C564 /* Activity.m */; };
 		53BB307A17C964D30013C564 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BB307917C964D30013C564 /* Globals.m */; };
+		53BB307E17CA8D6A0013C564 /* callisto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 53BB307C17CA8D6A0013C564 /* callisto.xcdatamodeld */; };
 		53CFA52817C098B000882E52 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFA52717C098B000882E52 /* LoginRequest.m */; };
 		53CFA53C17C099C500882E52 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CFA53B17C099C500882E52 /* CFNetwork.framework */; };
 		53CFA53E17C099CC00882E52 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CFA53D17C099CC00882E52 /* CoreData.framework */; };
@@ -110,6 +111,7 @@
 		53BB307617C959450013C564 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		53BB307817C964D30013C564 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		53BB307917C964D30013C564 /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
+		53BB307D17CA8D6A0013C564 /* callisto.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = callisto.xcdatamodel; sourceTree = "<group>"; };
 		53CFA52617C098B000882E52 /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
 		53CFA52717C098B000882E52 /* LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
 		53CFA53B17C099C500882E52 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -209,6 +211,7 @@
 		5310CB4717BB42F6000CD782 /* callisto */ = {
 			isa = PBXGroup;
 			children = (
+				53BB307B17CA8D2E0013C564 /* coredata */,
 				53FDBC7517C7ED2200BF32C5 /* utils */,
 				53CFA54917C16BB100882E52 /* models */,
 				53CFA52017C0970500882E52 /* requests */,
@@ -259,6 +262,14 @@
 				5389BDFB17BE8A0800FC8FBC /* UserActivityCell.m */,
 			);
 			name = cells;
+			sourceTree = "<group>";
+		};
+		53BB307B17CA8D2E0013C564 /* coredata */ = {
+			isa = PBXGroup;
+			children = (
+				53BB307C17CA8D6A0013C564 /* callisto.xcdatamodeld */,
+			);
+			name = coredata;
 			sourceTree = "<group>";
 		};
 		53CFA52017C0970500882E52 /* requests */ = {
@@ -485,6 +496,7 @@
 				535528C517C82999001E336B /* Session.m in Sources */,
 				53BB307717C959450013C564 /* Activity.m in Sources */,
 				53BB307A17C964D30013C564 /* Globals.m in Sources */,
+				53BB307E17CA8D6A0013C564 /* callisto.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +709,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		53BB307C17CA8D6A0013C564 /* callisto.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				53BB307D17CA8D6A0013C564 /* callisto.xcdatamodel */,
+			);
+			currentVersion = 53BB307D17CA8D6A0013C564 /* callisto.xcdatamodel */;
+			path = callisto.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5310CB3617BB42F6000CD782 /* Project object */;
 }

@@ -9,17 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <RestKit/RestKit.h>
 
-@interface User : NSObject 
+@interface User : NSManagedObject 
 
 
-@property (nonatomic, assign) NSNumber *_id;
-@property (nonatomic, assign) NSString *email;
-
-@property (nonatomic, assign) NSString *authtoken;
-@property (nonatomic, assign) NSString *firstName;
-@property (nonatomic, assign) NSString *lastName;
-@property (nonatomic, assign) NSString *role;
-@property (nonatomic, assign) NSString *createdAt;
+@property (nonatomic, retain) NSNumber * userId;
+@property (nonatomic, retain) NSString * email;
+@property (nonatomic, retain) NSString * authtoken;
+@property (nonatomic, retain) NSString * createdAt;
+@property (nonatomic, retain) NSString * role;
+@property (nonatomic, retain) NSString * lastName;
+@property (nonatomic, retain) NSString * firstName;
 
 + (RKObjectMapping*) mapper;
 
