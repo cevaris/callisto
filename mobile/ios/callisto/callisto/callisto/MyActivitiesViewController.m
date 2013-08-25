@@ -61,11 +61,60 @@
         NSLog(@"Session Email=%@ Authtoken=%@", email, authtoken);
         
         
+        
+        
     } else {
         NSLog(@"Has No Session");
         LoginViewController *loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
         [self.navigationController presentViewController:loginViewController animated:YES completion:nil];
     }
+}
+
+- (void) sendUserRequest {
+    
+    NSString *email = [[self txtEmail] text];
+    NSString *authtoken = [[self txtPassword] text];
+    [Session loadSession:&email authtoken:&authtoken];
+    
+    NSAssert(email != (id)[NSNull null] || email.length != 0, @"Email is not set");
+    NSAssert(password != (id)[NSNull null] || password.length != 0, @"Password is not set");
+    
+    RKObjectMapping* userMapper = [User mapper];
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userMapper method:RKRequestMethodPOST pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    RKObjectManager *manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:IOS_URL]];
+    
+    NSURL *url = [NSURL URLWithString:IOS_URL];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    [httpClient setParameterEncoding:AFJSONParameterEncoding];
+    
+    NSDictionary *package = [NSDictionary dictionaryWithObjectsAndKeys: password, @"password", email, @"email", nil];
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST"
+                                                            path:@"signin"
+                                                      parameters:package];
+    
+    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
+    
+    [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        NSLog(@"Request Successful, response '%@'", mappingResult.array);
+        NSArray *result =  [mappingResult array];
+        if([result count] > 0) {
+            User *user = [result objectAtIndex:0];
+            NSLog(@"User'%@'", user);
+            [Session saveSession:user];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        NSLog(@"[HTTPClient Error]: %@", error.localizedDescription);
+        [Utility showDefaultDialog:@"Login Error" text:@"Invalid Email/Password" handler:nil];
+        
+    }];
+    
+    [manager enqueueObjectRequestOperation:operation];
+    
+}
+
+- (void) sendMyActivitiesRequest {
+    
 }
 
 
