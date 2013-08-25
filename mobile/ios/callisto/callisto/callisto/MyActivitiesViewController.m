@@ -72,12 +72,13 @@
 
 - (void) sendUserRequest {
     
-    NSString *email = [[self txtEmail] text];
-    NSString *authtoken = [[self txtPassword] text];
-    [Session loadSession:&email authtoken:&authtoken];
+    User *user;
+    NSString *email = [user email];
+    NSString *authtoken = [user authtoken];
+
     
     NSAssert(email != (id)[NSNull null] || email.length != 0, @"Email is not set");
-    NSAssert(password != (id)[NSNull null] || password.length != 0, @"Password is not set");
+    NSAssert(authtoken != (id)[NSNull null] || authtoken.length != 0, @"Password is not set");
     
     RKObjectMapping* userMapper = [User mapper];
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userMapper method:RKRequestMethodPOST pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
@@ -87,7 +88,7 @@
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
     [httpClient setParameterEncoding:AFJSONParameterEncoding];
     
-    NSDictionary *package = [NSDictionary dictionaryWithObjectsAndKeys: password, @"password", email, @"email", nil];
+    NSDictionary *package = [NSDictionary dictionaryWithObjectsAndKeys: authtoken, @"authtoken", email, @"email", nil];
     NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST"
                                                             path:@"signin"
                                                       parameters:package];
